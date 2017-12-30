@@ -1,0 +1,6 @@
+[submodule "External/nanovg"]
+	path = External/nanovg
+	url = https://github.com/memononen/nanovg.git
+[submodule "External/ArbutusEngine"]
+	path = External/ArbutusEngine
+	url = https://github.com/danielfilipealmeida/ArbutusEngine.git
