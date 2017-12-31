@@ -11,12 +11,18 @@
 #include <stdio.h>
 #include "Element.hpp"
 
+
+/*!
+ Implements the Decorator Class, needed for the Decoractor Pattern
+ 
+ */
 class Decorator : public Element {
     Element *element;
     
 public:
     /*!
      \brief Decorator constructor
+     \param Element* the object to decorate
      */
     Decorator(Element *_el);
     

@@ -68,7 +68,6 @@ float Slider::getRealValue(float normalizedValue) {
     return normalizedValue * totalAmount + minValue;
 }
 
-
 void Slider::draw(NVGcontext* vg)
 {
     string displayedCaption = caption;
@@ -80,11 +79,14 @@ void Slider::draw(NVGcontext* vg)
         displayedCaption.append(" | " + ofToString(value, 2));
     }
     
-    drawSlider(vg, getNormalizedValue(), displayedCaption, drawingRect, ofColor2NVGColor(backgroundColor, 255), ofColor2NVGColor(GUIStyle::getInstance().getTextColor(), 255));
+    drawSlider(vg,
+               getNormalizedValue(),
+               displayedCaption,
+               drawingRect,
+               ofColor2NVGColor(backgroundColor, 255),
+               ofColor2NVGColor(GUIStyle::getInstance().getTextColor(), 255));
     Element::finishDraw(vg);
 }
-
-
 
 void Slider::set(json config) {
     Button::set(config);
@@ -95,21 +97,17 @@ void Slider::set(json config) {
     if (!config["defaultValue"].is_null()) defaultValue = config["defaultValue"].is_number_float() ? config["defaultValue"].get<float>(): 0.0;
 }
 
-
 void Slider::setValue(float _value) {
     value = ofClamp(_value, minValue, maxValue);
 }
-
 
 float Slider::getValue() {
     return value;
 }
 
-
 void Slider::setOnChange(std::function<void(Slider *slider)> _onChange) {
     onChange = _onChange;
 }
-
 
 void Slider::setDefaultValue() {
     value = defaultValue;

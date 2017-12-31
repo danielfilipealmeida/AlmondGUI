@@ -19,7 +19,6 @@
  */
 class VerticalSlider : public Slider {
 public:
-    
     /*!
      ...
      */
@@ -49,7 +48,5 @@ public:
      ...
      */
     virtual string getClass() { return "VerticalSlider";}
-    
-
 };
 #endif /* VerticalSlider_hpp */

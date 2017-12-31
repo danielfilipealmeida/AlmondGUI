@@ -58,10 +58,15 @@ public:
      */
     virtual void set(json config);
     
+    /*!
+     ...
+     */
     virtual void createButtons();
     
+    /*!
+     ...
+     */
     virtual void addButton(json::iterator it);
-
 
     /*!
      \brief Returns a json with the data of the last clicked button
@@ -101,12 +106,9 @@ public:
      */
     ofRectangle getVisibleRectForButton(ButtonData button);
     
-    
     /*!
      \brief returns the value of the currently selected button
      */
     virtual unsigned int getValue();
-    
-
 };
 #endif /* ButtonGroup_hpp */

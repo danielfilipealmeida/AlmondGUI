@@ -44,10 +44,12 @@ public:
     /*!
      Fbo Setter
      */
-   void setBuffer(ofFbo *_fbo);
+    void setBuffer(ofFbo *_fbo);
     
+    /*!
+     ...
+     */
     float getHeightForWidth(float _width);
-
 };
 
 #endif /* Preview_hpp */

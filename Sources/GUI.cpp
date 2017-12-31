@@ -68,23 +68,11 @@ void GUI::loadFonts() {
 
 void GUI::draw()
 {
-        nvgBeginFrame(vg, ofGetWidth(), ofGetHeight(), 1);
-    /*
-    nvgBeginPath(vg);
-    nvgRect(vg, 100,100, 120,30);
-    nvgFillColor(vg, nvgRGBA(255,192,0,255));
-    nvgFill(vg);
-    
-    drawSlider(vg, 0.5, 400, 430, 100, 20);
-
-    testButton.draw(vg);
-   */
-    
+    nvgBeginFrame(vg, ofGetWidth(), ofGetHeight(), 1);
     for(auto element:elements) {
          element->draw(vg);
     }
     nvgEndFrame(vg);
-    
 }
 
 void GUI::update()

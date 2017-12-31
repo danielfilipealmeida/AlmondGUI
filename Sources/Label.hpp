@@ -21,7 +21,6 @@ protected:
     string caption;
     
 public:
-    
     /*!
      ...
      */

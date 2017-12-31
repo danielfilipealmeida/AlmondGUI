@@ -18,12 +18,10 @@
  */
 class GUIStyle
 {
-    
     GUIStyle();
     ~GUIStyle();
     
 protected:
-    
     ofColor baseColor, textColor, backgroundColor, darkColor, lightColor;
     float contrast, brightness, saturation;
     
@@ -83,7 +81,6 @@ public:
      Saturation getter
      */
     float getSaturation();
-    
 };
 
 

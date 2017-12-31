@@ -13,12 +13,8 @@ Viewport::Viewport() {
     scrollPositionX = scrollPositionY = 0;
 }
 
-
 Viewport::~Viewport()  {
-    
-    
 }
-
 
 void Viewport::set(json config) {
     if (!config.is_object()) {
@@ -48,7 +44,8 @@ void Viewport::update()
     Element::update();
 }
 
-void Viewport::draw(NVGcontext* vg) {
+void Viewport::draw(NVGcontext* vg)
+{
     Element::draw(vg);
     
     //Element::drawDebugRect(vg);
@@ -61,7 +58,6 @@ ofRectangle Viewport::calculateDrawingRectForElement(Element *element) {
     ofRectangle drawingRect;
     
     // todo: return empty rect if this isn't a parent of the given element
-    
     
     drawingRect = element->rect;
     
@@ -85,7 +81,6 @@ Element* Viewport::add(Element *newElement) {
     float elementY, width, height;
     ofRectangle newElementRect = newElement->getRect();
     
-    
     newElement->setParent(this);
     
     elementY = ((childElements.size() == 0) ? 0 : childElements.back()->getRect().y + childElements.back()->getRect().height) + GUI_BORDER;
@@ -107,23 +102,13 @@ void Viewport::resize(ofRectangle newRect) {
     
     Element::resize(newRect);
     
-    
-    
     for(auto element:getChildElements()) {
         ofRectangle elementRect = element->getRect();
         float width, height;
         
         width = getRect().width - (2*GUI_BORDER);
         height = element->getHeightForWidth(width);
-        
-        /*
-        element->set({
-            {"x", GUI_BORDER},
-            {"y", currentY},
-            {"width",width},
-            {"height", height}
-        });
-         */
+    
         ofRectangle newRect;
         newRect.x =GUI_BORDER;
         newRect.y =currentY;
@@ -132,7 +117,6 @@ void Viewport::resize(ofRectangle newRect) {
         element->resize(newRect);
         currentY = currentY + height + GUI_BORDER;
     }
-    
 }
 
 float Viewport::getScrollPositionY() {

@@ -14,20 +14,23 @@
 void SliderDecorator::draw(NVGcontext* vg)
 {
     ofColor backgroundColor = Button::getBackgroundColor(slider.hover, slider.pushed);
-    
     Decorator::draw(vg);
     Element::draw(vg);
     drawSlider(vg, slider.value, "", slider.rect, ofColor2NVGColor(backgroundColor, 255), ofColor2NVGColor(GUIStyle::getInstance().getTextColor()), true);
     Element::finishDraw(vg);
 }
 
+/* TODO: this needs to be remake and cleaned up */
 void SliderDecorator::set(json config)
 {
     Decorator::set(config);
     
-    ofRectangle _rect = ofRectangle(config["x"].get<float>(),config["y"].get<float>(),config["width"].get<float>(),config["height"].get<float>());
+    ofRectangle _rect = ofRectangle(config["x"].get<float>(),
+                                    config["y"].get<float>(),
+                                    config["width"].get<float>(),
+                                    config["height"].get<float>());
     setSlider(_rect);
-    
+    config["width"] = config["width"].get<float>() - slider.rect.width;
     getElement()->set(config);
 }
 
@@ -43,7 +46,7 @@ void SliderDecorator::setSlider(ofRectangle _rect) {
 
 void SliderDecorator::update()
 {
-     Decorator::update();
+    Decorator::update();
     
     Boolean previousPressed = slider.pressed;
     Boolean previousHover = slider.hover;

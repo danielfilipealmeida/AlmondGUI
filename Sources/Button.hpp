@@ -74,6 +74,9 @@ public:
      */
     virtual string getClass() { return "Button";}
     
+    /*!
+     ...
+     */
     static ofColor getBackgroundColor(Boolean isHover, Boolean isPressed);
 
 };

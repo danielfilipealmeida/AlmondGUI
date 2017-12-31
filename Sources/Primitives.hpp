@@ -58,5 +58,4 @@ void printText(NVGcontext* vg, string text, float x, float y, NVGcolor textColor
  */
 void drawFilledRect(NVGcontext* vg, ofRectangle rect, NVGcolor col);
 
-
 #endif /* Primitives_hpp */

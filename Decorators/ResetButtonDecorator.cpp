@@ -10,12 +10,11 @@
 #include "Primitives.hpp"
 #include "Slider.hpp"
 
-void ResetButtonDecorator::draw(NVGcontext* vg)
-{
-    Decorator::draw(vg);
-    
+void ResetButtonDecorator::draw(NVGcontext* vg) {
     ofRectangle theRect;
     ofColor backgroundColor;
+    
+    Decorator::draw(vg);
     
     theRect = resetButton.rect;
     if (parent != NULL) {
@@ -23,10 +22,9 @@ void ResetButtonDecorator::draw(NVGcontext* vg)
         theRect.y = theRect.y + parent->rect.y;
     }
     backgroundColor = Button::getBackgroundColor(resetButton.hover, resetButton.pushed);
-    
-    //Element::draw(vg);
-    drawButton(vg, resetButton.caption, theRect, ofColor2NVGColor(backgroundColor, 255), ofColor2NVGColor(GUIStyle::getInstance().getTextColor(), 255));
-    //Element::finishDraw(vg);
+    drawButton(vg, resetButton.caption, theRect,
+               ofColor2NVGColor(backgroundColor, 255),
+               ofColor2NVGColor(GUIStyle::getInstance().getTextColor(), 255));
 }
 
 void ResetButtonDecorator::set(json config) {
@@ -35,9 +33,12 @@ void ResetButtonDecorator::set(json config) {
     if (config["x"].is_number() &&
         config["y"].is_number() &&
         config["width"].is_number() &&
-        config["height"].is_number())
-    {
-        setResetButton(ofRectangle(config["x"].get<float>(),config["y"].get<float>(),config["width"].get<float>(),config["height"].get<float>()));
+        config["height"].is_number()
+        ) {
+        setResetButton(ofRectangle(config["x"].get<float>(),
+                                   config["y"].get<float>(),
+                                   config["width"].get<float>(),
+                                   config["height"].get<float>()));
         config["width"] = config["width"].get<float>() - resetButton.rect.width - (GUI_BORDER / 2.0);
     }
     getElement()->set(config);

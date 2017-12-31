@@ -17,12 +17,39 @@ class ResetButtonDecorator : public Decorator
     ButtonData resetButton;
     
 public:
+    /*!
+     ...
+     */
     ResetButtonDecorator(Element *el): Decorator(el) {}
+    
+    /*!
+     ...
+     */
     void draw(NVGcontext* vg);
+    
+    /*!
+     ...
+     */
     void set(json config);
+    
+    /*!
+     ...
+     */
     void update();
+    
+    /*!
+     ...
+     */
     void setParent(Element *_parent);
+    
+    /*!
+     ...
+     */
     void resize(ofRectangle newRect);
+    
+    /*!
+     ...
+     */
     void setResetButton(ofRectangle _rect);
 };
 

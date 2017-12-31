@@ -16,7 +16,6 @@ class ToggleButtonGroup : public ButtonGroup
 {
     std::function<void(ToggleButtonGroup *toggleButtonGroup)> onClick = NULL;
  public:
-    
     /*!
      ...
      */

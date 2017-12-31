@@ -66,13 +66,14 @@ public:
      */
     Element();
     
-    
     /*!
      ...
      */
     ~Element();
     
-    
+    /*!
+     ...
+     */
     virtual string getClass() { return "Element";}
     
     /*!
@@ -85,7 +86,6 @@ public:
      When overriding this method, the descendent needs always to run this because in here elements inside elements are properly handled.
      */
     virtual void draw(NVGcontext* vg) = 0;
-    
     
     /*!
      Finishes drawing the element. Important for properly drawing elements inside other elements.
@@ -106,6 +106,11 @@ public:
      \brief Sets the element that will contain this element
      */
     virtual void setParent(Element *_parent);
+    
+    /*!
+     \brief Returns the parent
+     */
+    Element* getParent() { return parent; }
     
     /*!
      \brief Adds another element as a child
@@ -139,7 +144,6 @@ public:
      */
     ofRectangle getRect();
     
-    
     /*!
      \brief Sets the new rect
      */
@@ -163,7 +167,6 @@ public:
      This method is defined and is empty and should only be overriden where it's needed, like in the Sliders
      */
     virtual void setDefaultValue() {}
-    
 };
 
 #endif /* Element_hpp */
