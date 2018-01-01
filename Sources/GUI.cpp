@@ -21,7 +21,6 @@ GUI::GUI()
     ofDisableAlphaBlending();
     ofTrueTypeFont::setGlobalDpi(72);
     loadFonts();
-    fbo.allocate(ofGetWidth(), ofGetHeight());
 }
 
 /*!
@@ -123,10 +122,6 @@ void GUI::drawCenteredText(string caption, ofRectangle rect, Fonts font)
     
 }
 
-ofFbo GUI::getFbo()
-{
-    return fbo;
-}
 
 
 void GUI::saveTexture(string file, ofTexture texture)

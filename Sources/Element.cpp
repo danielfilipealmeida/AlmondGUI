@@ -40,7 +40,6 @@ void Element::update()
         croppedVisibleRect = croppedVisibleRect.getIntersection(parent->visibleRect);
     }
      
-    
     if (!croppedVisibleRect.inside(ofGetMouseX(), ofGetMouseY())) {
         hover = FALSE;
         pressed = FALSE;
@@ -58,18 +57,13 @@ void Element::update()
     }
 }
 
-void Element::draw( ) {
-    if (parent != NULL) {
-        //ofViewport(parent->getRect());
-    }
+void Element::draw() {
     
     if (style.hasBackground) {
         ofFill();
         ofSetColor(style.backgroundColor);
-        ofDrawRectangle(visibleRect);
+        ofDrawRectangle(rect);
     }
-    
-    //if (rect==visibleRect || parent == NULL) return;
 }
 
 void Element::finishDraw( ) {
@@ -77,52 +71,18 @@ void Element::finishDraw( ) {
     drawDebugRect();
 #endif
     
-    // draws the childs
-    //drawChilds();
-    
     if (style.hasBorder) {
         ofNoFill();
         ofSetColor(style.borderColor);
-        ofDrawRectangle(visibleRect);
-    }
-    
-    //if (rect==visibleRect) return;
-    if (parent != NULL) {
-        //ofViewport(0,0,ofGetWidth(), ofGetHeight());
+        ofDrawRectangle(rect);
     }
 }
 
 void Element::drawChilds( ) {
-    ofFbo fbo = GUI::getInstance().getFbo();
-    static Boolean saved = false;
-    
-    fbo.begin();
-    ofClear((style.hasBackground == true) ? style.backgroundColor : GUIStyle::getInstance().getDarkColor());
-
     GUI::getInstance().forEach([this](Element *element) {
         if (element->parent != this) return;
         element->draw();
     });
-    
-    fbo.end();
-    
-    float x = visibleRect.x;
-    float y = visibleRect.y;
-    
-    if (getClass().compare("Viewport") == 0) {
-        Viewport *viewport = (Viewport *) this;
-        viewport->update();
-        x = x + viewport->getOffsetX();
-        y = y + viewport->getOffsetY();
-    }
-    
-    
-    fbo.getTexture().drawSubsection(visibleRect.x, visibleRect.y, visibleRect.width, visibleRect.height, x, y);
-    
-    if (!saved) {
-        GUI::getInstance().saveTexture("output.png", fbo.getTexture());
-        saved = true;
-    }
 }
 
 

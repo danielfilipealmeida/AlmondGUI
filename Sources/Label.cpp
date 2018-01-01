@@ -25,7 +25,7 @@ void Label::draw( ){
     Element::draw( );
     
     ofSetColor(style.captionColor);
-    GUI::getInstance().drawCenteredText(caption, visibleRect);
+    GUI::getInstance().drawCenteredText(caption, rect);
     
     Element::finishDraw();
 }

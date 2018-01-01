@@ -25,7 +25,17 @@ protected:
     float scrollPositionX, scrollPositionY;
     float totalHeight;
     float totalWidth;
+    
+    /*!
+     \brief fbo to store the bitmap contents of the fbo
+     */
+     ofFbo fbo;
 
+    /*!
+     \brief updates the size of the fbo
+     */
+    void updateFbo();
+    
 public:
     
     /*!

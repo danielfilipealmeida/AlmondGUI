@@ -39,8 +39,6 @@ void SliderDecorator::set(json config)
                                     config["height"].get<float>());
     setSlider(_rect);
     config["width"] = config["width"].get<float>() - slider.rect.width;
-    config["x"] = 0;
-    config["y"] = 0;
     
     getElement()->set(config);
 }
@@ -59,7 +57,6 @@ void SliderDecorator::update()
 {
     Decorator::update();
     
-    //Boolean previousPressed = slider.pressed;
     Boolean previousHover = slider.hover;
     ofRectangle visibleRect;
     

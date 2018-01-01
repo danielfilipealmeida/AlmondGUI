@@ -67,7 +67,7 @@ ofRectangle ButtonGroup::getVisibleRectForButton(ButtonData button) {
 }
 
 
-void ButtonGroup::draw( )
+void ButtonGroup::draw(  )
 {
     Element::draw( );
     
@@ -83,11 +83,6 @@ void ButtonGroup::draw( )
         visibleRect = getVisibleRectForButton(button);
         isHovered =  visibleRect.inside(ofGetMouseX(), ofGetMouseY());
         backgroundColor = Button::getBackgroundColor(isHovered, pressed);
-
-        /*
-        drawButton( , button.caption, theRect, ofColor2N Color(backgroundColor, 255), ofColor2N Color(GUIStyle::getInstance().getTextColor(), 255));
-         */
-        // todo: draw button
     }
     
     Element::finishDraw( );

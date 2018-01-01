@@ -41,7 +41,6 @@ class GUI
     
 protected:
     ofTrueTypeFont textFont;
-    ofFbo fbo;
     
     std::vector<Element*> elements; //!< a vector of elements that represent the first layer of a gui. elements can have children and that implements the next layers
     
@@ -111,11 +110,6 @@ public:
      \brief Draws a line of text centered in a given rectangle
      */
     void drawCenteredText(string caption, ofRectangle rect, Fonts font = Text);
-    
-    /*!
-     \brief Traverse all elements and updates their visible rect
-     */
-    ofFbo getFbo();
     
     /*!
      \brief Save a texture to a file

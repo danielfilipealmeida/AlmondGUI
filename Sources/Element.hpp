@@ -74,7 +74,7 @@ public:
     /*!
      ...
      */
-    virtual string getClass() { return "Element";}
+    virtual string getClass() { return "Element"; }
     
     /*!
      Checks if the mouse is hover and if the element is being pressed

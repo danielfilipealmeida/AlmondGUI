@@ -81,10 +81,10 @@ void Slider::draw( )
     
     float normalizedValue = getNormalizedValue();
     ofSetColor(backgroundColor + 50);
-    ofDrawRectangle(visibleRect.x, visibleRect.y, visibleRect.width * normalizedValue, visibleRect.height);
+    ofDrawRectangle(rect.x, rect.y, rect.width * normalizedValue, rect.height);
     
     ofSetColor(ofColor::white);
-    GUI::getInstance().drawCenteredText(caption, visibleRect);
+    GUI::getInstance().drawCenteredText(caption, rect);
     
     Element::finishDraw( );
 }

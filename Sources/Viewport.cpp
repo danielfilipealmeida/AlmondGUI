@@ -7,12 +7,11 @@
 //
 
 #include "Viewport.hpp"
-
+#include "GUI.hpp"
 
 Viewport::Viewport() {
     scrollPositionX = scrollPositionY = 0;
     style.hasBorder = true;
-    
 }
 
 Viewport::~Viewport()  {
@@ -33,6 +32,20 @@ void Viewport::set(json config) {
 
     if (totalWidth < rect.width) totalWidth = rect.width;
     if (totalHeight < rect.height) totalHeight = rect.height;
+    
+    updateFbo();
+}
+
+
+void Viewport::updateFbo()
+{
+    if (fbo.getHeight() == totalHeight && fbo.getWidth() == totalWidth) return;
+    /*
+    if (fbo.isAllocated()) {
+        fbo.destroy();
+    }
+     */
+    fbo.allocate(totalWidth, totalHeight);
 }
 
 void Viewport::update()
@@ -49,8 +62,29 @@ void Viewport::update()
 
 void Viewport::draw( )
 {
+    static Boolean saved = false;
+    
     Element::draw( );
+    
+    fbo.begin();
+    ofClear((style.hasBackground == true) ? style.backgroundColor : GUIStyle::getInstance().getDarkColor());
+    
     drawChilds();
+    
+    fbo.end();
+    update();
+
+    fbo.getTexture().drawSubsection(rect.x,
+                                    rect.y,
+                                    rect.width, rect.height,
+                                    getOffsetX(),
+                                    getOffsetY());
+    
+    if (!saved) {
+        GUI::getInstance().saveTexture("output.png", fbo.getTexture());
+        saved = true;
+    }
+    
     Element::finishDraw( );
 }
 
@@ -72,12 +106,14 @@ ofRectangle Viewport::calculateDrawingRectForElement(Element *element) {
 void Viewport::setTotalHeight(float height) {
     if (totalHeight < rect.height) return;
     totalHeight = height;
+    updateFbo();
     update();
 }
 
 void Viewport::setTotalWidth(float width)  {
     if (totalWidth < rect.width) return;
     totalWidth = width;
+    updateFbo();
     update();
 }
 
@@ -97,7 +133,7 @@ Element* Viewport::add(Element *newElement) {
     newElement->setParent(this);
     
     elementY = ((childElements.size() == 0) ? 0 : childElements.back()->getRect().y + childElements.back()->getRect().height) + GUI_BORDER;
-    width = getRect().width - (2*GUI_BORDER);
+    width = getRect().width - (2 * GUI_BORDER);
     height = newElement->getHeightForWidth(width);
     
     newElement->set({
@@ -107,8 +143,11 @@ Element* Viewport::add(Element *newElement) {
         {"height", height}
     });
 
-    float nextElementY = height + elementY;
+    float nextElementY = height + elementY + 2 * GUI_BORDER;
     if (nextElementY > totalHeight) totalHeight = nextElementY;
+    
+    updateFbo();
+    update();
     
     return newElement;
 }
