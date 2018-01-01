@@ -11,9 +11,9 @@
 
 #include <stdio.h>
 #include "ofMain.h"
-#include "nanovg.h"
 #include "json.hpp"
-
+#include "ElementStyle.hpp"
+#include "GUIStyle.hpp"
 
 //#define GUIDEBUG
 
@@ -32,7 +32,7 @@ using json = nlohmann::json;
  @abstract GUI Root class, from which all other GUI classes descends from
  @discussion Handles basic state and position/size. Possible events are: hover, pressed and entered. TODO (maybe) callbacks for those events. Element can also contain other elements.
  */
-class Element 
+class Element
 {
 protected:
     Element *parent;
@@ -40,7 +40,7 @@ protected:
     Boolean pressed;
     Boolean entered;
     Boolean exited;
-   
+    ElementStyle style;
     
 public:
     
@@ -85,12 +85,17 @@ public:
      Draws. Method to be overriden by childs.
      When overriding this method, the descendent needs always to run this because in here elements inside elements are properly handled.
      */
-    virtual void draw(NVGcontext* vg) = 0;
+    virtual void draw() = 0;
     
     /*!
      Finishes drawing the element. Important for properly drawing elements inside other elements.
      */
-    void finishDraw(NVGcontext* vg);
+    void finishDraw();
+    
+    /*!
+     Draws all the childs of the current element
+     */
+    void drawChilds();
     
     /*!
      Sets the Rectangle 
@@ -137,7 +142,7 @@ public:
     /*!
      \brief Draws a rect around the visible area of the element for debugging purposes
      */
-    void drawDebugRect(NVGcontext* vg);
+    void drawDebugRect();
     
     /*!
      Get the rectangle definition of the element

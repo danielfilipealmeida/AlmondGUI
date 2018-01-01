@@ -7,9 +7,9 @@
 //
 
 #include "Slider.hpp"
-#include "Primitives.hpp"
 #include "GUIStyle.hpp"
 #include "Viewport.hpp"
+#include "GUI.hpp"
 
 
 Slider::Slider()
@@ -68,24 +68,25 @@ float Slider::getRealValue(float normalizedValue) {
     return normalizedValue * totalAmount + minValue;
 }
 
-void Slider::draw(NVGcontext* vg)
+void Slider::draw( )
 {
     string displayedCaption = caption;
-    ofRectangle drawingRect = Element::getDrawingRec();
+    //ofRectangle drawingRect = Element::getDrawingRec();
     ofColor backgroundColor = getBackgroundColor();
-    Element::draw(vg);
+    Element::draw( );
     
     if (showValue) {
         displayedCaption.append(" | " + ofToString(value, 2));
     }
     
-    drawSlider(vg,
-               getNormalizedValue(),
-               displayedCaption,
-               drawingRect,
-               ofColor2NVGColor(backgroundColor, 255),
-               ofColor2NVGColor(GUIStyle::getInstance().getTextColor(), 255));
-    Element::finishDraw(vg);
+    float normalizedValue = getNormalizedValue();
+    ofSetColor(backgroundColor + 50);
+    ofDrawRectangle(visibleRect.x, visibleRect.y, visibleRect.width * normalizedValue, visibleRect.height);
+    
+    ofSetColor(ofColor::white);
+    GUI::getInstance().drawCenteredText(caption, visibleRect);
+    
+    Element::finishDraw( );
 }
 
 void Slider::set(json config) {

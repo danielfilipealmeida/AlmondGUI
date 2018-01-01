@@ -11,6 +11,8 @@
 
 Viewport::Viewport() {
     scrollPositionX = scrollPositionY = 0;
+    style.hasBorder = true;
+    
 }
 
 Viewport::~Viewport()  {
@@ -35,6 +37,7 @@ void Viewport::set(json config) {
 
 void Viewport::update()
 {
+    //scrollPositionY = 0.5;
     overflowX = totalWidth - rect.width;
     overflowY = totalHeight - rect.height;
     visibleRect = rect;
@@ -44,13 +47,11 @@ void Viewport::update()
     Element::update();
 }
 
-void Viewport::draw(NVGcontext* vg)
+void Viewport::draw( )
 {
-    Element::draw(vg);
-    
-    //Element::drawDebugRect(vg);
-    
-    Element::finishDraw(vg);
+    Element::draw( );
+    drawChilds();
+    Element::finishDraw( );
 }
 
 
@@ -67,6 +68,18 @@ ofRectangle Viewport::calculateDrawingRectForElement(Element *element) {
     return drawingRect;
 }
 
+
+void Viewport::setTotalHeight(float height) {
+    if (totalHeight < rect.height) return;
+    totalHeight = height;
+    update();
+}
+
+void Viewport::setTotalWidth(float width)  {
+    if (totalWidth < rect.width) return;
+    totalWidth = width;
+    update();
+}
 
 void Viewport::setScrollPositionY(float position) {
     scrollPositionY = position;
@@ -94,6 +107,9 @@ Element* Viewport::add(Element *newElement) {
         {"height", height}
     });
 
+    float nextElementY = height + elementY;
+    if (nextElementY > totalHeight) totalHeight = nextElementY;
+    
     return newElement;
 }
 
@@ -110,8 +126,8 @@ void Viewport::resize(ofRectangle newRect) {
         height = element->getHeightForWidth(width);
     
         ofRectangle newRect;
-        newRect.x =GUI_BORDER;
-        newRect.y =currentY;
+        newRect.x = GUI_BORDER;
+        newRect.y = currentY;
         newRect.width = width;
         newRect.height = height;
         element->resize(newRect);

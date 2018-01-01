@@ -35,8 +35,8 @@ void Splitter::update() {
 
 
 
-void Splitter::draw(NVGcontext* vg) {
-    Element::draw(vg);
+void Splitter::draw( ) {
+    Element::draw( );
 }
 
 

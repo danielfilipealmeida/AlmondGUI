@@ -6,7 +6,6 @@
 //
 
 #include "ToggleButton.hpp"
-#include "Primitives.hpp"
 #include "GUIStyle.hpp"
 
 void ToggleButton::update() {
@@ -39,15 +38,19 @@ ofColor ToggleButton::getBackgroundColor(Boolean isHover, Boolean isPressed, Boo
 }
 
 
-void ToggleButton::draw(NVGcontext* vg)
+void ToggleButton::draw( )
 {
     ofColor backgroundColor;
     
-    Element::draw(vg);
+    Element::draw( );
     backgroundColor = getBackgroundColor(hover, pressed, isPushed());
-    drawButton(vg, caption, getRect(), ofColor2NVGColor(backgroundColor, 255), ofColor2NVGColor(GUIStyle::getInstance().getTextColor(), 255));
     
-    Element::finishDraw(vg);
+    // todo: draw button
+    /*
+    drawButton( , caption, getRect(), ofColor2N Color(backgroundColor, 255), ofColor2N Color(GUIStyle::getInstance().getTextColor(), 255));
+     */
+    
+    Element::finishDraw( );
 }
 
 void ToggleButton::setOnClick(std::function<void(ToggleButton *toggleButton)> _onClick) {

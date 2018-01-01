@@ -6,8 +6,9 @@
 //
 
 #include "Label.hpp"
-#include "Primitives.hpp"
 #include "GUIStyle.hpp"
+#include "GUI.hpp"
+
 
 Label::Label(){
 	caption = "";
@@ -20,10 +21,13 @@ Label::~Label(){
 void Label::update(){
 }
 
-void Label::draw(NVGcontext* vg){
-    Element::draw(vg);
-    printCenteredText(vg, caption, getRect(), ofColor2NVGColor(GUIStyle::getInstance().getTextColor(), 255));
-    Element::finishDraw(vg);
+void Label::draw( ){
+    Element::draw( );
+    
+    ofSetColor(style.captionColor);
+    GUI::getInstance().drawCenteredText(caption, visibleRect);
+    
+    Element::finishDraw();
 }
 
 void Label::set(json config){

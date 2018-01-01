@@ -8,7 +8,6 @@
 #include "ButtonGroup.hpp"
 #include "GUI.hpp"
 #include "GUIStyle.hpp"
-#include "Primitives.hpp"
 
 
 ButtonGroup::ButtonGroup()
@@ -68,9 +67,9 @@ ofRectangle ButtonGroup::getVisibleRectForButton(ButtonData button) {
 }
 
 
-void ButtonGroup::draw(NVGcontext* vg)
+void ButtonGroup::draw( )
 {
-    Element::draw(vg);
+    Element::draw( );
     
     for (auto button:buttons) {
         ofRectangle theRect, visibleRect;
@@ -84,10 +83,14 @@ void ButtonGroup::draw(NVGcontext* vg)
         visibleRect = getVisibleRectForButton(button);
         isHovered =  visibleRect.inside(ofGetMouseX(), ofGetMouseY());
         backgroundColor = Button::getBackgroundColor(isHovered, pressed);
-        drawButton(vg, button.caption, theRect, ofColor2NVGColor(backgroundColor, 255), ofColor2NVGColor(GUIStyle::getInstance().getTextColor(), 255));
+
+        /*
+        drawButton( , button.caption, theRect, ofColor2N Color(backgroundColor, 255), ofColor2N Color(GUIStyle::getInstance().getTextColor(), 255));
+         */
+        // todo: draw button
     }
     
-    Element::finishDraw(vg);
+    Element::finishDraw( );
 }
 
 void ButtonGroup::set(json config)

@@ -7,13 +7,16 @@
 //
 
 #include "Button.hpp"
-#include "Primitives.hpp"
 #include "GUIStyle.hpp"
+#include "GUI.hpp"
 
 Button::Button() 
 {
     pushed = false;
     caption = "";
+    style.hasBorder = true;
+    style.hasBackground = true;
+
 }
 
 
@@ -46,18 +49,15 @@ ofColor Button::getBackgroundColor(Boolean isHover, Boolean isPressed) {
 }
 
 
-void Button::draw(NVGcontext* vg)
+void Button::draw( )
 {
-    ofColor backgroundColor;
-    ofRectangle theRect;
-    
-    Element::draw(vg);
-    
-    backgroundColor = getBackgroundColor(hover, pressed);
-    theRect = getRect();
-    drawButton(vg, caption, theRect, ofColor2NVGColor(backgroundColor, 255), ofColor2NVGColor(GUIStyle::getInstance().getTextColor(), 255));
+    style.backgroundColor = getBackgroundColor(hover, pressed);
+    Element::draw( );
 
-    Element::finishDraw(vg);
+    ofSetColor(style.captionColor);
+    GUI::getInstance().drawCenteredText(caption, visibleRect);
+    
+    Element::finishDraw( );
 }
 
 

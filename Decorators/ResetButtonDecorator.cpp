@@ -7,14 +7,13 @@
 
 #include "ResetButtonDecorator.hpp"
 #include "GUIStyle.hpp"
-#include "Primitives.hpp"
 #include "Slider.hpp"
 
-void ResetButtonDecorator::draw(NVGcontext* vg) {
+void ResetButtonDecorator::draw( ) {
     ofRectangle theRect;
     ofColor backgroundColor;
     
-    Decorator::draw(vg);
+    Decorator::draw( );
     
     theRect = resetButton.rect;
     if (parent != NULL) {
@@ -22,9 +21,13 @@ void ResetButtonDecorator::draw(NVGcontext* vg) {
         theRect.y = theRect.y + parent->rect.y;
     }
     backgroundColor = Button::getBackgroundColor(resetButton.hover, resetButton.pushed);
-    drawButton(vg, resetButton.caption, theRect,
-               ofColor2NVGColor(backgroundColor, 255),
-               ofColor2NVGColor(GUIStyle::getInstance().getTextColor(), 255));
+    /*
+    drawButton( , resetButton.caption, theRect,
+               ofColor2N Color(backgroundColor, 255),
+               ofColor2N Color(GUIStyle::getInstance().getTextColor(), 255));
+     */
+    
+    // todo: draw a button here
 }
 
 void ResetButtonDecorator::set(json config) {

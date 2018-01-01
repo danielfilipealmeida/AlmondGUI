@@ -7,17 +7,25 @@
 
 #include "SliderDecorator.hpp"
 #include "GUIStyle.hpp"
-#include "Primitives.hpp"
 #include "Slider.hpp"
 #include "Viewport.hpp"
+#include "GUI.hpp"
 
-void SliderDecorator::draw(NVGcontext* vg)
+void SliderDecorator::draw( )
 {
     ofColor backgroundColor = Button::getBackgroundColor(slider.hover, slider.pushed);
-    Decorator::draw(vg);
-    Element::draw(vg);
-    drawSlider(vg, slider.value, "", slider.rect, ofColor2NVGColor(backgroundColor, 255), ofColor2NVGColor(GUIStyle::getInstance().getTextColor()), true);
-    Element::finishDraw(vg);
+    Decorator::draw();
+    Element::draw();
+    
+    // todo: move the following code somewhere to have a slider reusable
+    ofSetColor(backgroundColor + 40);
+    ofFill();
+    ofDrawRectangle(slider.rect.x, slider.rect.y, slider.rect.width , slider.rect.height *  slider.value);
+    ofNoFill();
+    ofSetColor(ofColor::black);
+    ofDrawRectangle(slider.rect);
+    
+    Element::finishDraw( );
 }
 
 /* TODO: this needs to be remake and cleaned up */
@@ -31,6 +39,9 @@ void SliderDecorator::set(json config)
                                     config["height"].get<float>());
     setSlider(_rect);
     config["width"] = config["width"].get<float>() - slider.rect.width;
+    config["x"] = 0;
+    config["y"] = 0;
+    
     getElement()->set(config);
 }
 
@@ -48,7 +59,7 @@ void SliderDecorator::update()
 {
     Decorator::update();
     
-    Boolean previousPressed = slider.pressed;
+    //Boolean previousPressed = slider.pressed;
     Boolean previousHover = slider.hover;
     ofRectangle visibleRect;
     
@@ -65,7 +76,9 @@ void SliderDecorator::update()
         
         if (slider.pushed) {
             slider.value = (ofGetMouseY() - visibleRect.y) / (rect.height);
-            ((Viewport *) Decorator::getElement())->setScrollPositionY(slider.value);
+            Viewport *viewport= ((Viewport *) Decorator::getElement());
+            viewport->setScrollPositionY(slider.value);
+            viewport->update();
         }
         
     }

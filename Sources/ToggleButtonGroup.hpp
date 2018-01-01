@@ -29,7 +29,7 @@ class ToggleButtonGroup : public ButtonGroup
     /*!
      ...
      */
-    void draw(NVGcontext* vg);
+    void draw( );
     
     /*!
      ...

@@ -26,7 +26,10 @@
 #include "ResetButtonDecorator.hpp"
 #include "SliderDecorator.hpp"
 
-
+typedef enum  {
+    Text = 0,
+    Title
+} Fonts;
 
 /**
  * \brief Defines a GUI tree
@@ -37,11 +40,9 @@ class GUI
 {
     
 protected:
-    int fontNormal; //!< the normal font id
-    int fontBold;   //!< the bold font id
-    int fontIcons;  //!< the font icons id
-    int fontEmoji;  //!< the emoji font id
-
+    ofTrueTypeFont textFont;
+    ofFbo fbo;
+    
     std::vector<Element*> elements; //!< a vector of elements that represent the first layer of a gui. elements can have children and that implements the next layers
     
     GUI();  //!< Protected constructor
@@ -66,6 +67,11 @@ public:
      \brief Load all needed fonts
      */
     void loadFonts();
+    
+    /*!
+     \brief Returns a configured font
+     */
+    ofTrueTypeFont getFont(Fonts font);
     
     /*!
      \brief Adds an element to the elements list
@@ -95,6 +101,28 @@ public:
      \brief Apply a lambda to filter from all elements of the GUI
      */
     std::vector<Element*> filter(std::function<bool (Element *)> lambda);
+    
+    /*!
+     \brief Traverse all elements and updates their visible rect
+     */
+    void updateVisibleRects();
+    
+    /*!
+     \brief Draws a line of text centered in a given rectangle
+     */
+    void drawCenteredText(string caption, ofRectangle rect, Fonts font = Text);
+    
+    /*!
+     \brief Traverse all elements and updates their visible rect
+     */
+    ofFbo getFbo();
+    
+    /*!
+     \brief Save a texture to a file
+     
+     
+     */
+    void saveTexture(string file, ofTexture texture);
 };
 
 #endif /* GUI_hpp */

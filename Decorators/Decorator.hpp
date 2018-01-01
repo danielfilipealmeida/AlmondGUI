@@ -29,7 +29,7 @@ public:
     /*!
      \brief Draws the decorator
      */
-    void draw(NVGcontext* vg);
+    void draw( );
     
     /*!
      \brief Sets the decorator

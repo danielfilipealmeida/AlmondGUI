@@ -35,8 +35,13 @@ void Element::update()
     Boolean previousHover = hover;
     hover = FALSE;
     visibleRect = calculateVisibleRect();
+    ofRectangle croppedVisibleRect = visibleRect;
+    if (parent != NULL) {
+        croppedVisibleRect = croppedVisibleRect.getIntersection(parent->visibleRect);
+    }
+     
     
-    if (!visibleRect.inside(ofGetMouseX(), ofGetMouseY())) {
+    if (!croppedVisibleRect.inside(ofGetMouseX(), ofGetMouseY())) {
         hover = FALSE;
         pressed = FALSE;
     }
@@ -53,26 +58,71 @@ void Element::update()
     }
 }
 
-void Element::draw(NVGcontext* vg) {
-    if (rect==visibleRect || parent == NULL) return;
-
-    nvgEndFrame(vg);
-    ofRectangle parentRect = parent->rect;
-    ofViewport(parentRect.x,parentRect.y, parentRect.width, parentRect.height, true);
-    nvgBeginFrame(vg, parentRect.width, parentRect.height, 1);
+void Element::draw( ) {
+    if (parent != NULL) {
+        //ofViewport(parent->getRect());
+    }
+    
+    if (style.hasBackground) {
+        ofFill();
+        ofSetColor(style.backgroundColor);
+        ofDrawRectangle(visibleRect);
+    }
+    
+    //if (rect==visibleRect || parent == NULL) return;
 }
 
-void Element::finishDraw(NVGcontext* vg) {
+void Element::finishDraw( ) {
 #ifdef GUIDEBUG
-    drawDebugRect(vg);
+    drawDebugRect();
 #endif
     
-    if (rect==visibleRect) return;
+    // draws the childs
+    //drawChilds();
     
-    nvgEndFrame(vg);
-    ofViewport(0, 0, ofGetWidth(), ofGetHeight(), true);
-    nvgBeginFrame(vg, ofGetWidth(), ofGetHeight(), 1);
+    if (style.hasBorder) {
+        ofNoFill();
+        ofSetColor(style.borderColor);
+        ofDrawRectangle(visibleRect);
+    }
     
+    //if (rect==visibleRect) return;
+    if (parent != NULL) {
+        //ofViewport(0,0,ofGetWidth(), ofGetHeight());
+    }
+}
+
+void Element::drawChilds( ) {
+    ofFbo fbo = GUI::getInstance().getFbo();
+    static Boolean saved = false;
+    
+    fbo.begin();
+    ofClear((style.hasBackground == true) ? style.backgroundColor : GUIStyle::getInstance().getDarkColor());
+
+    GUI::getInstance().forEach([this](Element *element) {
+        if (element->parent != this) return;
+        element->draw();
+    });
+    
+    fbo.end();
+    
+    float x = visibleRect.x;
+    float y = visibleRect.y;
+    
+    if (getClass().compare("Viewport") == 0) {
+        Viewport *viewport = (Viewport *) this;
+        viewport->update();
+        x = x + viewport->getOffsetX();
+        y = y + viewport->getOffsetY();
+    }
+    
+    
+    fbo.getTexture().drawSubsection(visibleRect.x, visibleRect.y, visibleRect.width, visibleRect.height, x, y);
+    
+    if (!saved) {
+        GUI::getInstance().saveTexture("output.png", fbo.getTexture());
+        saved = true;
+    }
 }
 
 
@@ -87,14 +137,17 @@ ofRectangle Element::getDrawingRec() {
 }
 
 
-
-void Element::drawDebugRect(NVGcontext* vg) {
-    nvgBeginPath(vg);
-    nvgFillColor(vg, nvgRGB(0,0,0));
-    nvgRect(vg, rect.getX(), rect.getY(), rect.getWidth(), rect.getHeight());
-    nvgStroke(vg);
-
+// todo: convert this to of
+void Element::drawDebugRect( ) {
+    /*
+    n BeginPath( );
+    n FillColor( , n RGB(0,0,0));
+    n Rect( , rect.getX(), rect.getY(), rect.getWidth(), rect.getHeight());
+    n Stroke( );
+     */
 }
+
+
 
 
 void Element::set(json config) {
@@ -143,13 +196,6 @@ ofRectangle Element::calculateVisibleRect() {
     visibleRect.y = parentRect.y + rect.y;
     visibleRect.width = rect.width;
     visibleRect.height = rect.height;
-    
-    if (parent->getClass().compare("Viewport") == 0) {
-        visibleRect.x = visibleRect.x - ((Viewport *) parent)->getOffsetX();
-        visibleRect.y = visibleRect.y - ((Viewport *) parent)->getOffsetY();
-    }
-    
-    visibleRect = visibleRect.getIntersection(parentRect);
 
     return visibleRect;
 }

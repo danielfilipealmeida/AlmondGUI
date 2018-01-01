@@ -51,7 +51,7 @@ public:
     /*!
      ...
      */
-    virtual void draw(NVGcontext* vg);
+    virtual void draw( );
     
     /*!
      ...

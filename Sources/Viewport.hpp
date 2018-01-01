@@ -51,7 +51,7 @@ public:
     /*!
      ...
      */
-    virtual void draw(NVGcontext* vg);
+    virtual void draw( );
     
     /*!
      ...
@@ -64,22 +64,36 @@ public:
     ofRectangle calculateDrawingRectForElement(Element *element);
     
     /*!
-     \brief
+     \brief Manually sets the total height of available space on the viewport.
+     
+     This shouldn't be used directly and this setter only exists for helping out development
      */
-    void setScrollPositionY(float position);
+    void setTotalHeight(float height);
     
     /*!
-     \brief ...
+     \brief Manually sets the total width of available space on the viewport.
+     
+     This shouldn't be used directly and this setter only exists for helping out development
+     */
+    void setTotalWidth(float width);
+    
+    /*!
+     \brief sets the percentage of scroll in the X axis. from 0 to 1
      */
     void setScrollPositionX(float position);
     
     /*!
-     \brief
+     \brief sets the percentage of scroll in the Y axis. from 0 to 1
+     */
+    void setScrollPositionY(float position);
+    
+    /*!
+     \brief returns the percentage of scroll in the Y axis. from 0 to 1
      */
     float getScrollPositionY();
 
     /*!
-     \brief
+     \brief returns the percentage of scroll in the X axis. from 0 to 1
      */
     float getScrollPositionX();
     

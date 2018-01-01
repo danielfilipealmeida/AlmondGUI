@@ -24,7 +24,7 @@ public:
     /*!
      ...
      */
-    void draw(NVGcontext* vg);
+    void draw( );
     
     /*!
      ...

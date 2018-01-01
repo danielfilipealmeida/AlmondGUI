@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "Element.hpp"
 
+
 /*!
  \brief a structure so store data that can be used to define a button when a button class isn't needed
  */
@@ -57,7 +58,7 @@ public:
     /*!
      ...
      */
-    virtual void draw(NVGcontext* vg);
+    virtual void draw( );
     
     /*!
      ...

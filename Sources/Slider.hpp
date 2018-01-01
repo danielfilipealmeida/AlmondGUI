@@ -56,7 +56,7 @@ public:
     /*!
      ...
      */
-    void draw(NVGcontext* vg);
+    void draw( );
     
     /*!
      Calculate the background color according to the slider state

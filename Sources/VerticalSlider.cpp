@@ -7,7 +7,6 @@
 //
 
 #include "VerticalSlider.hpp"
-#include "Primitives.hpp"
 #include "GUIStyle.hpp"
 
 VerticalSlider::VerticalSlider() {
@@ -46,11 +45,14 @@ void VerticalSlider::update() {
 }
 
 
-void VerticalSlider::draw(NVGcontext* vg) {
+void VerticalSlider::draw( ) {
     ofColor backgroundColor = getBackgroundColor();
-    Element::draw(vg);
-    drawSlider(vg, value, caption, rect, ofColor2NVGColor(backgroundColor, 255), ofColor2NVGColor(GUIStyle::getInstance().getTextColor(), 255), true);
-    Element::finishDraw(vg);
+    Element::draw( );
+    /*
+    drawSlider( , value, caption, rect, ofColor2N Color(backgroundColor, 255), ofColor2N Color(GUIStyle::getInstance().getTextColor(), 255), true);
+    */
+    // todo: draw a slider here
+     Element::finishDraw( );
 }
 
 void VerticalSlider::set(json config) {

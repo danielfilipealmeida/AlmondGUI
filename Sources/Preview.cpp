@@ -7,7 +7,6 @@
 
 #include "Preview.hpp"
 #include "GUIStyle.hpp"
-#include "Primitives.hpp"
 
 Preview::Preview() {
     fbo = NULL;
@@ -36,8 +35,8 @@ void Preview::update() {
 
 
 
-void Preview::draw(NVGcontext* vg) {
-    //Element::draw(vg);
+void Preview::draw( ) {
+    //Element::draw( );
     if (fbo == NULL) return;
     
     ofRectangle drawingRect = Element::getDrawingRec();
@@ -50,11 +49,13 @@ void Preview::draw(NVGcontext* vg) {
     fbo->draw(fboRect);
     
     
-    Element::draw(vg);
-    nvgBeginPath(vg);
-    nvgRect(vg, drawingRect.x, drawingRect.y, drawingRect.width, drawingRect.height);
-    nvgStrokeColor(vg, ofColor2NVGColor(ofColor::black, 255));
-    nvgStroke(vg);
+    Element::draw( );
+    /*
+    n BeginPath( );
+    n Rect( , drawingRect.x, drawingRect.y, drawingRect.width, drawingRect.height);
+    n StrokeColor( , ofColor2N Color(ofColor::black, 255));
+    n Stroke( );
+     */
     
     if (!caption.empty()) {
         ofRectangle captionRect;
@@ -62,10 +63,13 @@ void Preview::draw(NVGcontext* vg) {
         captionRect.y = drawingRect.y + 2;
         captionRect.width = 72;
         captionRect.height = 20;
-        drawFilledRect(vg, captionRect, ofColor2NVGColor(ofColor::black));
-        printCenteredText(vg, caption, captionRect, ofColor2NVGColor(ofColor::white));
+        /*
+        drawFilledRect( , captionRect, ofColor2N Color(ofColor::black));
+        printCenteredText( , caption, captionRect, ofColor2N Color(ofColor::white));
+         */
+        // todo: draw caption
     }
-    Element::finishDraw(vg);
+    Element::finishDraw( );
 }
 
 

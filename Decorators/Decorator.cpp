@@ -11,12 +11,15 @@
 Decorator::Decorator(Element *_el)
 {
     element = _el;
+    
+    // todo: check if this is doable
+    element->setParent(this);
 }
 
 
-void Decorator::draw(NVGcontext* vg)
+void Decorator::draw()
 {
-    element->draw(vg);
+    element->draw( );
 }
 
 void Decorator::set(json config) {

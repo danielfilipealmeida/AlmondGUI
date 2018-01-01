@@ -25,11 +25,9 @@
 		0C03708E1FF849C9005744F2 /* ofxSyphonClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81361DF8D94600331165 /* ofxSyphonClient.mm */; };
 		0C03708F1FF849C9005744F2 /* ofxSyphonServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81381DF8D94600331165 /* ofxSyphonServer.mm */; };
 		0C0370901FF849C9005744F2 /* RtMidi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65C1EB171E6E1D16003F731D /* RtMidi.cpp */; };
-		0C0370911FF849C9005744F2 /* nanovg.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B96B11FBD953500611AAF /* nanovg.c */; };
 		0C0370921FF849C9005744F2 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81451DF8D96500331165 /* NetworkingUtils.cpp */; };
 		0C0370931FF849C9005744F2 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC819A1DF8D9D600331165 /* ofxXmlSettings.cpp */; };
 		0C0370941FF849C9005744F2 /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEC1FBCFA3100D9016F /* GUI.cpp */; };
-		0C0370951FF849C9005744F2 /* Primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD81FBCFA2F00D9016F /* Primitives.cpp */; };
 		0C0370961FF849C9005744F2 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
 		0C0370971FF849C9005744F2 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81461DF8D96500331165 /* UdpSocket.cpp */; };
 		0C0370991FF849C9005744F2 /* ofxBaseMidi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81871DF8D9CA00331165 /* ofxBaseMidi.cpp */; };
@@ -53,11 +51,6 @@
 		0C0370AD1FF849C9005744F2 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BC812F1DF8D94600331165 /* Syphon.framework */; };
 		0C0370AF1FF849C9005744F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8967B1E73311F000D470B /* Foundation.framework */; };
 		0C0370B01FF849C9005744F2 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655BFAF81E7355BD00B74446 /* CoreMIDI.framework */; };
-		0C0370B31FF849C9005744F2 /* entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650415561F65DE47001D7832 /* entypo.ttf */; };
-		0C0370B41FF849C9005744F2 /* NotoEmoji-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650415571F65DE47001D7832 /* NotoEmoji-Regular.ttf */; };
-		0C0370B51FF849C9005744F2 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650415581F65DE47001D7832 /* Roboto-Bold.ttf */; };
-		0C0370B61FF849C9005744F2 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650415591F65DE47001D7832 /* Roboto-Light.ttf */; };
-		0C0370B71FF849C9005744F2 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6504155A1F65DE47001D7832 /* Roboto-Regular.ttf */; };
 		0C0370C11FF849FF005744F2 /* Viewport-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C0370BD1FF849FF005744F2 /* Viewport-Info.plist */; };
 		0C0370C21FF849FF005744F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0370BE1FF849FF005744F2 /* ofApp.cpp */; };
 		0C0370C31FF849FF005744F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0370C01FF849FF005744F2 /* main.cpp */; };
@@ -69,7 +62,6 @@
 		0C0370D81FF853E1005744F2 /* GUIStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEA1FBCFA3100D9016F /* GUIStyle.cpp */; };
 		0C0370D91FF853E1005744F2 /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE51FBCFA3000D9016F /* Label.cpp */; };
 		0C0370DA1FF853E1005744F2 /* Preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE61FBCFA3000D9016F /* Preview.cpp */; };
-		0C0370DB1FF853E1005744F2 /* Primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD81FBCFA2F00D9016F /* Primitives.cpp */; };
 		0C0370DC1FF853E1005744F2 /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
 		0C0370DD1FF853E1005744F2 /* Slider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDF1FBCFA3000D9016F /* Slider.cpp */; };
 		0C0370DE1FF853E1005744F2 /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
@@ -85,14 +77,25 @@
 		0C0370EA1FF85CC0005744F2 /* libfmodex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1150EF1F9F67C70004CBD5 /* libfmodex.dylib */; };
 		0C0370EC1FF85FD3005744F2 /* libfmodex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1150EF1F9F67C70004CBD5 /* libfmodex.dylib */; };
 		0C08AF051F915E1200CE531F /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C08AEE41F915A3900CE531F /* openFrameworksDebug.a */; };
+		0C0CA2901FF92EA700C4C463 /* ElementStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0CA28E1FF92EA700C4C463 /* ElementStyle.cpp */; };
+		0C0CA2911FF92EA700C4C463 /* ElementStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0CA28E1FF92EA700C4C463 /* ElementStyle.cpp */; };
+		0C0CA2921FF92EA700C4C463 /* ElementStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0CA28E1FF92EA700C4C463 /* ElementStyle.cpp */; };
+		0C0CA2931FF92EA700C4C463 /* ElementStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0CA28E1FF92EA700C4C463 /* ElementStyle.cpp */; };
+		0C0CA2941FF92EA700C4C463 /* ElementStyle.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0C0CA28F1FF92EA700C4C463 /* ElementStyle.hpp */; };
+		0C0CA29C1FF9781A00C4C463 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0CA2981FF9781A00C4C463 /* OpenSans-Regular.ttf */; };
+		0C0CA29D1FF9781A00C4C463 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0CA2981FF9781A00C4C463 /* OpenSans-Regular.ttf */; };
+		0C0CA29E1FF9781A00C4C463 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0CA2991FF9781A00C4C463 /* OpenSans-Italic.ttf */; };
+		0C0CA29F1FF9781A00C4C463 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0CA2991FF9781A00C4C463 /* OpenSans-Italic.ttf */; };
+		0C0CA2A01FF9781A00C4C463 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0CA29A1FF9781A00C4C463 /* OpenSans-Light.ttf */; };
+		0C0CA2A11FF9781A00C4C463 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0CA29A1FF9781A00C4C463 /* OpenSans-Light.ttf */; };
+		0C0CA2A21FF9781A00C4C463 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0CA29B1FF9781A00C4C463 /* OpenSans-Bold.ttf */; };
+		0C0CA2A31FF9781A00C4C463 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0CA29B1FF9781A00C4C463 /* OpenSans-Bold.ttf */; };
 		0C1150F01F9F67C70004CBD5 /* libfmodex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1150EF1F9F67C70004CBD5 /* libfmodex.dylib */; };
 		0C1150F11F9F67C70004CBD5 /* libfmodex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1150EF1F9F67C70004CBD5 /* libfmodex.dylib */; };
 		0C1150F21F9F680E0004CBD5 /* libfmodex.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = 0C1150EF1F9F67C70004CBD5 /* libfmodex.dylib */; };
 		0C1E77D21F8D8690005507CF /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81321DF8D94600331165 /* SyphonNameboundClient.m */; };
 		0C392FF61FBCFA3200D9016F /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
 		0C392FF71FBCFA3200D9016F /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
-		0C392FF81FBCFA3200D9016F /* Primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD81FBCFA2F00D9016F /* Primitives.cpp */; };
-		0C392FF91FBCFA3200D9016F /* Primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD81FBCFA2F00D9016F /* Primitives.cpp */; };
 		0C392FFA1FBCFA3200D9016F /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDA1FBCFA2F00D9016F /* Element.cpp */; };
 		0C392FFB1FBCFA3200D9016F /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDA1FBCFA2F00D9016F /* Element.cpp */; };
 		0C392FFC1FBCFA3200D9016F /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDD1FBCFA3000D9016F /* Viewport.cpp */; };
@@ -126,18 +129,11 @@
 		0C39301F1FBCFAE500D9016F /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C39301D1FBCFAE500D9016F /* ofApp.cpp */; };
 		0C3930201FBCFAE500D9016F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C39301E1FBCFAE500D9016F /* main.cpp */; };
 		0C3930221FBCFB4500D9016F /* HelloWorld-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C3930211FBCFB4500D9016F /* HelloWorld-Info.plist */; };
-		0C4B96B31FBD953500611AAF /* nanovg.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B96B11FBD953500611AAF /* nanovg.c */; };
-		0C4B96B41FBD953500611AAF /* nanovg.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B96B11FBD953500611AAF /* nanovg.c */; };
 		0C71E9F61FF828880045EA4D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F01FF828880045EA4D /* main.cpp */; };
 		0C71E9F71FF828880045EA4D /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F11FF828880045EA4D /* Splitter.cpp */; };
 		0C71E9F81FF828880045EA4D /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F21FF828880045EA4D /* Viewport.cpp */; };
 		0C71E9FA1FF828880045EA4D /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F41FF828880045EA4D /* VerticalSlider.cpp */; };
 		0C71E9FB1FF828880045EA4D /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F51FF828880045EA4D /* Button.cpp */; };
-		6504155B1F65DE47001D7832 /* entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650415561F65DE47001D7832 /* entypo.ttf */; };
-		6504155C1F65DE47001D7832 /* NotoEmoji-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650415571F65DE47001D7832 /* NotoEmoji-Regular.ttf */; };
-		6504155D1F65DE47001D7832 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650415581F65DE47001D7832 /* Roboto-Bold.ttf */; };
-		6504155E1F65DE47001D7832 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 650415591F65DE47001D7832 /* Roboto-Light.ttf */; };
-		6504155F1F65DE47001D7832 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6504155A1F65DE47001D7832 /* Roboto-Regular.ttf */; };
 		6504556E1F470EA300CB3BE5 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655BFAF81E7355BD00B74446 /* CoreMIDI.framework */; };
 		6504556F1F470EAC00CB3BE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8967B1E73311F000D470B /* Foundation.framework */; };
 		650455711F470ED000CB3BE5 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BC812F1DF8D94600331165 /* Syphon.framework */; };
@@ -237,6 +233,12 @@
 		0C0370C01FF849FF005744F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = examples/Viewport/main.cpp; sourceTree = SOURCE_ROOT; };
 		0C0370C81FF85376005744F2 /* libAlmond.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAlmond.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C03769B1F968FCC0079E842 /* makedocs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = makedocs.sh; sourceTree = "<group>"; };
+		0C0CA28E1FF92EA700C4C463 /* ElementStyle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ElementStyle.cpp; sourceTree = "<group>"; };
+		0C0CA28F1FF92EA700C4C463 /* ElementStyle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ElementStyle.hpp; sourceTree = "<group>"; };
+		0C0CA2981FF9781A00C4C463 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "Resources/Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		0C0CA2991FF9781A00C4C463 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "Resources/Fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		0C0CA29A1FF9781A00C4C463 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Resources/Fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		0C0CA29B1FF9781A00C4C463 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "Resources/Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		0C0CB3871F957763004BD8FE /* doxygenconf */ = {isa = PBXFileReference; lastKnownFileType = text; path = doxygenconf; sourceTree = "<group>"; };
 		0C1150EF1F9F67C70004CBD5 /* libfmodex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmodex.dylib; path = ../ArbutusEngine/External/openFrameworks/libs/fmodex/lib/osx/libfmodex.dylib; sourceTree = "<group>"; };
 		0C1E77E51F8E5320005507CF /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../ArbutusEngine/External/openFrameworks/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -244,8 +246,6 @@
 		0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SliderDecorator.cpp; sourceTree = "<group>"; };
 		0C392FD61FBCFA2F00D9016F /* GUIStyle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GUIStyle.hpp; sourceTree = "<group>"; };
 		0C392FD71FBCFA2F00D9016F /* Button.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Button.hpp; sourceTree = "<group>"; };
-		0C392FD81FBCFA2F00D9016F /* Primitives.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Primitives.cpp; sourceTree = "<group>"; };
-		0C392FD91FBCFA2F00D9016F /* Primitives.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Primitives.hpp; sourceTree = "<group>"; };
 		0C392FDA1FBCFA2F00D9016F /* Element.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Element.cpp; sourceTree = "<group>"; };
 		0C392FDB1FBCFA2F00D9016F /* Splitter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Splitter.hpp; sourceTree = "<group>"; };
 		0C392FDC1FBCFA2F00D9016F /* ToggleButtonGroup.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ToggleButtonGroup.hpp; sourceTree = "<group>"; };
@@ -278,24 +278,12 @@
 		0C39301D1FBCFAE500D9016F /* ofApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofApp.cpp; path = examples/HelloWorld/ofApp.cpp; sourceTree = SOURCE_ROOT; };
 		0C39301E1FBCFAE500D9016F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = examples/HelloWorld/main.cpp; sourceTree = SOURCE_ROOT; };
 		0C3930211FBCFB4500D9016F /* HelloWorld-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "HelloWorld-Info.plist"; path = "examples/HelloWorld/HelloWorld-Info.plist"; sourceTree = SOURCE_ROOT; };
-		0C4B96AB1FBD953500611AAF /* stb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stb_truetype.h; path = External/nanovg/src/stb_truetype.h; sourceTree = SOURCE_ROOT; };
-		0C4B96AD1FBD953500611AAF /* nanovg_gl_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nanovg_gl_utils.h; path = External/nanovg/src/nanovg_gl_utils.h; sourceTree = SOURCE_ROOT; };
-		0C4B96AE1FBD953500611AAF /* nanovg_gl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nanovg_gl.h; path = External/nanovg/src/nanovg_gl.h; sourceTree = SOURCE_ROOT; };
-		0C4B96AF1FBD953500611AAF /* fontstash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fontstash.h; path = External/nanovg/src/fontstash.h; sourceTree = SOURCE_ROOT; };
-		0C4B96B01FBD953500611AAF /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stb_image.h; path = External/nanovg/src/stb_image.h; sourceTree = SOURCE_ROOT; };
-		0C4B96B11FBD953500611AAF /* nanovg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = nanovg.c; path = External/nanovg/src/nanovg.c; sourceTree = SOURCE_ROOT; };
-		0C4B96B21FBD953500611AAF /* nanovg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = nanovg.h; path = External/nanovg/src/nanovg.h; sourceTree = SOURCE_ROOT; };
 		0C71E9F01FF828880045EA4D /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = tests/main.cpp; sourceTree = SOURCE_ROOT; };
 		0C71E9F11FF828880045EA4D /* Splitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Splitter.cpp; path = tests/Splitter.cpp; sourceTree = SOURCE_ROOT; };
 		0C71E9F21FF828880045EA4D /* Viewport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Viewport.cpp; path = tests/Viewport.cpp; sourceTree = SOURCE_ROOT; };
 		0C71E9F31FF828880045EA4D /* Element.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Element.cpp; path = tests/Element.cpp; sourceTree = SOURCE_ROOT; };
 		0C71E9F41FF828880045EA4D /* VerticalSlider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VerticalSlider.cpp; path = tests/VerticalSlider.cpp; sourceTree = SOURCE_ROOT; };
 		0C71E9F51FF828880045EA4D /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = tests/Button.cpp; sourceTree = SOURCE_ROOT; };
-		650415561F65DE47001D7832 /* entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = entypo.ttf; path = Resources/Fonts/entypo.ttf; sourceTree = "<group>"; };
-		650415571F65DE47001D7832 /* NotoEmoji-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoEmoji-Regular.ttf"; path = "Resources/Fonts/NotoEmoji-Regular.ttf"; sourceTree = "<group>"; };
-		650415581F65DE47001D7832 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "Resources/Fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		650415591F65DE47001D7832 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "Resources/Fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
-		6504155A1F65DE47001D7832 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "Resources/Fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		650455591F47085D00CB3BE5 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6504CA6B1ECE4DCC00355E4A /* Loop001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Loop001.mp4; sourceTree = "<group>"; };
 		655BFAF81E7355BD00B74446 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
@@ -475,23 +463,8 @@
 		0C392FD21FBCF9CE00D9016F /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				0C392FD31FBCF9D700D9016F /* nanovg */,
 			);
 			path = libs;
-			sourceTree = "<group>";
-		};
-		0C392FD31FBCF9D700D9016F /* nanovg */ = {
-			isa = PBXGroup;
-			children = (
-				0C4B96AF1FBD953500611AAF /* fontstash.h */,
-				0C4B96AD1FBD953500611AAF /* nanovg_gl_utils.h */,
-				0C4B96AE1FBD953500611AAF /* nanovg_gl.h */,
-				0C4B96B11FBD953500611AAF /* nanovg.c */,
-				0C4B96B21FBD953500611AAF /* nanovg.h */,
-				0C4B96B01FBD953500611AAF /* stb_image.h */,
-				0C4B96AB1FBD953500611AAF /* stb_truetype.h */,
-			);
-			path = nanovg;
 			sourceTree = "<group>";
 		};
 		0C39301A1FBCFAC600D9016F /* Examples */ = {
@@ -540,11 +513,10 @@
 		650415611F65DE58001D7832 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				650415561F65DE47001D7832 /* entypo.ttf */,
-				650415571F65DE47001D7832 /* NotoEmoji-Regular.ttf */,
-				650415581F65DE47001D7832 /* Roboto-Bold.ttf */,
-				650415591F65DE47001D7832 /* Roboto-Light.ttf */,
-				6504155A1F65DE47001D7832 /* Roboto-Regular.ttf */,
+				0C0CA29B1FF9781A00C4C463 /* OpenSans-Bold.ttf */,
+				0C0CA2991FF9781A00C4C463 /* OpenSans-Italic.ttf */,
+				0C0CA29A1FF9781A00C4C463 /* OpenSans-Light.ttf */,
+				0C0CA2981FF9781A00C4C463 /* OpenSans-Regular.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -891,22 +863,22 @@
 			isa = PBXGroup;
 			children = (
 				0C0370ED1FF8602E005744F2 /* Decorators */,
-				0C392FF01FBCFA3200D9016F /* Button.cpp */,
-				0C392FD71FBCFA2F00D9016F /* Button.hpp */,
-				0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */,
-				0C392FF41FBCFA3200D9016F /* ButtonGroup.hpp */,
-				0C392FDA1FBCFA2F00D9016F /* Element.cpp */,
-				0C392FE31FBCFA3000D9016F /* Element.hpp */,
 				0C392FEC1FBCFA3100D9016F /* GUI.cpp */,
 				0C392FD41FBCFA2F00D9016F /* GUI.hpp */,
 				0C392FEA1FBCFA3100D9016F /* GUIStyle.cpp */,
 				0C392FD61FBCFA2F00D9016F /* GUIStyle.hpp */,
+				0C0CA28E1FF92EA700C4C463 /* ElementStyle.cpp */,
+				0C0CA28F1FF92EA700C4C463 /* ElementStyle.hpp */,
+				0C392FDA1FBCFA2F00D9016F /* Element.cpp */,
+				0C392FE31FBCFA3000D9016F /* Element.hpp */,
+				0C392FF01FBCFA3200D9016F /* Button.cpp */,
+				0C392FD71FBCFA2F00D9016F /* Button.hpp */,
+				0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */,
+				0C392FF41FBCFA3200D9016F /* ButtonGroup.hpp */,
 				0C392FE51FBCFA3000D9016F /* Label.cpp */,
 				0C392FE21FBCFA3000D9016F /* Label.hpp */,
 				0C392FE61FBCFA3000D9016F /* Preview.cpp */,
 				0C392FE71FBCFA3000D9016F /* Preview.hpp */,
-				0C392FD81FBCFA2F00D9016F /* Primitives.cpp */,
-				0C392FD91FBCFA2F00D9016F /* Primitives.hpp */,
 				0C392FDF1FBCFA3000D9016F /* Slider.cpp */,
 				0C392FEE1FBCFA3100D9016F /* Slider.hpp */,
 				0C392FED1FBCFA3100D9016F /* Splitter.cpp */,
@@ -930,6 +902,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0CA2941FF92EA700C4C463 /* ElementStyle.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,12 +1046,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C0370B31FF849C9005744F2 /* entypo.ttf in Resources */,
-				0C0370B41FF849C9005744F2 /* NotoEmoji-Regular.ttf in Resources */,
-				0C0370B51FF849C9005744F2 /* Roboto-Bold.ttf in Resources */,
-				0C0370B61FF849C9005744F2 /* Roboto-Light.ttf in Resources */,
+				0C0CA29F1FF9781A00C4C463 /* OpenSans-Italic.ttf in Resources */,
+				0C0CA29D1FF9781A00C4C463 /* OpenSans-Regular.ttf in Resources */,
+				0C0CA2A11FF9781A00C4C463 /* OpenSans-Light.ttf in Resources */,
+				0C0CA2A31FF9781A00C4C463 /* OpenSans-Bold.ttf in Resources */,
 				0C0370C11FF849FF005744F2 /* Viewport-Info.plist in Resources */,
-				0C0370B71FF849C9005744F2 /* Roboto-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1086,12 +1058,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0CA29E1FF9781A00C4C463 /* OpenSans-Italic.ttf in Resources */,
+				0C0CA29C1FF9781A00C4C463 /* OpenSans-Regular.ttf in Resources */,
+				0C0CA2A01FF9781A00C4C463 /* OpenSans-Light.ttf in Resources */,
+				0C0CA2A21FF9781A00C4C463 /* OpenSans-Bold.ttf in Resources */,
 				0C3930221FBCFB4500D9016F /* HelloWorld-Info.plist in Resources */,
-				6504155B1F65DE47001D7832 /* entypo.ttf in Resources */,
-				6504155C1F65DE47001D7832 /* NotoEmoji-Regular.ttf in Resources */,
-				6504155D1F65DE47001D7832 /* Roboto-Bold.ttf in Resources */,
-				6504155E1F65DE47001D7832 /* Roboto-Light.ttf in Resources */,
-				6504155F1F65DE47001D7832 /* Roboto-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1137,11 +1108,9 @@
 				0C03708E1FF849C9005744F2 /* ofxSyphonClient.mm in Sources */,
 				0C03708F1FF849C9005744F2 /* ofxSyphonServer.mm in Sources */,
 				0C0370901FF849C9005744F2 /* RtMidi.cpp in Sources */,
-				0C0370911FF849C9005744F2 /* nanovg.c in Sources */,
 				0C0370921FF849C9005744F2 /* NetworkingUtils.cpp in Sources */,
 				0C0370931FF849C9005744F2 /* ofxXmlSettings.cpp in Sources */,
 				0C0370941FF849C9005744F2 /* GUI.cpp in Sources */,
-				0C0370951FF849C9005744F2 /* Primitives.cpp in Sources */,
 				0C0370961FF849C9005744F2 /* ToggleButtonGroup.cpp in Sources */,
 				0C0370971FF849C9005744F2 /* UdpSocket.cpp in Sources */,
 				0C0370C31FF849FF005744F2 /* main.cpp in Sources */,
@@ -1154,6 +1123,7 @@
 				0C0370A01FF849C9005744F2 /* Element.cpp in Sources */,
 				0C0370A11FF849C9005744F2 /* Decorator.cpp in Sources */,
 				0C0370A21FF849C9005744F2 /* Label.cpp in Sources */,
+				0C0CA2921FF92EA700C4C463 /* ElementStyle.cpp in Sources */,
 				0C0370A31FF849C9005744F2 /* ofxMidiOut.cpp in Sources */,
 				0C0370A41FF849C9005744F2 /* Splitter.cpp in Sources */,
 				0C0370A51FF849C9005744F2 /* ofxOscMessage.cpp in Sources */,
@@ -1169,6 +1139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0CA2931FF92EA700C4C463 /* ElementStyle.cpp in Sources */,
 				0C0370D31FF853E1005744F2 /* Button.cpp in Sources */,
 				0C0370D41FF853E1005744F2 /* ButtonGroup.cpp in Sources */,
 				0C0370D51FF853E1005744F2 /* Decorator.cpp in Sources */,
@@ -1177,7 +1148,6 @@
 				0C0370D81FF853E1005744F2 /* GUIStyle.cpp in Sources */,
 				0C0370D91FF853E1005744F2 /* Label.cpp in Sources */,
 				0C0370DA1FF853E1005744F2 /* Preview.cpp in Sources */,
-				0C0370DB1FF853E1005744F2 /* Primitives.cpp in Sources */,
 				0C0370DC1FF853E1005744F2 /* ResetButtonDecorator.cpp in Sources */,
 				0C0370DD1FF853E1005744F2 /* Slider.cpp in Sources */,
 				0C0370DE1FF853E1005744F2 /* SliderDecorator.cpp in Sources */,
@@ -1211,11 +1181,9 @@
 				65276BB51F486E4300949383 /* ofxSyphonClient.mm in Sources */,
 				65276BB61F486E4300949383 /* ofxSyphonServer.mm in Sources */,
 				65276BAA1F486DEC00949383 /* RtMidi.cpp in Sources */,
-				0C4B96B31FBD953500611AAF /* nanovg.c in Sources */,
 				65276BB91F486EDA00949383 /* NetworkingUtils.cpp in Sources */,
 				65276BAB1F486DF700949383 /* ofxXmlSettings.cpp in Sources */,
 				0C39300E1FBCFA3200D9016F /* GUI.cpp in Sources */,
-				0C392FF81FBCFA3200D9016F /* Primitives.cpp in Sources */,
 				0C3930081FBCFA3200D9016F /* ToggleButtonGroup.cpp in Sources */,
 				65276BBA1F486FC100949383 /* UdpSocket.cpp in Sources */,
 				0C3930201FBCFAE500D9016F /* main.cpp in Sources */,
@@ -1229,6 +1197,7 @@
 				0C392FFA1FBCFA3200D9016F /* Element.cpp in Sources */,
 				0C3930161FBCFA3200D9016F /* Decorator.cpp in Sources */,
 				0C3930041FBCFA3200D9016F /* Label.cpp in Sources */,
+				0C0CA2901FF92EA700C4C463 /* ElementStyle.cpp in Sources */,
 				65276BA71F486DD000949383 /* ofxMidiOut.cpp in Sources */,
 				0C3930101FBCFA3200D9016F /* Splitter.cpp in Sources */,
 				65276BAF1F486E0E00949383 /* ofxOscMessage.cpp in Sources */,
@@ -1256,6 +1225,7 @@
 				65E896931E7342BC000D470B /* ofxSyphonServer.mm in Sources */,
 				65E896941E734340000D470B /* ofxSyphonClient.mm in Sources */,
 				65E896A11E734F37000D470B /* RtMidi.cpp in Sources */,
+				0C0CA2911FF92EA700C4C463 /* ElementStyle.cpp in Sources */,
 				65E896911E733DD2000D470B /* ofxOscMessage.cpp in Sources */,
 				65E896921E734275000D470B /* ofxOscReceiver.cpp in Sources */,
 				655BFAFB1E735A3D00B74446 /* IpEndpointName.cpp in Sources */,
@@ -1268,7 +1238,6 @@
 				65E8969D1E734EEF000D470B /* OscTypes.cpp in Sources */,
 				655BFAFA1E7358C000B74446 /* UdpSocket.cpp in Sources */,
 				655BFAFD1E735BC100B74446 /* SyphonNameboundClient.m in Sources */,
-				0C4B96B41FBD953500611AAF /* nanovg.c in Sources */,
 				0C392FF71FBCFA3200D9016F /* SliderDecorator.cpp in Sources */,
 				0C39300D1FBCFA3200D9016F /* ResetButtonDecorator.cpp in Sources */,
 				0C392FFF1FBCFA3200D9016F /* Slider.cpp in Sources */,
@@ -1281,7 +1250,6 @@
 				0C71E9FA1FF828880045EA4D /* VerticalSlider.cpp in Sources */,
 				0C3930031FBCFA3200D9016F /* VerticalSlider.cpp in Sources */,
 				0C3930011FBCFA3200D9016F /* ButtonGroup.cpp in Sources */,
-				0C392FF91FBCFA3200D9016F /* Primitives.cpp in Sources */,
 				0C3930091FBCFA3200D9016F /* ToggleButtonGroup.cpp in Sources */,
 				0C3930071FBCFA3200D9016F /* Preview.cpp in Sources */,
 				0C392FFD1FBCFA3200D9016F /* Viewport.cpp in Sources */,

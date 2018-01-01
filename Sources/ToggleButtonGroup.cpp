@@ -8,7 +8,6 @@
 #include "ToggleButtonGroup.hpp"
 #include "GUI.hpp"
 #include "GUIStyle.hpp"
-#include "Primitives.hpp"
 
 
 
@@ -26,9 +25,9 @@ void ToggleButtonGroup::addButton(json::iterator it) {
     buttons.push_back(newButtonData);
 }
 
-void ToggleButtonGroup::draw(NVGcontext* vg)
+void ToggleButtonGroup::draw( )
 {
-    Element::draw(vg);
+    Element::draw( );
     
     for (auto button:buttons) {
         ofRectangle theRect, visibleRect;
@@ -42,10 +41,15 @@ void ToggleButtonGroup::draw(NVGcontext* vg)
         visibleRect = getVisibleRectForButton(button);
         isHovered =  visibleRect.inside(ofGetMouseX(), ofGetMouseY());
         backgroundColor = ToggleButton::getBackgroundColor(isHovered, button.pressed, button.pushed );
-        drawButton(vg, button.caption, theRect, ofColor2NVGColor(backgroundColor, 255), ofColor2NVGColor(GUIStyle::getInstance().getTextColor(), 255));
+        
+        /*
+        drawButton( , button.caption, theRect, ofColor2N Color(backgroundColor, 255), ofColor2N Color(GUIStyle::getInstance().getTextColor(), 255));
+         */
+        
+        // todo: draw button
     }
     
-    Element::finishDraw(vg);
+    Element::finishDraw( );
 }
 
 void ToggleButtonGroup::update()

@@ -8,24 +8,20 @@
 
 #include "ofMain.h"
 
-#include "Primitives.hpp"
-#define NANOVG_GL2_IMPLEMENTATION
-#include "nanovg_gl.h"
 #include "GUI.hpp"
 
-
-
-struct NVGcontext* vg;
 
 /*!
  Creates the GUI
  */
 GUI::GUI()
 {
-    vg = nvgCreateGL2(NVG_ANTIALIAS | NVG_STENCIL_STROKES | NVG_DEBUG);
-
+    ofBackground(0,0,0);
+    ofDisableSmoothing();
+    ofDisableAlphaBlending();
+    ofTrueTypeFont::setGlobalDpi(72);
     loadFonts();
-
+    fbo.allocate(ofGetWidth(), ofGetHeight());
 }
 
 /*!
@@ -33,58 +29,41 @@ GUI::GUI()
  */
 GUI::~GUI()
 {
-    free(vg);
 }
 
-GUI& GUI::getInstance() {
+GUI& GUI::getInstance()
+{
     static GUI instance;
     
     return instance;
 }
 
-void GUI::add(Element *element) {
+void GUI::add(Element *element)
+{
      elements.push_back(element);
 }
-
-void GUI::loadFonts() {
-    fontIcons = nvgCreateFont(vg, "icons", "../Resources/entypo.ttf");
-    if (fontIcons == -1) throw ("Could not add font icons");
-    
-    fontNormal = nvgCreateFont(vg, "sans", "../Resources/Roboto-Regular.ttf");
-    if (fontNormal == -1) throw("Could not add font italic.");
-    
-    fontBold = nvgCreateFont(vg, "sans-bold", "../Resources/Roboto-Bold.ttf");
-    if (fontBold == -1) throw("Could not add font bold");
-    
-    fontEmoji = nvgCreateFont(vg, "emoji", "../Resources/NotoEmoji-Regular.ttf");
-    if (fontEmoji == -1) throw("Could not add font emoji");
-
-    nvgAddFallbackFontId(vg, fontNormal, fontEmoji);
-    nvgAddFallbackFontId(vg, fontBold, fontEmoji);
-}
-
-
 
 
 void GUI::draw()
 {
-    nvgBeginFrame(vg, ofGetWidth(), ofGetHeight(), 1);
-    for(auto element:elements) {
-         element->draw(vg);
+    for(auto element:elements)
+    {
+         if (!element->getParent()) element->draw();
     }
-    nvgEndFrame(vg);
+    ofSetColor(255,255,255,255);
 }
 
 void GUI::update()
 {
-
-    for(auto element:elements) {
+    for(auto element:elements)
+    {
         element->update();
     }
 }
 
 
-void GUI::forEach(std::function<void (Element *)> lambda) {
+void GUI::forEach(std::function<void (Element *)> lambda)
+{
     for(auto element:elements) {
         lambda(element);
     }
@@ -100,4 +79,60 @@ std::vector<Element*> GUI::filter(std::function<bool (Element *)> lambda) {
     }
     
     return result;
+}
+
+void GUI::updateVisibleRects()
+{
+    forEach([this](Element *element) {
+        element->visibleRect = element->calculateVisibleRect();
+    });
+}
+
+void GUI::loadFonts()
+{
+    textFont.load("OpenSans-Light.ttf", 13, true, true);
+    textFont.setLineHeight(10);
+}
+
+ofTrueTypeFont GUI::getFont(Fonts font)
+{
+    ofTrueTypeFont result;
+    
+    switch (font) {
+        case Text:
+            result = textFont;
+            break;
+            
+        default:
+            result = textFont;
+            break;
+    }
+    
+    return result;
+}
+
+void GUI::drawCenteredText(string caption, ofRectangle rect, Fonts font)
+{
+    ofTrueTypeFont ttfont = getFont(font);
+    ofRectangle stringRect = ttfont.getStringBoundingBox(caption, 0,0);
+    float x, y;
+    
+    x = (rect.width - stringRect.width) / 2.0 + rect.x;
+    y = (rect.height - stringRect.height ) / 2.0 + rect.y + ttfont.getLineHeight();
+    ttfont.drawString(caption,x, y);
+    
+}
+
+ofFbo GUI::getFbo()
+{
+    return fbo;
+}
+
+
+void GUI::saveTexture(string file, ofTexture texture)
+{
+    ofPixels pixels;
+    
+    texture.readToPixels(pixels);
+    ofSaveImage(pixels, file);
 }

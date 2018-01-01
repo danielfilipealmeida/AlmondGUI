@@ -64,7 +64,7 @@ public:
     /*!
      Draw the splitter in a given context
      */
-    void draw(NVGcontext* vg);
+    void draw( );
     
     /*!
      Adds a new element to the splitter at the end
