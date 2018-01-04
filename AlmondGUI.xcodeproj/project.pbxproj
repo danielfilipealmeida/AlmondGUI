@@ -449,7 +449,8 @@
 				0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */,
 				0C392FE41FBCFA3000D9016F /* SliderDecorator.hpp */,
 			);
-			path = Decorators;
+			name = Decorators;
+			path = Sources/Decorators;
 			sourceTree = SOURCE_ROOT;
 		};
 		0C08AEE01F915A3900CE531F /* Products */ = {

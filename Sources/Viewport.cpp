@@ -81,7 +81,7 @@ void Viewport::draw( )
         x = x + visibleParentRect.x;
         y = y + visibleParentRect.y;
     }
-    ofSetColor(0xffffff);
+    ofSetColor(ofColor::white);
     fbo.getTexture().drawSubsection(rect.x,
                                     rect.y,
                                     rect.width, rect.height,
