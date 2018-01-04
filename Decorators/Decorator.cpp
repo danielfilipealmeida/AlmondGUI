@@ -13,7 +13,7 @@ Decorator::Decorator(Element *_el)
     element = _el;
     
     // todo: check if this is doable
-    element->setParent(this);
+    element->setParent(this->parent);
 }
 
 

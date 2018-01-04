@@ -156,6 +156,12 @@ ofRectangle Element::calculateVisibleRect() {
     visibleRect.y = parentRect.y + rect.y;
     visibleRect.width = rect.width;
     visibleRect.height = rect.height;
+    
+    if (parent->getClass().compare("Viewport") == 0) {
+        Viewport *viewport = (Viewport *) parent;
+        visibleRect.x = visibleRect.x - viewport->getOffsetX();
+        visibleRect.y = visibleRect.y - viewport->getOffsetY();
+    }
 
     return visibleRect;
 }

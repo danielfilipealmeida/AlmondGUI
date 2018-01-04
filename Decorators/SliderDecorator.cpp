@@ -39,6 +39,7 @@ void SliderDecorator::set(json config)
                                     config["height"].get<float>());
     setSlider(_rect);
     config["width"] = config["width"].get<float>() - slider.rect.width;
+    //config["x"] = config["y"] = 0;
     
     getElement()->set(config);
 }

@@ -50,7 +50,6 @@ void Viewport::updateFbo()
 
 void Viewport::update()
 {
-    //scrollPositionY = 0.5;
     overflowX = totalWidth - rect.width;
     overflowY = totalHeight - rect.height;
     visibleRect = rect;
@@ -63,6 +62,7 @@ void Viewport::update()
 void Viewport::draw( )
 {
     static Boolean saved = false;
+    float x, y;
     
     Element::draw( );
     
@@ -74,6 +74,14 @@ void Viewport::draw( )
     fbo.end();
     update();
 
+    x =rect.x;
+    y = rect.y;
+    if (parent != NULL) {
+        ofRectangle visibleParentRect = this->parent->getRect();
+        x = x + visibleParentRect.x;
+        y = y + visibleParentRect.y;
+    }
+    ofSetColor(0xffffff);
     fbo.getTexture().drawSubsection(rect.x,
                                     rect.y,
                                     rect.width, rect.height,
