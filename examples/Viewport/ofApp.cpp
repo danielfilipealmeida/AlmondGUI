@@ -3,41 +3,40 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofSetWindowTitle("Hello World");
+    ofSetWindowTitle("Viewport example");
     
-
-    Viewport *viewport = GUI::getInstance().add<Viewport>({
+    //Viewport *viewport = new Viewport();
+    Viewport *viewport = GUI::getInstance().add<Viewport>({});
+    SliderDecorator *viewportWithSlider = new SliderDecorator(viewport);
+    viewportWithSlider->set({
+        {"x", 10},
+        {"y", 10},
+        {"width", 320},
+        {"height", 240}
     });
-    Button *button = GUI::getInstance().add<Button>({
-        {"caption", "Click me!"}
-    });
-    viewport->add(button);
+    
+    
+    GUI::getInstance().add(viewportWithSlider);
     
     Label *label = GUI::getInstance().add<Label>({
-        {"caption", "just a simple label"}
+        {"caption", "Presenting a Viewport"}
     });
     viewport->add(label);
     
-    button->setOnClick([label](Button *button) {
-        static unsigned int counter = 1;
-        label->set({
-            {"caption", "Button Clicked! " + ofToString(counter) + " times"}
-        });
-        counter++;
-    });
+    for(auto f=0; f < 20; f++) {
+        viewport->add(GUI::getInstance().add<Button>({
+            {"caption", "Button # " + ofToString(f+1)}
+        }));
+        viewport->add(GUI::getInstance().add<Slider>({
+            {"caption", "Slider # " + ofToString(f+1)},
+            {"minValue", 0},
+            {"maxValue", 1},
+            {"value", ofRandom(0, 1)}
+        }));
+    }
     
-    
-    Slider *slider = GUI::getInstance().add<Slider>({
-        {"caption", "a slider"},
-        {"value", 0.5},
-        {"minValue", 0},
-        {"maxValue", 1}
-    });
-    
-    viewport->add(slider);
-    
-    GUI::getInstance().updateVisibleRects();
-     
+    viewport->setScrollPositionY(0.0);
+     GUI::getInstance().updateVisibleRects();
 }
 
 //--------------------------------------------------------------
@@ -49,8 +48,8 @@ void ofApp::update(){
 void ofApp::draw(){
     ofClear(GUIStyle::getInstance().getDarkColor());
     GUI::getInstance().draw();
+    
 }
-
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
