@@ -4,8 +4,8 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetWindowTitle("Viewport example");
+    GUI::getInstance().loadFonts();
     
-    //Viewport *viewport = new Viewport();
     Viewport *viewport = GUI::getInstance().add<Viewport>({});
     SliderDecorator *viewportWithSlider = new SliderDecorator(viewport);
     viewportWithSlider->set({
@@ -14,7 +14,6 @@ void ofApp::setup(){
         {"width", 320},
         {"height", 240}
     });
-    
     
     GUI::getInstance().add(viewportWithSlider);
     

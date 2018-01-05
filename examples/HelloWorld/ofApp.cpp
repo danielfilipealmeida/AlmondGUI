@@ -4,7 +4,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetWindowTitle("Hello World");
-    
+    GUI::getInstance().loadFonts();
 
     Viewport *viewport = GUI::getInstance().add<Viewport>({
     });

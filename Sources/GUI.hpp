@@ -44,7 +44,7 @@ protected:
     
     std::vector<Element*> elements; //!< a vector of elements that represent the first layer of a gui. elements can have children and that implements the next layers
     
-    GUI(string fontsPath = "");  //!< Protected constructor
+    GUI();  //!< Protected constructor
     ~GUI(); //!< protected destructor
 public:
     
@@ -65,7 +65,7 @@ public:
     /*!
      \brief Load all needed fonts
      */
-    void loadFonts(string fontsPath);
+    void loadFonts(string fontsPath = "");
     
     /*!
      \brief Returns a configured font

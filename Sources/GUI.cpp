@@ -14,13 +14,12 @@
 /*!
  Creates the GUI
  */
-GUI::GUI(string fontsPath)
+GUI::GUI()
 {
     ofBackground(0,0,0);
     ofDisableSmoothing();
     ofDisableAlphaBlending();
     ofTrueTypeFont::setGlobalDpi(72);
-    loadFonts(fontsPath);
 }
 
 /*!
