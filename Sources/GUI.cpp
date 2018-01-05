@@ -14,13 +14,13 @@
 /*!
  Creates the GUI
  */
-GUI::GUI()
+GUI::GUI(string fontsPath)
 {
     ofBackground(0,0,0);
     ofDisableSmoothing();
     ofDisableAlphaBlending();
     ofTrueTypeFont::setGlobalDpi(72);
-    loadFonts();
+    loadFonts(fontsPath);
 }
 
 /*!
@@ -87,9 +87,9 @@ void GUI::updateVisibleRects()
     });
 }
 
-void GUI::loadFonts()
+void GUI::loadFonts(string fontsPath)
 {
-    textFont.load("OpenSans-Light.ttf", 13, true, true);
+    textFont.load(fontsPath + "OpenSans-Light.ttf", 13, true, true);
     textFont.setLineHeight(10);
 }
 
