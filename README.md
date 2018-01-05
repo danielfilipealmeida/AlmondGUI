@@ -1,4 +1,4 @@
-# Almond - a GUI for openFrameworks
+# ofxAlmond - a GUI for openFrameworks
 
 2017 Daniel Almeida
 

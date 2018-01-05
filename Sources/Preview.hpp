@@ -11,6 +11,11 @@
 #include <stdio.h>
 #include "Element.hpp"
 
+/*!
+ \brief An Element for displaying FBO's
+ 
+ The Preview is used for displaying content stored in fbo's like playing videos, animations, compositions or other graphic elements
+ */
 class Preview : public Element {
     ofFbo *fbo;
     string caption;

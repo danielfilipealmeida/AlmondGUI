@@ -17,6 +17,11 @@ typedef enum {
     SPLITTER_VERTICAL
 } SplitterType;
 
+/*
+ \brief configuration of a child of the splitter.
+ 
+ Stores the element in the splitter section and the percentage of that section
+ */
 typedef struct {
     Element *element;
     float size;
@@ -24,10 +29,9 @@ typedef struct {
 
 
 /*!
- * \brief abstract Divides the area of the parent into several elements
- *
- * Takes the entire area of the parent or the whole screen of no parent. Divides it into the given number of requested zones. each zone needs to define a percentage (float values 0 to 1).
- * the total percentage must be 1.
+ \brief abstract Divides the area of the parent into several elements
+ 
+ Takes the entire area of the parent or the whole screen of no parent. Divides it into the given number of requested zones. each zone needs to define a percentage (float values 0 to 1). The total percentage must be 1.
  */
 class Splitter : public Element {
 protected:

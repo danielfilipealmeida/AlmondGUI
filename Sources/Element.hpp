@@ -15,7 +15,7 @@
 #include "ElementStyle.hpp"
 #include "GUIStyle.hpp"
 
-//#define GUIDEBUG
+
 
 /*!
  GUI definitions for dimensions
@@ -28,9 +28,9 @@
 using json = nlohmann::json;
 
 /*!
- @class Element
- @abstract GUI Root class, from which all other GUI classes descends from
- @discussion Handles basic state and position/size. Possible events are: hover, pressed and entered. TODO (maybe) callbacks for those events. Element can also contain other elements.
+ \brief GUI Root class, from which all other GUI classes descends from
+
+ Handles basic state and position/size. Possible events are: hover, pressed and entered. TODO (maybe) callbacks for those events. Element can also contain other elements.
  */
 class Element
 {
@@ -45,18 +45,20 @@ protected:
 public:
     
     /*!
-     The rectangle definition in the GUI system.
+     \brief The rectangle definition in the GUI system.
      */
     ofRectangle rect;
     
     /*!
-     The rectangle definition related to the screen.
+     \brief The rectangle definition related to the screen.
+     
      Only represents the parts of the element that are visible, since parts can be hidden due to scrolled parents, etc.
      */
     ofRectangle visibleRect;
     
     /*!
-     Rectangle definition used for drawing the rectangle.
+     \brief Rectangle definition used for drawing the rectangle.
+     
      This is related to a parent viewport and if the vary from the `rect` if the parent is scrolled
      */
     ofRectangle drawingRect;
@@ -77,33 +79,34 @@ public:
     virtual string getClass() { return "Element"; }
     
     /*!
-     Checks if the mouse is hover and if the element is being pressed
+     \brief Checks if the mouse is hover and if the element is being pressed
      */
     virtual void update();
     
     /*!
-     Draws. Method to be overriden by childs.
+     \brief Draws the element. Method to be overriden by childs.
+     
      When overriding this method, the descendent needs always to run this because in here elements inside elements are properly handled.
      */
     virtual void draw() = 0;
     
     /*!
-     Finishes drawing the element. Important for properly drawing elements inside other elements.
+     \brief Finishes drawing the element. Important for properly drawing elements inside other elements.
      */
     void finishDraw();
     
     /*!
-     Draws all the childs of the current element
+     \brief Draws all the childs of the current element
      */
     void drawChilds();
     
     /*!
-     Sets the Rectangle 
+     \brief Sets the Rectangle
      */
     virtual void set(json config) = 0;
     
     /**
-     ...
+     \brief Returns all the children of this element
      */
     std::vector<Element*> getChildElements();
     
@@ -145,7 +148,7 @@ public:
     void drawDebugRect();
     
     /*!
-     Get the rectangle definition of the element
+     \brief Get the rectangle definition of the element
      */
     ofRectangle getRect();
     
@@ -163,6 +166,9 @@ public:
      \brief Get a visible rect, in the screen coordinates and crop if needed
      
      A returned rect can be croped if it´s inside a viewport that isn't completely visible
+     
+     \param the rectangle from which the visible part is requested
+     \return the visible part of the input rectangle
      */
     ofRectangle getVisibleRectForRect(ofRectangle _rect);
     

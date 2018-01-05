@@ -12,6 +12,12 @@
 #include "Decorator.hpp"
 #include "Slider.hpp"
 
+/*!
+ \brief Implements sliders to be used for scrolling viewport with overflow.
+ 
+ Currently only shows vertical slider.
+ TODO: implement horizontal slider and configuration possibility: Vertical, Horizontal, Both
+ */
 class SliderDecorator : public Decorator
 {
     SliderData slider;

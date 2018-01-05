@@ -13,9 +13,7 @@
 #include "Slider.hpp"
 
 /*!
- @class VerticalSlider
- @abstract A vertical oriented slider without caption (only because I haven't figured out how to rotate the text. this should be changed soon!)
- @discussion
+ \brief A vertical oriented slider without caption (only because I haven't figured out how to rotate the text. this should be changed soon!)
  */
 class VerticalSlider : public Slider {
 public:

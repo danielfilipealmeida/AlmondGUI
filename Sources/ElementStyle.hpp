@@ -9,7 +9,7 @@
 #define ElementStyle_hpp
 
 /*!
-    The configuration of the style of each element type
+    \brief The configuration of the style of each element type
  
     This class has all the possible common drawing aspects of an element.
  */

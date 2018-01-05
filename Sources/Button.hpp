@@ -26,9 +26,9 @@ typedef struct ButtonData {
 } ButtonData;
 
 /*!
- @class Button
- @abstract Implements a simple button
- @discussion The button have a caption and an associated lambda to be executed whenever it's pushed.
+ \brief Implements a simple button GUI element
+ 
+ The button have a caption and an associated lambda to be executed whenever it's pushed.
  */
 class Button : public Element
 {
@@ -41,12 +41,12 @@ protected:
 public:
     
     /*!
-     ...
+     \brief Constructor
      */
     Button() ;
     
     /*!
-     ...
+     \brief Destructor
      */
     ~Button();
     

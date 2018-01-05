@@ -12,8 +12,7 @@
 #include "Element.hpp"
 
 /*!
- @class Label
- @abstract Implements a simple label
+ \brief Implements a simple label element
  */
 class Label : public Element
 {

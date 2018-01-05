@@ -11,6 +11,9 @@
 #include <stdio.h>
 #include "ButtonGroup.hpp"
 
+/*!
+ \brief Implements a Toggle Button from the Button element
+ */
 class ToggleButton : public Button
 {
     std::function<void(ToggleButton *toggleButton)> onClick = NULL;

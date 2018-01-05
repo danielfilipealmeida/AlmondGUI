@@ -25,9 +25,9 @@ typedef struct SliderData {
 
 
 /*!
- @class Slider
- @abstract Implements a slider from the button
- @discussion Descends from the button but adds new behaviour by allowing the user to drag inside and set a value. This value is between a min and a max.
+ \brief Implements a slider from the button
+ 
+ Descends from the button but adds new behaviour by allowing the user to drag inside and set a value. This value is between a min and a max.
  */
 class Slider : public Button
 {

@@ -15,8 +15,7 @@
 
 
 /*!
-@class ButtonGroup
-@abstract Implements a a group of buttons
+\brief Implements a a group of buttons
 */
 class ButtonGroup : public Element
 {

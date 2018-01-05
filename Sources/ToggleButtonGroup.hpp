@@ -12,6 +12,9 @@
 #include "ButtonGroup.hpp"
 #include "ToggleButton.hpp"
 
+/*!
+ \brief Implements a group of toggle buttons
+ */
 class ToggleButtonGroup : public ButtonGroup
 {
     std::function<void(ToggleButtonGroup *toggleButtonGroup)> onClick = NULL;

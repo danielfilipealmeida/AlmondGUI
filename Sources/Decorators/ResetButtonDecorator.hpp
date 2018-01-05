@@ -12,6 +12,9 @@
 #include "Decorator.hpp"
 #include "Button.hpp"
 
+/*!
+ \brief Decorates an element by adding a botton with an `X` to be used next to sliders or toggles or other elements that can have default data.
+ */
 class ResetButtonDecorator : public Decorator
 {
     ButtonData resetButton;
