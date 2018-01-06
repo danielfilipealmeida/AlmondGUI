@@ -20,6 +20,7 @@ GUI::GUI()
     ofDisableSmoothing();
     ofDisableAlphaBlending();
     ofTrueTypeFont::setGlobalDpi(72);
+    loadFonts();
 }
 
 /*!
@@ -112,6 +113,8 @@ ofTrueTypeFont GUI::getFont(Fonts font)
 void GUI::drawCenteredText(string caption, ofRectangle rect, Fonts font)
 {
     ofTrueTypeFont ttfont = getFont(font);
+    if (!ttfont.isLoaded()) return;
+    
     ofRectangle stringRect = ttfont.getStringBoundingBox(caption, 0,0);
     float x, y;
     

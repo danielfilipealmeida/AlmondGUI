@@ -10,6 +10,8 @@
 
 Preview::Preview() {
     fbo = NULL;
+    style.hasBorder = true;
+    style.hasBackground = true;
 }
 
 Preview::~Preview()  {
