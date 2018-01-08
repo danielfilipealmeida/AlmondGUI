@@ -7,6 +7,7 @@
 
 #include "ToggleButton.hpp"
 #include "GUIStyle.hpp"
+#include "GUI.hpp"
 
 void ToggleButton::update() {
     Boolean previousPressed = pressed;
@@ -40,16 +41,14 @@ ofColor ToggleButton::getBackgroundColor(Boolean isHover, Boolean isPressed, Boo
 
 void ToggleButton::draw( )
 {
+    style.backgroundColor = getBackgroundColor(hover, pressed, isPushed());
     ofColor backgroundColor;
     
     Element::draw( );
-    backgroundColor = getBackgroundColor(hover, pressed, isPushed());
-    
-    // todo: draw button
-    /*
-    drawButton( , caption, getRect(), ofColor2N Color(backgroundColor, 255), ofColor2N Color(GUIStyle::getInstance().getTextColor(), 255));
-     */
-    
+
+    ofSetColor(style.captionColor);
+    GUI::getInstance().drawCenteredText(caption, getRect());
+        
     Element::finishDraw( );
 }
 

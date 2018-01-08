@@ -122,6 +122,8 @@
 		0C71E9F81FF828880045EA4D /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F21FF828880045EA4D /* Viewport.cpp */; };
 		0C71E9FA1FF828880045EA4D /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F41FF828880045EA4D /* VerticalSlider.cpp */; };
 		0C71E9FB1FF828880045EA4D /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F51FF828880045EA4D /* Button.cpp */; };
+		0CEC7E1F20019DAF001AF9A3 /* Loop001.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC7E1D20019DAF001AF9A3 /* Loop001.mp4 */; };
+		0CF9976720024B4B00D15EAA /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9976620024B4B00D15EAA /* ButtonGroup.cpp */; };
 		6504556E1F470EA300CB3BE5 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655BFAF81E7355BD00B74446 /* CoreMIDI.framework */; };
 		6504556F1F470EAC00CB3BE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8967B1E73311F000D470B /* Foundation.framework */; };
 		650455711F470ED000CB3BE5 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BC812F1DF8D94600331165 /* Syphon.framework */; };
@@ -281,6 +283,8 @@
 		0C71E9F31FF828880045EA4D /* Element.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Element.cpp; path = tests/Element.cpp; sourceTree = SOURCE_ROOT; };
 		0C71E9F41FF828880045EA4D /* VerticalSlider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VerticalSlider.cpp; path = tests/VerticalSlider.cpp; sourceTree = SOURCE_ROOT; };
 		0C71E9F51FF828880045EA4D /* Button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Button.cpp; path = tests/Button.cpp; sourceTree = SOURCE_ROOT; };
+		0CEC7E1D20019DAF001AF9A3 /* Loop001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Loop001.mp4; path = ../../../../../ArbutusEngine/TestData/Loop001.mp4; sourceTree = "<group>"; };
+		0CF9976620024B4B00D15EAA /* ButtonGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ButtonGroup.cpp; sourceTree = "<group>"; };
 		650455591F47085D00CB3BE5 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		655BFAF81E7355BD00B74446 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		659E25D51E70BCAE00217A12 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -498,6 +502,7 @@
 				0C39301E1FBCFAE500D9016F /* main.cpp */,
 				0C39301D1FBCFAE500D9016F /* ofApp.cpp */,
 				0C39301C1FBCFAE500D9016F /* ofApp.h */,
+				0CEC7E1D20019DAF001AF9A3 /* Loop001.mp4 */,
 			);
 			name = "Hello World";
 			path = HelloWorld;
@@ -512,6 +517,7 @@
 				0C71E9F11FF828880045EA4D /* Splitter.cpp */,
 				0C71E9F41FF828880045EA4D /* VerticalSlider.cpp */,
 				0C71E9F21FF828880045EA4D /* Viewport.cpp */,
+				0CF9976620024B4B00D15EAA /* ButtonGroup.cpp */,
 			);
 			name = Tests;
 			path = tests;
@@ -995,6 +1001,7 @@
 				0C0CA29E1FF9781A00C4C463 /* OpenSans-Italic.ttf in Resources */,
 				0C0CA29C1FF9781A00C4C463 /* OpenSans-Regular.ttf in Resources */,
 				0C0CA2A01FF9781A00C4C463 /* OpenSans-Light.ttf in Resources */,
+				0CEC7E1F20019DAF001AF9A3 /* Loop001.mp4 in Resources */,
 				0C0CA2A21FF9781A00C4C463 /* OpenSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1159,6 +1166,7 @@
 				0C71E9FA1FF828880045EA4D /* VerticalSlider.cpp in Sources */,
 				0C3930031FBCFA3200D9016F /* VerticalSlider.cpp in Sources */,
 				0C3930011FBCFA3200D9016F /* ButtonGroup.cpp in Sources */,
+				0CF9976720024B4B00D15EAA /* ButtonGroup.cpp in Sources */,
 				0C3930091FBCFA3200D9016F /* ToggleButtonGroup.cpp in Sources */,
 				0C3930071FBCFA3200D9016F /* Preview.cpp in Sources */,
 				0C392FFD1FBCFA3200D9016F /* Viewport.cpp in Sources */,

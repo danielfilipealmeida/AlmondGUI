@@ -11,6 +11,8 @@
  @discussion ...
  */
 class ofApp : public ofBaseApp {
+    ofFbo fbo;
+    ofVideoPlayer video;
     
 	public:
 		void setup();

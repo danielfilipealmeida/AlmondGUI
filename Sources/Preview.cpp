@@ -7,6 +7,7 @@
 
 #include "Preview.hpp"
 #include "GUIStyle.hpp"
+#include "GUI.hpp"
 
 Preview::Preview() {
     fbo = NULL;
@@ -48,28 +49,24 @@ void Preview::draw( ) {
         fboRect.x = fboRect.x + this->parent->getRect().x;
         fboRect.y = fboRect.y + this->parent->getRect().y;
     }
-    fbo->draw(fboRect);
-    
-    
     Element::draw( );
-    /*
-    n BeginPath( );
-    n Rect( , drawingRect.x, drawingRect.y, drawingRect.width, drawingRect.height);
-    n StrokeColor( , ofColor2N Color(ofColor::black, 255));
-    n Stroke( );
-     */
+    ofSetColor(255,255,255,255);
+    fbo->draw(fboRect);
     
     if (!caption.empty()) {
         ofRectangle captionRect;
+        ofRectangle stringRect = GUI::getInstance().getFont(Text).getStringBoundingBox(caption, 0,0);
+        
         captionRect.x = drawingRect.x + 2;
         captionRect.y = drawingRect.y + 2;
-        captionRect.width = 72;
-        captionRect.height = 20;
-        /*
-        drawFilledRect( , captionRect, ofColor2N Color(ofColor::black));
-        printCenteredText( , caption, captionRect, ofColor2N Color(ofColor::white));
-         */
-        // todo: draw caption
+        captionRect.width = stringRect.width + 4;
+        captionRect.height = stringRect.height + 4;
+       
+        ofSetColor(0,0,0);
+        ofFill();
+        ofDrawRectangle(captionRect);
+        ofSetColor(style.captionColor);
+        GUI::getInstance().drawCenteredText(caption, captionRect);
     }
     Element::finishDraw( );
 }

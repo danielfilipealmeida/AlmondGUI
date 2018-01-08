@@ -79,11 +79,11 @@ public:
     
     
     /*!
-     \brief Calculate each buttons width, according to the total width and the number of buttons to display.
+     \brief Returns the width of the buttons, according to the total width and the number of buttons to display.
      
      This method takes into consideration the margin between the buttons
      */
-    float calculateButtonsWidth();
+    float getButtonsWidth();
     
     /*!
      \brief Sets the element that will contain this element
@@ -109,5 +109,24 @@ public:
      \brief returns the value of the currently selected button
      */
     virtual unsigned int getValue();
+    
+    /*!
+     \brief Get the number of buttons on the Buttons Group
+     
+     \return the number of buttons
+     */
+    unsigned int count();
+    
+    /*!
+     \brief Apply a lambda to all buttons in a button group
+     */
+    void forEach(std::function<void (ButtonData)> lambda);
+    
+    /*
+     \brief Get the data of a button at the given index
+     \param the index of the button, from 0 to count-1
+     \return a structure with the data needed for the button
+     */
+    ButtonData getButtonDataAtIndex(unsigned int index);
 };
 #endif /* ButtonGroup_hpp */
