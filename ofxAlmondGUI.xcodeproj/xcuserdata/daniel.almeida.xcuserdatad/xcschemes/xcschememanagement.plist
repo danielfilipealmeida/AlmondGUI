@@ -14,17 +14,17 @@
 		<key>Catch Tests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>HelloWorld copy.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
 		<key>HelloWorld.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+		<key>Splitters.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Viewport 2.xcscheme</key>
 		<dict>
@@ -40,6 +40,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>0C0370C71FF85376005744F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C9C32D920057BD500750DC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

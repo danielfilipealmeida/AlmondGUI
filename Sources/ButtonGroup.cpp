@@ -92,9 +92,7 @@ void ButtonGroup::draw()
         ofSetColor(style.borderColor);
         ofNoFill();
         ofDrawRectangle(visibleRect);
-        
     }
-    
     Element::finishDraw( );
 }
 
@@ -104,7 +102,6 @@ void ButtonGroup::set(json config)
     if (config["options"].is_array() && config["options"].size() > 0) {
         options = config["options"];
         nButtons = options.size();
-        
     }
     
     value = config["value"].is_number() ? config["value"].get<unsigned int>():0;

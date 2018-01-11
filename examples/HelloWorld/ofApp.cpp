@@ -6,9 +6,7 @@ void ofApp::setup(){
     ofSetWindowTitle("Hello World");
     ofSetFrameRate(30);
     
-    video.load(ofFilePath::getCurrentExeDir() + "../Resources/Loop001.mp4");
-    video.play();
-
+    // Viewport (to gather all inside)
     Viewport *viewport = GUI::getInstance().add<Viewport>({
     });
     Button *button = GUI::getInstance().add<Button>({
@@ -16,6 +14,8 @@ void ofApp::setup(){
     });
     viewport->add(button);
     
+    
+    // Button (plus label)
     Label *label1 = GUI::getInstance().add<Label>({
         {"caption", "just a simple label"}
     });
@@ -29,6 +29,8 @@ void ofApp::setup(){
         counter++;
     });
     
+    
+    // Slider
     Slider *slider = GUI::getInstance().add<Slider>({
         {"caption", "a slider"},
         {"value", 0.5},
@@ -36,13 +38,21 @@ void ofApp::setup(){
         {"maxValue", 1}
     });
     viewport->add(slider);
+    slider->setOnChange([](Slider *slider) {
+        slider->set({
+            {"caption", "Slider value: " + ofToString(slider->getValue()) + "!"}
+        });
+    });
     
+    
+    // ToggleButton
     ToggleButton *toggleButton = GUI::getInstance().add<ToggleButton>({
         {"caption" , "a toggle button"}
     });
     viewport->add(toggleButton);
     
-    
+
+    // ButtonGroup (plus label)
     ButtonGroup *bGroup = GUI::getInstance().add<ButtonGroup>({
         {"options", {
             {
@@ -66,6 +76,7 @@ void ofApp::setup(){
         {"caption", "Button Group Label: Nothing pressed yet."}
     });
     viewport->add(label2);
+    
     bGroup->setOnClick([label2](ButtonGroup *bg) {
         ButtonData buttonData = bg->getLastClickedButtonData();
         label2->set({
@@ -74,6 +85,10 @@ void ofApp::setup(){
     });
 
     
+    
+    // Preview & playing video
+    video.load(ofFilePath::getCurrentExeDir() + "../Resources/Loop001.mp4");
+    video.play();
     fbo.allocate(160, 120);
     Preview *preview = GUI::getInstance().add<Preview>({
         {"caption", "a preview!!!. see some videos playing"}

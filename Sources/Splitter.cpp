@@ -9,7 +9,7 @@
 #include "Splitter.hpp"
 
 Splitter::Splitter() {
-    
+    type = SPLITTER_VERTICAL;
 }
 
 Splitter::~Splitter()  {
@@ -22,6 +22,8 @@ void Splitter::set(json config) {
     if (!config["y"].is_number()) config["y"] = 0;
     if (!config["width"].is_number()) config["width"] = ofGetWidth();
     if (!config["height"].is_number()) config["height"] = ofGetHeight();
+    
+    if (config["type"].is_number_integer()) type = (SplitterType) config["type"].get<int>();
     
     Element::set(config);
     calculateChildsRects();
