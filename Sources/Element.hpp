@@ -167,7 +167,7 @@ public:
      
      A returned rect can be croped if it´s inside a viewport that isn't completely visible
      
-     \param the rectangle from which the visible part is requested
+     \param _rect rectangle from which the visible part is requested
      \return the visible part of the input rectangle
      */
     ofRectangle getVisibleRectForRect(ofRectangle _rect);
@@ -178,6 +178,21 @@ public:
      This method is defined and is empty and should only be overriden where it's needed, like in the Sliders
      */
     virtual void setDefaultValue() {}
+    
+    
+    /*!
+     \brief gets a dump of the state of the element in json format
+     
+     This will be used to generate the string dump
+     */
+    json jsonDump();
+    
+    /*!
+     \brief Get a dump of all data of the element
+     
+     \return a string representing the state of the element
+     */
+    string dump();
 };
 
 #endif /* Element_hpp */

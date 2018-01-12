@@ -8,6 +8,11 @@
 #ifndef ElementStyle_hpp
 #define ElementStyle_hpp
 
+
+#include "json.hpp"
+
+using json = nlohmann::json;
+
 /*!
     \brief The configuration of the style of each element type
  
@@ -27,11 +32,12 @@ public:
     ofColor backgroundColor;
     
     ofColor captionColor;
-    //Fonts font;
+    
     
     ElementStyle();
     
     
+    json jsonDump();
 };
 
 #endif /* ElementStyle_hpp */

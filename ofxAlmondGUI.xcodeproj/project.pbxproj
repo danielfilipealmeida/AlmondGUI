@@ -575,10 +575,10 @@
 				0C71E9F51FF828880045EA4D /* Button.cpp */,
 				0C71E9F31FF828880045EA4D /* Element.cpp */,
 				0C71E9F01FF828880045EA4D /* main.cpp */,
-				0C71E9F11FF828880045EA4D /* Splitter.cpp */,
 				0C71E9F41FF828880045EA4D /* VerticalSlider.cpp */,
 				0C71E9F21FF828880045EA4D /* Viewport.cpp */,
 				0CF9976620024B4B00D15EAA /* ButtonGroup.cpp */,
+				0C71E9F11FF828880045EA4D /* Splitter.cpp */,
 			);
 			name = Tests;
 			path = tests;

@@ -124,8 +124,6 @@ void GUI::drawCenteredText(string caption, ofRectangle rect, Fonts font)
     
 }
 
-
-
 void GUI::saveTexture(string file, ofTexture texture)
 {
     ofPixels pixels;
@@ -133,3 +131,24 @@ void GUI::saveTexture(string file, ofTexture texture)
     texture.readToPixels(pixels);
     ofSaveImage(pixels, file);
 }
+
+
+json GUI::jsonDump(ofRectangle rect)
+{
+    return {
+        {"x", rect.x},
+        {"y", rect.y},
+        {"width", rect.width},
+        {"height", rect.height}
+    };
+}
+
+json GUI::jsonDump(ofColor color)
+{
+    return {
+        {"red", color.r},
+        {"green", color.g},
+        {"blue", color.b}
+    };
+}
+

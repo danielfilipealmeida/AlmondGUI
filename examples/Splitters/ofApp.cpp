@@ -11,10 +11,7 @@ void ofApp::setup(){
     });
     
     Viewport *viewport1 = GUI::getInstance().add<Viewport>({});
-    
-    
     Viewport *viewport2 = GUI::getInstance().add<Viewport>({});
-    
     
     for (unsigned int f = 0; f < 20; f++) {
         Button *button = GUI::getInstance().add<Button>({
@@ -23,16 +20,16 @@ void ofApp::setup(){
         viewport1->add(button);
         
         Slider *slider = GUI::getInstance().add<Slider>({
-            {"caption", "Slider " + ofToString(f+1)}
+            {"caption", "Slider " + ofToString(f+1)},
+            {"value", ofRandom(0.0, 1.0)},
+            {"minValue", 0.0},
+            {"maxValue", 1.0}
         });
         viewport2->add(slider);
     }
     
     horizontalSpliter->add(viewport1, 0.50);
     horizontalSpliter->add(viewport2, 0.50);
-    
-    GUI::getInstance().updateVisibleRects();
-     
 }
 
 //--------------------------------------------------------------

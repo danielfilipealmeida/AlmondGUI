@@ -114,9 +114,28 @@ public:
     /*!
      \brief Save a texture to a file
      
-     
+     \param file filename
+     \param texture texture
      */
     void saveTexture(string file, ofTexture texture);
+    
+    
+#pragma mark json helpers
+    
+    /*!
+     Returns the dump of a ofRectangle
+     \param ofRectangle rect to get the dump from
+     \return a json variable with the dump
+     */
+    static json jsonDump(ofRectangle rect);
+    
+    /*!
+     Returns the dump of a ofColor
+     \param ofColor color to get the dump from
+     \return a json variable with the dump
+     */
+    static json jsonDump(ofColor color);
+    
 };
 
 #endif /* GUI_hpp */

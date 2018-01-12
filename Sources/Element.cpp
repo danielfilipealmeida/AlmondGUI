@@ -218,3 +218,22 @@ ofRectangle Element::getVisibleRectForRect(ofRectangle _rect) {
     
     return visibleRect;
 }
+
+json Element::jsonDump()
+{
+    return {
+        {"rect", GUI::jsonDump(rect)},
+        {"visibleRect", GUI::jsonDump(visibleRect)},
+        {"drawingRect",  GUI::jsonDump(drawingRect)},
+        {"hover", hover},
+        {"pressed", pressed},
+        {"entered", entered},
+        {"exited", exited},
+        {"style",  style.jsonDump()}
+    };
+}
+
+string Element::dump()
+{
+    return  jsonDump().dump(4);
+}
