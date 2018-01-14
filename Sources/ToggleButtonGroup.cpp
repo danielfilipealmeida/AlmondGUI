@@ -49,7 +49,6 @@ void ToggleButtonGroup::draw( )
         ofSetColor(style.borderColor);
         ofNoFill();
         ofDrawRectangle(theRect);
-        
     }
     
     Element::finishDraw( );

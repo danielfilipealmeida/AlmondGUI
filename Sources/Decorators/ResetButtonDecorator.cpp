@@ -8,6 +8,7 @@
 #include "ResetButtonDecorator.hpp"
 #include "GUIStyle.hpp"
 #include "Slider.hpp"
+#include "GUI.hpp"
 
 void ResetButtonDecorator::draw( ) {
     ofRectangle theRect;
@@ -16,18 +17,18 @@ void ResetButtonDecorator::draw( ) {
     Decorator::draw( );
     
     theRect = resetButton.rect;
-    if (parent != NULL) {
-        theRect.x = theRect.x + parent->rect.x;
-        theRect.y = theRect.y + parent->rect.y;
-    }
     backgroundColor = Button::getBackgroundColor(resetButton.hover, resetButton.pushed);
-    /*
-    drawButton( , resetButton.caption, theRect,
-               ofColor2N Color(backgroundColor, 255),
-               ofColor2N Color(GUIStyle::getInstance().getTextColor(), 255));
-     */
     
-    // todo: draw a button here
+    ofFill();
+    ofSetColor(backgroundColor);
+    ofDrawRectangle(theRect);
+    
+    ofSetColor(style.captionColor);
+    GUI::getInstance().drawCenteredText("X", theRect);
+    
+    ofSetColor(style.borderColor);
+    ofNoFill();
+    ofDrawRectangle(theRect);
 }
 
 void ResetButtonDecorator::set(json config) {
