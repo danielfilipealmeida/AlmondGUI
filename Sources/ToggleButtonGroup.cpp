@@ -34,19 +34,22 @@ void ToggleButtonGroup::draw( )
         Boolean isHovered;
         ofColor backgroundColor;
         
-        theRect = button.rect;
-        theRect.x = theRect.x + rect.x;
-        theRect.y = theRect.y + rect.y;
-        
+        theRect = getRectForButton(button);
         visibleRect = getVisibleRectForButton(button);
         isHovered =  visibleRect.inside(ofGetMouseX(), ofGetMouseY());
         backgroundColor = ToggleButton::getBackgroundColor(isHovered, button.pressed, button.pushed );
         
-        /*
-        drawButton( , button.caption, theRect, ofColor2N Color(backgroundColor, 255), ofColor2N Color(GUIStyle::getInstance().getTextColor(), 255));
-         */
+        ofFill();
+        ofSetColor(backgroundColor);
+        ofDrawRectangle(theRect);
         
-        // todo: draw button
+        ofSetColor(style.captionColor);
+        GUI::getInstance().drawCenteredText(button.caption, theRect);
+        
+        ofSetColor(style.borderColor);
+        ofNoFill();
+        ofDrawRectangle(theRect);
+        
     }
     
     Element::finishDraw( );

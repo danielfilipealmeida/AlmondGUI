@@ -59,6 +59,7 @@ ofRectangle ButtonGroup::getVisibleRectForButton(ButtonData button) {
      ofRectangle visibleRect;
     
     visibleRect = getRectForButton(button);
+    
     if (parent != NULL) {
         ofRectangle parentRect = parent->getRect();
         visibleRect.x = visibleRect.x + parentRect.x;
@@ -78,20 +79,21 @@ void ButtonGroup::draw()
         Boolean isHovered;
         ofColor backgroundColor;
         
+        theRect = getRectForButton(button);
         visibleRect = getVisibleRectForButton(button);
         isHovered =  visibleRect.inside(ofGetMouseX(), ofGetMouseY());
         backgroundColor = Button::getBackgroundColor(isHovered, pressed);
         
         ofFill();
         ofSetColor(backgroundColor);
-        ofDrawRectangle(visibleRect);
+        ofDrawRectangle(theRect);
         
         ofSetColor(style.captionColor);
-        GUI::getInstance().drawCenteredText(button.caption, visibleRect);
+        GUI::getInstance().drawCenteredText(button.caption, theRect);
         
         ofSetColor(style.borderColor);
         ofNoFill();
-        ofDrawRectangle(visibleRect);
+        ofDrawRectangle(theRect);
     }
     Element::finishDraw( );
 }
