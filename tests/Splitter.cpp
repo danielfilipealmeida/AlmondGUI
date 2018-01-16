@@ -56,7 +56,6 @@ TEST_CASE("Elements inside splitter are properly clicked", "") {
     splitter->add(viewport1, 0.5);
     splitter->add(viewport2, 0.5);
     
-    cout << button2->dump() << endl;
     REQUIRE(button2->getRect().x == GUI_BORDER);
     REQUIRE(button2->getRect().y == GUI_BORDER);
     REQUIRE(button2->getRect().height == GUI_LINE_HEIGHT * 1.5);

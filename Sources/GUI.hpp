@@ -20,6 +20,7 @@
 #include "Label.hpp"
 #include "ButtonGroup.hpp"
 #include "ToggleButtonGroup.hpp"
+#include "Table.hpp"
 
 // Decorators
 #include "Decorator.hpp"

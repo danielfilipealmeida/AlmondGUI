@@ -71,7 +71,6 @@ float Slider::getRealValue(float normalizedValue) {
 void Slider::draw( )
 {
     string displayedCaption = caption;
-    //ofRectangle drawingRect = Element::getDrawingRec();
     ofColor backgroundColor = getBackgroundColor();
     Element::draw( );
     
