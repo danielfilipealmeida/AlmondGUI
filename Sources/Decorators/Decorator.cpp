@@ -14,9 +14,6 @@ Decorator::Decorator(Element *_el)
     
     // todo: check if this is doable
     element->setParent(this->parent);
-    
-    // needs to add it self to the gui because we cannot use the add<SomeDecorator> templating syntax
-    GUI::getInstance().add(this);
 }
 
 
