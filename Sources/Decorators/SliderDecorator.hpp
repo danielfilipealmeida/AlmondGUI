@@ -49,7 +49,7 @@ public:
     void setParent(Element *_parent);
     
     /*!
-     ...
+     \brief Resizes and updates the decorator and decorated element
      */
     void resize(ofRectangle newRect);
     

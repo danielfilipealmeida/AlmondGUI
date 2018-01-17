@@ -39,8 +39,6 @@ void SliderDecorator::set(json config)
                                     config["height"].get<float>());
     setSlider(_rect);
     config["width"] = config["width"].get<float>() - slider.rect.width;
-    //config["x"] = config["y"] = 0;
-    
     getElement()->set(config);
 }
 
@@ -62,10 +60,12 @@ void SliderDecorator::update()
     ofRectangle visibleRect;
     
     visibleRect = slider.rect;
+    /*
     if (parent != NULL) {
         visibleRect.x = visibleRect.x + parent->rect.x;
         visibleRect.y = visibleRect.y + parent->rect.y;
     }
+     */
     
     slider.hover = visibleRect.inside(ofGetMouseX(), ofGetMouseY());
     if (slider.hover) {

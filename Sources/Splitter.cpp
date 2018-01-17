@@ -32,7 +32,7 @@ void Splitter::set(json config) {
 
 
 void Splitter::update() {
-    
+    Element::update();
 }
 
 
@@ -59,13 +59,14 @@ void Splitter::add(Element* element, float size) {
     calculateChildsRects();
 }
 
+
 // todo: what is this for?
 void Splitter::calculateRect() {
     rect = (parent != NULL) ? parent->getRect() : ofGetWindowRect();
 }
 
 void Splitter::calculateChildsRects() {
-    float totalSizeInPercentage = 0.0;
+    //float totalSizeInPercentage = 0.0;
     float totalSizeInPixels = (type == SPLITTER_HORIZONTAL) ? rect.width : rect.height;
     float currentPosition = 0.0;
     

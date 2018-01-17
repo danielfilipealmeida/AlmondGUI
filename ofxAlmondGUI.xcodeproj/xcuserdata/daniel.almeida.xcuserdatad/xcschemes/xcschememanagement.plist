@@ -14,7 +14,12 @@
 		<key>Catch Tests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>7</integer>
+		</dict>
+		<key>HelloWorld copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>HelloWorld.xcscheme</key>
 		<dict>
@@ -41,6 +46,11 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>Viewport in Splitter.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>Viewport.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -55,6 +65,11 @@
 			<true/>
 		</dict>
 		<key>0C1C0B67200E6B2700BC3369</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C1C0BED200F7A3200BC3369</key>
 		<dict>
 			<key>primary</key>
 			<true/>
