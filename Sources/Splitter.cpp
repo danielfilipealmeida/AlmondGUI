@@ -42,43 +42,55 @@ void Splitter::draw( ) {
 }
 
 
+void Splitter::resize(ofRectangle newRect) {
+    Element::resize(newRect);
+    
+    // resize childs
+    calculateChildsRects();
+}
+
 void Splitter::add(Element* element, float size) {
     SplitterChild child;
     
     child.element = element;
     child.size = size;
-    
     childs.push_back(child);
-    calculateRect();
+    
     calculateChildsRects();
 }
 
+// todo: what is this for?
 void Splitter::calculateRect() {
     rect = (parent != NULL) ? parent->getRect() : ofGetWindowRect();
 }
 
 void Splitter::calculateChildsRects() {
-    float totalSizeInPercentage = 0;
+    float totalSizeInPercentage = 0.0;
     float totalSizeInPixels = (type == SPLITTER_HORIZONTAL) ? rect.width : rect.height;
-
+    float currentPosition = 0.0;
+    
     for(auto child:childs) {
         ofRectangle currentRect;
+        float currentSize = totalSizeInPixels * child.size;
         
         if (type == SPLITTER_HORIZONTAL) {
-            currentRect.x = totalSizeInPercentage * totalSizeInPixels;
-            currentRect.width = totalSizeInPixels * child.size;
-            currentRect.y = 0;
+            //currentRect.x = totalSizeInPercentage * totalSizeInPixels;
+            currentRect.x = rect.x + currentPosition;
+            currentRect.width = currentSize;
+            currentRect.y = rect.y;
             currentRect.height = rect.height;
         }
         else {
-            currentRect.y = totalSizeInPercentage * totalSizeInPixels;
-            currentRect.height = totalSizeInPixels * child.size;
-            currentRect.x = 0;
+            //currentRect.y = totalSizeInPercentage * totalSizeInPixels;
+            currentRect.y = rect.y + currentPosition;
+            currentRect.height = currentSize;
+            currentRect.x = rect.x;
             currentRect.width = rect.width;
         }
-        
+
         child.element->resize(currentRect);
         
-        totalSizeInPercentage = totalSizeInPercentage + child.size;
+        //totalSizeInPercentage = totalSizeInPercentage + child.size; // <- ????
+        currentPosition = currentPosition + currentSize;
     }
 }

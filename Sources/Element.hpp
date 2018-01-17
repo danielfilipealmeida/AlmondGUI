@@ -31,6 +31,24 @@ using json = nlohmann::json;
  \brief GUI Root class, from which all other GUI classes descends from
 
  Handles basic state and position/size. Possible events are: hover, pressed and entered. TODO (maybe) callbacks for those events. Element can also contain other elements.
+ 
+ WORK TODO:
+ 
+ standartize the usage of rects. they need to follow the rules:
+ 
+ rect:
+ the rect definition of the current element. it should be (0,0, totalHeigth, totalWidth);
+ 
+ clipRect:
+ the definition of printed part of the rect. If the rect is clipped (allows scrolling), this should define wich part is being displayed.
+ this means that this rect cannot go outside the rect.
+ Need to take into consideration if this element is inside other element.
+ 
+ visibleRect:
+ need to sort this out. suposibly this should be the final position of the rect in the screen and it is use to handle mouse hover events.
+ 
+ Important to figure out:
+ how to handle elements inside elements.
  */
 class Element
 {
