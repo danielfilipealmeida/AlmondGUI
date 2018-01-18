@@ -155,3 +155,33 @@ TEST_CASE("Splitters inside splitters are displayed properly", "") {
     REQUIRE(button4->rect.width == 50);
     REQUIRE(button4->rect.height == 50); 
 }
+
+
+TEST_CASE("Split dimensions propperly calculated", "getSplitSizeForChild") {
+    SplitterChild child;
+    
+    child.mode = SPLITTER_MODE_PERCENTAGE;
+    child.size = 0.5;
+    REQUIRE(Splitter::getSplitSizeForChild(100, child) == 50);
+    
+    child.size = -1.0;
+    REQUIRE(Splitter::getSplitSizeForChild(100, child) == 0);
+
+    child.size = 1.1;
+    REQUIRE(Splitter::getSplitSizeForChild(100, child) == 100);
+
+    
+    child.mode = SPLITTER_MODE_FIXED;
+    child.size = 10;
+    REQUIRE(Splitter::getSplitSizeForChild(100, child) == 10);
+
+    child.size = -1;
+    REQUIRE(Splitter::getSplitSizeForChild(100, child) == 0);
+
+    child.size = 100;
+    REQUIRE(Splitter::getSplitSizeForChild(100, child) == 100);
+    
+    child.size = 101;
+    REQUIRE(Splitter::getSplitSizeForChild(100, child) == 100);
+}
+          

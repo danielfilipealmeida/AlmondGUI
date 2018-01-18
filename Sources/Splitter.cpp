@@ -49,11 +49,12 @@ void Splitter::resize(ofRectangle newRect) {
     calculateChildsRects();
 }
 
-void Splitter::add(Element* element, float size) {
+void Splitter::add(Element* element, float size, SplitMode mode) {
     SplitterChild child;
     
     child.element = element;
     child.size = size;
+    child.mode = mode;
     childs.push_back(child);
     
     calculateChildsRects();
@@ -65,24 +66,54 @@ void Splitter::calculateRect() {
     rect = (parent != NULL) ? parent->getRect() : ofGetWindowRect();
 }
 
+// todo: make unit tests
+float Splitter::getSplitSizeForChild(float totalSplitterSize, SplitterChild child) {
+    float result = 0;
+    float size;
+    
+    size = child.size;
+    
+    switch (child.mode) {
+    case SPLITTER_MODE_PERCENTAGE:
+            size = ofClamp(size, 0.0, 1.0);
+            result = totalSplitterSize * size;
+            break;
+        
+        case SPLITTER_MODE_FIXED:
+             size = ofClamp(size, 0.0, totalSplitterSize);
+            result = size;
+            break;
+    }
+    
+    return result;
+}
+
 void Splitter::calculateChildsRects() {
-    //float totalSizeInPercentage = 0.0;
     float totalSizeInPixels = (type == SPLITTER_HORIZONTAL) ? rect.width : rect.height;
     float currentPosition = 0.0;
     
-    for(auto child:childs) {
+    // todo: make the last child get all remaining space!
+    for(auto it = childs.begin(); it != childs.end(); it++) {
+        auto child = *it;
         ofRectangle currentRect;
-        float currentSize = totalSizeInPixels * child.size;
+        float currentSize;
+        
+        // calculate the dimension of the current split.
+        // if it's the last take as much space possible!
+        if (std::next(it) != childs.end()) {
+            currentSize = getSplitSizeForChild(totalSizeInPixels, child);
+        }
+        else {
+            currentSize = totalSizeInPixels - currentPosition;
+        }
         
         if (type == SPLITTER_HORIZONTAL) {
-            //currentRect.x = totalSizeInPercentage * totalSizeInPixels;
             currentRect.x = rect.x + currentPosition;
             currentRect.width = currentSize;
             currentRect.y = rect.y;
             currentRect.height = rect.height;
         }
         else {
-            //currentRect.y = totalSizeInPercentage * totalSizeInPixels;
             currentRect.y = rect.y + currentPosition;
             currentRect.height = currentSize;
             currentRect.x = rect.x;

@@ -6,12 +6,18 @@ void ofApp::setup() {
     ofSetWindowTitle("Viewport in Splitter");
     ofSetFrameRate(30);
     
-    Splitter *splitter = GUI::getInstance().add<Splitter>({
+    Splitter *mainSplitter = GUI::getInstance().add<Splitter>({
         {"type", (unsigned int) SPLITTER_HORIZONTAL}
     });
     
+    Splitter *subSplitter1 = GUI::getInstance().add<Splitter>({
+        {"type", (unsigned int) SPLITTER_VERTICAL}
+    });
+    
+    
     Viewport *viewport1 = GUI::getInstance().add<Viewport>({});
     SliderDecorator *viewportWithSlider1 = new SliderDecorator(viewport1);
+    GUI::getInstance().add(viewportWithSlider1);
     
     for (unsigned int f = 0; f < 40; f++) {
         viewport1->add(GUI::getInstance().add<Button>({
@@ -21,6 +27,7 @@ void ofApp::setup() {
     
     Viewport *viewport2 = GUI::getInstance().add<Viewport>({});
     SliderDecorator *viewportWithSlider2 = new SliderDecorator(viewport2);
+    GUI::getInstance().add(viewportWithSlider2);
     
     for (unsigned int f = 0; f < 40; f++) {
         viewport2->add(GUI::getInstance().add<Button>({
@@ -28,8 +35,39 @@ void ofApp::setup() {
         }));
     }
     
-    splitter->add(viewportWithSlider1, 0.5);
-    splitter->add(viewportWithSlider2, 0.5);
+    subSplitter1->add(viewportWithSlider1, 0.2);
+    subSplitter1->add(viewportWithSlider2);
+    
+    Splitter *subSplitter2 = GUI::getInstance().add<Splitter>({
+        {"type", (unsigned int) SPLITTER_VERTICAL}
+    });
+    
+    Viewport *viewport3 = GUI::getInstance().add<Viewport>({});
+    SliderDecorator *viewportWithSlider3 = new SliderDecorator(viewport3);
+    GUI::getInstance().add(viewportWithSlider3);
+    
+    for (unsigned int f = 0; f < 40; f++) {
+        viewport3->add(GUI::getInstance().add<Button>({
+            {"caption", "Button " + ofToString(f+1) + ". Left."}
+        }));
+    }
+    
+    Viewport *viewport4 = GUI::getInstance().add<Viewport>({});
+    SliderDecorator *viewportWithSlider4 = new SliderDecorator(viewport4);
+    GUI::getInstance().add(viewportWithSlider4);
+    
+    for (unsigned int f = 0; f < 40; f++) {
+        viewport4->add(GUI::getInstance().add<Button>({
+            {"caption", "Button " + ofToString(f+1) + ". Right."}
+        }));
+    }
+    
+    subSplitter2->add(viewportWithSlider3, 0.6);
+    subSplitter2->add(viewportWithSlider4);
+    
+    
+    mainSplitter->add(subSplitter1, 0.4);
+    mainSplitter->add(subSplitter2);
 }
 
 //--------------------------------------------------------------

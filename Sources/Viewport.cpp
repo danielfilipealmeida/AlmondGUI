@@ -11,7 +11,7 @@
 
 Viewport::Viewport() {
     scrollPositionX = scrollPositionY = 0;
-    style.hasBorder = true;
+    style.hasBorder = false;
 }
 
 Viewport::~Viewport()  {

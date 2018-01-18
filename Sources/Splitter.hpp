@@ -17,6 +17,11 @@ typedef enum {
     SPLITTER_VERTICAL
 } SplitterType;
 
+typedef enum {
+    SPLITTER_MODE_PERCENTAGE = 0,
+    SPLITTER_MODE_FIXED
+} SplitMode;
+
 /*
  \brief configuration of a child of the splitter.
  
@@ -25,6 +30,7 @@ typedef enum {
 typedef struct {
     Element *element;
     float size;
+    SplitMode mode;
 } SplitterChild;
 
 
@@ -50,6 +56,11 @@ protected:
      Calculate the splitter rect
      */
     void calculateRect();
+    
+    /*!
+     Calculate the splitter rect
+     */
+    static float getSplitSizeForChild(float totalSplitterSize, SplitterChild child);
     
 public:
     
@@ -107,10 +118,11 @@ public:
     
     /*!
      \brief Adds a new element to the splitter at the end
-     \param element
-     \param size
+     \param element the element to add to the new split child
+     \param size the dimension of the child (percentage / pixels)
+     \param mode sets if the dimension is in percentage or in pixels
      */
-    void add(Element* element, float size);
+    void add(Element* element, float size = 0.5, SplitMode mode = SPLITTER_MODE_PERCENTAGE);
     
     /*!
      \brief Calculate the rectangular areas of the child elements
