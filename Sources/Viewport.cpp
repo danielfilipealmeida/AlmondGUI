@@ -59,43 +59,29 @@ void Viewport::update()
     Element::update();
 }
 
+
+// todo: clean this up. it look really bad!
 void Viewport::draw( )
 {
-    static Boolean saved = false;
-    float x, y;
-    
     Element::draw( );
-    
-    fbo.begin();
-    ofClear((style.hasBackground == true) ? style.backgroundColor : GUIStyle::getInstance().getDarkColor());
-    
-    drawChilds();
-    
-    fbo.end();
-    update();
-
-    x =rect.x;
-    y = rect.y;
-    if (parent != NULL) {
-        ofRectangle visibleParentRect = this->parent->getRect();
-        x = x + visibleParentRect.x;
-        y = y + visibleParentRect.y;
-    }
-    ofSetColor(ofColor::white);
-    fbo.getTexture().drawSubsection(rect.x,
-                                    rect.y,
-                                    rect.width, rect.height,
-                                    getOffsetX(),
-                                    getOffsetY());
-    
-    if (!saved) {
-        GUI::getInstance().saveTexture("output.png", fbo.getTexture());
-        saved = true;
-    }
-    
+    drawChildsInFbo();
+    drawFbo();
     Element::finishDraw( );
 }
 
+
+void Viewport::drawChildsInFbo() {
+    fbo.begin();
+    ofClear((style.hasBackground == true) ? style.backgroundColor : GUIStyle::getInstance().getDarkColor());
+    drawChilds();
+    fbo.end();
+    update();
+}
+
+void Viewport::drawFbo() {
+    ofSetColor(ofColor::white);
+    fbo.getTexture().drawSubsection(rect.x, rect.y,totalWidth, totalHeight, getOffsetX() > 0 ? getOffsetX():0, getOffsetY() > 0 ? getOffsetY() : 0);
+}
 
 ofRectangle Viewport::calculateDrawingRectForElement(Element *element) {
     ofRectangle drawingRect;
@@ -205,4 +191,35 @@ float Viewport::getOffsetX() {
 
 float Viewport::getOffsetY() {
     return scrollPositionY * overflowY;
+}
+
+void Viewport::resizeToFitContent() {
+    ofRectangle childsRect;
+   
+    for(auto childElement:getChildElements()) {
+        ofRectangle newRect =childElement->rect;
+        newRect.width = newRect.width;
+        newRect.height = newRect.height;
+        childsRect.growToInclude(newRect);
+    }
+    
+    totalHeight = childsRect.height + GUI_BORDER;
+    totalWidth = childsRect.width + GUI_BORDER;
+}
+
+json Viewport::jsonDump() {
+    json dump = Element::jsonDump();
+    
+    dump["overflowX"] = overflowX;
+    dump["overflowY"] = overflowY;
+    dump["scrollPositionX"] = scrollPositionX;
+    dump["scrollPositionY"] = scrollPositionY;
+    dump["totalHeight"] = totalHeight;
+    dump["totalWidth"] = totalWidth;
+    
+    return dump;
+}
+
+string Viewport::dump()  {
+    return jsonDump().dump(4);
 }

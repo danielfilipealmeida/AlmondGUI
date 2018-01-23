@@ -80,6 +80,12 @@ std::vector<Element*> GUI::filter(std::function<bool (Element *)> lambda) {
     return result;
 }
 
+void GUI::forEachChildOf(Element *parent, std::function<void (Element *)> lambda) {
+    for(auto element:parent->getChildElements()) {
+        lambda(element);
+    }
+}
+
 void GUI::updateVisibleRects()
 {
     forEach([this](Element *element) {

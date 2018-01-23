@@ -103,6 +103,13 @@ public:
     std::vector<Element*> filter(std::function<bool (Element *)> lambda);
     
     /*!
+     \brief Apply a lambda to all child elements of an element
+     \param parent the parent element
+     \param lambda the function to apply to each child element
+     */
+    void forEachChildOf(Element *parent, std::function<void (Element *)> lambda);
+    
+    /*!
      \brief Traverse all elements and updates their visible rect
      */
     void updateVisibleRects();

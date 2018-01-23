@@ -15,6 +15,9 @@
 
 /*!
  \brief Implements a scrollable area that can contain elements. The Element class already allows this but isn't scrollable.
+ 
+ rect: the definition of the rectangle of the viewport
+ visibleRect: rect translated into screen coordinates
  */
 class Viewport : public Element
 {
@@ -35,6 +38,16 @@ protected:
      \brief updates the size of the fbo
      */
     void updateFbo();
+    
+    /*!
+     \brief Draws all the viewport childs inside the fbo that is used as the video memory holding the viewport content
+     */
+    void drawChildsInFbo();
+    
+    /*!
+     \brief Draws the visible part of the fbo on the screen
+     */
+    void drawFbo();
     
 public:
     
@@ -133,8 +146,32 @@ public:
      */
     Element *add(Element *newElement);
 
+    /*!
+     \brief Resizes the viewport to the required rect
+     \param newRect the new size of the viewport
+     */
     void resize(ofRectangle newRect);
     
+    /*!
+     \brief Resizes the Viewport to fit the total of it's content
+     
+     Traverses all the childs of the viewport and calculate all ocuppied space
+     */
+    void resizeToFitContent();
+    
+    /*!
+     \brief gets a dump of the state of the element in json format
+     
+     This will be used to generate the string dump
+     */
+    json jsonDump();
+    
+    /*!
+     \brief Get a dump of all data of the element
+     
+     \return a string representing the state of the element
+     */
+    string dump();
  
 };
 

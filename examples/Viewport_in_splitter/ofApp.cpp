@@ -19,7 +19,7 @@ void ofApp::setup() {
     SliderDecorator *viewportWithSlider1 = new SliderDecorator(viewport1);
     GUI::getInstance().add(viewportWithSlider1);
     
-    for (unsigned int f = 0; f < 40; f++) {
+    for (unsigned int f = 0; f < 20; f++) {
         viewport1->add(GUI::getInstance().add<Button>({
             {"caption", "Button " + ofToString(f+1) + ". Left."}
         }));
@@ -29,7 +29,7 @@ void ofApp::setup() {
     SliderDecorator *viewportWithSlider2 = new SliderDecorator(viewport2);
     GUI::getInstance().add(viewportWithSlider2);
     
-    for (unsigned int f = 0; f < 40; f++) {
+    for (unsigned int f = 0; f < 20; f++) {
         viewport2->add(GUI::getInstance().add<Button>({
             {"caption", "Button " + ofToString(f+1) + ". Right."}
         }));
@@ -46,7 +46,7 @@ void ofApp::setup() {
     SliderDecorator *viewportWithSlider3 = new SliderDecorator(viewport3);
     GUI::getInstance().add(viewportWithSlider3);
     
-    for (unsigned int f = 0; f < 40; f++) {
+    for (unsigned int f = 0; f < 20; f++) {
         viewport3->add(GUI::getInstance().add<Button>({
             {"caption", "Button " + ofToString(f+1) + ". Left."}
         }));
@@ -56,7 +56,7 @@ void ofApp::setup() {
     SliderDecorator *viewportWithSlider4 = new SliderDecorator(viewport4);
     GUI::getInstance().add(viewportWithSlider4);
     
-    for (unsigned int f = 0; f < 40; f++) {
+    for (unsigned int f = 0; f < 20; f++) {
         viewport4->add(GUI::getInstance().add<Button>({
             {"caption", "Button " + ofToString(f+1) + ". Right."}
         }));
@@ -65,9 +65,17 @@ void ofApp::setup() {
     subSplitter2->add(viewportWithSlider3, 0.6);
     subSplitter2->add(viewportWithSlider4);
     
-    
     mainSplitter->add(subSplitter1, 0.4);
     mainSplitter->add(subSplitter2);
+    
+    
+    // right now I need to resize here!
+    // should check what happens when I add a viewport to a slider. is it changing the rect?
+    viewport1->resizeToFitContent();
+    viewport2->resizeToFitContent();
+    viewport3->resizeToFitContent();
+    viewport4->resizeToFitContent();
+
 }
 
 //--------------------------------------------------------------
