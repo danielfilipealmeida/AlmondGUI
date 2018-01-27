@@ -96,5 +96,4 @@ void SliderDecorator::resize(ofRectangle newRect)
     setSlider(newRect);
     newRect.width = newRect.width - slider.rect.width - (GUI_BORDER / 2.0);
     Decorator::resize(newRect);
-    
 }

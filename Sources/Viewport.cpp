@@ -166,6 +166,8 @@ void Viewport::resize(ofRectangle newRect) {
         element->resize(newRect);
         currentY = currentY + height + GUI_BORDER;
     }
+    
+    resizeInnerRectToFitContent();
 }
 
 float Viewport::getScrollPositionY() {
@@ -193,7 +195,7 @@ float Viewport::getOffsetY() {
     return scrollPositionY * overflowY;
 }
 
-void Viewport::resizeToFitContent() {
+void Viewport::resizeInnerRectToFitContent() {
     ofRectangle childsRect;
    
     for(auto childElement:getChildElements()) {

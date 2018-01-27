@@ -71,10 +71,10 @@ void ofApp::setup() {
     
     // right now I need to resize here!
     // should check what happens when I add a viewport to a slider. is it changing the rect?
-    viewport1->resizeToFitContent();
-    viewport2->resizeToFitContent();
-    viewport3->resizeToFitContent();
-    viewport4->resizeToFitContent();
+    //viewport1->resizeToFitContent();
+    //viewport2->resizeToFitContent();
+    //viewport3->resizeToFitContent();
+    //viewport4->resizeToFitContent();
 
 }
 

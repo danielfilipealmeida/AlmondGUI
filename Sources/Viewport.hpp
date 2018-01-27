@@ -157,7 +157,7 @@ public:
      
      Traverses all the childs of the viewport and calculate all ocuppied space
      */
-    void resizeToFitContent();
+    void resizeInnerRectToFitContent();
     
     /*!
      \brief gets a dump of the state of the element in json format
