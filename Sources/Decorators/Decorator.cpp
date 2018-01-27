@@ -45,4 +45,6 @@ void Decorator::resize(ofRectangle newRect) {
     element->resize(newRect);
 }
 
-
+Boolean Decorator::elementCanScroll() {
+    return element->canScroll();
+}

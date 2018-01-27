@@ -40,11 +40,6 @@ void Viewport::set(json config) {
 void Viewport::updateFbo()
 {
     if (fbo.getHeight() == totalHeight && fbo.getWidth() == totalWidth) return;
-    /*
-    if (fbo.isAllocated()) {
-        fbo.destroy();
-    }
-     */
     fbo.allocate(totalWidth, totalHeight);
 }
 
@@ -224,4 +219,8 @@ json Viewport::jsonDump() {
 
 string Viewport::dump()  {
     return jsonDump().dump(4);
+}
+
+Boolean Viewport::canScroll() {
+    return totalWidth > rect.width || totalHeight > rect.height;
 }

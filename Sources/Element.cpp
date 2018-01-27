@@ -237,3 +237,7 @@ string Element::dump()
 {
     return  jsonDump().dump(4);
 }
+
+Boolean Element::canScroll() {
+    return false;
+}

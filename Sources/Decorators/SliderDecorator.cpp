@@ -56,17 +56,15 @@ void SliderDecorator::update()
 {
     Decorator::update();
     
+    /* if the decorated element doen's need to scroll, return */
+    if (!Decorator::elementCanScroll()) {
+        return;
+    }
+    
     Boolean previousHover = slider.hover;
     ofRectangle visibleRect;
     
     visibleRect = slider.rect;
-    /*
-    if (parent != NULL) {
-        visibleRect.x = visibleRect.x + parent->rect.x;
-        visibleRect.y = visibleRect.y + parent->rect.y;
-    }
-     */
-    
     slider.hover = visibleRect.inside(ofGetMouseX(), ofGetMouseY());
     if (slider.hover) {
         slider.pressed = (ofGetMousePressed() > 0);

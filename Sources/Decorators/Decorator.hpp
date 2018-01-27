@@ -68,6 +68,11 @@ public:
      This will properly setup the rects of both decorated elements and the decorator.
      */
     void resize(ofRectangle newRect);
+    
+    /*!
+     \brief Tells of the decorated element can scroll
+     */
+    Boolean elementCanScroll();
 };
 
 

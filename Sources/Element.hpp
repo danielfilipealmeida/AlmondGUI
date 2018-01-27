@@ -211,6 +211,11 @@ public:
      \return a string representing the state of the element
      */
     string dump();
+    
+    /*!
+     \brief Tells if the element has a bigger rect than the visible rect definition
+     */
+    virtual Boolean canScroll();
 };
 
 #endif /* Element_hpp */

@@ -173,6 +173,13 @@ public:
      */
     string dump();
  
+    /*!
+     \brief Tells of the viewport can scroll
+     
+     \returns true or false
+     */
+    Boolean canScroll();
+    
 };
 
 #endif /* Viewport_hpp */
