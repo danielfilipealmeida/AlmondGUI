@@ -194,7 +194,7 @@ void Viewport::resizeInnerRectToFitContent() {
     ofRectangle childsRect;
    
     for(auto childElement:getChildElements()) {
-        ofRectangle newRect =childElement->rect;
+        ofRectangle newRect = childElement->getRect();
         newRect.width = newRect.width;
         newRect.height = newRect.height;
         childsRect.growToInclude(newRect);

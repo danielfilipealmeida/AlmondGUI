@@ -20,22 +20,8 @@ void ofApp::setup() {
     GUI::getInstance().add(viewportWithSlider1);
     
     for (unsigned int f = 0; f < 10; f++) {
-        viewport1->add(GUI::getInstance().add<Slider>({
-            {"caption", "Slider " + ofToString(f+1) + ". Left."},
-            {"minValue", 0.0},
-            {"maxValue", 1.0},
-            {"value", ofRandom(1.0)}
-        }));
-                                        
-        /*
-        viewport1->add(new ResetButtonDecorator(GUI::getInstance().add<Slider>({
-            {"caption", "Slider " + ofToString(f+1) + ". Left."},
-            {"minValue", 0.0},
-            {"maxValue", 1.0},
-            {"value", ofRandom(1.0)}
-        })));
-                                            
-        Slider *slider = GUI::getInstance().add<Slider>({
+        Slider *slider = new Slider();
+        slider->set({
             {"caption", "Slider " + ofToString(f+1) + ". Left."},
             {"minValue", 0.0},
             {"maxValue", 1.0},
@@ -43,9 +29,7 @@ void ofApp::setup() {
         });
         ResetButtonDecorator *sliderWithReset = new ResetButtonDecorator(slider);
         GUI::getInstance().add(sliderWithReset);
-        sliderWithReset->setParent(viewport1);
-        //viewport1->add(sliderWithReset);
-        */
+        viewport1->add(sliderWithReset);
     }
     
     Viewport *viewport2 = GUI::getInstance().add<Viewport>({});

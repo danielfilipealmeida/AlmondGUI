@@ -92,3 +92,9 @@ void ResetButtonDecorator::resize(ofRectangle newRect) {
     newRect.width = newRect.width - resetButton.rect.width - (GUI_BORDER / 2.0);
     Decorator::resize(newRect);
 }
+
+ofRectangle ResetButtonDecorator::getRect() {
+    ofRectangle result = rect;
+    result.growToInclude(resetButton.rect);
+    return result;
+}

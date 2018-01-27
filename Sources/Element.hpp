@@ -168,7 +168,7 @@ public:
     /*!
      \brief Get the rectangle definition of the element
      */
-    ofRectangle getRect();
+    virtual ofRectangle getRect();
     
     /*!
      \brief Sets the new rect

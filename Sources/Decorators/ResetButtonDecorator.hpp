@@ -54,6 +54,13 @@ public:
      ...
      */
     void setResetButton(ofRectangle _rect);
+    
+    /*!
+     \brief returns the rect of the decorated element
+     
+     Contains the element and it's decorator
+     */
+    virtual ofRectangle getRect();
 };
 
 #endif /* ResetButtonDecorator_hpp */
