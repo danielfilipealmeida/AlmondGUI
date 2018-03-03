@@ -122,7 +122,7 @@ void GUI::forEachChildOf(Element *parent, std::function<void (Element *)> lambda
 void GUI::updateVisibleRects()
 {
     forEach([this](Element *element) {
-        element->visibleRect = element->calculateVisibleRect();
+        element->setVisibleRect(element->calculateVisibleRect());
     });
 }
 

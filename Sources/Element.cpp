@@ -14,6 +14,7 @@
 
 Element::Element()
 {
+    className = "Element";
     parent = NULL;
     hover = FALSE;
     pressed = FALSE;
@@ -23,10 +24,13 @@ Element::Element()
     rect.x = rect.y = rect.width = rect.height = -1;
 }
 
-
 Element::~Element()
 {
-    
+}
+
+void Element::setVisibleRect(ofRectangle _visibleRect)
+{
+    visibleRect = _visibleRect;
 }
 
 Boolean Element::checkIsDragging()
@@ -54,7 +58,7 @@ void Element::update()
     visibleRect = calculateVisibleRect();
     ofRectangle croppedVisibleRect = visibleRect;
     if (parent != NULL) {
-        croppedVisibleRect = croppedVisibleRect.getIntersection(parent->visibleRect);
+        croppedVisibleRect = croppedVisibleRect.getIntersection(parent->getVisibleRect());
     }
      
     if (!croppedVisibleRect.inside(ofGetMouseX(), ofGetMouseY())) {
@@ -172,10 +176,6 @@ std::vector<Element*> Element::getChildElements() {
     });
 }
 */
-
-void Element::setParent(Element *_parent) {
-    parent = _parent;
-}
 
 Element *Element::add(Element *newElement) {
     newElement->setParent(this);

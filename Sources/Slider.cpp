@@ -14,16 +14,21 @@
 
 Slider::Slider()
 {
+    className = "Slider";
+
     showValue = true;
 }
-
 
 Slider::~Slider()
 {
     
 }
 
-
+/*
+void Slider::setParent(ElementInterface *_parent) {
+    parent=_parent;
+}
+ */
 
 void Slider::update() {
     float previousValue = value;

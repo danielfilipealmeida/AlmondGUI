@@ -10,6 +10,8 @@
 
 
 Table::Table() {
+    className = "Table";
+    
     nColumns = 0;
     nRows = 0;
     rowHeight = 0;

@@ -12,6 +12,7 @@
 
 Button::Button() 
 {
+    className = "Button";
     pushed = false;
     caption = "";
     style.hasBorder = true;

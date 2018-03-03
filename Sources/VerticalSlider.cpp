@@ -10,6 +10,8 @@
 #include "GUIStyle.hpp"
 
 VerticalSlider::VerticalSlider() {
+    className = "VerticalSlider";
+
     Slider::Slider();
 }
 

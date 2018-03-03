@@ -9,7 +9,10 @@
 #include "GUIStyle.hpp"
 #include "GUI.hpp"
 
-Preview::Preview() {
+Preview::Preview()
+{
+    className = "Preview";
+
     fbo = NULL;
     style.hasBorder = true;
     style.hasBackground = true;

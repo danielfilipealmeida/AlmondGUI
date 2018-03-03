@@ -9,6 +9,8 @@
 #include "Splitter.hpp"
 
 Splitter::Splitter() {
+    className = "Splitter";
+
     type = SPLITTER_VERTICAL;
 }
 

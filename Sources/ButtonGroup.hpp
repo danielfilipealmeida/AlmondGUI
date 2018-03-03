@@ -88,7 +88,7 @@ public:
     /*!
      \brief Sets the element that will contain this element
      */
-    void setParent(Element *_parent);
+    void setParent(ElementInterface *_parent);
     
     /*!
      \brief handles resizing (not sure if this is needed)

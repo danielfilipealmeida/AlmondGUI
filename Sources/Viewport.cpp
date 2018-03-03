@@ -10,6 +10,9 @@
 #include "GUI.hpp"
 
 Viewport::Viewport() {
+    className = "Viewport";
+
+    
     scrollPositionX = scrollPositionY = 0;
     style.hasBorder = false;
 }
@@ -83,7 +86,7 @@ ofRectangle Viewport::calculateDrawingRectForElement(Element *element) {
     
     // todo: return empty rect if this isn't a parent of the given element
     
-    drawingRect = element->rect;
+    drawingRect = element->getRect();
     
     drawingRect.x = drawingRect.x - overflowX * scrollPositionX;
     drawingRect.y = drawingRect.y - overflowY * scrollPositionY;

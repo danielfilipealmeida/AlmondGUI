@@ -10,27 +10,22 @@
 		0C03707F1FF849C9005744F2 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81321DF8D94600331165 /* SyphonNameboundClient.m */; };
 		0C0370811FF849C9005744F2 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD361F44691E008E4F9E /* tinyxml.cpp */; };
 		0C0370821FF849C9005744F2 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81551DF8D96500331165 /* OscReceivedElements.cpp */; };
-		0C0370851FF849C9005744F2 /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
-		0C0370861FF849C9005744F2 /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
 		0C0370871FF849C9005744F2 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF01FBCFA3200D9016F /* Button.cpp */; };
 		0C0370891FF849C9005744F2 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81531DF8D96500331165 /* OscPrintReceivedElements.cpp */; };
 		0C03708A1FF849C9005744F2 /* Slider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDF1FBCFA3000D9016F /* Slider.cpp */; };
 		0C03708B1FF849C9005744F2 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81571DF8D96500331165 /* OscTypes.cpp */; };
 		0C03708C1FF849C9005744F2 /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE11FBCFA3000D9016F /* VerticalSlider.cpp */; };
-		0C03708D1FF849C9005744F2 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		0C03708E1FF849C9005744F2 /* ofxSyphonClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81361DF8D94600331165 /* ofxSyphonClient.mm */; };
 		0C03708F1FF849C9005744F2 /* ofxSyphonServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81381DF8D94600331165 /* ofxSyphonServer.mm */; };
 		0C0370921FF849C9005744F2 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81451DF8D96500331165 /* NetworkingUtils.cpp */; };
 		0C0370931FF849C9005744F2 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC819A1DF8D9D600331165 /* ofxXmlSettings.cpp */; };
 		0C0370941FF849C9005744F2 /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEC1FBCFA3100D9016F /* GUI.cpp */; };
-		0C0370961FF849C9005744F2 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
 		0C0370971FF849C9005744F2 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81461DF8D96500331165 /* UdpSocket.cpp */; };
 		0C03709B1FF849C9005744F2 /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81621DF8D96500331165 /* ofxOscReceiver.cpp */; };
 		0C03709C1FF849C9005744F2 /* Preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE61FBCFA3000D9016F /* Preview.cpp */; };
 		0C03709E1FF849C9005744F2 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD391F44691E008E4F9E /* tinyxmlparser.cpp */; };
 		0C03709F1FF849C9005744F2 /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDD1FBCFA3000D9016F /* Viewport.cpp */; };
 		0C0370A01FF849C9005744F2 /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDA1FBCFA2F00D9016F /* Element.cpp */; };
-		0C0370A11FF849C9005744F2 /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
 		0C0370A21FF849C9005744F2 /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE51FBCFA3000D9016F /* Label.cpp */; };
 		0C0370A41FF849C9005744F2 /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FED1FBCFA3100D9016F /* Splitter.cpp */; };
 		0C0370A51FF849C9005744F2 /* ofxOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC815E1DF8D96500331165 /* ofxOscMessage.cpp */; };
@@ -46,19 +41,14 @@
 		0C0370C21FF849FF005744F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0370BE1FF849FF005744F2 /* ofApp.cpp */; };
 		0C0370C31FF849FF005744F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0370C01FF849FF005744F2 /* main.cpp */; };
 		0C0370D31FF853E1005744F2 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF01FBCFA3200D9016F /* Button.cpp */; };
-		0C0370D41FF853E1005744F2 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
-		0C0370D51FF853E1005744F2 /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
 		0C0370D61FF853E1005744F2 /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDA1FBCFA2F00D9016F /* Element.cpp */; };
 		0C0370D71FF853E1005744F2 /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEC1FBCFA3100D9016F /* GUI.cpp */; };
 		0C0370D81FF853E1005744F2 /* GUIStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEA1FBCFA3100D9016F /* GUIStyle.cpp */; };
 		0C0370D91FF853E1005744F2 /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE51FBCFA3000D9016F /* Label.cpp */; };
 		0C0370DA1FF853E1005744F2 /* Preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE61FBCFA3000D9016F /* Preview.cpp */; };
-		0C0370DC1FF853E1005744F2 /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
 		0C0370DD1FF853E1005744F2 /* Slider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDF1FBCFA3000D9016F /* Slider.cpp */; };
-		0C0370DE1FF853E1005744F2 /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
 		0C0370DF1FF853E1005744F2 /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FED1FBCFA3100D9016F /* Splitter.cpp */; };
 		0C0370E01FF853E1005744F2 /* ToggleButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF31FBCFA3200D9016F /* ToggleButton.cpp */; };
-		0C0370E11FF853E1005744F2 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
 		0C0370E21FF853E1005744F2 /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE11FBCFA3000D9016F /* VerticalSlider.cpp */; };
 		0C0370E31FF853E1005744F2 /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDD1FBCFA3000D9016F /* Viewport.cpp */; };
 		0C0370E51FF85656005744F2 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E896851E733920000D470B /* Syphon.framework */; };
@@ -85,28 +75,23 @@
 		0C1C0BB2200F76D800BC3369 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81321DF8D94600331165 /* SyphonNameboundClient.m */; };
 		0C1C0BB3200F76D800BC3369 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD361F44691E008E4F9E /* tinyxml.cpp */; };
 		0C1C0BB4200F76D800BC3369 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81551DF8D96500331165 /* OscReceivedElements.cpp */; };
-		0C1C0BB5200F76D800BC3369 /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
-		0C1C0BB6200F76D800BC3369 /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
 		0C1C0BB7200F76D800BC3369 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF01FBCFA3200D9016F /* Button.cpp */; };
 		0C1C0BB8200F76D800BC3369 /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C767D0B200D1EB10002318B /* Table.cpp */; };
 		0C1C0BB9200F76D800BC3369 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81531DF8D96500331165 /* OscPrintReceivedElements.cpp */; };
 		0C1C0BBA200F76D800BC3369 /* Slider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDF1FBCFA3000D9016F /* Slider.cpp */; };
 		0C1C0BBB200F76D800BC3369 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81571DF8D96500331165 /* OscTypes.cpp */; };
 		0C1C0BBC200F76D800BC3369 /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE11FBCFA3000D9016F /* VerticalSlider.cpp */; };
-		0C1C0BBD200F76D800BC3369 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		0C1C0BBE200F76D800BC3369 /* ofxSyphonClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81361DF8D94600331165 /* ofxSyphonClient.mm */; };
 		0C1C0BBF200F76D800BC3369 /* ofxSyphonServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81381DF8D94600331165 /* ofxSyphonServer.mm */; };
 		0C1C0BC0200F76D800BC3369 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81451DF8D96500331165 /* NetworkingUtils.cpp */; };
 		0C1C0BC1200F76D800BC3369 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC819A1DF8D9D600331165 /* ofxXmlSettings.cpp */; };
 		0C1C0BC2200F76D800BC3369 /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEC1FBCFA3100D9016F /* GUI.cpp */; };
-		0C1C0BC3200F76D800BC3369 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
 		0C1C0BC4200F76D800BC3369 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81461DF8D96500331165 /* UdpSocket.cpp */; };
 		0C1C0BC6200F76D800BC3369 /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81621DF8D96500331165 /* ofxOscReceiver.cpp */; };
 		0C1C0BC7200F76D800BC3369 /* Preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE61FBCFA3000D9016F /* Preview.cpp */; };
 		0C1C0BC9200F76D800BC3369 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD391F44691E008E4F9E /* tinyxmlparser.cpp */; };
 		0C1C0BCA200F76D800BC3369 /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDD1FBCFA3000D9016F /* Viewport.cpp */; };
 		0C1C0BCB200F76D800BC3369 /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDA1FBCFA2F00D9016F /* Element.cpp */; };
-		0C1C0BCC200F76D800BC3369 /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
 		0C1C0BCD200F76D800BC3369 /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE51FBCFA3000D9016F /* Label.cpp */; };
 		0C1C0BCE200F76D800BC3369 /* ElementStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0CA28E1FF92EA700C4C463 /* ElementStyle.cpp */; };
 		0C1C0BCF200F76D800BC3369 /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FED1FBCFA3100D9016F /* Splitter.cpp */; };
@@ -130,28 +115,23 @@
 		0C1C0BEF200F7A3200BC3369 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81321DF8D94600331165 /* SyphonNameboundClient.m */; };
 		0C1C0BF0200F7A3200BC3369 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD361F44691E008E4F9E /* tinyxml.cpp */; };
 		0C1C0BF1200F7A3200BC3369 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81551DF8D96500331165 /* OscReceivedElements.cpp */; };
-		0C1C0BF2200F7A3200BC3369 /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
-		0C1C0BF3200F7A3200BC3369 /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
 		0C1C0BF4200F7A3200BC3369 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF01FBCFA3200D9016F /* Button.cpp */; };
 		0C1C0BF5200F7A3200BC3369 /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C767D0B200D1EB10002318B /* Table.cpp */; };
 		0C1C0BF6200F7A3200BC3369 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81531DF8D96500331165 /* OscPrintReceivedElements.cpp */; };
 		0C1C0BF7200F7A3200BC3369 /* Slider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDF1FBCFA3000D9016F /* Slider.cpp */; };
 		0C1C0BF8200F7A3200BC3369 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81571DF8D96500331165 /* OscTypes.cpp */; };
 		0C1C0BF9200F7A3200BC3369 /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE11FBCFA3000D9016F /* VerticalSlider.cpp */; };
-		0C1C0BFA200F7A3200BC3369 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		0C1C0BFB200F7A3200BC3369 /* ofxSyphonClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81361DF8D94600331165 /* ofxSyphonClient.mm */; };
 		0C1C0BFC200F7A3200BC3369 /* ofxSyphonServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81381DF8D94600331165 /* ofxSyphonServer.mm */; };
 		0C1C0BFD200F7A3200BC3369 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81451DF8D96500331165 /* NetworkingUtils.cpp */; };
 		0C1C0BFE200F7A3200BC3369 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC819A1DF8D9D600331165 /* ofxXmlSettings.cpp */; };
 		0C1C0C00200F7A3200BC3369 /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEC1FBCFA3100D9016F /* GUI.cpp */; };
-		0C1C0C01200F7A3200BC3369 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
 		0C1C0C03200F7A3200BC3369 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81461DF8D96500331165 /* UdpSocket.cpp */; };
 		0C1C0C04200F7A3200BC3369 /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81621DF8D96500331165 /* ofxOscReceiver.cpp */; };
 		0C1C0C05200F7A3200BC3369 /* Preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE61FBCFA3000D9016F /* Preview.cpp */; };
 		0C1C0C06200F7A3200BC3369 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD391F44691E008E4F9E /* tinyxmlparser.cpp */; };
 		0C1C0C07200F7A3200BC3369 /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDD1FBCFA3000D9016F /* Viewport.cpp */; };
 		0C1C0C08200F7A3200BC3369 /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDA1FBCFA2F00D9016F /* Element.cpp */; };
-		0C1C0C09200F7A3200BC3369 /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
 		0C1C0C0A200F7A3200BC3369 /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE51FBCFA3000D9016F /* Label.cpp */; };
 		0C1C0C0B200F7A3200BC3369 /* ElementStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0CA28E1FF92EA700C4C463 /* ElementStyle.cpp */; };
 		0C1C0C0C200F7A3200BC3369 /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FED1FBCFA3100D9016F /* Splitter.cpp */; };
@@ -173,28 +153,20 @@
 		0C1C0C23200F7A5400BC3369 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C0BE9200F7A2700BC3369 /* main.cpp */; };
 		0C1C0C24200F7A5800BC3369 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C1C0BEA200F7A2700BC3369 /* ofApp.cpp */; };
 		0C1E77D21F8D8690005507CF /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81321DF8D94600331165 /* SyphonNameboundClient.m */; };
-		0C392FF61FBCFA3200D9016F /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
-		0C392FF71FBCFA3200D9016F /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
 		0C392FFA1FBCFA3200D9016F /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDA1FBCFA2F00D9016F /* Element.cpp */; };
 		0C392FFB1FBCFA3200D9016F /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDA1FBCFA2F00D9016F /* Element.cpp */; };
 		0C392FFC1FBCFA3200D9016F /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDD1FBCFA3000D9016F /* Viewport.cpp */; };
 		0C392FFD1FBCFA3200D9016F /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDD1FBCFA3000D9016F /* Viewport.cpp */; };
 		0C392FFE1FBCFA3200D9016F /* Slider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDF1FBCFA3000D9016F /* Slider.cpp */; };
 		0C392FFF1FBCFA3200D9016F /* Slider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDF1FBCFA3000D9016F /* Slider.cpp */; };
-		0C3930001FBCFA3200D9016F /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
-		0C3930011FBCFA3200D9016F /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		0C3930021FBCFA3200D9016F /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE11FBCFA3000D9016F /* VerticalSlider.cpp */; };
 		0C3930031FBCFA3200D9016F /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE11FBCFA3000D9016F /* VerticalSlider.cpp */; };
 		0C3930041FBCFA3200D9016F /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE51FBCFA3000D9016F /* Label.cpp */; };
 		0C3930051FBCFA3200D9016F /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE51FBCFA3000D9016F /* Label.cpp */; };
 		0C3930061FBCFA3200D9016F /* Preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE61FBCFA3000D9016F /* Preview.cpp */; };
 		0C3930071FBCFA3200D9016F /* Preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE61FBCFA3000D9016F /* Preview.cpp */; };
-		0C3930081FBCFA3200D9016F /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
-		0C3930091FBCFA3200D9016F /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
 		0C39300A1FBCFA3200D9016F /* GUIStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEA1FBCFA3100D9016F /* GUIStyle.cpp */; };
 		0C39300B1FBCFA3200D9016F /* GUIStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEA1FBCFA3100D9016F /* GUIStyle.cpp */; };
-		0C39300C1FBCFA3200D9016F /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
-		0C39300D1FBCFA3200D9016F /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
 		0C39300E1FBCFA3200D9016F /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEC1FBCFA3100D9016F /* GUI.cpp */; };
 		0C39300F1FBCFA3200D9016F /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEC1FBCFA3100D9016F /* GUI.cpp */; };
 		0C3930101FBCFA3200D9016F /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FED1FBCFA3100D9016F /* Splitter.cpp */; };
@@ -203,8 +175,6 @@
 		0C3930131FBCFA3200D9016F /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF01FBCFA3200D9016F /* Button.cpp */; };
 		0C3930141FBCFA3200D9016F /* ToggleButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF31FBCFA3200D9016F /* ToggleButton.cpp */; };
 		0C3930151FBCFA3200D9016F /* ToggleButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF31FBCFA3200D9016F /* ToggleButton.cpp */; };
-		0C3930161FBCFA3200D9016F /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
-		0C3930171FBCFA3200D9016F /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
 		0C39301F1FBCFAE500D9016F /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C39301D1FBCFAE500D9016F /* ofApp.cpp */; };
 		0C3930201FBCFAE500D9016F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C39301E1FBCFAE500D9016F /* main.cpp */; };
 		0C71E9F61FF828880045EA4D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F01FF828880045EA4D /* main.cpp */; };
@@ -220,27 +190,22 @@
 		0C767D19200E1A4F0002318B /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81321DF8D94600331165 /* SyphonNameboundClient.m */; };
 		0C767D1A200E1A4F0002318B /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD361F44691E008E4F9E /* tinyxml.cpp */; };
 		0C767D1B200E1A4F0002318B /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81551DF8D96500331165 /* OscReceivedElements.cpp */; };
-		0C767D1C200E1A4F0002318B /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
-		0C767D1D200E1A4F0002318B /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
 		0C767D1E200E1A4F0002318B /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF01FBCFA3200D9016F /* Button.cpp */; };
 		0C767D1F200E1A4F0002318B /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81531DF8D96500331165 /* OscPrintReceivedElements.cpp */; };
 		0C767D20200E1A4F0002318B /* Slider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDF1FBCFA3000D9016F /* Slider.cpp */; };
 		0C767D21200E1A4F0002318B /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81571DF8D96500331165 /* OscTypes.cpp */; };
 		0C767D22200E1A4F0002318B /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE11FBCFA3000D9016F /* VerticalSlider.cpp */; };
-		0C767D23200E1A4F0002318B /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		0C767D24200E1A4F0002318B /* ofxSyphonClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81361DF8D94600331165 /* ofxSyphonClient.mm */; };
 		0C767D25200E1A4F0002318B /* ofxSyphonServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81381DF8D94600331165 /* ofxSyphonServer.mm */; };
 		0C767D26200E1A4F0002318B /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81451DF8D96500331165 /* NetworkingUtils.cpp */; };
 		0C767D27200E1A4F0002318B /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC819A1DF8D9D600331165 /* ofxXmlSettings.cpp */; };
 		0C767D28200E1A4F0002318B /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEC1FBCFA3100D9016F /* GUI.cpp */; };
-		0C767D29200E1A4F0002318B /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
 		0C767D2A200E1A4F0002318B /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81461DF8D96500331165 /* UdpSocket.cpp */; };
 		0C767D2C200E1A4F0002318B /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81621DF8D96500331165 /* ofxOscReceiver.cpp */; };
 		0C767D2D200E1A4F0002318B /* Preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE61FBCFA3000D9016F /* Preview.cpp */; };
 		0C767D2F200E1A4F0002318B /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD391F44691E008E4F9E /* tinyxmlparser.cpp */; };
 		0C767D30200E1A4F0002318B /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDD1FBCFA3000D9016F /* Viewport.cpp */; };
 		0C767D31200E1A4F0002318B /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDA1FBCFA2F00D9016F /* Element.cpp */; };
-		0C767D32200E1A4F0002318B /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
 		0C767D33200E1A4F0002318B /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE51FBCFA3000D9016F /* Label.cpp */; };
 		0C767D34200E1A4F0002318B /* ElementStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0CA28E1FF92EA700C4C463 /* ElementStyle.cpp */; };
 		0C767D35200E1A4F0002318B /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FED1FBCFA3100D9016F /* Splitter.cpp */; };
@@ -268,28 +233,23 @@
 		0C9AA06C203F78ED00318675 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81321DF8D94600331165 /* SyphonNameboundClient.m */; };
 		0C9AA06D203F78ED00318675 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD361F44691E008E4F9E /* tinyxml.cpp */; };
 		0C9AA06E203F78ED00318675 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81551DF8D96500331165 /* OscReceivedElements.cpp */; };
-		0C9AA06F203F78ED00318675 /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
-		0C9AA070203F78ED00318675 /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
 		0C9AA071203F78ED00318675 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF01FBCFA3200D9016F /* Button.cpp */; };
 		0C9AA072203F78ED00318675 /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C767D0B200D1EB10002318B /* Table.cpp */; };
 		0C9AA073203F78ED00318675 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81531DF8D96500331165 /* OscPrintReceivedElements.cpp */; };
 		0C9AA074203F78ED00318675 /* Slider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDF1FBCFA3000D9016F /* Slider.cpp */; };
 		0C9AA075203F78ED00318675 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81571DF8D96500331165 /* OscTypes.cpp */; };
 		0C9AA076203F78ED00318675 /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE11FBCFA3000D9016F /* VerticalSlider.cpp */; };
-		0C9AA077203F78ED00318675 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		0C9AA078203F78ED00318675 /* ofxSyphonClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81361DF8D94600331165 /* ofxSyphonClient.mm */; };
 		0C9AA079203F78ED00318675 /* ofxSyphonServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81381DF8D94600331165 /* ofxSyphonServer.mm */; };
 		0C9AA07A203F78ED00318675 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81451DF8D96500331165 /* NetworkingUtils.cpp */; };
 		0C9AA07B203F78ED00318675 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC819A1DF8D9D600331165 /* ofxXmlSettings.cpp */; };
 		0C9AA07C203F78ED00318675 /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEC1FBCFA3100D9016F /* GUI.cpp */; };
-		0C9AA07D203F78ED00318675 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
 		0C9AA07E203F78ED00318675 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81461DF8D96500331165 /* UdpSocket.cpp */; };
 		0C9AA080203F78ED00318675 /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81621DF8D96500331165 /* ofxOscReceiver.cpp */; };
 		0C9AA081203F78ED00318675 /* Preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE61FBCFA3000D9016F /* Preview.cpp */; };
 		0C9AA083203F78ED00318675 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD391F44691E008E4F9E /* tinyxmlparser.cpp */; };
 		0C9AA084203F78ED00318675 /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDD1FBCFA3000D9016F /* Viewport.cpp */; };
 		0C9AA085203F78ED00318675 /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDA1FBCFA2F00D9016F /* Element.cpp */; };
-		0C9AA086203F78ED00318675 /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
 		0C9AA087203F78ED00318675 /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE51FBCFA3000D9016F /* Label.cpp */; };
 		0C9AA088203F78ED00318675 /* ElementStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0CA28E1FF92EA700C4C463 /* ElementStyle.cpp */; };
 		0C9AA089203F78ED00318675 /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FED1FBCFA3100D9016F /* Splitter.cpp */; };
@@ -323,27 +283,22 @@
 		0C9C32DB20057BD500750DC3 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81321DF8D94600331165 /* SyphonNameboundClient.m */; };
 		0C9C32DC20057BD500750DC3 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD361F44691E008E4F9E /* tinyxml.cpp */; };
 		0C9C32DD20057BD500750DC3 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81551DF8D96500331165 /* OscReceivedElements.cpp */; };
-		0C9C32DE20057BD500750DC3 /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
-		0C9C32DF20057BD500750DC3 /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
 		0C9C32E020057BD500750DC3 /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF01FBCFA3200D9016F /* Button.cpp */; };
 		0C9C32E120057BD500750DC3 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81531DF8D96500331165 /* OscPrintReceivedElements.cpp */; };
 		0C9C32E220057BD500750DC3 /* Slider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDF1FBCFA3000D9016F /* Slider.cpp */; };
 		0C9C32E320057BD500750DC3 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81571DF8D96500331165 /* OscTypes.cpp */; };
 		0C9C32E420057BD500750DC3 /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE11FBCFA3000D9016F /* VerticalSlider.cpp */; };
-		0C9C32E520057BD500750DC3 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		0C9C32E620057BD500750DC3 /* ofxSyphonClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81361DF8D94600331165 /* ofxSyphonClient.mm */; };
 		0C9C32E720057BD500750DC3 /* ofxSyphonServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81381DF8D94600331165 /* ofxSyphonServer.mm */; };
 		0C9C32E820057BD500750DC3 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81451DF8D96500331165 /* NetworkingUtils.cpp */; };
 		0C9C32E920057BD500750DC3 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC819A1DF8D9D600331165 /* ofxXmlSettings.cpp */; };
 		0C9C32EA20057BD500750DC3 /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEC1FBCFA3100D9016F /* GUI.cpp */; };
-		0C9C32EB20057BD500750DC3 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
 		0C9C32EC20057BD500750DC3 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81461DF8D96500331165 /* UdpSocket.cpp */; };
 		0C9C32EE20057BD500750DC3 /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81621DF8D96500331165 /* ofxOscReceiver.cpp */; };
 		0C9C32EF20057BD500750DC3 /* Preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE61FBCFA3000D9016F /* Preview.cpp */; };
 		0C9C32F120057BD500750DC3 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD391F44691E008E4F9E /* tinyxmlparser.cpp */; };
 		0C9C32F220057BD500750DC3 /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDD1FBCFA3000D9016F /* Viewport.cpp */; };
 		0C9C32F320057BD500750DC3 /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDA1FBCFA2F00D9016F /* Element.cpp */; };
-		0C9C32F420057BD500750DC3 /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
 		0C9C32F520057BD500750DC3 /* Label.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE51FBCFA3000D9016F /* Label.cpp */; };
 		0C9C32F620057BD500750DC3 /* ElementStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C0CA28E1FF92EA700C4C463 /* ElementStyle.cpp */; };
 		0C9C32F720057BD500750DC3 /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FED1FBCFA3100D9016F /* Splitter.cpp */; };
@@ -365,7 +320,8 @@
 		0C9C331320057C1D00750DC3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C331020057C1D00750DC3 /* main.cpp */; };
 		0C9C331420057C1D00750DC3 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C331120057C1D00750DC3 /* ofApp.cpp */; };
 		0C9F6613202E11270026F6E1 /* ScrollableInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0C9F6612202E11270026F6E1 /* ScrollableInterface.hpp */; };
-		0C9F6615202E11600026F6E1 /* DrawableInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0C9F6614202E11600026F6E1 /* DrawableInterface.hpp */; };
+		0CD86AA0204B179600DFB79D /* ElementInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0CD86A9F204B179600DFB79D /* ElementInterface.hpp */; };
+		0CD86AA5204B34D200DFB79D /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		0CEC7E1F20019DAF001AF9A3 /* Loop001.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC7E1D20019DAF001AF9A3 /* Loop001.mp4 */; };
 		0CF9976720024B4B00D15EAA /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9976620024B4B00D15EAA /* ButtonGroup.cpp */; };
 		6504556E1F470EA300CB3BE5 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655BFAF81E7355BD00B74446 /* CoreMIDI.framework */; };
@@ -563,7 +519,7 @@
 		0C9C331120057C1D00750DC3 /* ofApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofApp.cpp; sourceTree = "<group>"; };
 		0C9C331220057C1D00750DC3 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
 		0C9F6612202E11270026F6E1 /* ScrollableInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ScrollableInterface.hpp; path = Sources/Interfaces/ScrollableInterface.hpp; sourceTree = SOURCE_ROOT; };
-		0C9F6614202E11600026F6E1 /* DrawableInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DrawableInterface.hpp; path = Sources/Interfaces/DrawableInterface.hpp; sourceTree = SOURCE_ROOT; };
+		0CD86A9F204B179600DFB79D /* ElementInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ElementInterface.hpp; path = Sources/Interfaces/ElementInterface.hpp; sourceTree = SOURCE_ROOT; };
 		0CEC7E1D20019DAF001AF9A3 /* Loop001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Loop001.mp4; path = ../../../../../ArbutusEngine/TestData/Loop001.mp4; sourceTree = "<group>"; };
 		0CF9976620024B4B00D15EAA /* ButtonGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ButtonGroup.cpp; sourceTree = "<group>"; };
 		650455591F47085D00CB3BE5 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -924,7 +880,7 @@
 			isa = PBXGroup;
 			children = (
 				0C9F6612202E11270026F6E1 /* ScrollableInterface.hpp */,
-				0C9F6614202E11600026F6E1 /* DrawableInterface.hpp */,
+				0CD86A9F204B179600DFB79D /* ElementInterface.hpp */,
 			);
 			path = Interfaces;
 			sourceTree = SOURCE_ROOT;
@@ -1268,8 +1224,8 @@
 				0C0CA2941FF92EA700C4C463 /* ElementStyle.hpp in Headers */,
 				0C9AA0AD203F7E4B00318675 /* Window.hpp in Headers */,
 				0C9F6613202E11270026F6E1 /* ScrollableInterface.hpp in Headers */,
-				0C9F6615202E11600026F6E1 /* DrawableInterface.hpp in Headers */,
 				0C767D0F200D1EB10002318B /* Table.hpp in Headers */,
+				0CD86AA0204B179600DFB79D /* ElementInterface.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1611,21 +1567,17 @@
 				0C0370C21FF849FF005744F2 /* ofApp.cpp in Sources */,
 				0C0370811FF849C9005744F2 /* tinyxml.cpp in Sources */,
 				0C0370821FF849C9005744F2 /* OscReceivedElements.cpp in Sources */,
-				0C0370851FF849C9005744F2 /* SliderDecorator.cpp in Sources */,
-				0C0370861FF849C9005744F2 /* ResetButtonDecorator.cpp in Sources */,
 				0C767D50200E1CCC0002318B /* Table.cpp in Sources */,
 				0C0370871FF849C9005744F2 /* Button.cpp in Sources */,
 				0C0370891FF849C9005744F2 /* OscPrintReceivedElements.cpp in Sources */,
 				0C03708A1FF849C9005744F2 /* Slider.cpp in Sources */,
 				0C03708B1FF849C9005744F2 /* OscTypes.cpp in Sources */,
 				0C03708C1FF849C9005744F2 /* VerticalSlider.cpp in Sources */,
-				0C03708D1FF849C9005744F2 /* ButtonGroup.cpp in Sources */,
 				0C03708E1FF849C9005744F2 /* ofxSyphonClient.mm in Sources */,
 				0C03708F1FF849C9005744F2 /* ofxSyphonServer.mm in Sources */,
 				0C0370921FF849C9005744F2 /* NetworkingUtils.cpp in Sources */,
 				0C0370931FF849C9005744F2 /* ofxXmlSettings.cpp in Sources */,
 				0C0370941FF849C9005744F2 /* GUI.cpp in Sources */,
-				0C0370961FF849C9005744F2 /* ToggleButtonGroup.cpp in Sources */,
 				0C0370971FF849C9005744F2 /* UdpSocket.cpp in Sources */,
 				0C0370C31FF849FF005744F2 /* main.cpp in Sources */,
 				0C03709B1FF849C9005744F2 /* ofxOscReceiver.cpp in Sources */,
@@ -1633,7 +1585,6 @@
 				0C03709E1FF849C9005744F2 /* tinyxmlparser.cpp in Sources */,
 				0C03709F1FF849C9005744F2 /* Viewport.cpp in Sources */,
 				0C0370A01FF849C9005744F2 /* Element.cpp in Sources */,
-				0C0370A11FF849C9005744F2 /* Decorator.cpp in Sources */,
 				0C0370A21FF849C9005744F2 /* Label.cpp in Sources */,
 				0C9AA0A5203F7E4A00318675 /* Window.cpp in Sources */,
 				0C0CA2921FF92EA700C4C463 /* ElementStyle.cpp in Sources */,
@@ -1653,21 +1604,16 @@
 			files = (
 				0C0CA2931FF92EA700C4C463 /* ElementStyle.cpp in Sources */,
 				0C0370D31FF853E1005744F2 /* Button.cpp in Sources */,
-				0C0370D41FF853E1005744F2 /* ButtonGroup.cpp in Sources */,
 				0C9AA0A9203F7E4B00318675 /* Window.cpp in Sources */,
-				0C0370D51FF853E1005744F2 /* Decorator.cpp in Sources */,
 				0C0370D61FF853E1005744F2 /* Element.cpp in Sources */,
 				0C0370D71FF853E1005744F2 /* GUI.cpp in Sources */,
 				0C767D0D200D1EB10002318B /* Table.cpp in Sources */,
 				0C0370D81FF853E1005744F2 /* GUIStyle.cpp in Sources */,
 				0C0370D91FF853E1005744F2 /* Label.cpp in Sources */,
 				0C0370DA1FF853E1005744F2 /* Preview.cpp in Sources */,
-				0C0370DC1FF853E1005744F2 /* ResetButtonDecorator.cpp in Sources */,
 				0C0370DD1FF853E1005744F2 /* Slider.cpp in Sources */,
-				0C0370DE1FF853E1005744F2 /* SliderDecorator.cpp in Sources */,
 				0C0370DF1FF853E1005744F2 /* Splitter.cpp in Sources */,
 				0C0370E01FF853E1005744F2 /* ToggleButton.cpp in Sources */,
-				0C0370E11FF853E1005744F2 /* ToggleButtonGroup.cpp in Sources */,
 				0C0370E21FF853E1005744F2 /* VerticalSlider.cpp in Sources */,
 				0C0370E31FF853E1005744F2 /* Viewport.cpp in Sources */,
 			);
@@ -1680,22 +1626,18 @@
 				0C1C0BB2200F76D800BC3369 /* SyphonNameboundClient.m in Sources */,
 				0C1C0BB3200F76D800BC3369 /* tinyxml.cpp in Sources */,
 				0C1C0BB4200F76D800BC3369 /* OscReceivedElements.cpp in Sources */,
-				0C1C0BB5200F76D800BC3369 /* SliderDecorator.cpp in Sources */,
-				0C1C0BB6200F76D800BC3369 /* ResetButtonDecorator.cpp in Sources */,
 				0C1C0BB7200F76D800BC3369 /* Button.cpp in Sources */,
 				0C1C0BB8200F76D800BC3369 /* Table.cpp in Sources */,
 				0C1C0BB9200F76D800BC3369 /* OscPrintReceivedElements.cpp in Sources */,
 				0C1C0BBA200F76D800BC3369 /* Slider.cpp in Sources */,
 				0C1C0BBB200F76D800BC3369 /* OscTypes.cpp in Sources */,
 				0C1C0BBC200F76D800BC3369 /* VerticalSlider.cpp in Sources */,
-				0C1C0BBD200F76D800BC3369 /* ButtonGroup.cpp in Sources */,
 				0C1C0BBE200F76D800BC3369 /* ofxSyphonClient.mm in Sources */,
 				0C1C0BBF200F76D800BC3369 /* ofxSyphonServer.mm in Sources */,
 				0C1C0BC0200F76D800BC3369 /* NetworkingUtils.cpp in Sources */,
 				0C1C0BC1200F76D800BC3369 /* ofxXmlSettings.cpp in Sources */,
 				0C1C0BE7200F770100BC3369 /* ofApp.cpp in Sources */,
 				0C1C0BC2200F76D800BC3369 /* GUI.cpp in Sources */,
-				0C1C0BC3200F76D800BC3369 /* ToggleButtonGroup.cpp in Sources */,
 				0C1C0BE6200F76FE00BC3369 /* main.cpp in Sources */,
 				0C1C0BC4200F76D800BC3369 /* UdpSocket.cpp in Sources */,
 				0C1C0BC6200F76D800BC3369 /* ofxOscReceiver.cpp in Sources */,
@@ -1703,7 +1645,6 @@
 				0C1C0BC9200F76D800BC3369 /* tinyxmlparser.cpp in Sources */,
 				0C1C0BCA200F76D800BC3369 /* Viewport.cpp in Sources */,
 				0C1C0BCB200F76D800BC3369 /* Element.cpp in Sources */,
-				0C1C0BCC200F76D800BC3369 /* Decorator.cpp in Sources */,
 				0C1C0BCD200F76D800BC3369 /* Label.cpp in Sources */,
 				0C9AA0A8203F7E4B00318675 /* Window.cpp in Sources */,
 				0C1C0BCE200F76D800BC3369 /* ElementStyle.cpp in Sources */,
@@ -1724,22 +1665,18 @@
 				0C1C0BEF200F7A3200BC3369 /* SyphonNameboundClient.m in Sources */,
 				0C1C0BF0200F7A3200BC3369 /* tinyxml.cpp in Sources */,
 				0C1C0BF1200F7A3200BC3369 /* OscReceivedElements.cpp in Sources */,
-				0C1C0BF2200F7A3200BC3369 /* SliderDecorator.cpp in Sources */,
-				0C1C0BF3200F7A3200BC3369 /* ResetButtonDecorator.cpp in Sources */,
 				0C1C0BF4200F7A3200BC3369 /* Button.cpp in Sources */,
 				0C1C0BF5200F7A3200BC3369 /* Table.cpp in Sources */,
 				0C1C0BF6200F7A3200BC3369 /* OscPrintReceivedElements.cpp in Sources */,
 				0C1C0BF7200F7A3200BC3369 /* Slider.cpp in Sources */,
 				0C1C0BF8200F7A3200BC3369 /* OscTypes.cpp in Sources */,
 				0C1C0BF9200F7A3200BC3369 /* VerticalSlider.cpp in Sources */,
-				0C1C0BFA200F7A3200BC3369 /* ButtonGroup.cpp in Sources */,
 				0C1C0BFB200F7A3200BC3369 /* ofxSyphonClient.mm in Sources */,
 				0C1C0BFC200F7A3200BC3369 /* ofxSyphonServer.mm in Sources */,
 				0C1C0BFD200F7A3200BC3369 /* NetworkingUtils.cpp in Sources */,
 				0C1C0BFE200F7A3200BC3369 /* ofxXmlSettings.cpp in Sources */,
 				0C1C0C24200F7A5800BC3369 /* ofApp.cpp in Sources */,
 				0C1C0C00200F7A3200BC3369 /* GUI.cpp in Sources */,
-				0C1C0C01200F7A3200BC3369 /* ToggleButtonGroup.cpp in Sources */,
 				0C1C0C23200F7A5400BC3369 /* main.cpp in Sources */,
 				0C1C0C03200F7A3200BC3369 /* UdpSocket.cpp in Sources */,
 				0C1C0C04200F7A3200BC3369 /* ofxOscReceiver.cpp in Sources */,
@@ -1747,7 +1684,6 @@
 				0C1C0C06200F7A3200BC3369 /* tinyxmlparser.cpp in Sources */,
 				0C1C0C07200F7A3200BC3369 /* Viewport.cpp in Sources */,
 				0C1C0C08200F7A3200BC3369 /* Element.cpp in Sources */,
-				0C1C0C09200F7A3200BC3369 /* Decorator.cpp in Sources */,
 				0C1C0C0A200F7A3200BC3369 /* Label.cpp in Sources */,
 				0C9AA0AB203F7E4B00318675 /* Window.cpp in Sources */,
 				0C1C0C0B200F7A3200BC3369 /* ElementStyle.cpp in Sources */,
@@ -1770,28 +1706,23 @@
 				0C767D4D200E1A6F0002318B /* ofApp.cpp in Sources */,
 				0C767D4C200E1A670002318B /* main.cpp in Sources */,
 				0C767D1B200E1A4F0002318B /* OscReceivedElements.cpp in Sources */,
-				0C767D1C200E1A4F0002318B /* SliderDecorator.cpp in Sources */,
 				0C767D4E200E1CCB0002318B /* Table.cpp in Sources */,
-				0C767D1D200E1A4F0002318B /* ResetButtonDecorator.cpp in Sources */,
 				0C767D1E200E1A4F0002318B /* Button.cpp in Sources */,
 				0C767D1F200E1A4F0002318B /* OscPrintReceivedElements.cpp in Sources */,
 				0C767D20200E1A4F0002318B /* Slider.cpp in Sources */,
 				0C767D21200E1A4F0002318B /* OscTypes.cpp in Sources */,
 				0C767D22200E1A4F0002318B /* VerticalSlider.cpp in Sources */,
-				0C767D23200E1A4F0002318B /* ButtonGroup.cpp in Sources */,
 				0C767D24200E1A4F0002318B /* ofxSyphonClient.mm in Sources */,
 				0C767D25200E1A4F0002318B /* ofxSyphonServer.mm in Sources */,
 				0C767D26200E1A4F0002318B /* NetworkingUtils.cpp in Sources */,
 				0C767D27200E1A4F0002318B /* ofxXmlSettings.cpp in Sources */,
 				0C767D28200E1A4F0002318B /* GUI.cpp in Sources */,
-				0C767D29200E1A4F0002318B /* ToggleButtonGroup.cpp in Sources */,
 				0C767D2A200E1A4F0002318B /* UdpSocket.cpp in Sources */,
 				0C767D2C200E1A4F0002318B /* ofxOscReceiver.cpp in Sources */,
 				0C767D2D200E1A4F0002318B /* Preview.cpp in Sources */,
 				0C767D2F200E1A4F0002318B /* tinyxmlparser.cpp in Sources */,
 				0C767D30200E1A4F0002318B /* Viewport.cpp in Sources */,
 				0C767D31200E1A4F0002318B /* Element.cpp in Sources */,
-				0C767D32200E1A4F0002318B /* Decorator.cpp in Sources */,
 				0C767D33200E1A4F0002318B /* Label.cpp in Sources */,
 				0C9AA0A7203F7E4B00318675 /* Window.cpp in Sources */,
 				0C767D34200E1A4F0002318B /* ElementStyle.cpp in Sources */,
@@ -1812,22 +1743,18 @@
 				0C9AA06C203F78ED00318675 /* SyphonNameboundClient.m in Sources */,
 				0C9AA06D203F78ED00318675 /* tinyxml.cpp in Sources */,
 				0C9AA06E203F78ED00318675 /* OscReceivedElements.cpp in Sources */,
-				0C9AA06F203F78ED00318675 /* SliderDecorator.cpp in Sources */,
-				0C9AA070203F78ED00318675 /* ResetButtonDecorator.cpp in Sources */,
 				0C9AA071203F78ED00318675 /* Button.cpp in Sources */,
 				0C9AA072203F78ED00318675 /* Table.cpp in Sources */,
 				0C9AA073203F78ED00318675 /* OscPrintReceivedElements.cpp in Sources */,
 				0C9AA074203F78ED00318675 /* Slider.cpp in Sources */,
 				0C9AA075203F78ED00318675 /* OscTypes.cpp in Sources */,
 				0C9AA076203F78ED00318675 /* VerticalSlider.cpp in Sources */,
-				0C9AA077203F78ED00318675 /* ButtonGroup.cpp in Sources */,
 				0C9AA078203F78ED00318675 /* ofxSyphonClient.mm in Sources */,
 				0C9AA079203F78ED00318675 /* ofxSyphonServer.mm in Sources */,
 				0C9AA07A203F78ED00318675 /* NetworkingUtils.cpp in Sources */,
 				0C9AA07B203F78ED00318675 /* ofxXmlSettings.cpp in Sources */,
 				0C9AA0A1203F7A5B00318675 /* ofApp.cpp in Sources */,
 				0C9AA07C203F78ED00318675 /* GUI.cpp in Sources */,
-				0C9AA07D203F78ED00318675 /* ToggleButtonGroup.cpp in Sources */,
 				0C9AA0A0203F7A5B00318675 /* main.cpp in Sources */,
 				0C9AA07E203F78ED00318675 /* UdpSocket.cpp in Sources */,
 				0C9AA080203F78ED00318675 /* ofxOscReceiver.cpp in Sources */,
@@ -1835,7 +1762,6 @@
 				0C9AA083203F78ED00318675 /* tinyxmlparser.cpp in Sources */,
 				0C9AA084203F78ED00318675 /* Viewport.cpp in Sources */,
 				0C9AA085203F78ED00318675 /* Element.cpp in Sources */,
-				0C9AA086203F78ED00318675 /* Decorator.cpp in Sources */,
 				0C9AA087203F78ED00318675 /* Label.cpp in Sources */,
 				0C9AA0AC203F7E4B00318675 /* Window.cpp in Sources */,
 				0C9AA088203F78ED00318675 /* ElementStyle.cpp in Sources */,
@@ -1856,21 +1782,17 @@
 				0C9C32DB20057BD500750DC3 /* SyphonNameboundClient.m in Sources */,
 				0C9C32DC20057BD500750DC3 /* tinyxml.cpp in Sources */,
 				0C9C32DD20057BD500750DC3 /* OscReceivedElements.cpp in Sources */,
-				0C9C32DE20057BD500750DC3 /* SliderDecorator.cpp in Sources */,
-				0C9C32DF20057BD500750DC3 /* ResetButtonDecorator.cpp in Sources */,
 				0C9C32E020057BD500750DC3 /* Button.cpp in Sources */,
 				0C767D4F200E1CCC0002318B /* Table.cpp in Sources */,
 				0C9C32E120057BD500750DC3 /* OscPrintReceivedElements.cpp in Sources */,
 				0C9C32E220057BD500750DC3 /* Slider.cpp in Sources */,
 				0C9C32E320057BD500750DC3 /* OscTypes.cpp in Sources */,
 				0C9C32E420057BD500750DC3 /* VerticalSlider.cpp in Sources */,
-				0C9C32E520057BD500750DC3 /* ButtonGroup.cpp in Sources */,
 				0C9C32E620057BD500750DC3 /* ofxSyphonClient.mm in Sources */,
 				0C9C32E720057BD500750DC3 /* ofxSyphonServer.mm in Sources */,
 				0C9C32E820057BD500750DC3 /* NetworkingUtils.cpp in Sources */,
 				0C9C32E920057BD500750DC3 /* ofxXmlSettings.cpp in Sources */,
 				0C9C32EA20057BD500750DC3 /* GUI.cpp in Sources */,
-				0C9C32EB20057BD500750DC3 /* ToggleButtonGroup.cpp in Sources */,
 				0C9C32EC20057BD500750DC3 /* UdpSocket.cpp in Sources */,
 				0C9C32EE20057BD500750DC3 /* ofxOscReceiver.cpp in Sources */,
 				0C9C32EF20057BD500750DC3 /* Preview.cpp in Sources */,
@@ -1879,7 +1801,6 @@
 				0C9C32F220057BD500750DC3 /* Viewport.cpp in Sources */,
 				0C9C331320057C1D00750DC3 /* main.cpp in Sources */,
 				0C9C32F320057BD500750DC3 /* Element.cpp in Sources */,
-				0C9C32F420057BD500750DC3 /* Decorator.cpp in Sources */,
 				0C9C32F520057BD500750DC3 /* Label.cpp in Sources */,
 				0C9AA0A6203F7E4B00318675 /* Window.cpp in Sources */,
 				0C9C32F620057BD500750DC3 /* ElementStyle.cpp in Sources */,
@@ -1900,21 +1821,17 @@
 				0C1E77D21F8D8690005507CF /* SyphonNameboundClient.m in Sources */,
 				65276BAC1F486E0000949383 /* tinyxml.cpp in Sources */,
 				65276BB31F486E3400949383 /* OscReceivedElements.cpp in Sources */,
-				0C392FF61FBCFA3200D9016F /* SliderDecorator.cpp in Sources */,
-				0C39300C1FBCFA3200D9016F /* ResetButtonDecorator.cpp in Sources */,
 				0C3930121FBCFA3200D9016F /* Button.cpp in Sources */,
 				0C767D51200E1CCD0002318B /* Table.cpp in Sources */,
 				65276BB21F486E3400949383 /* OscPrintReceivedElements.cpp in Sources */,
 				0C392FFE1FBCFA3200D9016F /* Slider.cpp in Sources */,
 				65276BB41F486E3400949383 /* OscTypes.cpp in Sources */,
 				0C3930021FBCFA3200D9016F /* VerticalSlider.cpp in Sources */,
-				0C3930001FBCFA3200D9016F /* ButtonGroup.cpp in Sources */,
 				65276BB51F486E4300949383 /* ofxSyphonClient.mm in Sources */,
 				65276BB61F486E4300949383 /* ofxSyphonServer.mm in Sources */,
 				65276BB91F486EDA00949383 /* NetworkingUtils.cpp in Sources */,
 				65276BAB1F486DF700949383 /* ofxXmlSettings.cpp in Sources */,
 				0C39300E1FBCFA3200D9016F /* GUI.cpp in Sources */,
-				0C3930081FBCFA3200D9016F /* ToggleButtonGroup.cpp in Sources */,
 				65276BBA1F486FC100949383 /* UdpSocket.cpp in Sources */,
 				0C3930201FBCFAE500D9016F /* main.cpp in Sources */,
 				65276BB01F486E1600949383 /* ofxOscReceiver.cpp in Sources */,
@@ -1923,7 +1840,6 @@
 				65276BAE1F486E0000949383 /* tinyxmlparser.cpp in Sources */,
 				0C392FFC1FBCFA3200D9016F /* Viewport.cpp in Sources */,
 				0C392FFA1FBCFA3200D9016F /* Element.cpp in Sources */,
-				0C3930161FBCFA3200D9016F /* Decorator.cpp in Sources */,
 				0C3930041FBCFA3200D9016F /* Label.cpp in Sources */,
 				0C9AA0A4203F7E4A00318675 /* Window.cpp in Sources */,
 				0C0CA2901FF92EA700C4C463 /* ElementStyle.cpp in Sources */,
@@ -1934,6 +1850,7 @@
 				65276BB81F486ED300949383 /* IpEndpointName.cpp in Sources */,
 				65276BB11F486E2700949383 /* OscOutboundPacketStream.cpp in Sources */,
 				0C3930141FBCFA3200D9016F /* ToggleButton.cpp in Sources */,
+				0CD86AA5204B34D200DFB79D /* ButtonGroup.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1960,8 +1877,6 @@
 				65E8969D1E734EEF000D470B /* OscTypes.cpp in Sources */,
 				655BFAFA1E7358C000B74446 /* UdpSocket.cpp in Sources */,
 				655BFAFD1E735BC100B74446 /* SyphonNameboundClient.m in Sources */,
-				0C392FF71FBCFA3200D9016F /* SliderDecorator.cpp in Sources */,
-				0C39300D1FBCFA3200D9016F /* ResetButtonDecorator.cpp in Sources */,
 				0C392FFF1FBCFA3200D9016F /* Slider.cpp in Sources */,
 				0C3930131FBCFA3200D9016F /* Button.cpp in Sources */,
 				0C39300F1FBCFA3200D9016F /* GUI.cpp in Sources */,
@@ -1971,14 +1886,11 @@
 				0C71E9F61FF828880045EA4D /* main.cpp in Sources */,
 				0C71E9FA1FF828880045EA4D /* VerticalSlider.cpp in Sources */,
 				0C3930031FBCFA3200D9016F /* VerticalSlider.cpp in Sources */,
-				0C3930011FBCFA3200D9016F /* ButtonGroup.cpp in Sources */,
 				0CF9976720024B4B00D15EAA /* ButtonGroup.cpp in Sources */,
-				0C3930091FBCFA3200D9016F /* ToggleButtonGroup.cpp in Sources */,
 				0C3930071FBCFA3200D9016F /* Preview.cpp in Sources */,
 				0C392FFD1FBCFA3200D9016F /* Viewport.cpp in Sources */,
 				0C392FFB1FBCFA3200D9016F /* Element.cpp in Sources */,
 				0C767D0E200D1EB10002318B /* Table.cpp in Sources */,
-				0C3930171FBCFA3200D9016F /* Decorator.cpp in Sources */,
 				0C3930051FBCFA3200D9016F /* Label.cpp in Sources */,
 				0C3930111FBCFA3200D9016F /* Splitter.cpp in Sources */,
 				0C39300B1FBCFA3200D9016F /* GUIStyle.cpp in Sources */,

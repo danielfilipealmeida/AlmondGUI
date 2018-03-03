@@ -13,7 +13,8 @@
 
 
 Window::Window() {
-   
+    className = "Window";
+
 }
 
 

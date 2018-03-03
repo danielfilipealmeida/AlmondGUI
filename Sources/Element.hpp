@@ -14,7 +14,7 @@
 #include "json.hpp"
 #include "ElementStyle.hpp"
 #include "GUIStyle.hpp"
-
+#include "ElementInterface.hpp"
 
 
 /*!
@@ -50,10 +50,9 @@ using json = nlohmann::json;
  Important to figure out:
  how to handle elements inside elements.
  */
-class Element
+class Element : public ElementInterface
 {
 protected:
-    Element *parent;
     Boolean hover;
     Boolean pressed;
     Boolean entered;
@@ -71,93 +70,15 @@ protected:
     
 public:
     
-    /*!
-     \brief The rectangle definition in the GUI system.
-     */
-    ofRectangle rect;
-    
-    /*!
-     \brief The rectangle definition related to the screen.
-     
-     Only represents the parts of the element that are visible, since parts can be hidden due to scrolled parents, etc.
-     */
-    ofRectangle visibleRect;
-    
-    /*!
-     \brief Rectangle definition used for drawing the rectangle.
-     
-     This is related to a parent viewport and if the vary from the `rect` if the parent is scrolled
-     */
-    ofRectangle drawingRect;
-    
-    /*!
-     ...
-     */
     Element();
-    
-    /*!
-     ...
-     */
     ~Element();
     
-    /*!
-     ...
-     */
-    virtual string getClass() { return "Element"; }
-    
-    /*!
-     \brief Checks if the mouse is hover and if the element is being pressed
-     */
+    /* ElementInteface mandatory methods */
     virtual void update();
-    
-    /*!
-     \brief Draws the element. Method to be overriden by childs.
-     
-     When overriding this method, the descendent needs always to run this because in here elements inside elements are properly handled.
-     */
     virtual void draw() = 0;
-    
-    /*!
-     \brief Finishes drawing the element. Important for properly drawing elements inside other elements.
-     */
-    void finishDraw();
-    
-    /*!
-     \brief Draws all the childs of the current element
-     */
-    void drawChilds();
-    
-    /*!
-     \brief Sets the Rectangle
-     */
     virtual void set(json config) = 0;
-    
-    /**
-     \brief Returns all the children of this element
-     TODO: move this to the GUI. element should not have access to this
-     */
-    //std::vector<Element*> getChildElements();
-    
-    /*!
-     \brief Sets the element that will contain this element
-     */
-    virtual void setParent(Element *_parent);
-    
-    /*!
-     \brief Returns the parent
-     */
-    Element* getParent() { return parent; }
-    
-    /*!
-     \brief Adds another element as a child
-     */
-    virtual Element *add(Element *newElement);
-    
-    /*!
-     \brief Traverse parents and calculate the elements visible rect, in screen coordinates.
-     
-     This is the actual place on the screen this element occupies.
-     */
+    void finishDraw();            
+    void setVisibleRect(ofRectangle _visibleRect);
     ofRectangle calculateVisibleRect();
     
     /*!
@@ -226,6 +147,32 @@ public:
      \brief Tells if the element has a bigger rect than the visible rect definition
      */
     virtual Boolean canScroll();
+    
+    
+    
+    
+    
+    
+    
+    /*!
+     \brief Draws all the childs of the current element
+     todo: remove this. This should only exist on elements with childs
+     */
+    void drawChilds();
+    
+    /*!
+     \brief Adds another element as a child
+     todo: move outside. this should only be applied to elements with childs
+     */
+    virtual Element *add(Element *newElement);
+    
+    /*!
+     \brief Returns all the children of this element
+     TODO: move this to the GUI. element should not have access to this
+     */
+    //std::vector<Element*> getChildElements();
+    
+    
 };
 
 #endif /* Element_hpp */

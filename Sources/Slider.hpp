@@ -58,6 +58,8 @@ public:
      */
     void draw( );
     
+    //void setParent(ElementInterface *_parent);
+    
     /*!
      Calculate the background color according to the slider state
      */

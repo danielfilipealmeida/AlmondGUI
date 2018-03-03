@@ -12,6 +12,7 @@
 
 ButtonGroup::ButtonGroup()
 {
+    className = "ButtonGroup";
     currentX = 0;
     style.hasBorder = false;
     style.hasBackground = false;
@@ -157,7 +158,7 @@ void ButtonGroup::setOnClick(std::function<void(ButtonGroup *buttonGroup)> _onCl
     onClick = _onClick;
 }
 
-void ButtonGroup::setParent(Element *_parent) {
+void ButtonGroup::setParent(ElementInterface *_parent) {
     Element::setParent(_parent);
     
     currentX = GUI_BORDER;

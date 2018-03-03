@@ -18,8 +18,8 @@
 #include "Splitter.hpp"
 #include "Preview.hpp"
 #include "Label.hpp"
-#include "ButtonGroup.hpp"
-#include "ToggleButtonGroup.hpp"
+//#include "ButtonGroup.hpp"
+//#include "ToggleButtonGroup.hpp"
 #include "Table.hpp"
 #include "Window.hpp"
 

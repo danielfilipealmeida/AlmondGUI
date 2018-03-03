@@ -10,7 +10,9 @@
 #include "GUI.hpp"
 
 
-Label::Label(){
+Label::Label()
+{
+    className = "Label";
 	caption = "";
 }
 
