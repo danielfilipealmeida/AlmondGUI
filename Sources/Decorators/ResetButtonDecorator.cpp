@@ -24,7 +24,7 @@ void ResetButtonDecorator::draw( ) {
     ofDrawRectangle(theRect);
     
     ofSetColor(style.captionColor);
-    GUI::getInstance().drawCenteredText("X", theRect);
+    GUI::drawCenteredText("X", theRect);
     
     ofSetColor(style.borderColor);
     ofNoFill();

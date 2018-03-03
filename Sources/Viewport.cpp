@@ -115,11 +115,15 @@ void Viewport::setScrollPositionX(float position) {
 }
 
 Element* Viewport::add(Element *newElement) {
+    newElement->setParent(this);
+    
+    // todo: rework all this. elements can only be added by the GUI
+    /*
     std::vector<Element*> childElements = getChildElements();
     float elementY, width, height;
     ofRectangle newElementRect = newElement->getRect();
     
-    newElement->setParent(this);
+    
     
     elementY = ((childElements.size() == 0) ? 0 : childElements.back()->getRect().y + childElements.back()->getRect().height) + GUI_BORDER;
     width = getRect().width - (2 * GUI_BORDER);
@@ -137,6 +141,7 @@ Element* Viewport::add(Element *newElement) {
     
     updateFbo();
     update();
+     */
     
     return newElement;
 }
@@ -146,11 +151,12 @@ void Viewport::resize(ofRectangle newRect) {
     
     Element::resize(newRect);
     
+    /*
     for(auto element:getChildElements()) {
         ofRectangle elementRect = element->getRect();
         float width, height;
         
-        width = getRect().width - (2*GUI_BORDER);
+        width = getRect().width - (2 * GUI_BORDER);
         height = element->getHeightForWidth(width);
     
         ofRectangle newRect;
@@ -161,6 +167,7 @@ void Viewport::resize(ofRectangle newRect) {
         element->resize(newRect);
         currentY = currentY + height + GUI_BORDER;
     }
+     */
     
     resizeInnerRectToFitContent();
 }
@@ -193,13 +200,15 @@ float Viewport::getOffsetY() {
 void Viewport::resizeInnerRectToFitContent() {
     ofRectangle childsRect;
    
+    // todo: remove all this. Elements cannot touch other elements. only the GUI
+    /*
     for(auto childElement:getChildElements()) {
         ofRectangle newRect = childElement->getRect();
         newRect.width = newRect.width;
         newRect.height = newRect.height;
         childsRect.growToInclude(newRect);
     }
-    
+    */
     totalHeight = childsRect.height + GUI_BORDER;
     totalWidth = childsRect.width + GUI_BORDER;
 }

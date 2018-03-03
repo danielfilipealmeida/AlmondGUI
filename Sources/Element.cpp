@@ -41,7 +41,10 @@ Boolean Element::checkIsDragging()
 }
 
 
-/** TODO: move hover outside */
+/** TODO:
+  - move hover outside
+  - receives current gui instance as parameter
+ */
 void Element::update()
 {
     dragging = checkIsDragging();
@@ -63,13 +66,18 @@ void Element::update()
         if (ofGetMousePressed() > 0) {
             pressed = TRUE;
             
-            if (!GUI::getInstance().elementHasChilds(this) &&
-                GUI::getInstance().getFocusedElement() != this
-                ) {
-                GUI::getInstance().setFocusedElement(this);
+            
+            // todo: better way to handle focusing.
+            // this should be done directly on the GUI object.
+            // focused should be an element attribute and the GUI
+            // handles turning it on and off
+            /*
+            if (!gui->elementHasChilds(this) && gui->getFocusedElement() != this)
+            {
+                gui->setFocusedElement(this);
             }
+             */
         }
-        //pressed = (ofGetMousePressed() > 0);
     }
     
     
@@ -97,16 +105,23 @@ void Element::finishDraw( ) {
     
     if (style.hasBorder) {
         ofNoFill();
-        ofSetColor(GUI::getInstance().getFocusedElement() == this ? style.focusedColor : style.borderColor);
+        /*
+        ofSetColor(gui->getFocusedElement() == this ? style.focusedColor : style.borderColor);
+         */
+        
         ofDrawRectangle(rect);
     }
 }
 
 void Element::drawChilds( ) {
-    GUI::getInstance().forEach([this](Element *element) {
+    // this shouldn't be done here! but should be the gui to do this
+    /*
+    gui->forEach([this](Element *element) {
         if (element->parent != this) return;
         element->draw();
     });
+     */
+    
 }
 
 
@@ -150,12 +165,13 @@ void Element::set(json config) {
 
 
 
+/*
 std::vector<Element*> Element::getChildElements() {
-    return GUI::getInstance().filter([this](Element *element) {
+    return gui->filter([this](Element *element) {
         return element->parent == this;
     });
 }
-
+*/
 
 void Element::setParent(Element *_parent) {
     parent = _parent;

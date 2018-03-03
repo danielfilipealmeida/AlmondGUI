@@ -47,7 +47,7 @@ void ToggleButton::draw( )
     Element::draw( );
 
     ofSetColor(style.captionColor);
-    GUI::getInstance().drawCenteredText(caption, getRect());
+    GUI::drawCenteredText(caption, getRect());
         
     Element::finishDraw( );
 }

@@ -11,7 +11,9 @@ void ofApp::setup(){
     ofSetWindowTitle("Hello World");
     ofSetFrameRate(30);
     
-    Button *button1 = GUI::getInstance().add<Button>({
+    gui = new GUI();
+    
+    Button *button1 = gui->add<Button>({
         {"x", 20},
         {"y", 20},
         {"width", 120},
@@ -19,7 +21,7 @@ void ofApp::setup(){
         {"caption", "button 1"}
     });
     
-    Window *secondWindow = GUI::getInstance().add<Window>({
+    Window *secondWindow = gui->add<Window>({
         {"x", 10},
         {"y", 10},
         {"height", 400},
@@ -49,7 +51,7 @@ static ofApp* getInstance() {
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    GUI::getInstance().update();
+    gui->update();
     
 }
 
@@ -57,7 +59,7 @@ void ofApp::update(){
 void ofApp::draw(){
     ofClear(GUIStyle::getInstance().getDarkColor());
     
-    GUI::getInstance().draw();
+    gui->draw();
     
 }
 

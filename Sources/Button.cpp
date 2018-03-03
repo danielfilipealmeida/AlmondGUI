@@ -55,7 +55,7 @@ void Button::draw( )
     Element::draw( );
 
     ofSetColor(style.captionColor);
-    GUI::getInstance().drawCenteredText(caption, rect);
+    GUI::drawCenteredText(caption, rect);
     
     Element::finishDraw( );
 }

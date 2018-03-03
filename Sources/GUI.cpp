@@ -10,6 +10,28 @@
 
 #include "GUI.hpp"
 
+ofTrueTypeFont textFont;
+
+ofTrueTypeFont getFont(Fonts font)
+{
+    ofTrueTypeFont result;
+    
+    switch (font) {
+        case Text:
+            result = textFont;
+            break;
+            
+        default:
+            result = textFont;
+            break;
+    }
+    
+    return result;
+}
+
+
+
+
 
 /*!
  Creates the GUI
@@ -28,13 +50,6 @@ GUI::GUI()
  */
 GUI::~GUI()
 {
-}
-
-GUI& GUI::getInstance()
-{
-    static GUI instance;
-    
-    return instance;
 }
 
 void GUI::add(Element *element)
@@ -96,9 +111,12 @@ std::vector<Element*> GUI::filter(std::function<bool (Element *)> lambda) {
 }
 
 void GUI::forEachChildOf(Element *parent, std::function<void (Element *)> lambda) {
+    
+    /*
     for(auto element:parent->getChildElements()) {
         lambda(element);
     }
+     */
 }
 
 void GUI::updateVisibleRects()
@@ -114,22 +132,6 @@ void GUI::loadFonts(string fontsPath)
     textFont.setLineHeight(10);
 }
 
-ofTrueTypeFont GUI::getFont(Fonts font)
-{
-    ofTrueTypeFont result;
-    
-    switch (font) {
-        case Text:
-            result = textFont;
-            break;
-            
-        default:
-            result = textFont;
-            break;
-    }
-    
-    return result;
-}
 
 void GUI::drawCenteredText(string caption, ofRectangle rect, Fonts font)
 {

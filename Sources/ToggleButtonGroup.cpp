@@ -44,7 +44,7 @@ void ToggleButtonGroup::draw( )
         ofDrawRectangle(theRect);
         
         ofSetColor(style.captionColor);
-        GUI::getInstance().drawCenteredText(button.caption, theRect);
+        GUI::drawCenteredText(button.caption, theRect);
         
         ofSetColor(style.borderColor);
         ofNoFill();

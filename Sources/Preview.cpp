@@ -58,7 +58,7 @@ void Preview::draw( ) {
     
     if (!caption.empty()) {
         ofRectangle captionRect;
-        ofRectangle stringRect = GUI::getInstance().getFont(Text).getStringBoundingBox(caption, 0,0);
+        ofRectangle stringRect = getFont(Text).getStringBoundingBox(caption, 0,0);
         
         captionRect.x = drawingRect.x + 2;
         captionRect.y = drawingRect.y + 2;
@@ -69,7 +69,7 @@ void Preview::draw( ) {
         ofFill();
         ofDrawRectangle(captionRect);
         ofSetColor(style.captionColor);
-        GUI::getInstance().drawCenteredText(caption, captionRect);
+        GUI::drawCenteredText(caption, captionRect);
     }
     Element::finishDraw( );
 }

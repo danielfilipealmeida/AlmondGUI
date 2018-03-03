@@ -42,7 +42,8 @@ void Slider::update() {
         }
     }
     else {
-        if (ofGetMousePressed() && GUI::getInstance().getFocusedElement() == this) {
+        // todo: find a way to get access to the gui or to find if this is focused
+        if (ofGetMousePressed() /*&& GUI::getInstance().getFocusedElement() == this*/) {
             value = getRealValue((ofGetMouseX() - visibleRect.x) / (rect.width));
         }
     }
@@ -88,7 +89,7 @@ void Slider::draw( )
     ofDrawRectangle(rect.x, rect.y, rect.width * normalizedValue, rect.height);
     
     ofSetColor(ofColor::white);
-    GUI::getInstance().drawCenteredText(caption, rect);
+    GUI::drawCenteredText(caption, rect);
     
     Element::finishDraw( );
 }

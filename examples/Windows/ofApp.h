@@ -14,6 +14,7 @@ class ofApp : public ofBaseApp {
     ofFbo fbo;
     ofVideoPlayer video;
     Window *secondWindow;
+    GUI *gui;
     
 	public:
     

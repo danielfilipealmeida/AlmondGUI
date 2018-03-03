@@ -61,7 +61,6 @@ protected:
     Boolean dragging;
     ElementStyle style;
     
-    
     /*!
         Returns true if a dragging event is happening
      
@@ -135,8 +134,9 @@ public:
     
     /**
      \brief Returns all the children of this element
+     TODO: move this to the GUI. element should not have access to this
      */
-    std::vector<Element*> getChildElements();
+    //std::vector<Element*> getChildElements();
     
     /*!
      \brief Sets the element that will contain this element

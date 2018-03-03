@@ -3,20 +3,22 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    gui = new GUI();
+    
     ofSetWindowTitle("Hello World");
     ofSetFrameRate(30);
     
     // Viewport (to gather all inside)
-    Viewport *viewport = GUI::getInstance().add<Viewport>({
+    Viewport *viewport = gui->add<Viewport>({
     });
-    Button *button = GUI::getInstance().add<Button>({
+    Button *button = gui->add<Button>({
         {"caption", "Click me!"}
     });
     viewport->add(button);
     
     
     // Button (plus label)
-    Label *label1 = GUI::getInstance().add<Label>({
+    Label *label1 = gui->add<Label>({
         {"caption", "just a simple label"}
     });
     viewport->add(label1);
@@ -31,7 +33,7 @@ void ofApp::setup(){
     
     
     // Slider
-    Slider *slider = GUI::getInstance().add<Slider>({
+    Slider *slider = gui->add<Slider>({
         {"caption", "a slider"},
         {"value", 0.5},
         {"minValue", 0},
@@ -46,14 +48,14 @@ void ofApp::setup(){
     
     
     // ToggleButton
-    ToggleButton *toggleButton = GUI::getInstance().add<ToggleButton>({
+    ToggleButton *toggleButton = gui->add<ToggleButton>({
         {"caption" , "a toggle button"}
     });
     viewport->add(toggleButton);
     
 
     // ButtonGroup (plus label)
-    ButtonGroup *bGroup = GUI::getInstance().add<ButtonGroup>({
+    ButtonGroup *bGroup = gui->add<ButtonGroup>({
         {"options", {
             {
                 {"caption", "A"}
@@ -72,7 +74,7 @@ void ofApp::setup(){
     });
     viewport->add(bGroup);
     
-    Label *label2 = GUI::getInstance().add<Label>({
+    Label *label2 = gui->add<Label>({
         {"caption", "Button Group Label: Nothing pressed yet."}
     });
     viewport->add(label2);
@@ -90,7 +92,7 @@ void ofApp::setup(){
     video.load(ofFilePath::getCurrentExeDir() + "../Resources/Loop001.mp4");
     video.play();
     fbo.allocate(160, 120);
-    Preview *preview = GUI::getInstance().add<Preview>({
+    Preview *preview = gui->add<Preview>({
         {"caption", "a preview!!!. see some videos playing"}
     });
     preview->setBuffer(&fbo);
@@ -98,13 +100,13 @@ void ofApp::setup(){
     
   
     
-    GUI::getInstance().updateVisibleRects();
+    gui->updateVisibleRects();
      
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    GUI::getInstance().update();
+    gui->update();
     
     video.update();
     fbo.begin();
@@ -117,7 +119,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofClear(GUIStyle::getInstance().getDarkColor());
-    GUI::getInstance().draw();
+    gui->draw();
 }
 
 

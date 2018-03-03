@@ -28,10 +28,15 @@
 #include "ResetButtonDecorator.hpp"
 #include "SliderDecorator.hpp"
 
+
+// todo: move fonts somewhere else.
+// maybe have them on a singleton that gathers all fonts
 typedef enum  {
     Text = 0,
     Title
 } Fonts;
+
+ofTrueTypeFont getFont(Fonts font);
 
 /**
  * \brief Defines a GUI tree
@@ -42,20 +47,17 @@ class GUI
 {
     
 protected:
-    ofTrueTypeFont textFont;
+    
     
     std::vector<Element*> elements; //!< a vector of elements that represent the first layer of a gui. elements can have children and that implements the next layers
-    
-    GUI();  //!< Protected constructor
-    ~GUI(); //!< protected destructor
+
     
     Element *focusedElement;
     
 public:
     
-    static GUI& getInstance();  //!< the instance getter
-    GUI(GUI const&) = delete;   //!< deletes the constructor by reference copy
-    void operator=(GUI const&) = delete; //!< destroy constructor by equal sign
+    GUI();
+    ~GUI();
     
     /*!
      Updates all elements of the GUI
@@ -72,11 +74,7 @@ public:
      */
     void loadFonts(string fontsPath = "");
     
-    /*!
-     \brief Returns a configured font
-     */
-    ofTrueTypeFont getFont(Fonts font);
-    
+   
     /*!
      \brief Adds an element to the elements list
      */
@@ -128,7 +126,7 @@ public:
     /*!
      \brief Draws a line of text centered in a given rectangle
      */
-    void drawCenteredText(string caption, ofRectangle rect, Fonts font = Text);
+    static void drawCenteredText(string caption, ofRectangle rect, Fonts font = Text);
     
     /*!
      \brief Save a texture to a file
