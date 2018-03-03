@@ -12,6 +12,7 @@
 ElementStyle::ElementStyle() {
     hasBorder = false;
     borderColor = ofColor::black;
+    focusedColor = ofColor::yellow;
     
     hasBackground = false;
     backgroundColor = GUIStyle::getInstance().getBackgroundColor();

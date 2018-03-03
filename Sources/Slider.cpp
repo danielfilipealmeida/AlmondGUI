@@ -27,6 +27,11 @@ Slider::~Slider()
 
 void Slider::update() {
     float previousValue = value;
+    static bool previousMouseState;
+    
+    // calculate dragging = mouse is clicked and has the same value as previously
+    dragging = (ofGetMousePressed() == previousMouseState && ofGetMousePressed() > 0);
+    previousMouseState = ofGetMousePressed();
     
     Button::update();
     
@@ -37,7 +42,7 @@ void Slider::update() {
         }
     }
     else {
-        if (ofGetMousePressed() > 0) {
+        if (ofGetMousePressed() && GUI::getInstance().getFocusedElement() == this) {
             value = getRealValue((ofGetMouseX() - visibleRect.x) / (rect.width));
         }
     }

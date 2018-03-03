@@ -29,9 +29,23 @@ Element::~Element()
     
 }
 
+Boolean Element::checkIsDragging()
+{
+    Boolean result;
+    static bool previousMouseState;
+    
+    result =  ofGetMousePressed() == previousMouseState && ofGetMousePressed() > 0;
+    previousMouseState = ofGetMousePressed();
+    
+    return result;
+}
 
+
+/** TODO: move hover outside */
 void Element::update()
 {
+    dragging = checkIsDragging();
+    
     Boolean previousHover = hover;
     hover = FALSE;
     visibleRect = calculateVisibleRect();
@@ -46,8 +60,18 @@ void Element::update()
     }
     else {
         hover = TRUE;
-        pressed = (ofGetMousePressed() > 0);
+        if (ofGetMousePressed() > 0) {
+            pressed = TRUE;
+            
+            if (!GUI::getInstance().elementHasChilds(this) &&
+                GUI::getInstance().getFocusedElement() != this
+                ) {
+                GUI::getInstance().setFocusedElement(this);
+            }
+        }
+        //pressed = (ofGetMousePressed() > 0);
     }
+    
     
     if (hover) {
         entered = (!previousHover) ? TRUE : FALSE;
@@ -73,7 +97,7 @@ void Element::finishDraw( ) {
     
     if (style.hasBorder) {
         ofNoFill();
-        ofSetColor(style.borderColor);
+        ofSetColor(GUI::getInstance().getFocusedElement() == this ? style.focusedColor : style.borderColor);
         ofDrawRectangle(rect);
     }
 }

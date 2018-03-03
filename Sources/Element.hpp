@@ -58,7 +58,17 @@ protected:
     Boolean pressed;
     Boolean entered;
     Boolean exited;
+    Boolean dragging;
     ElementStyle style;
+    
+    
+    /*!
+        Returns true if a dragging event is happening
+     
+        Dragging happens whtn the mouse is clicked and the the click
+        value is the same as before
+     */
+    Boolean checkIsDragging();
     
 public:
     

@@ -57,7 +57,6 @@ void Table::pushElement(Element* newElement, unsigned int column, unsigned int r
 
 void Table::update() {
     Element::update();
-    
 }
 
 void Table::draw() {

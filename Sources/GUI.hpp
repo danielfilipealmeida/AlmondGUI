@@ -21,6 +21,7 @@
 #include "ButtonGroup.hpp"
 #include "ToggleButtonGroup.hpp"
 #include "Table.hpp"
+#include "Window.hpp"
 
 // Decorators
 #include "Decorator.hpp"
@@ -47,6 +48,9 @@ protected:
     
     GUI();  //!< Protected constructor
     ~GUI(); //!< protected destructor
+    
+    Element *focusedElement;
+    
 public:
     
     static GUI& getInstance();  //!< the instance getter
@@ -110,6 +114,13 @@ public:
     void forEachChildOf(Element *parent, std::function<void (Element *)> lambda);
     
     /*!
+     \brief Checks if a given element has childs
+     \param element the element to check if it has childs
+     \result returns if the element has childs or not
+     */
+    Boolean elementHasChilds(Element *element);
+    
+    /*!
      \brief Traverse all elements and updates their visible rect
      */
     void updateVisibleRects();
@@ -127,6 +138,25 @@ public:
      */
     void saveTexture(string file, ofTexture texture);
     
+    
+    /*!
+     \brief sets an element as the focused element
+     \param element to focus
+     */
+    void setFocusedElement(Element *element);
+
+    /*!
+     \brief gets the currently focused element
+     \return the currently focused element
+     */
+    Element *getFocusedElement();
+    
+    /*!
+     \brief checks if a given element is currently focused
+     \param the element to check
+     \return true or false for the focused condition of the queried element
+     */
+    Boolean isElementFocused(Element *element);
     
 #pragma mark json helpers
     

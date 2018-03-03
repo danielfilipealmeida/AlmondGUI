@@ -16,11 +16,6 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>HelloWorld copy.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
-		</dict>
 		<key>HelloWorld.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -56,6 +51,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>Windows.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -70,6 +70,11 @@
 			<true/>
 		</dict>
 		<key>0C1C0BED200F7A3200BC3369</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C9AA06A203F78ED00318675</key>
 		<dict>
 			<key>primary</key>
 			<true/>

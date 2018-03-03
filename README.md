@@ -62,5 +62,14 @@ Shows how to use the viewport element can contain other elements and have a slid
 
 ## Todo
 
+- Multi windows
+- List (will display an array of elements)
 -  generate gui tree for debugging (text)
 - changes the sequence of drawing (gui draws only what has null parents. then each element draws it's children)
+
+
+### Multi windows todo
+
+- a window is not part of the GUI. It's a stand alone object that is used for creating windows before running the main loop
+- all needed windows must be created at start time?
+- try to find a work around for this.

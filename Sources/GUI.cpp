@@ -58,6 +58,8 @@ void GUI::update()
     {
         element->update();
     }
+    // remove
+    ofSetWindowTitle("Focused" + ofToString(focusedElement));
 }
 
 
@@ -66,6 +68,19 @@ void GUI::forEach(std::function<void (Element *)> lambda)
     for(auto element:elements) {
         lambda(element);
     }
+}
+
+Boolean  GUI::elementHasChilds(Element *element) {
+    Boolean result = FALSE;
+
+    for (auto el:elements) {
+        if (el->getParent() == element) {
+            result = TRUE;
+            break;
+        }
+    }
+    
+    return result;
 }
 
 std::vector<Element*> GUI::filter(std::function<bool (Element *)> lambda) {
@@ -156,5 +171,20 @@ json GUI::jsonDump(ofColor color)
         {"green", color.g},
         {"blue", color.b}
     };
+}
+
+
+void GUI::setFocusedElement(Element *element) {
+    
+    focusedElement = element;
+}
+
+Element *GUI::getFocusedElement() {
+    return focusedElement;
+}
+
+
+Boolean GUI::isElementFocused(Element *element) {
+    return element == focusedElement;
 }
 

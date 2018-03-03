@@ -26,7 +26,7 @@ using json = nlohmann::json;
 class ElementStyle {
 public:
     Boolean hasBorder;
-    ofColor borderColor;
+    ofColor borderColor, focusedColor;
     
     Boolean hasBackground;
     ofColor backgroundColor;
