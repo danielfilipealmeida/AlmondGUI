@@ -10,8 +10,7 @@
 #define Viewport_hpp
 
 #include <stdio.h>
-#include "Element.hpp"
-
+#include "ContainerBase.hpp"
 
 /*!
  \brief Implements a scrollable area that can contain elements. The Element class already allows this but isn't scrollable.
@@ -19,7 +18,7 @@
  rect: the definition of the rectangle of the viewport
  visibleRect: rect translated into screen coordinates
  */
-class Viewport : public Element
+class Viewport : public ContainerBase
 {
 protected:
     
@@ -29,6 +28,7 @@ protected:
     float totalHeight;
     float totalWidth;
     
+   
     /*!
      \brief fbo to store the bitmap contents of the fbo
      */
@@ -80,6 +80,14 @@ public:
      ...
      */
     virtual string getClass() { return "Viewport";}
+    
+    
+    
+
+    /*!
+     \brief returns the Y position to be occupied by the next element
+     */
+    float getNextElementY();
     
     /*!
      \brief what is this for?
@@ -144,8 +152,8 @@ public:
     /*!
      Add a new element to the viewport
      */
-    Element *add(Element *newElement);
-
+    ChildInterface* add(ChildInterface *newElement);
+    
     /*!
      \brief Resizes the viewport to the required rect
      \param newRect the new size of the viewport

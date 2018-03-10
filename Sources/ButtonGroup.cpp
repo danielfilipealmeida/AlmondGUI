@@ -62,7 +62,7 @@ ofRectangle ButtonGroup::getVisibleRectForButton(ButtonData button) {
     visibleRect = getRectForButton(button);
     
     if (parent != NULL) {
-        ofRectangle parentRect = parent->getRect();
+        ofRectangle parentRect = ((ElementInterface *)parent)->getRect();
         visibleRect.x = visibleRect.x + parentRect.x;
         visibleRect.y = visibleRect.y + parentRect.y;
     };
@@ -122,7 +122,7 @@ float ButtonGroup::getButtonsWidth()
     float totalWidth = rect.width;
     
     if (totalWidth <= 0 && parent != NULL) {
-        totalWidth = parent->getRect().width;
+        totalWidth = ((ElementInterface *)parent)->getRect().width;
     }
     
     return (totalWidth - (GUI_BORDER * (nButtons)))/ (float) nButtons;
@@ -176,7 +176,7 @@ void ButtonGroup::setParent(ElementInterface *_parent) {
 
 void ButtonGroup::resize(ofRectangle newRect) {
     Element::resize(newRect);
-    if (parent!=NULL) setParent(parent);
+    if (parent!=NULL) setParent((ElementInterface *)parent);
 }
 
 unsigned int ButtonGroup::getValue() {

@@ -15,6 +15,8 @@
 #include "ElementStyle.hpp"
 #include "GUIStyle.hpp"
 #include "ElementInterface.hpp"
+#include "ChildInterface.hpp"
+#include "ContainerInterface.hpp"
 
 
 /*!
@@ -50,7 +52,7 @@ using json = nlohmann::json;
  Important to figure out:
  how to handle elements inside elements.
  */
-class Element : public ElementInterface
+class Element : public ElementInterface, public ChildInterface
 {
 protected:
     Boolean hover;
@@ -59,7 +61,12 @@ protected:
     Boolean exited;
     Boolean dragging;
     ElementStyle style;
-    
+
+    /*!
+     \brief reference of the element this element is child of
+     */
+    ContainerInterface *parent;
+
     /*!
         Returns true if a dragging event is happening
      
@@ -80,6 +87,8 @@ public:
     void finishDraw();            
     void setVisibleRect(ofRectangle _visibleRect);
     ofRectangle calculateVisibleRect();
+    void setParent(void *_parent);
+    void* getParent();
     
     /*!
      \brief Returns the zone to draw
@@ -103,6 +112,7 @@ public:
     
     /*!
      \brief Sets the new rect
+     \param newRect the definition of the new size and position of the element
      */
     virtual void resize(ofRectangle newRect);
     
@@ -148,17 +158,11 @@ public:
      */
     virtual Boolean canScroll();
     
-    
-    
-    
-    
-    
-    
     /*!
      \brief Draws all the childs of the current element
      todo: remove this. This should only exist on elements with childs
      */
-    void drawChilds();
+    //void drawChilds();
     
     /*!
      \brief Adds another element as a child

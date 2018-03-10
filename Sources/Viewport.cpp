@@ -12,7 +12,6 @@
 Viewport::Viewport() {
     className = "Viewport";
 
-    
     scrollPositionX = scrollPositionY = 0;
     style.hasBorder = false;
 }
@@ -38,6 +37,7 @@ void Viewport::set(json config) {
     
     updateFbo();
 }
+
 
 
 void Viewport::updateFbo()
@@ -117,16 +117,54 @@ void Viewport::setScrollPositionX(float position) {
     scrollPositionX = position;
 }
 
-Element* Viewport::add(Element *newElement) {
+float Viewport::getNextElementY()
+{
+    std::vector<ChildInterface*> childElements;
+    ElementInterface *lastElement;
+    ofRectangle lastElementRect;
+    
+    childElements = getChildElements();
+    
+    if (childElements.size() == 0) return 0.0;
+    
+    lastElement = (ElementInterface *) (childElements.back());
+    lastElementRect = lastElement->getRect();
+    
+    return lastElementRect.y + lastElementRect.height + GUI_BORDER;
+}
+
+ChildInterface* Viewport::add(ChildInterface *newElement) {
+    float elementY, width, height;
+    ofRectangle newElementRect;
+    std::vector<ChildInterface*> childElements;
+    
     newElement->setParent(this);
+    childElements = getChildElements();
+
+    elementY = getNextElementY();
+    width = getRect().width - (2 * GUI_BORDER);
+    height = ((Element *)newElement)->getHeightForWidth(width);
+    
+    ((Element*) newElement)->set({
+        {"x", GUI_BORDER},
+        {"y", elementY},
+        {"width", width},
+        {"height", height}
+    });
+   
+    // todo: move this code into a new method that checks if the currently added element takes more space
+    // the the actual current space and increase this space if so
+    float nextElementY = height + elementY + 2 * GUI_BORDER;
+    if (nextElementY > totalHeight) totalHeight = nextElementY;
+    
+    updateFbo();
+    update();
     
     // todo: rework all this. elements can only be added by the GUI
     /*
     std::vector<Element*> childElements = getChildElements();
     float elementY, width, height;
     ofRectangle newElementRect = newElement->getRect();
-    
-    
     
     elementY = ((childElements.size() == 0) ? 0 : childElements.back()->getRect().y + childElements.back()->getRect().height) + GUI_BORDER;
     width = getRect().width - (2 * GUI_BORDER);
@@ -153,6 +191,22 @@ void Viewport::resize(ofRectangle newRect) {
     float currentY = GUI_BORDER;
     
     Element::resize(newRect);
+    
+    for (auto element:getChildElements()) {
+        ofRectangle elementRect, newRect;
+        float width, height;
+        
+        elementRect = ((ElementInterface *)element)->getRect();
+        
+        // todo: make a method for this?!
+        width = getRect().width - (2 * GUI_BORDER);
+        height =  ((ElementInterface *)element)->getHeightForWidth(width);
+        
+        newRect = ofRectangle(GUI_BORDER, currentY, width, height);
+        
+        ((ElementInterface *)element)->resize(newRect);
+        currentY = currentY + height + GUI_BORDER;
+    }
     
     /*
     for(auto element:getChildElements()) {

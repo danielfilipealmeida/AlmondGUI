@@ -9,7 +9,7 @@
 #define Table_hpp
 
 #include <stdio.h>
-#include "Element.hpp"
+#include "ContainerBase.hpp"
 
 
 /*!
@@ -20,7 +20,8 @@
  fully configurable.
  Data won't be defined on a vector but on a map!
  */
-class Table : public Element {
+class Table : public ContainerBase
+{
 protected:
     unsigned int nRows, nColumns;
     float rowHeight, columnWidth;

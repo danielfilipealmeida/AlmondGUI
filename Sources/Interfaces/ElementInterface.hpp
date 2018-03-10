@@ -50,6 +50,12 @@ public:
     virtual void setVisibleRect(ofRectangle _visibleRect) = 0;
     
     /*!
+     \brief Sets the new rect
+     \param newRect the definition of the new size and position of the element
+     */
+    virtual void resize(ofRectangle newRect) = 0;
+    
+    /*!
      \brief Returns the rect
      */
     ofRectangle getRect() {
@@ -71,31 +77,14 @@ public:
     virtual ofRectangle calculateVisibleRect() = 0;
     
     /*!
-     \brief Sets the element that will contain this element
-     \param _parent the parent
+     \brief gets the height for a requested width
      */
-    void setParent(ElementInterface *_parent) {
-        parent = _parent;
-    };
+    virtual float getHeightForWidth(float _width) = 0;
     
-    /*!
-     \brief Returns the parent
-     \returns the element this element is child of
-     */
-    ElementInterface* getParent() {
-        return parent;
-    };
     
-
     
 protected:
     string className;
-    
-    /*!
-     \brief reference of the element this element is child of
-     */
-    ElementInterface *parent;
-    
     
     /*!
      \brief The rectangle definition in the GUI system.

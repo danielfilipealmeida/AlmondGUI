@@ -10,6 +10,8 @@
 
 #include "GUI.hpp"
 
+
+/* TODO: move fonts to a new class called FontsManager */
 ofTrueTypeFont textFont;
 
 ofTrueTypeFont getFont(Fonts font)
@@ -62,7 +64,9 @@ void GUI::draw()
 {
     for(auto element:elements)
     {
-         if (!element->getParent()) element->draw();
+        if (!element->getParent()) {
+            element->draw();
+        }
     }
     ofSetColor(255,255,255,255);
 }
@@ -98,8 +102,8 @@ Boolean  GUI::elementHasChilds(Element *element) {
     return result;
 }
 
-std::vector<Element*> GUI::filter(std::function<bool (Element *)> lambda) {
-    std::vector<Element*> result;
+std::vector<ChildInterface*> GUI::filter(std::function<bool (ChildInterface *)> lambda) {
+    std::vector<ChildInterface *> result;
     
     for(auto element:elements) {
         if (lambda(element) == true) {
@@ -111,12 +115,44 @@ std::vector<Element*> GUI::filter(std::function<bool (Element *)> lambda) {
 }
 
 void GUI::forEachChildOf(Element *parent, std::function<void (Element *)> lambda) {
-    
+    // todo: finish this
     /*
     for(auto element:parent->getChildElements()) {
         lambda(element);
     }
      */
+}
+
+std::vector<ChildInterface*> GUI::getChildsOfElement(ContainerInterface* parentElement){
+    // todo: check problem with filter
+    /*
+    return filter([&](ChildInterface* element) {
+        return (ContainerInterface *) element->getParent() == (ContainerInterface *) parentElement;
+    });
+     */
+    std::vector<ChildInterface *> result;
+    auto parentAddress = std::addressof(parentElement);
+    
+    std::stringstream ss1;
+    ss1 << *parentAddress;
+    std::string parentElementAddressString = ss1.str();
+    
+    for(auto element:elements) {
+        ContainerInterface* currentParent = (ContainerInterface*) element->getParent();
+        auto currentParentAddress = std::addressof(currentParent);
+        
+        std::stringstream ss2;
+        ss2 << *parentAddress;
+        std::string currentParentElementAddressString = ss2.str();
+        
+        //if (*parentAddress == *currentParentAddress) {
+        if (currentParentElementAddressString.compare(parentElementAddressString) == 0) {
+            result.push_back(element);
+        }
+    }
+    
+    return result;
+    
 }
 
 void GUI::updateVisibleRects()

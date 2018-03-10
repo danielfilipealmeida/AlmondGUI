@@ -33,6 +33,16 @@ void Element::setVisibleRect(ofRectangle _visibleRect)
     visibleRect = _visibleRect;
 }
 
+void Element::setParent(void *_parent) {
+    parent = (ContainerInterface*) _parent;
+};
+
+
+void* Element::getParent() {
+    return (void *) parent;
+};
+
+
 Boolean Element::checkIsDragging()
 {
     Boolean result;
@@ -58,7 +68,7 @@ void Element::update()
     visibleRect = calculateVisibleRect();
     ofRectangle croppedVisibleRect = visibleRect;
     if (parent != NULL) {
-        croppedVisibleRect = croppedVisibleRect.getIntersection(parent->getVisibleRect());
+        croppedVisibleRect = croppedVisibleRect.getIntersection(((ElementInterface *)parent)->getVisibleRect());
     }
      
     if (!croppedVisibleRect.inside(ofGetMouseX(), ofGetMouseY())) {
@@ -117,7 +127,9 @@ void Element::finishDraw( ) {
     }
 }
 
-void Element::drawChilds( ) {
+
+// todo: this must move out of here... it should be implemented by the container
+//void Element::drawChilds( ) {
     // this shouldn't be done here! but should be the gui to do this
     /*
     gui->forEach([this](Element *element) {
@@ -126,13 +138,13 @@ void Element::drawChilds( ) {
     });
      */
     
-}
+//}
 
 
 ofRectangle Element::getDrawingRec() {
     ofRectangle drawingRect = rect;
     
-    if (parent!= NULL && parent->getClass().compare("Viewport") == 0) {
+    if (parent!= NULL && ((ElementInterface *)parent)->getClass().compare("Viewport") == 0) {
         drawingRect = ((Viewport *) parent)->calculateDrawingRectForElement(this);
     }
     
@@ -189,7 +201,7 @@ ofRectangle Element::calculateVisibleRect() {
         return rect;
     }
     
-    ofRectangle parentRect = parent->calculateVisibleRect();
+    ofRectangle parentRect = ((ElementInterface *)parent)->calculateVisibleRect();
     ofRectangle visibleRect;
     
     visibleRect.x = parentRect.x + rect.x;
@@ -197,7 +209,7 @@ ofRectangle Element::calculateVisibleRect() {
     visibleRect.width = rect.width;
     visibleRect.height = rect.height;
     
-    if (parent->getClass().compare("Viewport") == 0) {
+    if (((ElementInterface *)parent)->getClass().compare("Viewport") == 0) {
         Viewport *viewport = (Viewport *) parent;
         visibleRect.x = visibleRect.x - viewport->getOffsetX();
         visibleRect.y = visibleRect.y - viewport->getOffsetY();
@@ -225,7 +237,7 @@ ofRectangle Element::getRect() {
         returnedRect.y = GUI_BORDER;
     }
     if (returnedRect.width < 0) {
-        returnedRect.width = (parent!=NULL) ? (parent->getRect().width - 2 * GUI_BORDER) : GUI_LINE_HEIGHT * 5;
+        returnedRect.width = (parent!=NULL) ? (((ElementInterface *)parent)->getRect().width - 2 * GUI_BORDER) : GUI_LINE_HEIGHT * 5;
     }
     if (returnedRect.height < 0) {
         returnedRect.height = GUI_LINE_HEIGHT * 1.5;
@@ -251,7 +263,7 @@ ofRectangle Element::getVisibleRectForRect(ofRectangle _rect) {
     visibleRect.x = visibleRect.x + rect.x;
     visibleRect.y = visibleRect.y + rect.y;
     if (parent != NULL) {
-        ofRectangle parentRect = parent->getRect();
+        ofRectangle parentRect = ((ElementInterface *)parent)->getRect();
         visibleRect.x = visibleRect.x + parentRect.x;
         visibleRect.y = visibleRect.y + parentRect.y;
     };

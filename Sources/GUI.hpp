@@ -29,6 +29,9 @@
 #include "SliderDecorator.hpp"
 
 
+
+
+
 // todo: move fonts somewhere else.
 // maybe have them on a singleton that gathers all fonts
 typedef enum  {
@@ -58,6 +61,10 @@ public:
     
     GUI();
     ~GUI();
+    
+    // implement Interface methods
+    std::vector<ChildInterface*> getChildsOfElement(ContainerInterface* parentElement);
+    
     
     /*!
      Updates all elements of the GUI
@@ -91,6 +98,10 @@ public:
         guiObject->set(data);
         elements.push_back(guiObject);
         
+        if (ContainerInterface *guiContainerObject = dynamic_cast<ContainerInterface *>(guiObject)) {
+            guiContainerObject->setGUI((void *)this);
+        }
+        
         return guiObject;
     };
     
@@ -102,7 +113,7 @@ public:
     /*!
      \brief Apply a lambda to filter from all elements of the GUI
      */
-    std::vector<Element*> filter(std::function<bool (Element *)> lambda);
+    std::vector<ChildInterface*> filter(std::function<bool (ChildInterface *)> lambda);
     
     /*!
      \brief Apply a lambda to all child elements of an element
@@ -110,6 +121,7 @@ public:
      \param lambda the function to apply to each child element
      */
     void forEachChildOf(Element *parent, std::function<void (Element *)> lambda);
+    
     
     /*!
      \brief Checks if a given element has childs

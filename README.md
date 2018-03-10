@@ -66,7 +66,7 @@ Shows how to use the viewport element can contain other elements and have a slid
 - List (will display an array of elements)
 -  generate gui tree for debugging (text)
 - changes the sequence of drawing (gui draws only what has null parents. then each element draws it's children)
-
+- Properly implement Interfaces. Only have method definitions. no implementations and no attributes.
 
 ### Multi windows todo
 

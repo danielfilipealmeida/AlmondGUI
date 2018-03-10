@@ -230,6 +230,16 @@
 		0C767D4F200E1CCC0002318B /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C767D0B200D1EB10002318B /* Table.cpp */; };
 		0C767D50200E1CCC0002318B /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C767D0B200D1EB10002318B /* Table.cpp */; };
 		0C767D51200E1CCD0002318B /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C767D0B200D1EB10002318B /* Table.cpp */; };
+		0C94472D20533CEE00C46845 /* ContainerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C94472B20533CEE00C46845 /* ContainerBase.cpp */; };
+		0C94472E20533CEE00C46845 /* ContainerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C94472B20533CEE00C46845 /* ContainerBase.cpp */; };
+		0C94472F20533CEE00C46845 /* ContainerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C94472B20533CEE00C46845 /* ContainerBase.cpp */; };
+		0C94473020533CEE00C46845 /* ContainerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C94472B20533CEE00C46845 /* ContainerBase.cpp */; };
+		0C94473120533CEE00C46845 /* ContainerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C94472B20533CEE00C46845 /* ContainerBase.cpp */; };
+		0C94473220533CEE00C46845 /* ContainerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C94472B20533CEE00C46845 /* ContainerBase.cpp */; };
+		0C94473320533CEE00C46845 /* ContainerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C94472B20533CEE00C46845 /* ContainerBase.cpp */; };
+		0C94473420533CEE00C46845 /* ContainerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C94472B20533CEE00C46845 /* ContainerBase.cpp */; };
+		0C94473520533CEE00C46845 /* ContainerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C94472B20533CEE00C46845 /* ContainerBase.cpp */; };
+		0C94473620533CEE00C46845 /* ContainerBase.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0C94472C20533CEE00C46845 /* ContainerBase.hpp */; };
 		0C9AA06C203F78ED00318675 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81321DF8D94600331165 /* SyphonNameboundClient.m */; };
 		0C9AA06D203F78ED00318675 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD361F44691E008E4F9E /* tinyxml.cpp */; };
 		0C9AA06E203F78ED00318675 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81551DF8D96500331165 /* OscReceivedElements.cpp */; };
@@ -322,6 +332,8 @@
 		0C9F6613202E11270026F6E1 /* ScrollableInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0C9F6612202E11270026F6E1 /* ScrollableInterface.hpp */; };
 		0CD86AA0204B179600DFB79D /* ElementInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0CD86A9F204B179600DFB79D /* ElementInterface.hpp */; };
 		0CD86AA5204B34D200DFB79D /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
+		0CD86AAB204BFC2800DFB79D /* ContainerInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0CD86AAA204BFC2800DFB79D /* ContainerInterface.hpp */; };
+		0CD86AAF204BFCAA00DFB79D /* ChildInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0CD86AAE204BFCAA00DFB79D /* ChildInterface.hpp */; };
 		0CEC7E1F20019DAF001AF9A3 /* Loop001.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC7E1D20019DAF001AF9A3 /* Loop001.mp4 */; };
 		0CF9976720024B4B00D15EAA /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9976620024B4B00D15EAA /* ButtonGroup.cpp */; };
 		6504556E1F470EA300CB3BE5 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655BFAF81E7355BD00B74446 /* CoreMIDI.framework */; };
@@ -505,6 +517,8 @@
 		0C767D16200E1A310002318B /* ofApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
 		0C767D4A200E1A4F0002318B /* Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Table.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C767D4B200E1A500002318B /* HelloWorld copy3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HelloWorld copy3-Info.plist"; path = "/Users/daniel.almeida/Personal/of_v0.9.8_osx_release/addons/ofxAlmondGUI/HelloWorld copy3-Info.plist"; sourceTree = "<absolute>"; };
+		0C94472B20533CEE00C46845 /* ContainerBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ContainerBase.cpp; sourceTree = "<group>"; };
+		0C94472C20533CEE00C46845 /* ContainerBase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ContainerBase.hpp; sourceTree = "<group>"; };
 		0C9AA066203F783500318675 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = examples/Windows/main.cpp; sourceTree = SOURCE_ROOT; };
 		0C9AA067203F783500318675 /* Windows-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Windows-Info.plist"; path = "examples/Windows/Windows-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0C9AA068203F783500318675 /* ofApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ofApp.cpp; path = examples/Windows/ofApp.cpp; sourceTree = SOURCE_ROOT; };
@@ -520,6 +534,8 @@
 		0C9C331220057C1D00750DC3 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
 		0C9F6612202E11270026F6E1 /* ScrollableInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ScrollableInterface.hpp; path = Sources/Interfaces/ScrollableInterface.hpp; sourceTree = SOURCE_ROOT; };
 		0CD86A9F204B179600DFB79D /* ElementInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ElementInterface.hpp; path = Sources/Interfaces/ElementInterface.hpp; sourceTree = SOURCE_ROOT; };
+		0CD86AAA204BFC2800DFB79D /* ContainerInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ContainerInterface.hpp; path = Sources/Interfaces/ContainerInterface.hpp; sourceTree = SOURCE_ROOT; };
+		0CD86AAE204BFCAA00DFB79D /* ChildInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ChildInterface.hpp; path = Sources/Interfaces/ChildInterface.hpp; sourceTree = SOURCE_ROOT; };
 		0CEC7E1D20019DAF001AF9A3 /* Loop001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Loop001.mp4; path = ../../../../../ArbutusEngine/TestData/Loop001.mp4; sourceTree = "<group>"; };
 		0CF9976620024B4B00D15EAA /* ButtonGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ButtonGroup.cpp; sourceTree = "<group>"; };
 		650455591F47085D00CB3BE5 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -881,6 +897,8 @@
 			children = (
 				0C9F6612202E11270026F6E1 /* ScrollableInterface.hpp */,
 				0CD86A9F204B179600DFB79D /* ElementInterface.hpp */,
+				0CD86AAA204BFC2800DFB79D /* ContainerInterface.hpp */,
+				0CD86AAE204BFCAA00DFB79D /* ChildInterface.hpp */,
 			);
 			path = Interfaces;
 			sourceTree = SOURCE_ROOT;
@@ -1186,6 +1204,8 @@
 				0C0CA28F1FF92EA700C4C463 /* ElementStyle.hpp */,
 				0C392FDA1FBCFA2F00D9016F /* Element.cpp */,
 				0C392FE31FBCFA3000D9016F /* Element.hpp */,
+				0C94472B20533CEE00C46845 /* ContainerBase.cpp */,
+				0C94472C20533CEE00C46845 /* ContainerBase.hpp */,
 				0C392FF01FBCFA3200D9016F /* Button.cpp */,
 				0C392FD71FBCFA2F00D9016F /* Button.hpp */,
 				0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */,
@@ -1221,9 +1241,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD86AAB204BFC2800DFB79D /* ContainerInterface.hpp in Headers */,
 				0C0CA2941FF92EA700C4C463 /* ElementStyle.hpp in Headers */,
 				0C9AA0AD203F7E4B00318675 /* Window.hpp in Headers */,
+				0CD86AAF204BFCAA00DFB79D /* ChildInterface.hpp in Headers */,
 				0C9F6613202E11270026F6E1 /* ScrollableInterface.hpp in Headers */,
+				0C94473620533CEE00C46845 /* ContainerBase.hpp in Headers */,
 				0C767D0F200D1EB10002318B /* Table.hpp in Headers */,
 				0CD86AA0204B179600DFB79D /* ElementInterface.hpp in Headers */,
 			);
@@ -1581,6 +1604,7 @@
 				0C0370971FF849C9005744F2 /* UdpSocket.cpp in Sources */,
 				0C0370C31FF849FF005744F2 /* main.cpp in Sources */,
 				0C03709B1FF849C9005744F2 /* ofxOscReceiver.cpp in Sources */,
+				0C94472E20533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C03709C1FF849C9005744F2 /* Preview.cpp in Sources */,
 				0C03709E1FF849C9005744F2 /* tinyxmlparser.cpp in Sources */,
 				0C03709F1FF849C9005744F2 /* Viewport.cpp in Sources */,
@@ -1605,6 +1629,7 @@
 				0C0CA2931FF92EA700C4C463 /* ElementStyle.cpp in Sources */,
 				0C0370D31FF853E1005744F2 /* Button.cpp in Sources */,
 				0C9AA0A9203F7E4B00318675 /* Window.cpp in Sources */,
+				0C94473220533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C0370D61FF853E1005744F2 /* Element.cpp in Sources */,
 				0C0370D71FF853E1005744F2 /* GUI.cpp in Sources */,
 				0C767D0D200D1EB10002318B /* Table.cpp in Sources */,
@@ -1641,6 +1666,7 @@
 				0C1C0BE6200F76FE00BC3369 /* main.cpp in Sources */,
 				0C1C0BC4200F76D800BC3369 /* UdpSocket.cpp in Sources */,
 				0C1C0BC6200F76D800BC3369 /* ofxOscReceiver.cpp in Sources */,
+				0C94473120533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C1C0BC7200F76D800BC3369 /* Preview.cpp in Sources */,
 				0C1C0BC9200F76D800BC3369 /* tinyxmlparser.cpp in Sources */,
 				0C1C0BCA200F76D800BC3369 /* Viewport.cpp in Sources */,
@@ -1680,6 +1706,7 @@
 				0C1C0C23200F7A5400BC3369 /* main.cpp in Sources */,
 				0C1C0C03200F7A3200BC3369 /* UdpSocket.cpp in Sources */,
 				0C1C0C04200F7A3200BC3369 /* ofxOscReceiver.cpp in Sources */,
+				0C94473420533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C1C0C05200F7A3200BC3369 /* Preview.cpp in Sources */,
 				0C1C0C06200F7A3200BC3369 /* tinyxmlparser.cpp in Sources */,
 				0C1C0C07200F7A3200BC3369 /* Viewport.cpp in Sources */,
@@ -1719,6 +1746,7 @@
 				0C767D28200E1A4F0002318B /* GUI.cpp in Sources */,
 				0C767D2A200E1A4F0002318B /* UdpSocket.cpp in Sources */,
 				0C767D2C200E1A4F0002318B /* ofxOscReceiver.cpp in Sources */,
+				0C94473020533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C767D2D200E1A4F0002318B /* Preview.cpp in Sources */,
 				0C767D2F200E1A4F0002318B /* tinyxmlparser.cpp in Sources */,
 				0C767D30200E1A4F0002318B /* Viewport.cpp in Sources */,
@@ -1758,6 +1786,7 @@
 				0C9AA0A0203F7A5B00318675 /* main.cpp in Sources */,
 				0C9AA07E203F78ED00318675 /* UdpSocket.cpp in Sources */,
 				0C9AA080203F78ED00318675 /* ofxOscReceiver.cpp in Sources */,
+				0C94473520533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C9AA081203F78ED00318675 /* Preview.cpp in Sources */,
 				0C9AA083203F78ED00318675 /* tinyxmlparser.cpp in Sources */,
 				0C9AA084203F78ED00318675 /* Viewport.cpp in Sources */,
@@ -1797,6 +1826,7 @@
 				0C9C32EE20057BD500750DC3 /* ofxOscReceiver.cpp in Sources */,
 				0C9C32EF20057BD500750DC3 /* Preview.cpp in Sources */,
 				0C9C32F120057BD500750DC3 /* tinyxmlparser.cpp in Sources */,
+				0C94472F20533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C9C331420057C1D00750DC3 /* ofApp.cpp in Sources */,
 				0C9C32F220057BD500750DC3 /* Viewport.cpp in Sources */,
 				0C9C331320057C1D00750DC3 /* main.cpp in Sources */,
@@ -1838,6 +1868,7 @@
 				0C3930061FBCFA3200D9016F /* Preview.cpp in Sources */,
 				0C39301F1FBCFAE500D9016F /* ofApp.cpp in Sources */,
 				65276BAE1F486E0000949383 /* tinyxmlparser.cpp in Sources */,
+				0C94472D20533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C392FFC1FBCFA3200D9016F /* Viewport.cpp in Sources */,
 				0C392FFA1FBCFA3200D9016F /* Element.cpp in Sources */,
 				0C3930041FBCFA3200D9016F /* Label.cpp in Sources */,
@@ -1870,6 +1901,7 @@
 				0C767D12200D1EC90002318B /* Table.cpp in Sources */,
 				65E6BD3A1F44691E008E4F9E /* tinyxml.cpp in Sources */,
 				65E6BD3B1F44691E008E4F9E /* tinyxmlerror.cpp in Sources */,
+				0C94473320533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				65E8969F1E734F02000D470B /* OscPrintReceivedElements.cpp in Sources */,
 				65E896A01E734F05000D470B /* OscOutboundPacketStream.cpp in Sources */,
 				65E8969E1E734EFF000D470B /* OscReceivedElements.cpp in Sources */,

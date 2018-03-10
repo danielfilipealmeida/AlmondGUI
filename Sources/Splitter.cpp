@@ -65,7 +65,7 @@ void Splitter::add(Element* element, float size, SplitMode mode) {
 
 // todo: what is this for?
 void Splitter::calculateRect() {
-    rect = (parent != NULL) ? parent->getRect() : ofGetWindowRect();
+    rect = (parent != NULL) ? ((ElementInterface *)parent)->getRect() : ofGetWindowRect();
 }
 
 // todo: make unit tests

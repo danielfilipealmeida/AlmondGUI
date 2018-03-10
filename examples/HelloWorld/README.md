@@ -16,3 +16,6 @@ Shows how to have more than one window with it's own Graphic User Interface
 
 * GUI no longer uses the singleton pattern. there can be several GUIs
 * a Window no longer an element. it has it's own GUI.
+*Interfaces should only define methods and not implement code.
+* code that is re-used, should be implemented on new classes like ElementBase and ContainerBase
+* everything related to containers must be moved out of the element class

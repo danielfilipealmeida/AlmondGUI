@@ -9,7 +9,7 @@
 #define Window_hpp
 
 #include <stdio.h>
-#include "Element.hpp"
+#include "ContainerBase.hpp"
 #include "ofAppGLFWWindow.h"
 #include "GUI.hpp"
 
@@ -18,7 +18,7 @@
  
  A window has it's own interface structure
  */
-class Window : public ofBaseApp, public Element
+class Window : public ofBaseApp, public ContainerBase
 {
     shared_ptr<ofAppBaseWindow> window = NULL;
     ofGLFWWindowSettings getSettings();
