@@ -61,6 +61,8 @@ protected:
     Boolean exited;
     Boolean dragging;
     ElementStyle style;
+    
+    string className;
 
     /*!
      \brief reference of the element this element is child of
@@ -75,10 +77,31 @@ protected:
      */
     Boolean checkIsDragging();
     
+    /*!
+     \brief The rectangle definition in the GUI system.
+     */
+    ofRectangle rect;
+    
+    /*!
+     \brief The rectangle definition related to the screen.
+     
+     Only represents the parts of the element that are visible, since parts can be hidden due to scrolled parents, etc.
+     */
+    ofRectangle visibleRect;
+    
+    /*!
+     \brief Rectangle definition used for drawing the rectangle.
+     
+     This is related to a parent viewport and if the vary from the `rect` if the parent is scrolled
+     */
+    ofRectangle drawingRect;
+    
 public:
     
     Element();
     ~Element();
+    
+    virtual string getClass();
     
     /* ElementInteface mandatory methods */
     virtual void update();
@@ -121,6 +144,10 @@ public:
      */
     virtual float getHeightForWidth(float _width);
     
+    
+    virtual ofRectangle getVisibleRect();
+
+        
     /*!
      \brief Get a visible rect, in the screen coordinates and crop if needed
      

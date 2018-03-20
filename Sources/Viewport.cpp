@@ -120,19 +120,20 @@ void Viewport::setScrollPositionX(float position) {
 float Viewport::getNextElementY()
 {
     std::vector<ChildInterface*> childElements;
-    ElementInterface *lastElement;
+    Element *lastElement;
     ofRectangle lastElementRect;
     
     childElements = getChildElements();
     
     if (childElements.size() == 0) return 0.0;
     
-    lastElement = (ElementInterface *) (childElements.back());
+    lastElement = (Element *) (childElements.back());
     lastElementRect = lastElement->getRect();
     
     return lastElementRect.y + lastElementRect.height + GUI_BORDER;
 }
 
+// todo: fix bug here.
 ChildInterface* Viewport::add(ChildInterface *newElement) {
     float elementY, width, height;
     ofRectangle newElementRect;

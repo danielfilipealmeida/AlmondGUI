@@ -28,6 +28,15 @@ Element::~Element()
 {
 }
 
+string Element::getClass()
+{
+    return className;
+};
+
+ofRectangle Element::getVisibleRect() {
+    return visibleRect;
+}
+
 void Element::setVisibleRect(ofRectangle _visibleRect)
 {
     visibleRect = _visibleRect;

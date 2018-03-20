@@ -24,13 +24,12 @@ public:
      \brief return all child elements
      \return std::vector<ChildInterface*>
      */
-    std::vector<ChildInterface*> getChildElements();
+    virtual std::vector<ChildInterface*> getChildElements() = 0;
    
     /*!
      \brief Set internally the gui where this container is at.
-            This is needed to be able to gain access to the gui's methods that handle it's elements
-     
-     \param auto the gui
+     This is needed to be able to gain access to the gui's methods that handle it's elements
+     \param void the gui
      */
     virtual void setGUI(void *_gui) = 0;
     

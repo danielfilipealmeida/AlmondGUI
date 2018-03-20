@@ -14,7 +14,8 @@ void ContainerBase::setGUI(void *_gui)
     gui = _gui;
 }
 
-std::vector<ChildInterface*> ContainerBase::getChildElements() {
+std::vector<ChildInterface*> ContainerBase::getChildElements()
+{
     return ((GUI *)gui)->getChildsOfElement(this);
 }
 
@@ -27,6 +28,6 @@ void ContainerBase::drawChilds() {
      */
     auto childs = getChildElements();
     for(auto child:childs) {
-        ((ElementInterface *)child)->draw();
+        ((Element*)child)->draw();
     }
 }

@@ -35,7 +35,6 @@ class Button : public Element
 protected:
     Boolean pushed;
     string caption;
-    unsigned int icon;
     std::function<void(Button *button)> onClick = NULL;
     
 public:
