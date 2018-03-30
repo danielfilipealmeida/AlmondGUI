@@ -13,6 +13,7 @@
 class ofApp : public ofBaseApp {
     ofFbo fbo;
     ofVideoPlayer video;
+    GUI *gui;
     
 	public:
 		void setup();

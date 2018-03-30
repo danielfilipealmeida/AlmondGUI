@@ -4,10 +4,12 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    gui = new GUI();
+    
     ofSetWindowTitle("Table Example");
     ofSetFrameRate(30);
     
-    Table *table = GUI::getInstance().add<Table>({
+    Table *table = gui->add<Table>({
         {"x", 10},
         {"y", 10},
         {"width", 400},
@@ -17,12 +19,12 @@ void ofApp::setup(){
         {"allowResize", false}
     });
     
-    Button *button1 = GUI::getInstance().add<Button>({
+    Button *button1 = gui->add<Button>({
          {"caption", "a button"}
     });
     table->pushElement(button1, 0, 0);
     
-    Slider *slider1 = GUI::getInstance().add<Slider>({
+    Slider *slider1 = gui->add<Slider>({
         {"caption", "a slider"},
         {"minValue", 0},
         {"maxValue", 1},
@@ -30,7 +32,7 @@ void ofApp::setup(){
     });
     table->pushElement(slider1, 1, 1);
     
-    ToggleButton *toggle1 = GUI::getInstance().add<ToggleButton>({
+    ToggleButton *toggle1 = gui->add<ToggleButton>({
         {"caption", "a toggle button"}
     });
     table->pushElement(toggle1, 2, 2);
@@ -38,7 +40,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    GUI::getInstance().update();
+    gui->update();
     
     video.update();
     fbo.begin();
@@ -51,7 +53,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofClear(GUIStyle::getInstance().getDarkColor());
-    GUI::getInstance().draw();
+    gui->draw();
 }
 
 

@@ -96,6 +96,8 @@ public:
      \return a string representing the state of the element
      */
     string dump();
+    
+    ChildInterface* add(ChildInterface *newElement);
 };
 
 

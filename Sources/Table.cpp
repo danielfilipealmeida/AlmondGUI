@@ -6,7 +6,7 @@
 //
 
 #include "Table.hpp"
-
+#include "GUI.hpp"
 
 
 Table::Table() {
@@ -124,4 +124,8 @@ json Table::jsonDump() {
 
 string Table::dump() {
     return  jsonDump().dump(4);
+}
+
+ChildInterface* Table::add(ChildInterface *newElement) {
+    return NULL;
 }

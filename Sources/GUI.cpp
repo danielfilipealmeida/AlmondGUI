@@ -102,8 +102,8 @@ Boolean  GUI::elementHasChilds(Element *element) {
     return result;
 }
 
-std::vector<ChildInterface*> GUI::filter(std::function<bool (ChildInterface *)> lambda) {
-    std::vector<ChildInterface *> result;
+std::vector<Element*> GUI::filter(std::function<bool (ChildInterface *)> lambda) {
+    std::vector<Element*> result;
     
     for(auto element:elements) {
         if (lambda(element) == true) {
@@ -123,8 +123,8 @@ void GUI::forEachChildOf(Element *parent, std::function<void (Element *)> lambda
      */
 }
 
-std::vector<ChildInterface*> GUI::getChildsOfElement(ContainerInterface* parentElement){
-    std::vector<ChildInterface *> result;
+std::vector<Element*> GUI::getChildsOfElement(ContainerInterface* parentElement){
+    std::vector<Element *> result;
     
     // todo: check problem with filter
     /*
@@ -160,9 +160,14 @@ std::vector<ChildInterface*> GUI::getChildsOfElement(ContainerInterface* parentE
         Element *currentElementParent = (Element*) element->getParent();
         if (currentElementParent == NULL) continue;
         
+        if (currentElementParent == element->getParent()) {
+            result.push_back(element);
+        }
+        /*
         if (((Element *)currentElementParent)->getIdentifier().compare(((Element*)parentElement)->getIdentifier()) == 0) {
             result.push_back(element);
         }
+         */
     }
     
     return result;

@@ -9,6 +9,8 @@
 #define ContainerInterface_h
 
 #include "ChildInterface.hpp"
+#include "Element.hpp"
+
 
 class ContainerInterface {
     

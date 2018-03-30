@@ -63,7 +63,7 @@ public:
     ~GUI();
     
     // implement Interface methods
-    std::vector<ChildInterface*> getChildsOfElement(ContainerInterface* parentElement);
+    std::vector<Element*> getChildsOfElement(ContainerInterface* parentElement);
     
     
     /*!
@@ -113,7 +113,7 @@ public:
     /*!
      \brief Apply a lambda to filter from all elements of the GUI
      */
-    std::vector<ChildInterface*> filter(std::function<bool (ChildInterface *)> lambda);
+    std::vector<Element*> filter(std::function<bool (ChildInterface *)> lambda);
     
     /*!
      \brief Apply a lambda to all child elements of an element

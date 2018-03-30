@@ -177,8 +177,8 @@
 		0C3930151FBCFA3200D9016F /* ToggleButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF31FBCFA3200D9016F /* ToggleButton.cpp */; };
 		0C39301F1FBCFAE500D9016F /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C39301D1FBCFAE500D9016F /* ofApp.cpp */; };
 		0C3930201FBCFAE500D9016F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C39301E1FBCFAE500D9016F /* main.cpp */; };
+		0C580728206EE0EE00B43487 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		0C71E9F61FF828880045EA4D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F01FF828880045EA4D /* main.cpp */; };
-		0C71E9F71FF828880045EA4D /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F11FF828880045EA4D /* Splitter.cpp */; };
 		0C71E9F81FF828880045EA4D /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F21FF828880045EA4D /* Viewport.cpp */; };
 		0C71E9FA1FF828880045EA4D /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F41FF828880045EA4D /* VerticalSlider.cpp */; };
 		0C71E9FB1FF828880045EA4D /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F51FF828880045EA4D /* Button.cpp */; };
@@ -330,12 +330,12 @@
 		0C9C331320057C1D00750DC3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C331020057C1D00750DC3 /* main.cpp */; };
 		0C9C331420057C1D00750DC3 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C9C331120057C1D00750DC3 /* ofApp.cpp */; };
 		0C9F6613202E11270026F6E1 /* ScrollableInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0C9F6612202E11270026F6E1 /* ScrollableInterface.hpp */; };
+		0CB45C66206EACC900BAF981 /* GUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CB45C65206EACC900BAF981 /* GUI.cpp */; };
 		0CD86AA0204B179600DFB79D /* ElementInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0CD86A9F204B179600DFB79D /* ElementInterface.hpp */; };
 		0CD86AA5204B34D200DFB79D /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		0CD86AAB204BFC2800DFB79D /* ContainerInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0CD86AAA204BFC2800DFB79D /* ContainerInterface.hpp */; };
 		0CD86AAF204BFCAA00DFB79D /* ChildInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0CD86AAE204BFCAA00DFB79D /* ChildInterface.hpp */; };
 		0CEC7E1F20019DAF001AF9A3 /* Loop001.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC7E1D20019DAF001AF9A3 /* Loop001.mp4 */; };
-		0CF9976720024B4B00D15EAA /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CF9976620024B4B00D15EAA /* ButtonGroup.cpp */; };
 		6504556E1F470EA300CB3BE5 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655BFAF81E7355BD00B74446 /* CoreMIDI.framework */; };
 		6504556F1F470EAC00CB3BE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8967B1E73311F000D470B /* Foundation.framework */; };
 		650455711F470ED000CB3BE5 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BC812F1DF8D94600331165 /* Syphon.framework */; };
@@ -533,6 +533,7 @@
 		0C9C331120057C1D00750DC3 /* ofApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofApp.cpp; sourceTree = "<group>"; };
 		0C9C331220057C1D00750DC3 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
 		0C9F6612202E11270026F6E1 /* ScrollableInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ScrollableInterface.hpp; path = Sources/Interfaces/ScrollableInterface.hpp; sourceTree = SOURCE_ROOT; };
+		0CB45C65206EACC900BAF981 /* GUI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GUI.cpp; sourceTree = "<group>"; };
 		0CD86A9F204B179600DFB79D /* ElementInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ElementInterface.hpp; path = Sources/Interfaces/ElementInterface.hpp; sourceTree = SOURCE_ROOT; };
 		0CD86AAA204BFC2800DFB79D /* ContainerInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ContainerInterface.hpp; path = Sources/Interfaces/ContainerInterface.hpp; sourceTree = SOURCE_ROOT; };
 		0CD86AAE204BFCAA00DFB79D /* ChildInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ChildInterface.hpp; path = Sources/Interfaces/ChildInterface.hpp; sourceTree = SOURCE_ROOT; };
@@ -854,6 +855,7 @@
 				0CF9976620024B4B00D15EAA /* ButtonGroup.cpp */,
 				0C71E9F11FF828880045EA4D /* Splitter.cpp */,
 				0C767D11200D1EC90002318B /* Table.cpp */,
+				0CB45C65206EACC900BAF981 /* GUI.cpp */,
 			);
 			name = Tests;
 			path = tests;
@@ -1912,16 +1914,16 @@
 				0C392FFF1FBCFA3200D9016F /* Slider.cpp in Sources */,
 				0C3930131FBCFA3200D9016F /* Button.cpp in Sources */,
 				0C39300F1FBCFA3200D9016F /* GUI.cpp in Sources */,
-				0C71E9F71FF828880045EA4D /* Splitter.cpp in Sources */,
 				0C71E9FB1FF828880045EA4D /* Button.cpp in Sources */,
 				0C71E9F81FF828880045EA4D /* Viewport.cpp in Sources */,
 				0C71E9F61FF828880045EA4D /* main.cpp in Sources */,
 				0C71E9FA1FF828880045EA4D /* VerticalSlider.cpp in Sources */,
 				0C3930031FBCFA3200D9016F /* VerticalSlider.cpp in Sources */,
-				0CF9976720024B4B00D15EAA /* ButtonGroup.cpp in Sources */,
+				0C580728206EE0EE00B43487 /* ButtonGroup.cpp in Sources */,
 				0C3930071FBCFA3200D9016F /* Preview.cpp in Sources */,
 				0C392FFD1FBCFA3200D9016F /* Viewport.cpp in Sources */,
 				0C392FFB1FBCFA3200D9016F /* Element.cpp in Sources */,
+				0CB45C66206EACC900BAF981 /* GUI.cpp in Sources */,
 				0C767D0E200D1EB10002318B /* Table.cpp in Sources */,
 				0C3930051FBCFA3200D9016F /* Label.cpp in Sources */,
 				0C3930111FBCFA3200D9016F /* Splitter.cpp in Sources */,

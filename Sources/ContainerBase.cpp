@@ -18,7 +18,8 @@ std::vector<ChildInterface*> ContainerBase::getChildElements()
 {
     std::vector<ChildInterface*> childs;
     
-    childs = ((GUI *)gui)->getChildsOfElement(this);
+    // todo: fix this later
+    //childs = ((GUI *)gui)->getChildsOfElement(this);
     
     return childs;
 }

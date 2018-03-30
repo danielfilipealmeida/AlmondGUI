@@ -12,7 +12,8 @@
 VerticalSlider::VerticalSlider() {
     className = "VerticalSlider";
 
-    Slider::Slider();
+    // todo: fix this
+    //Slider::Slider();
 }
 
 VerticalSlider::~VerticalSlider() {
