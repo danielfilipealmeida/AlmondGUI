@@ -124,13 +124,17 @@ void GUI::forEachChildOf(Element *parent, std::function<void (Element *)> lambda
 }
 
 std::vector<ChildInterface*> GUI::getChildsOfElement(ContainerInterface* parentElement){
+    std::vector<ChildInterface *> result;
+    
     // todo: check problem with filter
     /*
     return filter([&](ChildInterface* element) {
         return (ContainerInterface *) element->getParent() == (ContainerInterface *) parentElement;
     });
      */
-    std::vector<ChildInterface *> result;
+    
+    /*
+    
     auto parentAddress = std::addressof(parentElement);
     
     std::stringstream ss1;
@@ -147,6 +151,16 @@ std::vector<ChildInterface*> GUI::getChildsOfElement(ContainerInterface* parentE
         
         //if (*parentAddress == *currentParentAddress) {
         if (currentParentElementAddressString.compare(parentElementAddressString) == 0) {
+            result.push_back(element);
+        }
+    }
+    */
+    
+    for(auto element:elements) {
+        Element *currentElementParent = (Element*) element->getParent();
+        if (currentElementParent == NULL) continue;
+        
+        if (((Element *)currentElementParent)->getIdentifier().compare(((Element*)parentElement)->getIdentifier()) == 0) {
             result.push_back(element);
         }
     }

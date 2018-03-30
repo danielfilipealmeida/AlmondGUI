@@ -62,6 +62,8 @@ protected:
     Boolean dragging;
     ElementStyle style;
     
+    string identifier;
+    
     string className;
 
     /*!
@@ -110,8 +112,9 @@ public:
     void finishDraw();            
     void setVisibleRect(ofRectangle _visibleRect);
     ofRectangle calculateVisibleRect();
-    void setParent(void *_parent);
-    void* getParent();
+    virtual void setParent(void *_parent);
+    virtual void* getParent();
+    virtual string getIdentifier();
     
     /*!
      \brief Returns the zone to draw
@@ -202,6 +205,11 @@ public:
      TODO: move this to the GUI. element should not have access to this
      */
     //std::vector<Element*> getChildElements();
+    
+    /*!
+     \brief Determines an unique identifier for this element by using it's type and memory address
+     */
+    string calculateIdentifier();
     
     
 };

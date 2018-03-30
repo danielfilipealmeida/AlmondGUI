@@ -12,6 +12,8 @@ class ElementInterface
 {
 public:
     
+    virtual string getIdentifier() = 0;
+    
     /*!
      \brief Returns a string with the name of the element
     */

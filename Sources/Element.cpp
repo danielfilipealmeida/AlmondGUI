@@ -22,10 +22,22 @@ Element::Element()
     exited = FALSE;
     
     rect.x = rect.y = rect.width = rect.height = -1;
+    
+    std::stringstream ss1;
+    identifier = calculateIdentifier();
 }
 
 Element::~Element()
-{
+{}
+
+string Element::calculateIdentifier() {
+    std::stringstream ss1;
+    ss1 << this;
+    return className + "-" + ss1.str();
+}
+
+string Element::getIdentifier() {
+    return identifier;
 }
 
 string Element::getClass()
@@ -48,7 +60,7 @@ void Element::setParent(void *_parent) {
 
 
 void* Element::getParent() {
-    return (void *) parent;
+    return parent;
 };
 
 
