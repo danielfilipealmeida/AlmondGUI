@@ -102,7 +102,7 @@ Boolean  GUI::elementHasChilds(Element *element) {
     return result;
 }
 
-std::vector<Element*> GUI::filter(std::function<bool (ChildInterface *)> lambda) {
+std::vector<Element*> GUI::filter(std::function<bool (Element *)> lambda) {
     std::vector<Element*> result;
     
     for(auto element:elements) {

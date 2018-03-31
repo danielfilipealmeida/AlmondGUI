@@ -69,4 +69,6 @@ void Button::setOnClick(std::function<void(Button *button)> _onClick) {
 }
 
 
-
+string Button::getCaption() {
+    return caption;
+}

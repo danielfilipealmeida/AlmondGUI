@@ -17,6 +17,11 @@ Window::Window() {
 
 }
 
+void* Window::add(void *newElement) {
+    // todo: finish
+    
+    return newElement;
+}
 
 ofGLFWWindowSettings Window::getSettings() {
     ofGLFWWindowSettings settings;

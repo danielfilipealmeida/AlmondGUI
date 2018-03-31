@@ -72,12 +72,17 @@ public:
     /*!
      ...
      */
-    virtual string getClass() { return "Button";}
+    string getClass() { return "Button";}
     
     /*!
      ...
      */
     static ofColor getBackgroundColor(Boolean isHover, Boolean isPressed);
+    
+    /*!
+     \brief Returns the caption
+     */
+    string getCaption();
 
 };
 

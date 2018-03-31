@@ -119,7 +119,7 @@ void Viewport::setScrollPositionX(float position) {
 
 float Viewport::getNextElementY()
 {
-    std::vector<ChildInterface*> childElements;
+    std::vector<void*> childElements;
     Element *lastElement;
     ofRectangle lastElementRect;
     
@@ -134,12 +134,12 @@ float Viewport::getNextElementY()
 }
 
 // todo: fix bug here.
-ChildInterface* Viewport::add(ChildInterface *newElement) {
+void* Viewport::add(void *newElement) {
     float elementY, width, height;
     ofRectangle newElementRect;
-    std::vector<ChildInterface*> childElements;
+    std::vector<void*> childElements;
     
-    newElement->setParent(this);
+    ((Element *)newElement)->setParent(this);
     childElements = getChildElements();
 
     elementY = getNextElementY();

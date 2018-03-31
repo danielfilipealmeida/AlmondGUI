@@ -152,7 +152,7 @@ public:
     /*!
      Add a new element to the viewport
      */
-    ChildInterface* add(ChildInterface *newElement);
+    void* add(void *newElement);
     
     /*!
      \brief Resizes the viewport to the required rect

@@ -113,7 +113,7 @@ public:
     /*!
      \brief Apply a lambda to filter from all elements of the GUI
      */
-    std::vector<Element*> filter(std::function<bool (ChildInterface *)> lambda);
+    std::vector<Element*> filter(std::function<bool (Element *)> lambda);
     
     /*!
      \brief Apply a lambda to all child elements of an element

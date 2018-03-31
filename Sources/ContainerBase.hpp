@@ -19,7 +19,7 @@ protected:
     
 public:
     void setGUI(void *_gui);
-    virtual std::vector<ChildInterface*> getChildElements();
+    virtual std::vector<void*> getChildElements();
     virtual void drawChilds();
 };
 

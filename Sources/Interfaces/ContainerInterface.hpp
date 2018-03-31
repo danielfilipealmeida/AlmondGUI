@@ -20,18 +20,18 @@ public:
      \brief Adds a child element to this container
      \param newElement the new element to add.
      */
-    virtual ChildInterface* add(ChildInterface *newElement) = 0;
+    virtual void* add(void *newElement) = 0;
    
     /*!
      \brief return all child elements
      \return std::vector<ChildInterface*>
      */
-    virtual std::vector<ChildInterface*> getChildElements() = 0;
+    virtual std::vector<void*> getChildElements() = 0;
    
     /*!
      \brief Set internally the gui where this container is at.
      This is needed to be able to gain access to the gui's methods that handle it's elements
-     \param void the gui
+     \param _gui the gui
      */
     virtual void setGUI(void *_gui) = 0;
     

@@ -198,7 +198,7 @@ public:
      \brief Adds another element as a child
      todo: move outside. this should only be applied to elements with childs
      */
-    virtual Element *add(Element *newElement);
+    virtual void* add(void *newElement);
     
     /*!
      \brief Returns all the children of this element

@@ -186,7 +186,6 @@
 		0C767D0D200D1EB10002318B /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C767D0B200D1EB10002318B /* Table.cpp */; };
 		0C767D0E200D1EB10002318B /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C767D0B200D1EB10002318B /* Table.cpp */; };
 		0C767D0F200D1EB10002318B /* Table.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0C767D0C200D1EB10002318B /* Table.hpp */; };
-		0C767D12200D1EC90002318B /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C767D11200D1EC90002318B /* Table.cpp */; };
 		0C767D19200E1A4F0002318B /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81321DF8D94600331165 /* SyphonNameboundClient.m */; };
 		0C767D1A200E1A4F0002318B /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD361F44691E008E4F9E /* tinyxml.cpp */; };
 		0C767D1B200E1A4F0002318B /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81551DF8D96500331165 /* OscReceivedElements.cpp */; };
@@ -1900,7 +1899,6 @@
 				65E896921E734275000D470B /* ofxOscReceiver.cpp in Sources */,
 				0C9AA0AA203F7E4B00318675 /* Window.cpp in Sources */,
 				655BFAFB1E735A3D00B74446 /* IpEndpointName.cpp in Sources */,
-				0C767D12200D1EC90002318B /* Table.cpp in Sources */,
 				65E6BD3A1F44691E008E4F9E /* tinyxml.cpp in Sources */,
 				65E6BD3B1F44691E008E4F9E /* tinyxmlerror.cpp in Sources */,
 				0C94473320533CEE00C46845 /* ContainerBase.cpp in Sources */,
@@ -4076,6 +4074,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_DEBUG_INFORMATION_LEVEL = default;
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -4205,6 +4204,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_DEBUG_INFORMATION_LEVEL = default;
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -4234,6 +4234,7 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "$(OF_PATH)/libs/glut/lib/osx\"";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

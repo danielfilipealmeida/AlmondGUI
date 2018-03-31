@@ -126,6 +126,6 @@ string Table::dump() {
     return  jsonDump().dump(4);
 }
 
-ChildInterface* Table::add(ChildInterface *newElement) {
+void* Table::add(void *newElement) {
     return NULL;
 }

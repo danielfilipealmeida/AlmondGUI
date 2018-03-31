@@ -97,7 +97,7 @@ public:
      */
     string dump();
     
-    ChildInterface* add(ChildInterface *newElement);
+    void* add(void *newElement);
 };
 
 

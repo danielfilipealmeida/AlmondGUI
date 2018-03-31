@@ -38,6 +38,8 @@ public:
     
     Element *addToGUI(json elementData);
     
+    void* add(void *newElement);
+    
     /*!
      \brief Checks if the mouse is hover and if the element is being pressed
      */

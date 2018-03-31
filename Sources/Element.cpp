@@ -210,8 +210,8 @@ std::vector<Element*> Element::getChildElements() {
 }
 */
 
-Element *Element::add(Element *newElement) {
-    newElement->setParent(this);
+void *Element::add(void *newElement) {
+    ((Element *)newElement)->setParent(this);
     
     return newElement;
 }
