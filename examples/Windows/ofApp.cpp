@@ -27,22 +27,8 @@ void ofApp::setup(){
         {"height", 400},
         {"width", 400}
     });
-    //button1->setParent(secondWindow);
-    //Window *secondWindow = new Window();
-    //secondWindow->createWindow();
-    /*
-    Window *secondWindow = GUI::getInstance().add<Window>({
-        {"x", 10},
-        {"y", 10},
-        {"height", 400},
-        {"width", 400}
-    });
-     */
     
     secondWindow->add(button1);
-    //button1->setParent(secondWindow);
-    //secondWindow->setCurrentWindow();
-    
 }
 
 static ofApp* getInstance() {

@@ -64,8 +64,9 @@ void ResetButtonDecorator::update() {
   
     visibleRect = resetButton.rect;
     if (parent != NULL) {
-        visibleRect.x = visibleRect.x + parent->rect.x;
-        visibleRect.y = visibleRect.y + parent->rect.y;
+        ofRectangle parentRect = parent->getRect();
+        visibleRect.x = visibleRect.x + parentRect.x;
+        visibleRect.y = visibleRect.y + parentRect.y;
     }
     
     resetButton.hover = visibleRect.inside(ofGetMouseX(), ofGetMouseY());

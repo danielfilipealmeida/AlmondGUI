@@ -72,10 +72,12 @@ float Slider::getNormalizedValue()
 
 float Slider::getRealValue(float normalizedValue)
 {
-    float totalAmount;
+    float totalAmount, result;
     
     totalAmount = maxValue - minValue;
-    return normalizedValue * totalAmount + minValue;
+    result = normalizedValue * totalAmount + minValue;
+    
+    return result;
 }
 
 void Slider::draw()
@@ -102,21 +104,35 @@ void Slider::set(json config)
 {
     Button::set(config);
     
-    if (!config["minValue"].is_null()) minValue = config["minValue"].is_number_float() ? config["minValue"].get<float>() : 0.0;
-    if (!config["maxValue"].is_null()) maxValue = config["maxValue"].is_number_float() ? config["maxValue"].get<float>() : 1.0;
-    if (!config["value"].is_null()) setValue((config["value"].is_number_float()) ? config["value"].get<float>() : minValue);
-    if (!config["defaultValue"].is_null()) defaultValue = config["defaultValue"].is_number_float() ? config["defaultValue"].get<float>(): 0.0;
+    if (!config["minValue"].is_null()) {
+        minValue = config["minValue"].is_number_float() ? config["minValue"].get<float>() : 0.0;
+    }
+    
+    if (!config["maxValue"].is_null()) {
+        maxValue = config["maxValue"].is_number_float() ? config["maxValue"].get<float>() : 1.0;
+    }
+    
+    if (!config["value"].is_null()) {
+        setValue((config["value"].is_number_float()) ? config["value"].get<float>() : minValue);
+    }
+    
+    if (!config["defaultValue"].is_null()) {
+        defaultValue = config["defaultValue"].is_number_float() ? config["defaultValue"].get<float>(): 0.0;
+    }
 }
+
 
 void Slider::setValue(float _value)
 {
     value = ofClamp(_value, minValue, maxValue);
 }
 
+
 float Slider::getValue()
 {
     return value;
 }
+
 
 void Slider::setOnChange(std::function<void(Slider *slider)> _onChange)
 {

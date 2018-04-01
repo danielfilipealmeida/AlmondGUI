@@ -39,18 +39,19 @@ void Splitter::update()
 }
 
 
-
 void Splitter::draw()
 {
     Element::draw( );
+    
+    // do something
+    
+    Element::finishDraw();
 }
 
 
 void Splitter::resize(ofRectangle newRect)
 {
     Element::resize(newRect);
-    
-    // resize childs
     calculateChildsRects();
 }
 

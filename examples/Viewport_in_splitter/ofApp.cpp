@@ -3,21 +3,22 @@
 
 //--------------------------------------------------------------
 void ofApp::setup() {
+    gui = new GUI();
+    
     ofSetWindowTitle("Viewport in Splitter");
     ofSetFrameRate(30);
     
-    Splitter *mainSplitter = GUI::getInstance().add<Splitter>({
+    Splitter *mainSplitter = gui->add<Splitter>({
         {"type", (unsigned int) SPLITTER_HORIZONTAL}
     });
     
-    Splitter *subSplitter1 = GUI::getInstance().add<Splitter>({
+    Splitter *subSplitter1 = gui->add<Splitter>({
         {"type", (unsigned int) SPLITTER_VERTICAL}
     });
     
-    
-    Viewport *viewport1 = GUI::getInstance().add<Viewport>({});
+    Viewport *viewport1 = gui->add<Viewport>({});
     SliderDecorator *viewportWithSlider1 = new SliderDecorator(viewport1);
-    GUI::getInstance().add(viewportWithSlider1);
+    gui->add(viewportWithSlider1);
     
     for (unsigned int f = 0; f < 10; f++) {
         Slider *slider = new Slider();
@@ -28,16 +29,16 @@ void ofApp::setup() {
             {"value", ofRandom(1.0)}
         });
         ResetButtonDecorator *sliderWithReset = new ResetButtonDecorator(slider);
-        GUI::getInstance().add(sliderWithReset);
+        gui->add(sliderWithReset);
         viewport1->add(sliderWithReset);
     }
     
-    Viewport *viewport2 = GUI::getInstance().add<Viewport>({});
+    Viewport *viewport2 = gui->add<Viewport>({});
     SliderDecorator *viewportWithSlider2 = new SliderDecorator(viewport2);
-    GUI::getInstance().add(viewportWithSlider2);
+    gui->add(viewportWithSlider2);
     
     for (unsigned int f = 0; f < 20; f++) {
-        viewport2->add(GUI::getInstance().add<Button>({
+        viewport2->add(gui->add<Button>({
             {"caption", "Button " + ofToString(f+1) + ". Right."}
         }));
     }
@@ -45,26 +46,26 @@ void ofApp::setup() {
     subSplitter1->add(viewportWithSlider1, 0.7);
     subSplitter1->add(viewportWithSlider2);
     
-    Splitter *subSplitter2 = GUI::getInstance().add<Splitter>({
+    Splitter *subSplitter2 = gui->add<Splitter>({
         {"type", (unsigned int) SPLITTER_VERTICAL}
     });
     
-    Viewport *viewport3 = GUI::getInstance().add<Viewport>({});
+    Viewport *viewport3 = gui->add<Viewport>({});
     SliderDecorator *viewportWithSlider3 = new SliderDecorator(viewport3);
-    GUI::getInstance().add(viewportWithSlider3);
+    gui->add(viewportWithSlider3);
     
     for (unsigned int f = 0; f < 20; f++) {
-        viewport3->add(GUI::getInstance().add<Button>({
+        viewport3->add(gui->add<Button>({
             {"caption", "Button " + ofToString(f+1) + ". Left."}
         }));
     }
     
-    Viewport *viewport4 = GUI::getInstance().add<Viewport>({});
+    Viewport *viewport4 = gui->add<Viewport>({});
     SliderDecorator *viewportWithSlider4 = new SliderDecorator(viewport4);
-    GUI::getInstance().add(viewportWithSlider4);
+    gui->add(viewportWithSlider4);
     
     for (unsigned int f = 0; f < 20; f++) {
-        viewport4->add(GUI::getInstance().add<Button>({
+        viewport4->add(gui->add<Button>({
             {"caption", "Button " + ofToString(f+1) + ". Right."}
         }));
     }
@@ -74,33 +75,23 @@ void ofApp::setup() {
     
     mainSplitter->add(subSplitter1, 0.4);
     mainSplitter->add(subSplitter2);
-    
-    
-    // right now I need to resize here!
-    // should check what happens when I add a viewport to a slider. is it changing the rect?
-    //viewport1->resizeToFitContent();
-    //viewport2->resizeToFitContent();
-    //viewport3->resizeToFitContent();
-    //viewport4->resizeToFitContent();
-
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
-    GUI::getInstance().update();
+    gui->update();
     
     video.update();
     fbo.begin();
     ofSetColor(255,255,255);
     video.draw(0,0,fbo.getWidth(), fbo.getHeight());
     fbo.end();
-    
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofClear(GUIStyle::getInstance().getDarkColor());
-    GUI::getInstance().draw();
+    gui->draw();
 }
 
 

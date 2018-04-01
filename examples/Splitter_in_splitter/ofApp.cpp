@@ -3,33 +3,35 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    gui = new GUI();
+    
     ofSetWindowTitle("Splitter in Splitter");
     ofSetFrameRate(30);
     
-    Splitter *mainSplitter = GUI::getInstance().add<Splitter>({
+    Splitter *mainSplitter = gui->add<Splitter>({
         {"type", (unsigned int) SPLITTER_HORIZONTAL}
     });
     
-    Splitter *subSplitter1 = GUI::getInstance().add<Splitter>({
+    Splitter *subSplitter1 = gui->add<Splitter>({
         {"type", (unsigned int) SPLITTER_VERTICAL}
     });
-    Button *button1 = GUI::getInstance().add<Button>({
+    Button *button1 = gui->add<Button>({
         {"caption", "button 1"}
     });
-    Button *button2 = GUI::getInstance().add<Button>({
+    Button *button2 = gui->add<Button>({
         {"caption", "button 2"}
     });
     subSplitter1->add(button1, 0.5);
     subSplitter1->add(button2, 0.5);
     
     
-    Splitter *subSplitter2 = GUI::getInstance().add<Splitter>({
+    Splitter *subSplitter2 = gui->add<Splitter>({
         {"type", (unsigned int) SPLITTER_VERTICAL}
     });
-    Button *button3 = GUI::getInstance().add<Button>({
+    Button *button3 = gui->add<Button>({
         {"caption", "button 3"}
     });
-    Button *button4 = GUI::getInstance().add<Button>({
+    Button *button4 = gui->add<Button>({
         {"caption", "button 4"}
     });
     subSplitter2->add(button3, 0.5);
@@ -42,7 +44,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    GUI::getInstance().update();
+    gui->update();
     
     video.update();
     fbo.begin();
@@ -55,7 +57,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofClear(GUIStyle::getInstance().getDarkColor());
-    GUI::getInstance().draw();
+    gui->draw();
 }
 
 

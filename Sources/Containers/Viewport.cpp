@@ -60,12 +60,12 @@ void Viewport::update()
 
 
 // todo: clean this up. it look really bad!
-void Viewport::draw( )
+void Viewport::draw()
 {
-    Element::draw( );
+    Element::draw();
     drawChildsInFbo();
     drawFbo();
-    Element::finishDraw( );
+    Element::finishDraw();
 }
 
 

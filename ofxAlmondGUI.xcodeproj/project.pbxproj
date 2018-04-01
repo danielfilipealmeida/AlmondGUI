@@ -180,6 +180,9 @@
 		0C580728206EE0EE00B43487 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		0C58072A207119E800B43487 /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
 		0C58072D20711B4B00B43487 /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
+		0C58072F2071458000B43487 /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
+		0C5807302071459800B43487 /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
+		0C5807312071467700B43487 /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
 		0C71E9F61FF828880045EA4D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F01FF828880045EA4D /* main.cpp */; };
 		0C71E9F81FF828880045EA4D /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F21FF828880045EA4D /* Viewport.cpp */; };
 		0C71E9FA1FF828880045EA4D /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F41FF828880045EA4D /* VerticalSlider.cpp */; };
@@ -814,8 +817,7 @@
 				0C1C0BEB200F7A2700BC3369 /* ofApp.h */,
 				0C1C0BEC200F7A2700BC3369 /* Viewport_in_splitter-Info.plist */,
 			);
-			name = Viewport_in_splitter;
-			path = examples/Viewport_in_splitter;
+			path = Viewport_in_splitter;
 			sourceTree = "<group>";
 		};
 		0C39301A1FBCFAC600D9016F /* Examples */ = {
@@ -827,6 +829,7 @@
 				0C767D13200E1A310002318B /* Table */,
 				0C9C330F20057C1D00750DC3 /* Splitters */,
 				0C1C0BAB200F76BE00BC3369 /* Splitter_in_splitter */,
+				0C1C0BE8200F7A2700BC3369 /* Viewport_in_splitter */,
 			);
 			name = Examples;
 			path = examples;
@@ -1179,7 +1182,6 @@
 			children = (
 				E4B69E1C0A3A1BDC003C02F2 /* Sources */,
 				0C39301A1FBCFAC600D9016F /* Examples */,
-				0C1C0BE8200F7A2700BC3369 /* Viewport_in_splitter */,
 				0C71E9EF1FF828650045EA4D /* Tests */,
 				0C1150EF1F9F67C70004CBD5 /* libfmodex.dylib */,
 				0C0CB3871F957763004BD8FE /* doxygenconf */,
@@ -1708,6 +1710,7 @@
 				0C1C0BF5200F7A3200BC3369 /* Table.cpp in Sources */,
 				0C1C0BF6200F7A3200BC3369 /* OscPrintReceivedElements.cpp in Sources */,
 				0C1C0BF7200F7A3200BC3369 /* Slider.cpp in Sources */,
+				0C5807312071467700B43487 /* ResetButtonDecorator.cpp in Sources */,
 				0C1C0BF8200F7A3200BC3369 /* OscTypes.cpp in Sources */,
 				0C1C0BF9200F7A3200BC3369 /* VerticalSlider.cpp in Sources */,
 				0C1C0BFB200F7A3200BC3369 /* ofxSyphonClient.mm in Sources */,
@@ -1718,6 +1721,7 @@
 				0C1C0C00200F7A3200BC3369 /* GUI.cpp in Sources */,
 				0C1C0C23200F7A5400BC3369 /* main.cpp in Sources */,
 				0C1C0C03200F7A3200BC3369 /* UdpSocket.cpp in Sources */,
+				0C58072F2071458000B43487 /* Decorator.cpp in Sources */,
 				0C1C0C04200F7A3200BC3369 /* ofxOscReceiver.cpp in Sources */,
 				0C94473420533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C1C0C05200F7A3200BC3369 /* Preview.cpp in Sources */,
@@ -1726,6 +1730,7 @@
 				0C1C0C08200F7A3200BC3369 /* Element.cpp in Sources */,
 				0C1C0C0A200F7A3200BC3369 /* Label.cpp in Sources */,
 				0C9AA0AB203F7E4B00318675 /* Window.cpp in Sources */,
+				0C5807302071459800B43487 /* SliderDecorator.cpp in Sources */,
 				0C1C0C0B200F7A3200BC3369 /* ElementStyle.cpp in Sources */,
 				0C1C0C0C200F7A3200BC3369 /* Splitter.cpp in Sources */,
 				0C1C0C0D200F7A3200BC3369 /* ofxOscMessage.cpp in Sources */,

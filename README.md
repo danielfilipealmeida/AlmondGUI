@@ -69,7 +69,8 @@ Shows how to use the viewport element can contain other elements and have a slid
 - Properly implement Interfaces. Only have method definitions. no implementations and no attributes. (started. not finished)
 - Rewrite Splitter. not working properly
 - unit test
-    - Viewport
+- Example with all GUI elements. a GUI elements gallery
+- Fix `Viewport in Splitter` example. Not drawing the gui elements. why?
 
 ### Multi windows todo
 
