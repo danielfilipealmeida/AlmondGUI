@@ -20,15 +20,8 @@ Slider::Slider()
 }
 
 Slider::~Slider()
-{
-    
-}
+{}
 
-/*
-void Slider::setParent(ElementInterface *_parent) {
-    parent=_parent;
-}
- */
 
 void Slider::update() {
     float previousValue = value;
@@ -48,8 +41,11 @@ void Slider::update() {
     }
     else {
         // todo: find a way to get access to the gui or to find if this is focused
-        if (ofGetMousePressed() /*&& GUI::getInstance().getFocusedElement() == this*/) {
-            value = getRealValue((ofGetMouseX() - visibleRect.x) / (rect.width));
+        /*&& GUI::getInstance().getFocusedElement() == this*/
+        if (ofGetMousePressed()) {
+            float mouseX = ofGetMouseX();
+            float normalizedValue = (mouseX - visibleRect.x) / (rect.width);
+            value = getRealValue(normalizedValue);
         }
     }
     
@@ -58,32 +54,35 @@ void Slider::update() {
     }
 }
 
-ofColor Slider::getBackgroundColor() {
+ofColor Slider::getBackgroundColor()
+{
     if (hover == FALSE) return GUIStyle::getInstance().getBackgroundColor();
 
     return (pressed) ? GUIStyle::getInstance().getDarkColor() : GUIStyle::getInstance().getLightColor();
 }
 
 
-float Slider::getNormalizedValue() {
+float Slider::getNormalizedValue()
+{
     float totalAmount;
     
     totalAmount = maxValue-minValue;
     return (value - minValue) / totalAmount;
 }
 
-float Slider::getRealValue(float normalizedValue) {
+float Slider::getRealValue(float normalizedValue)
+{
     float totalAmount;
     
     totalAmount = maxValue - minValue;
     return normalizedValue * totalAmount + minValue;
 }
 
-void Slider::draw( )
+void Slider::draw()
 {
     string displayedCaption = caption;
     ofColor backgroundColor = getBackgroundColor();
-    Element::draw( );
+    Element::draw();
     
     if (showValue) {
         displayedCaption.append(" | " + ofToString(value, 2));
@@ -96,10 +95,11 @@ void Slider::draw( )
     ofSetColor(ofColor::white);
     GUI::drawCenteredText(caption, rect);
     
-    Element::finishDraw( );
+    Element::finishDraw();
 }
 
-void Slider::set(json config) {
+void Slider::set(json config)
+{
     Button::set(config);
     
     if (!config["minValue"].is_null()) minValue = config["minValue"].is_number_float() ? config["minValue"].get<float>() : 0.0;
@@ -108,19 +108,23 @@ void Slider::set(json config) {
     if (!config["defaultValue"].is_null()) defaultValue = config["defaultValue"].is_number_float() ? config["defaultValue"].get<float>(): 0.0;
 }
 
-void Slider::setValue(float _value) {
+void Slider::setValue(float _value)
+{
     value = ofClamp(_value, minValue, maxValue);
 }
 
-float Slider::getValue() {
+float Slider::getValue()
+{
     return value;
 }
 
-void Slider::setOnChange(std::function<void(Slider *slider)> _onChange) {
+void Slider::setOnChange(std::function<void(Slider *slider)> _onChange)
+{
     onChange = _onChange;
 }
 
-void Slider::setDefaultValue() {
+void Slider::setDefaultValue()
+{
     value = defaultValue;
     onChange(this);
 }

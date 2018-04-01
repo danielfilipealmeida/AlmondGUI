@@ -55,7 +55,7 @@ void Element::setVisibleRect(ofRectangle _visibleRect)
 }
 
 void Element::setParent(void *_parent) {
-    parent = (ContainerInterface*) _parent;
+    parent = (Element *) _parent;
 };
 
 
@@ -86,6 +86,7 @@ void Element::update()
     
     Boolean previousHover = hover;
     hover = FALSE;
+    pressed = FALSE;
     visibleRect = calculateVisibleRect();
     ofRectangle croppedVisibleRect = visibleRect;
     if (parent != NULL) {
@@ -133,7 +134,9 @@ void Element::draw() {
     }
 }
 
-void Element::finishDraw( ) {
+void Element::finishDraw()
+{
+    
 #ifdef GUIDEBUG
     drawDebugRect();
 #endif
@@ -142,24 +145,11 @@ void Element::finishDraw( ) {
         ofNoFill();
         /*
         ofSetColor(gui->getFocusedElement() == this ? style.focusedColor : style.borderColor);
-         */
-        
+        */
+        ofSetColor(style.borderColor);
         ofDrawRectangle(rect);
     }
 }
-
-
-// todo: this must move out of here... it should be implemented by the container
-//void Element::drawChilds( ) {
-    // this shouldn't be done here! but should be the gui to do this
-    /*
-    gui->forEach([this](Element *element) {
-        if (element->parent != this) return;
-        element->draw();
-    });
-     */
-    
-//}
 
 
 ofRectangle Element::getDrawingRec() {
@@ -230,25 +220,31 @@ ofRectangle Element::calculateVisibleRect() {
     visibleRect.width = rect.width;
     visibleRect.height = rect.height;
     
+    // todo: this needs to be completely redone because scollable will be a new interface and it's needed to use this
+    /*
     if (((ElementInterface *)parent)->getClass().compare("Viewport") == 0) {
-        Viewport *viewport = (Viewport *) parent;
+        //Viewport *viewport = (Viewport *) parent;
+        // todo: fix the problem of the casting being incomplete due to multi-inheritance
+        Viewport *viewport = static_cast<Viewport *>(parent);
         visibleRect.x = visibleRect.x - viewport->getOffsetX();
         visibleRect.y = visibleRect.y - viewport->getOffsetY();
     }
-
+     */
     return visibleRect;
 }
 
 
 
-string Element::description() {
+string Element::description()
+{
     string description;
     
     return description;
 }
 
 
-ofRectangle Element::getRect() {
+ofRectangle Element::getRect()
+{
     ofRectangle returnedRect = rect;
     
     if (returnedRect.x < 0) {

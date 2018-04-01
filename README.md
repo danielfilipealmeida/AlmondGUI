@@ -62,11 +62,13 @@ Shows how to use the viewport element can contain other elements and have a slid
 
 ## Todo
 
-- Multi windows
+- Multi windows (started. not finished)
 - List (will display an array of elements)
 -  generate gui tree for debugging (text)
 - changes the sequence of drawing (gui draws only what has null parents. then each element draws it's children)
-- Properly implement Interfaces. Only have method definitions. no implementations and no attributes.
+- Properly implement Interfaces. Only have method definitions. no implementations and no attributes. (started. not finished)
+- unit test
+    - Viewport
 
 ### Multi windows todo
 

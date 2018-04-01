@@ -86,6 +86,8 @@ public:
 
     /*!
      \brief returns the Y position to be occupied by the next element
+     
+     \note this probably should be protected
      */
     float getNextElementY();
     

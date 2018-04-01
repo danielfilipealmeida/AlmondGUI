@@ -12,9 +12,7 @@
 
 #include <stdio.h>
 #include "catch.hpp"
-#include "Viewport.hpp"
-#include "Button.hpp"
-
+#include "GUI.hpp"
 
 TEST_CASE("Viewport should be properly created", "[Viewport]") {
     Viewport *viewport;
@@ -110,6 +108,34 @@ TEST_CASE("Elements should be properly scrollable inside viewport", "[Viewport]"
     REQUIRE(drawingRect.y == (10 - (viewport->overflowY)));
 }
 
+
+/**
+ Create a viewport, adds some buttons and checks that each time the `getNextElementY` properly returns it's value
+ */
+TEST_CASE("Can calculate the Y value of the next element","getNextElementY") {
+    GUI *gui = new GUI();
+    
+    
+    Viewport *viewport = gui->add<Viewport>({
+        {"x", 0},
+        {"y", 0},
+        {"width", 100},
+        {"height", 100},
+        {"totalWidth", 200},
+        {"totalHeight", 200}
+    });
+    
+    REQUIRE(viewport->getNextElementY() == GUI_BORDER);
+    
+    Button *button1 = gui->add<Button>({
+        {"caption", "button 1"}
+    });
+    viewport->add(button1);
+    
+    REQUIRE(viewport->getNextElementY() == GUI_BORDER * 2 +  GUI_LINE_HEIGHT * 1.5);
+    
+    delete gui;
+}
 
 // TODO
 TEST_CASE("","[calculateVisibleRect]") {

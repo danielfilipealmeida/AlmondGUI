@@ -9,8 +9,7 @@ void ofApp::setup(){
     ofSetFrameRate(30);
     
     // Viewport (to gather all inside)
-    Viewport *viewport = gui->add<Viewport>({
-    });
+    Viewport *viewport = gui->add<Viewport>({});
     Button *button = gui->add<Button>({
         {"caption", "Click me!"}
     });
@@ -86,7 +85,6 @@ void ofApp::setup(){
         });
     });
 
-    
     
     // Preview & playing video
     video.load(ofFilePath::getCurrentExeDir() + "../Resources/Loop001.mp4");

@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/GUI.cpp"
-            timestampString = "544189561.972764"
+            timestampString = "544268304.795817"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/Element.cpp"
-            timestampString = "544189561.972891"
+            timestampString = "544268304.795981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -282,12 +282,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/Element.cpp"
-            timestampString = "544189561.9729379"
+            timestampString = "544268304.796729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "Element::finishDraw( )"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "Element::finishDraw()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -314,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/Window.cpp"
-            timestampString = "544189561.972997"
+            timestampString = "544203043.876442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/Element.cpp"
-            timestampString = "544189561.973039"
+            timestampString = "544268304.797348"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "Element::update()"
             landmarkType = "7">
          </BreakpointContent>
@@ -346,7 +346,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/Window.cpp"
-            timestampString = "544189561.973076"
+            timestampString = "544203043.8767231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -361,24 +361,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sources/Button.cpp"
-            timestampString = "544189561.973115"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "Button::draw( )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Sources/Element.cpp"
-            timestampString = "544189561.973153"
+            timestampString = "544268304.797945"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
@@ -394,7 +378,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "examples/HelloWorld/ofApp.cpp"
-            timestampString = "541799893.316188"
+            timestampString = "544204263.871775"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "12"
@@ -410,7 +394,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/GUI.cpp"
-            timestampString = "544189561.973207"
+            timestampString = "544268304.79904"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
@@ -425,28 +409,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sources/Viewport.cpp"
-            timestampString = "544189561.9732569"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "Viewport::getNextElementY()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Sources/ContainerBase.cpp"
-            timestampString = "544189561.9733011"
+            timestampString = "544203043.878136"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "ContainerBase::drawChilds()"
             landmarkType = "7">
             <Locations>
@@ -490,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/ContainerBase.cpp"
-            timestampString = "544189561.973343"
+            timestampString = "544203043.8782049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "ContainerBase::drawChilds()"
             landmarkType = "7">
          </BreakpointContent>
@@ -505,13 +473,61 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sources/ContainerBase.cpp"
-            timestampString = "544189561.9733829"
+            filePath = "tests/Viewport.cpp"
+            timestampString = "544203043.87827"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "ContainerBase::getChildElements()"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "TEST_CASE(&quot;Can calculate the Y value of the next element&quot;,&quot;getNextElementY&quot;)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____C_A_T_C_H____T_E_S_T____6()"
+                  moduleName = "Catch Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniel.almeida/Desktop/Backup/Personal/of_v0.9.8_osx_release/addons/ofxAlmondGUI/tests/Viewport.cpp"
+                  timestampString = "544197494.304496"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "1842">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____C_A_T_C_H____T_E_S_T____6()"
+                  moduleName = "Catch Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniel.almeida/Desktop/Backup/Personal/of_v0.9.8_osx_release/addons/ofxAlmondGUI/tests/Viewport.cpp"
+                  timestampString = "544197494.307689"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "4051">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/Viewport.cpp"
+            timestampString = "544268304.799191"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "Viewport::getNextElementY()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -521,13 +537,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sources/GUI.cpp"
-            timestampString = "544189561.973421"
+            filePath = "Sources/Slider.cpp"
+            timestampString = "544268304.799273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
-            landmarkName = "GUI::getChildsOfElement(ContainerInterface* parentElement)"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "Slider::update()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/Viewport.cpp"
+            timestampString = "544268304.799758"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "Viewport::setScrollPositionX(float position)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -537,13 +569,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sources/GUI.cpp"
-            timestampString = "544189561.973466"
+            filePath = "Sources/Button.cpp"
+            timestampString = "544268304.799862"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "GUI::getChildsOfElement(ContainerInterface* parentElement)"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "Button::update()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

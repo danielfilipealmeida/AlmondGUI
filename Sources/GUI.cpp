@@ -77,8 +77,6 @@ void GUI::update()
     {
         element->update();
     }
-    // remove
-    ofSetWindowTitle("Focused" + ofToString(focusedElement));
 }
 
 
@@ -114,8 +112,8 @@ std::vector<Element*> GUI::filter(std::function<bool (Element *)> lambda) {
     return result;
 }
 
+// todo: finish this
 void GUI::forEachChildOf(Element *parent, std::function<void (Element *)> lambda) {
-    // todo: finish this
     /*
     for(auto element:parent->getChildElements()) {
         lambda(element);
@@ -123,38 +121,9 @@ void GUI::forEachChildOf(Element *parent, std::function<void (Element *)> lambda
      */
 }
 
+
 std::vector<Element*> GUI::getChildsOfElement(ContainerInterface* parentElement){
     std::vector<Element *> result;
-    
-    // todo: check problem with filter
-    /*
-    return filter([&](ChildInterface* element) {
-        return (ContainerInterface *) element->getParent() == (ContainerInterface *) parentElement;
-    });
-     */
-    
-    /*
-    
-    auto parentAddress = std::addressof(parentElement);
-    
-    std::stringstream ss1;
-    ss1 << *parentAddress;
-    std::string parentElementAddressString = ss1.str();
-    
-    for(auto element:elements) {
-        ContainerInterface* currentParent = (ContainerInterface*) element->getParent();
-        auto currentParentAddress = std::addressof(currentParent);
-        
-        std::stringstream ss2;
-        ss2 << *parentAddress;
-        std::string currentParentElementAddressString = ss2.str();
-        
-        //if (*parentAddress == *currentParentAddress) {
-        if (currentParentElementAddressString.compare(parentElementAddressString) == 0) {
-            result.push_back(element);
-        }
-    }
-    */
     
     for(auto element:elements) {
         Element *currentElementParent = (Element*) element->getParent();
@@ -163,16 +132,11 @@ std::vector<Element*> GUI::getChildsOfElement(ContainerInterface* parentElement)
         if (currentElementParent == element->getParent()) {
             result.push_back(element);
         }
-        /*
-        if (((Element *)currentElementParent)->getIdentifier().compare(((Element*)parentElement)->getIdentifier()) == 0) {
-            result.push_back(element);
-        }
-         */
     }
     
     return result;
-    
 }
+
 
 void GUI::updateVisibleRects()
 {
@@ -231,8 +195,8 @@ json GUI::jsonDump(ofColor color)
 }
 
 
-void GUI::setFocusedElement(Element *element) {
-    
+void GUI::setFocusedElement(Element *element)
+{
     focusedElement = element;
 }
 
@@ -241,7 +205,8 @@ Element *GUI::getFocusedElement() {
 }
 
 
-Boolean GUI::isElementFocused(Element *element) {
+Boolean GUI::isElementFocused(Element *element)
+{
     return element == focusedElement;
 }
 

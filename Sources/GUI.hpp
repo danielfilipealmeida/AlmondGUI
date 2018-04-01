@@ -51,10 +51,14 @@ class GUI
     
 protected:
     
+    /*!
+     \brief a vector of elements that represent the first layer of a gui. elements can have children and that implements the next layers
+     */
+    std::vector<Element*> elements; //!<
     
-    std::vector<Element*> elements; //!< a vector of elements that represent the first layer of a gui. elements can have children and that implements the next layers
-
-    
+    /*!
+     \brief The element that currently has the interface focus. used for situation like textboxes that need to be focused to receive input
+     */
     Element *focusedElement;
     
 public:

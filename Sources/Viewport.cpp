@@ -13,6 +13,7 @@ Viewport::Viewport() {
     className = "Viewport";
 
     scrollPositionX = scrollPositionY = 0;
+    overflowX = overflowY = 0;
     style.hasBorder = false;
 }
 
@@ -39,12 +40,12 @@ void Viewport::set(json config) {
 }
 
 
-
 void Viewport::updateFbo()
 {
     if (fbo.getHeight() == totalHeight && fbo.getWidth() == totalWidth) return;
     fbo.allocate(totalWidth, totalHeight);
 }
+
 
 void Viewport::update()
 {
@@ -117,6 +118,7 @@ void Viewport::setScrollPositionX(float position) {
     scrollPositionX = position;
 }
 
+// todo: unit test this!
 float Viewport::getNextElementY()
 {
     std::vector<void*> childElements;
@@ -125,7 +127,7 @@ float Viewport::getNextElementY()
     
     childElements = getChildElements();
     
-    if (childElements.size() == 0) return 0.0;
+    if (childElements.size() == 0) return GUI_BORDER;
     
     lastElement = (Element *) (childElements.back());
     lastElementRect = lastElement->getRect();
@@ -133,19 +135,19 @@ float Viewport::getNextElementY()
     return lastElementRect.y + lastElementRect.height + GUI_BORDER;
 }
 
-// todo: fix bug here.
+
 void* Viewport::add(void *newElement) {
     float elementY, width, height;
     ofRectangle newElementRect;
     std::vector<void*> childElements;
-    
-    ((Element *)newElement)->setParent(this);
-    childElements = getChildElements();
 
     elementY = getNextElementY();
     width = getRect().width - (2 * GUI_BORDER);
     height = ((Element *)newElement)->getHeightForWidth(width);
-    
+
+    ((Element *)newElement)->setParent(this);
+    childElements = getChildElements();
+
     ((Element*) newElement)->set({
         {"x", GUI_BORDER},
         {"y", elementY},
@@ -160,30 +162,6 @@ void* Viewport::add(void *newElement) {
     
     updateFbo();
     update();
-    
-    // todo: rework all this. elements can only be added by the GUI
-    /*
-    std::vector<Element*> childElements = getChildElements();
-    float elementY, width, height;
-    ofRectangle newElementRect = newElement->getRect();
-    
-    elementY = ((childElements.size() == 0) ? 0 : childElements.back()->getRect().y + childElements.back()->getRect().height) + GUI_BORDER;
-    width = getRect().width - (2 * GUI_BORDER);
-    height = newElement->getHeightForWidth(width);
-    
-    newElement->set({
-        {"x", GUI_BORDER},
-        {"y", elementY},
-        {"width", width},
-        {"height", height}
-    });
-
-    float nextElementY = height + elementY + 2 * GUI_BORDER;
-    if (nextElementY > totalHeight) totalHeight = nextElementY;
-    
-    updateFbo();
-    update();
-     */
     
     return newElement;
 }

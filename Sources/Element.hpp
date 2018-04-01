@@ -69,7 +69,7 @@ protected:
     /*!
      \brief reference of the element this element is child of
      */
-    ContainerInterface *parent;
+    Element *parent;
 
     /*!
         Returns true if a dragging event is happening

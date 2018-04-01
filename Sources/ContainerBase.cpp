@@ -16,21 +16,20 @@ void ContainerBase::setGUI(void *_gui)
 
 std::vector<void*> ContainerBase::getChildElements()
 {
-    std::vector<void*> childs;
+    std::vector<Element*> childs;
+    std::vector<void*> childsResult;
     
-    // todo: fix this later
-    //childs = ((GUI *)gui)->getChildsOfElement(this);
+    childs = ((GUI *)gui)->getChildsOfElement(this);
     
-    return childs;
+    /* Converts std::vector<Element*> to std::vector<void*> */
+    for(auto element:childs) {
+        childsResult.push_back((void*) element);
+    }
+    
+    return childsResult;
 }
 
 void ContainerBase::drawChilds() {
-    /*
-     gui->forEach([this](Element *element) {
-     if (element->parent != this) return;
-     element->draw();
-     });
-     */
     auto childs = getChildElements();
     for(auto child:childs) {
         ((Element*)child)->draw();

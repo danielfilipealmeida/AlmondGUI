@@ -24,13 +24,10 @@ Button::~Button()
 
 void Button::update() {
     Boolean previousPressed = pressed;
-    
+   
     Element::update();
-
-    if (
-        pressed == FALSE &&
-        previousPressed != pressed
-        ) {
+    if (pressed) cout << "pressed" <<endl;
+    if (pressed == FALSE && previousPressed != pressed) {
         onClick(this);
     }
 }
