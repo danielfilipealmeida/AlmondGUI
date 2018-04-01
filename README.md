@@ -32,14 +32,51 @@ This element is also clickable but it changes between two possible states: `push
 These elements show a group of buttons or toggles but actually are each one element.
 
 
+### Slider
+
+A rectangular area that allows the selection of a float value by clicking/dragging inside of it. The minimum and maximum values are user-defined.
+
+
+### Preview
+
+Draws a FBO inside a rect. Can be used to display pictures or videos.
+
+
+## Containers
+
+
+### Viewport
+
+This is the most simple contaniner and it's used to gather elements inside. It can be scrollable.
+
+
+### Table
+
+Splits an area into a table, with a predifined amount of columns and rows, set on setup. each cell receives only one interface element which can be a `viewport`, including this way more elements
+
+### Splitter
+
+Splits a rectangle horizontaly or vertically into several sub rectangles. Each split can have it's own split amount. A splitter isn't an actual container. It just defines an area and each
+cell has an `element` but those elements aren't really treated as GUI childs, they remain childless, thus they are toplevel elements. This needs to be addressed a fixed because
+it's not a propper mechanism.
+
+
+### Window
+
+Creates a new windows with it's own user interface. This is work in progress and currently it isn't working at all.
+
+
+
 ## Usage
 
-The `GUI` singleton and factory object is used when creating a Graphic User Interface with Almond. All elements are created with it.
+`Almond` uses  `GUI` objects for create Graphic User Interface structures. It was intended to exist one one `GUI` object per window and all 
+other elements are created using that object's creator template method `add`. 
 
 The following exemplifies how to create a simple button and set behaviour to it's click event:
 
+    GUI *gui = new GUI();
 
-    Button *button = GUI::getInstance().add<Button>({
+    Button *button = gui->add<Button>({
         {"caption", "Click me!"}
     });
 
@@ -47,7 +84,7 @@ The following exemplifies how to create a simple button and set behaviour to it'
         cout << "Button clicked!" << endl;
     });
 
-The factory method add uses C++ templating to generate each type of elements. It always receives the needed information in a JSON-like variable. The content of this varies according to the type of element.
+The factory method `add` uses C++ templating to generate each type of elements. It always receives the needed information in a JSON-like variable. The content of this varies according to the type of element.
 
 
 ## Examples
@@ -56,15 +93,42 @@ The factory method add uses C++ templating to generate each type of elements. It
 
 This example present a brief usage of most of the Elements.
 
+
 ### Viewport
 
 Shows how to use the viewport element can contain other elements and have a slider to scroll the content.
 
+
+### Table
+
+Example of how to use a table for composing interfaces.
+
+
+### Splitters
+
+Example not working. Needs to be fixed.
+
+
+### Splitter in spitter
+
+Simple example that has splitters inside of splitters for dividing the screen into a 4x4 table. each splitter cell has a button.
+
+
+### Viewport in splitter
+
+Example not working.
+
+
+### Windows
+
+Shows two windows with their own GUI. Currently not working.
+
 ## Todo
 
+- Transparency
 - Multi windows (started. not finished)
 - List (will display an array of elements)
--  generate gui tree for debugging (text)
+- generate gui tree for debugging (text)
 - changes the sequence of drawing (gui draws only what has null parents. then each element draws it's children)
 - Properly implement Interfaces. Only have method definitions. no implementations and no attributes. (started. not finished)
 - Rewrite Splitter. not working properly
