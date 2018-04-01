@@ -11,6 +11,7 @@
  @discussion ...
  */
 class ofApp : public ofBaseApp {
+    GUI *gui;
     
 	public:
 		void setup();

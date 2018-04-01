@@ -178,6 +178,8 @@
 		0C39301F1FBCFAE500D9016F /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C39301D1FBCFAE500D9016F /* ofApp.cpp */; };
 		0C3930201FBCFAE500D9016F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C39301E1FBCFAE500D9016F /* main.cpp */; };
 		0C580728206EE0EE00B43487 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
+		0C58072A207119E800B43487 /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
+		0C58072D20711B4B00B43487 /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
 		0C71E9F61FF828880045EA4D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F01FF828880045EA4D /* main.cpp */; };
 		0C71E9F81FF828880045EA4D /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F21FF828880045EA4D /* Viewport.cpp */; };
 		0C71E9FA1FF828880045EA4D /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F41FF828880045EA4D /* VerticalSlider.cpp */; };
@@ -843,6 +845,23 @@
 			path = HelloWorld;
 			sourceTree = "<group>";
 		};
+		0C58072E20711CD500B43487 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				0C94472B20533CEE00C46845 /* ContainerBase.cpp */,
+				0C94472C20533CEE00C46845 /* ContainerBase.hpp */,
+				0C392FDD1FBCFA3000D9016F /* Viewport.cpp */,
+				0C392FE91FBCFA3100D9016F /* Viewport.hpp */,
+				0C767D0B200D1EB10002318B /* Table.cpp */,
+				0C767D0C200D1EB10002318B /* Table.hpp */,
+				0C392FED1FBCFA3100D9016F /* Splitter.cpp */,
+				0C392FDB1FBCFA2F00D9016F /* Splitter.hpp */,
+				0C9AA0A2203F7E4A00318675 /* Window.cpp */,
+				0C9AA0A3203F7E4A00318675 /* Window.hpp */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
 		0C71E9EF1FF828650045EA4D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1197,6 +1216,7 @@
 			children = (
 				0C9F6610202E10D50026F6E1 /* Interfaces */,
 				0C0370ED1FF8602E005744F2 /* Decorators */,
+				0C58072E20711CD500B43487 /* Containers */,
 				0C392FEC1FBCFA3100D9016F /* GUI.cpp */,
 				0C392FD41FBCFA2F00D9016F /* GUI.hpp */,
 				0C392FEA1FBCFA3100D9016F /* GUIStyle.cpp */,
@@ -1205,8 +1225,6 @@
 				0C0CA28F1FF92EA700C4C463 /* ElementStyle.hpp */,
 				0C392FDA1FBCFA2F00D9016F /* Element.cpp */,
 				0C392FE31FBCFA3000D9016F /* Element.hpp */,
-				0C94472B20533CEE00C46845 /* ContainerBase.cpp */,
-				0C94472C20533CEE00C46845 /* ContainerBase.hpp */,
 				0C392FF01FBCFA3200D9016F /* Button.cpp */,
 				0C392FD71FBCFA2F00D9016F /* Button.hpp */,
 				0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */,
@@ -1217,20 +1235,12 @@
 				0C392FE71FBCFA3000D9016F /* Preview.hpp */,
 				0C392FDF1FBCFA3000D9016F /* Slider.cpp */,
 				0C392FEE1FBCFA3100D9016F /* Slider.hpp */,
-				0C392FED1FBCFA3100D9016F /* Splitter.cpp */,
-				0C392FDB1FBCFA2F00D9016F /* Splitter.hpp */,
 				0C392FF31FBCFA3200D9016F /* ToggleButton.cpp */,
 				0C392FF11FBCFA3200D9016F /* ToggleButton.hpp */,
 				0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */,
 				0C392FDC1FBCFA2F00D9016F /* ToggleButtonGroup.hpp */,
 				0C392FE11FBCFA3000D9016F /* VerticalSlider.cpp */,
 				0C392FF21FBCFA3200D9016F /* VerticalSlider.hpp */,
-				0C392FDD1FBCFA3000D9016F /* Viewport.cpp */,
-				0C392FE91FBCFA3100D9016F /* Viewport.hpp */,
-				0C767D0B200D1EB10002318B /* Table.cpp */,
-				0C767D0C200D1EB10002318B /* Table.hpp */,
-				0C9AA0A2203F7E4A00318675 /* Window.cpp */,
-				0C9AA0A3203F7E4A00318675 /* Window.hpp */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -1604,6 +1614,7 @@
 				0C0370941FF849C9005744F2 /* GUI.cpp in Sources */,
 				0C0370971FF849C9005744F2 /* UdpSocket.cpp in Sources */,
 				0C0370C31FF849FF005744F2 /* main.cpp in Sources */,
+				0C58072A207119E800B43487 /* Decorator.cpp in Sources */,
 				0C03709B1FF849C9005744F2 /* ofxOscReceiver.cpp in Sources */,
 				0C94472E20533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C03709C1FF849C9005744F2 /* Preview.cpp in Sources */,
@@ -1612,6 +1623,7 @@
 				0C0370A01FF849C9005744F2 /* Element.cpp in Sources */,
 				0C0370A21FF849C9005744F2 /* Label.cpp in Sources */,
 				0C9AA0A5203F7E4A00318675 /* Window.cpp in Sources */,
+				0C58072D20711B4B00B43487 /* SliderDecorator.cpp in Sources */,
 				0C0CA2921FF92EA700C4C463 /* ElementStyle.cpp in Sources */,
 				0C0370A41FF849C9005744F2 /* Splitter.cpp in Sources */,
 				0C0370A51FF849C9005744F2 /* ofxOscMessage.cpp in Sources */,

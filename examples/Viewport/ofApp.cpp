@@ -1,12 +1,16 @@
 #include "ofApp.h"
 #include "GUIStyle.hpp"
+#include "GUI.hpp"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetWindowTitle("Viewport example");
-    GUI::getInstance().loadFonts();
     
-    Viewport *viewport = GUI::getInstance().add<Viewport>({});
+    gui = new GUI();
+    
+    gui->loadFonts();
+    
+    Viewport *viewport = gui->add<Viewport>({});
     SliderDecorator *viewportWithSlider = new SliderDecorator(viewport);
     viewportWithSlider->set({
         {"x", 10},
@@ -15,18 +19,18 @@ void ofApp::setup(){
         {"height", 240}
     });
     
-    GUI::getInstance().add(viewportWithSlider);
+    gui->add(viewportWithSlider);
     
-    Label *label = GUI::getInstance().add<Label>({
+    Label *label = gui->add<Label>({
         {"caption", "Presenting a Viewport"}
     });
     viewport->add(label);
     
     for(auto f=0; f < 20; f++) {
-        viewport->add(GUI::getInstance().add<Button>({
+        viewport->add(gui->add<Button>({
             {"caption", "Button # " + ofToString(f+1)}
         }));
-        viewport->add(GUI::getInstance().add<Slider>({
+        viewport->add(gui->add<Slider>({
             {"caption", "Slider # " + ofToString(f+1)},
             {"minValue", 0},
             {"maxValue", 1},
@@ -35,18 +39,18 @@ void ofApp::setup(){
     }
     
     viewport->setScrollPositionY(0.0);
-     GUI::getInstance().updateVisibleRects();
+     gui->updateVisibleRects();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    GUI::getInstance().update();
+    gui->update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofClear(GUIStyle::getInstance().getDarkColor());
-    GUI::getInstance().draw();
+    gui->draw();
     
 }
 

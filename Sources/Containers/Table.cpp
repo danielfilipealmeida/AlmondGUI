@@ -64,9 +64,7 @@ void Table::update() {
 void Table::draw() {
     Element::draw( );
     
-    // todo: fix
-    // draw childs
-    //drawChilds();
+    drawChilds();
     
     Element::finishDraw( );
 }

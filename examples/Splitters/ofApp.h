@@ -1,8 +1,13 @@
+/**
+ TODO: rewrite the Splitter and have it working with the new ContainerBase Interface
+*/
+
 #ifndef __OF_APP__
 #define __OF_APP__
 
 #include "ofMain.h"
 #include "GUI.hpp"
+
 
 
 /*!
@@ -13,6 +18,7 @@
 class ofApp : public ofBaseApp {
     ofFbo fbo;
     ofVideoPlayer video;
+    GUI *gui;
     
 	public:
 		void setup();

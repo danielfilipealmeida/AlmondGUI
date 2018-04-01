@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 #include "Element.hpp"
+#include "ContainerBase.hpp"
+
 
 typedef enum {
     SPLITTER_HORIZONTAL = 0,
@@ -47,7 +49,7 @@ typedef struct {
  (0x0 100x50)
  (0,50 100x50)
  */
-class Splitter : public Element {
+class Splitter : public ContainerBase {
 protected:
     SplitterType type;                  //!< the type of spliter (vertical/horizontal)
     std::vector<SplitterChild> childs; //!< a vector with all the splitter childs
@@ -115,6 +117,12 @@ public:
      \param newRect the definition of the rect.
      */
     void resize(ofRectangle newRect);
+    
+    
+    /*!
+     Add a new element to the viewport
+     */
+    void* add(void *newElement);
     
     /*!
      \brief Adds a new element to the splitter at the end

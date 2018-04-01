@@ -3,23 +3,25 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    gui = new GUI();
+    
     ofSetWindowTitle("Splitters");
     ofSetFrameRate(30);
     
-    Splitter *horizontalSpliter = GUI::getInstance().add<Splitter>({
+    Splitter *horizontalSpliter = gui->add<Splitter>({
         {"type", (unsigned int) SPLITTER_HORIZONTAL}
     });
     
-    Viewport *viewport1 = GUI::getInstance().add<Viewport>({});
-    Viewport *viewport2 = GUI::getInstance().add<Viewport>({});
+    Viewport *viewport1 = gui->add<Viewport>({});
+    Viewport *viewport2 = gui->add<Viewport>({});
     
     for (unsigned int f = 0; f < 20; f++) {
-        Button *button = GUI::getInstance().add<Button>({
+        Button *button = gui->add<Button>({
             {"caption", "Button " + ofToString(f+1)}
         });
         viewport1->add(button);
         
-        Slider *slider = GUI::getInstance().add<Slider>({
+        Slider *slider = gui->add<Slider>({
             {"caption", "Slider " + ofToString(f+1)},
             {"value", ofRandom(0.0, 1.0)},
             {"minValue", 0.0},
@@ -34,7 +36,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    GUI::getInstance().update();
+    gui->update();
     
     video.update();
     fbo.begin();
@@ -47,7 +49,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofClear(GUIStyle::getInstance().getDarkColor());
-    GUI::getInstance().draw();
+    gui->draw();
 }
 
 

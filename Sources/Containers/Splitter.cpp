@@ -10,16 +10,16 @@
 
 Splitter::Splitter() {
     className = "Splitter";
-
     type = SPLITTER_VERTICAL;
 }
 
-Splitter::~Splitter()  {
-    
-}
+
+Splitter::~Splitter()
+{}
 
 
-void Splitter::set(json config) {
+void Splitter::set(json config)
+{
     if (!config["x"].is_number()) config["x"] = 0;
     if (!config["y"].is_number()) config["y"] = 0;
     if (!config["width"].is_number()) config["width"] = ofGetWidth();
@@ -33,25 +33,36 @@ void Splitter::set(json config) {
 
 
 
-void Splitter::update() {
+void Splitter::update()
+{
     Element::update();
 }
 
 
 
-void Splitter::draw( ) {
+void Splitter::draw()
+{
     Element::draw( );
 }
 
 
-void Splitter::resize(ofRectangle newRect) {
+void Splitter::resize(ofRectangle newRect)
+{
     Element::resize(newRect);
     
     // resize childs
     calculateChildsRects();
 }
 
-void Splitter::add(Element* element, float size, SplitMode mode) {
+
+void* Splitter::add(void *newElement)
+{
+    add((Element *) newElement, 0.5, SPLITTER_MODE_PERCENTAGE);
+}
+
+
+void Splitter::add(Element* element, float size, SplitMode mode)
+{
     SplitterChild child;
     
     child.element = element;
