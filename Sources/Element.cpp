@@ -30,22 +30,27 @@ Element::Element()
 Element::~Element()
 {}
 
-string Element::calculateIdentifier() {
+string Element::calculateIdentifier()
+{
     std::stringstream ss1;
     ss1 << this;
     return className + "-" + ss1.str();
 }
 
-string Element::getIdentifier() {
+string Element::getIdentifier()
+{
     return identifier;
 }
+
 
 string Element::getClass()
 {
     return className;
-};
+}
 
-ofRectangle Element::getVisibleRect() {
+
+ofRectangle Element::getVisibleRect()
+{
     return visibleRect;
 }
 
@@ -54,7 +59,9 @@ void Element::setVisibleRect(ofRectangle _visibleRect)
     visibleRect = _visibleRect;
 }
 
-void Element::setParent(void *_parent) {
+
+void Element::setParent(void *_parent)
+{
     parent = (Element *) _parent;
 };
 
@@ -127,9 +134,11 @@ void Element::update()
 
 void Element::draw() {
     
+    if (style.alpha < 255) ofEnableAlphaBlending();
+    
     if (style.hasBackground) {
         ofFill();
-        ofSetColor(style.backgroundColor);
+        ofSetColor(style.getBackgroundColor());
         ofDrawRectangle(rect);
     }
 }
@@ -146,9 +155,11 @@ void Element::finishDraw()
         /*
         ofSetColor(gui->getFocusedElement() == this ? style.focusedColor : style.borderColor);
         */
-        ofSetColor(style.borderColor);
+        ofSetColor(style.getBorderColor());
         ofDrawRectangle(rect);
     }
+    
+    if (style.alpha < 255) ofDisableAlphaBlending();
 }
 
 
@@ -309,4 +320,8 @@ string Element::dump()
 
 Boolean Element::canScroll() {
     return false;
+}
+
+ElementStyle* Element::getStyle() {
+    return &style;
 }

@@ -47,10 +47,10 @@ ofColor Button::getBackgroundColor(Boolean isHover, Boolean isPressed) {
 
 void Button::draw( )
 {
-    style.backgroundColor = getBackgroundColor(hover, pressed);
+    style.backgroundColor = style.addAlphaToColor(getBackgroundColor(hover, pressed));
     Element::draw( );
 
-    ofSetColor(style.captionColor);
+    ofSetColor(style.getCaptionColor());
     GUI::drawCenteredText(caption, rect);
     
     Element::finishDraw( );

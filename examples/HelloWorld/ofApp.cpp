@@ -29,6 +29,7 @@ void ofApp::setup(){
         });
         counter++;
     });
+    button->getStyle()->setAlpha(128);
     
     
     // Slider

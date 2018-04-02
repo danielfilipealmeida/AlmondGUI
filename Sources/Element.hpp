@@ -211,6 +211,10 @@ public:
      */
     string calculateIdentifier();
     
+    /*!
+     \brief Returns the style object of the element
+     */
+    ElementStyle* getStyle();
     
 };
 

@@ -24,7 +24,9 @@ using json = nlohmann::json;
 //#include "GUI.hpp"
 
 class ElementStyle {
+
 public:
+    // todo: move all variables to protected
     Boolean hasBorder;
     ofColor borderColor, focusedColor;
     
@@ -32,10 +34,31 @@ public:
     ofColor backgroundColor;
     
     ofColor captionColor;
-    
+    unsigned char alpha;
     
     ElementStyle();
     
+    void setAlpha(float _alpha);
+    
+    /*!
+     \brief Adds alpha information to a color if it is set
+     */
+    ofColor addAlphaToColor(ofColor color);
+    
+    /*!
+     \brief Returns the background color with alpha value if alpha is set to less than 1.0
+     */
+    ofColor getBackgroundColor();
+    
+    /*!
+     \brief Returns the border color with alpha value if alpha is set to less than 1.0
+     */
+    ofColor getBorderColor();
+    
+    /*!
+     \brief Returns the caption color with alpha value if alpha is set to less than 1.0
+     */
+    ofColor getCaptionColor();
     
     json jsonDump();
 };

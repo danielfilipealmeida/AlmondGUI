@@ -824,12 +824,12 @@
 			isa = PBXGroup;
 			children = (
 				0C39301B1FBCFAD600D9016F /* Hello World */,
-				0C9AA064203F77F700318675 /* Windows */,
 				0C03707C1FF849B1005744F2 /* Viewport */,
 				0C767D13200E1A310002318B /* Table */,
 				0C9C330F20057C1D00750DC3 /* Splitters */,
 				0C1C0BAB200F76BE00BC3369 /* Splitter_in_splitter */,
 				0C1C0BE8200F7A2700BC3369 /* Viewport_in_splitter */,
+				0C9AA064203F77F700318675 /* Windows */,
 			);
 			name = Examples;
 			path = examples;
