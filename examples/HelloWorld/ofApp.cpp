@@ -20,6 +20,7 @@ void ofApp::setup(){
     Label *label1 = gui->add<Label>({
         {"caption", "just a simple label"}
     });
+    label1->getStyle()->setAlpha(127);
     viewport->add(label1);
     
     button->setOnClick([label1](Button *button) {
@@ -29,7 +30,7 @@ void ofApp::setup(){
         });
         counter++;
     });
-    button->getStyle()->setAlpha(128);
+    button->getStyle()->setAlpha(127);
     
     
     // Slider
@@ -39,6 +40,7 @@ void ofApp::setup(){
         {"minValue", 0},
         {"maxValue", 1}
     });
+    slider->getStyle()->setAlpha(127);
     viewport->add(slider);
     slider->setOnChange([](Slider *slider) {
         slider->set({
@@ -51,6 +53,7 @@ void ofApp::setup(){
     ToggleButton *toggleButton = gui->add<ToggleButton>({
         {"caption" , "a toggle button"}
     });
+    toggleButton->getStyle()->setAlpha(127);
     viewport->add(toggleButton);
     
 
@@ -72,6 +75,7 @@ void ofApp::setup(){
         {"height", 32},
         {"width", 100}
     });
+    bGroup->getStyle()->setAlpha(127);
     viewport->add(bGroup);
     
     Label *label2 = gui->add<Label>({

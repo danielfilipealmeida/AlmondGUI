@@ -41,12 +41,12 @@ ofColor ToggleButton::getBackgroundColor(Boolean isHover, Boolean isPressed, Boo
 
 void ToggleButton::draw( )
 {
-    style.backgroundColor = getBackgroundColor(hover, pressed, isPushed());
+    style.backgroundColor = style.addAlphaToColor(getBackgroundColor(hover, pressed, isPushed()));
     ofColor backgroundColor;
     
     Element::draw( );
 
-    ofSetColor(style.captionColor);
+    ofSetColor(style.getCaptionColor());
     GUI::drawCenteredText(caption, getRect());
         
     Element::finishDraw( );

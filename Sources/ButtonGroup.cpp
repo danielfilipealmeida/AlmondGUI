@@ -83,16 +83,16 @@ void ButtonGroup::draw()
         theRect = getRectForButton(button);
         visibleRect = getVisibleRectForButton(button);
         isHovered =  visibleRect.inside(ofGetMouseX(), ofGetMouseY());
-        backgroundColor = Button::getBackgroundColor(isHovered, pressed);
+        backgroundColor = style.addAlphaToColor(Button::getBackgroundColor(isHovered, pressed));
         
         ofFill();
         ofSetColor(backgroundColor);
         ofDrawRectangle(theRect);
         
-        ofSetColor(style.captionColor);
+        ofSetColor(style.getCaptionColor());
         GUI::drawCenteredText(button.caption, theRect);
         
-        ofSetColor(style.borderColor);
+        ofSetColor(style.getBorderColor());
         ofNoFill();
         ofDrawRectangle(theRect);
     }

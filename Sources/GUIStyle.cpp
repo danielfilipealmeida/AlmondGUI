@@ -13,7 +13,7 @@ GUIStyle::GUIStyle() {
     baseColor = ofColor::dimGray;
     textColor = ofColor::white;
     saturation = 0.1;
-    brightness = 20;
+    brightness = 40;
     calculateColors();
 }
 

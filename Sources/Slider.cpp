@@ -83,7 +83,8 @@ float Slider::getRealValue(float normalizedValue)
 void Slider::draw()
 {
     string displayedCaption = caption;
-    ofColor backgroundColor = getBackgroundColor();
+    ofColor backgroundColor = style.addAlphaToColor(getBackgroundColor());
+    
     Element::draw();
     
     if (showValue) {
@@ -94,7 +95,7 @@ void Slider::draw()
     ofSetColor(backgroundColor + 50);
     ofDrawRectangle(rect.x, rect.y, rect.width * normalizedValue, rect.height);
     
-    ofSetColor(ofColor::white);
+    ofSetColor(style.getCaptionColor());
     GUI::drawCenteredText(caption, rect);
     
     Element::finishDraw();

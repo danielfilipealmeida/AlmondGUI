@@ -26,7 +26,7 @@ void Label::update(){
 void Label::draw( ){
     Element::draw( );
     
-    ofSetColor(style.captionColor);
+    ofSetColor(style.getCaptionColor());
     GUI::drawCenteredText(caption, rect);
     
     Element::finishDraw();

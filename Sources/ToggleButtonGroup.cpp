@@ -37,13 +37,13 @@ void ToggleButtonGroup::draw( )
         theRect = getRectForButton(button);
         visibleRect = getVisibleRectForButton(button);
         isHovered =  visibleRect.inside(ofGetMouseX(), ofGetMouseY());
-        backgroundColor = ToggleButton::getBackgroundColor(isHovered, button.pressed, button.pushed );
+        backgroundColor = style.addAlphaToColor(ToggleButton::getBackgroundColor(isHovered, button.pressed, button.pushed();
         
         ofFill();
         ofSetColor(backgroundColor);
         ofDrawRectangle(theRect);
         
-        ofSetColor(style.captionColor);
+        ofSetColor(style.getCaptionColor());
         GUI::drawCenteredText(button.caption, theRect);
         
         ofSetColor(style.borderColor);
