@@ -343,6 +343,13 @@
 		6504556E1F470EA300CB3BE5 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655BFAF81E7355BD00B74446 /* CoreMIDI.framework */; };
 		6504556F1F470EAC00CB3BE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8967B1E73311F000D470B /* Foundation.framework */; };
 		650455711F470ED000CB3BE5 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BC812F1DF8D94600331165 /* Syphon.framework */; };
+		651B4ECA20741098006B12A6 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
+		651B4ECC20741099006B12A6 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
+		651B4ECD20741099006B12A6 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
+		651B4ECE2074109A006B12A6 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
+		651B4ECF2074109B006B12A6 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
+		651B4ED02074109B006B12A6 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
+		651B4ED12074109C006B12A6 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		65276BAB1F486DF700949383 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC819A1DF8D9D600331165 /* ofxXmlSettings.cpp */; };
 		65276BAC1F486E0000949383 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD361F44691E008E4F9E /* tinyxml.cpp */; };
 		65276BAD1F486E0000949383 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD381F44691E008E4F9E /* tinyxmlerror.cpp */; };
@@ -1628,6 +1635,7 @@
 				0C58072D20711B4B00B43487 /* SliderDecorator.cpp in Sources */,
 				0C0CA2921FF92EA700C4C463 /* ElementStyle.cpp in Sources */,
 				0C0370A41FF849C9005744F2 /* Splitter.cpp in Sources */,
+				651B4ECA20741098006B12A6 /* ButtonGroup.cpp in Sources */,
 				0C0370A51FF849C9005744F2 /* ofxOscMessage.cpp in Sources */,
 				0C0370A61FF849C9005744F2 /* GUIStyle.cpp in Sources */,
 				0C0370A71FF849C9005744F2 /* tinyxmlerror.cpp in Sources */,
@@ -1650,6 +1658,7 @@
 				0C767D0D200D1EB10002318B /* Table.cpp in Sources */,
 				0C0370D81FF853E1005744F2 /* GUIStyle.cpp in Sources */,
 				0C0370D91FF853E1005744F2 /* Label.cpp in Sources */,
+				651B4ECE2074109A006B12A6 /* ButtonGroup.cpp in Sources */,
 				0C0370DA1FF853E1005744F2 /* Preview.cpp in Sources */,
 				0C0370DD1FF853E1005744F2 /* Slider.cpp in Sources */,
 				0C0370DF1FF853E1005744F2 /* Splitter.cpp in Sources */,
@@ -1690,6 +1699,7 @@
 				0C9AA0A8203F7E4B00318675 /* Window.cpp in Sources */,
 				0C1C0BCE200F76D800BC3369 /* ElementStyle.cpp in Sources */,
 				0C1C0BCF200F76D800BC3369 /* Splitter.cpp in Sources */,
+				651B4ECF2074109B006B12A6 /* ButtonGroup.cpp in Sources */,
 				0C1C0BD0200F76D800BC3369 /* ofxOscMessage.cpp in Sources */,
 				0C1C0BD1200F76D800BC3369 /* GUIStyle.cpp in Sources */,
 				0C1C0BD2200F76D800BC3369 /* tinyxmlerror.cpp in Sources */,
@@ -1730,6 +1740,7 @@
 				0C1C0C08200F7A3200BC3369 /* Element.cpp in Sources */,
 				0C1C0C0A200F7A3200BC3369 /* Label.cpp in Sources */,
 				0C9AA0AB203F7E4B00318675 /* Window.cpp in Sources */,
+				651B4ED02074109B006B12A6 /* ButtonGroup.cpp in Sources */,
 				0C5807302071459800B43487 /* SliderDecorator.cpp in Sources */,
 				0C1C0C0B200F7A3200BC3369 /* ElementStyle.cpp in Sources */,
 				0C1C0C0C200F7A3200BC3369 /* Splitter.cpp in Sources */,
@@ -1773,6 +1784,7 @@
 				0C9AA0A7203F7E4B00318675 /* Window.cpp in Sources */,
 				0C767D34200E1A4F0002318B /* ElementStyle.cpp in Sources */,
 				0C767D35200E1A4F0002318B /* Splitter.cpp in Sources */,
+				651B4ECD20741099006B12A6 /* ButtonGroup.cpp in Sources */,
 				0C767D36200E1A4F0002318B /* ofxOscMessage.cpp in Sources */,
 				0C767D37200E1A4F0002318B /* GUIStyle.cpp in Sources */,
 				0C767D38200E1A4F0002318B /* tinyxmlerror.cpp in Sources */,
@@ -1813,6 +1825,7 @@
 				0C9AA0AC203F7E4B00318675 /* Window.cpp in Sources */,
 				0C9AA088203F78ED00318675 /* ElementStyle.cpp in Sources */,
 				0C9AA089203F78ED00318675 /* Splitter.cpp in Sources */,
+				651B4ED12074109C006B12A6 /* ButtonGroup.cpp in Sources */,
 				0C9AA08A203F78ED00318675 /* ofxOscMessage.cpp in Sources */,
 				0C9AA08B203F78ED00318675 /* GUIStyle.cpp in Sources */,
 				0C9AA08C203F78ED00318675 /* tinyxmlerror.cpp in Sources */,
@@ -1853,6 +1866,7 @@
 				0C9AA0A6203F7E4B00318675 /* Window.cpp in Sources */,
 				0C9C32F620057BD500750DC3 /* ElementStyle.cpp in Sources */,
 				0C9C32F720057BD500750DC3 /* Splitter.cpp in Sources */,
+				651B4ECC20741099006B12A6 /* ButtonGroup.cpp in Sources */,
 				0C9C32F820057BD500750DC3 /* ofxOscMessage.cpp in Sources */,
 				0C9C32F920057BD500750DC3 /* GUIStyle.cpp in Sources */,
 				0C9C32FA20057BD500750DC3 /* tinyxmlerror.cpp in Sources */,
