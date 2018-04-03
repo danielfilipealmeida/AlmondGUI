@@ -67,7 +67,7 @@ public:
     ~GUI();
     
     // implement Interface methods
-    std::vector<Element*> getChildsOfElement(ContainerInterface* parentElement);
+    std::vector<Element*> getChildsOfElement(void* parentElement);
     
     
     /*!

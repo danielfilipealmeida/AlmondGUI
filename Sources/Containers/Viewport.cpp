@@ -43,9 +43,13 @@ void Viewport::set(json config) {
 void Viewport::updateFbo()
 {
     if (fbo.getHeight() == totalHeight && fbo.getWidth() == totalWidth) return;
-    fbo.allocate(totalWidth, totalHeight);
+    fbo.allocate(totalWidth, totalHeight, GL_RGBA);
 }
 
+ofRectangle Viewport::getFullRect()
+{
+    return ofRectangle(0,0,totalWidth, totalHeight);
+}
 
 void Viewport::update()
 {
@@ -70,8 +74,11 @@ void Viewport::draw()
 
 
 void Viewport::drawChildsInFbo() {
+    ofColor backgroundColor;
+    backgroundColor = style.addAlphaToColor((style.hasBackground == true) ? style.backgroundColor : GUIStyle::getInstance().getDarkColor());
+    
     fbo.begin();
-    ofClear((style.hasBackground == true) ? style.backgroundColor : GUIStyle::getInstance().getDarkColor());
+    ofClear(backgroundColor);
     drawChilds();
     fbo.end();
     update();
@@ -268,4 +275,19 @@ string Viewport::dump()  {
 
 Boolean Viewport::canScroll() {
     return totalWidth > rect.width || totalHeight > rect.height;
+}
+
+std::vector<void*> Viewport::getChildElements()
+{
+    std::vector<Element*> childs;
+    std::vector<void*> childsResult;
+    
+    childs = ((GUI *)gui)->getChildsOfElement((void *) this);
+    
+    /* Converts std::vector<Element*> to std::vector<void*> */
+    for(auto element:childs) {
+        childsResult.push_back((void*) element);
+    }
+    
+    return childsResult;
 }

@@ -19,7 +19,7 @@ std::vector<void*> ContainerBase::getChildElements()
     std::vector<Element*> childs;
     std::vector<void*> childsResult;
     
-    childs = ((GUI *)gui)->getChildsOfElement(this);
+    childs = ((GUI *)gui)->getChildsOfElement((void *) this);
     
     /* Converts std::vector<Element*> to std::vector<void*> */
     for(auto element:childs) {

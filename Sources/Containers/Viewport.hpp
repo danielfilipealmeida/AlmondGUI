@@ -81,6 +81,8 @@ public:
      */
     virtual string getClass() { return "Viewport";}
     
+    virtual std::vector<void*> getChildElements();
+    
     
     
 
@@ -190,6 +192,12 @@ public:
      */
     Boolean canScroll();
     
+    /*!
+     \brief Returns the rectangular definition of the viewport inner rectangle
+     
+     \return ofRectangle
+     */
+    ofRectangle getFullRect();
 };
 
 #endif /* Viewport_hpp */

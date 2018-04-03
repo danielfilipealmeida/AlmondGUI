@@ -122,14 +122,14 @@ void GUI::forEachChildOf(Element *parent, std::function<void (Element *)> lambda
 }
 
 
-std::vector<Element*> GUI::getChildsOfElement(ContainerInterface* parentElement){
+std::vector<Element*> GUI::getChildsOfElement(void* parentElement){
     std::vector<Element *> result;
     
     for(auto element:elements) {
         Element *currentElementParent = (Element*) element->getParent();
         if (currentElementParent == NULL) continue;
         
-        if (currentElementParent == element->getParent()) {
+        if (currentElementParent == parentElement) {
             result.push_back(element);
         }
     }
