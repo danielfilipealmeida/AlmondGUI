@@ -61,10 +61,10 @@ void Preview::draw( ) {
         captionRect.width = stringRect.width + 4;
         captionRect.height = stringRect.height + 4;
        
-        ofSetColor(0,0,0);
+        ofSetColor(style.addAlphaToColor(GUIStyle::getInstance().getDarkColor()));
         ofFill();
         ofDrawRectangle(captionRect);
-        ofSetColor(style.captionColor);
+        ofSetColor(style.addAlphaToColor(style.captionColor));
         GUI::drawCenteredText(caption, captionRect);
     }
     Element::finishDraw( );
