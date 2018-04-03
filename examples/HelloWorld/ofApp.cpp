@@ -99,6 +99,7 @@ void ofApp::setup(){
         {"caption", "a preview!!!. see some videos playing"}
     });
     preview->setBuffer(&fbo);
+    preview->getStyle()->setAlpha(127);
     viewport->add(preview);
     
   

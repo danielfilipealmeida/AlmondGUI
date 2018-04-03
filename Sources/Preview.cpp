@@ -46,17 +46,10 @@ void Preview::draw( ) {
     if (fbo == NULL) return;
     
     ofRectangle drawingRect = Element::getDrawingRec();
-    
     ofRectangle fboRect = drawingRect;
-    /*
-     // todo: check if this is really needed. it shouldn't
-    if (parent!=NULL) {
-        fboRect.x = fboRect.x + this->parent->getRect().x;
-        fboRect.y = fboRect.y + this->parent->getRect().y;
-    }
-     */
+
     Element::draw( );
-    ofSetColor(255,255,255,255);
+    ofSetColor(255,255,255, style.alpha);
     fbo->draw(rect);
     
     if (!caption.empty()) {
