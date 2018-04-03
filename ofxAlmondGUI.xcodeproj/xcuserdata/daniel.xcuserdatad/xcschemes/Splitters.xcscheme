@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "650455581F47085D00CB3BE5"
-               BuildableName = "HelloWorld.app"
-               BlueprintName = "HelloWorld"
-               ReferencedContainer = "container:ArbutusEngine.xcodeproj">
+               BlueprintIdentifier = "0C9C32D920057BD500750DC3"
+               BuildableName = "Splitters.app"
+               BlueprintName = "Splitters"
+               ReferencedContainer = "container:ofxAlmondGUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "650455581F47085D00CB3BE5"
-            BuildableName = "HelloWorld.app"
-            BlueprintName = "HelloWorld"
+            BlueprintIdentifier = "0C9C32D920057BD500750DC3"
+            BuildableName = "Splitters.app"
+            BlueprintName = "Splitters"
             ReferencedContainer = "container:ofxAlmondGUI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "650455581F47085D00CB3BE5"
-            BuildableName = "HelloWorld.app"
-            BlueprintName = "HelloWorld"
+            BlueprintIdentifier = "0C9C32D920057BD500750DC3"
+            BuildableName = "Splitters.app"
+            BlueprintName = "Splitters"
             ReferencedContainer = "container:ofxAlmondGUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "650455581F47085D00CB3BE5"
-            BuildableName = "HelloWorld.app"
-            BlueprintName = "HelloWorld"
-            ReferencedContainer = "container:ArbutusEngine.xcodeproj">
+            BlueprintIdentifier = "0C9C32D920057BD500750DC3"
+            BuildableName = "Splitters.app"
+            BlueprintName = "Splitters"
+            ReferencedContainer = "container:ofxAlmondGUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
