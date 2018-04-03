@@ -350,6 +350,15 @@
 		651B4ECF2074109B006B12A6 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		651B4ED02074109B006B12A6 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
 		651B4ED12074109C006B12A6 /* ButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE01FBCFA3000D9016F /* ButtonGroup.cpp */; };
+		651B4ED820743A5E006B12A6 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
+		651B4EDA20743A5E006B12A6 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
+		651B4EDB20743A5E006B12A6 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
+		651B4EDC20743A5F006B12A6 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
+		651B4EDD20743A5F006B12A6 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
+		651B4EDE20743A60006B12A6 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
+		651B4EDF20743A60006B12A6 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
+		651B4EE020743A60006B12A6 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
+		651B4EE120743A61006B12A6 /* ToggleButtonGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE81FBCFA3100D9016F /* ToggleButtonGroup.cpp */; };
 		65276BAB1F486DF700949383 /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC819A1DF8D9D600331165 /* ofxXmlSettings.cpp */; };
 		65276BAC1F486E0000949383 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD361F44691E008E4F9E /* tinyxml.cpp */; };
 		65276BAD1F486E0000949383 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD381F44691E008E4F9E /* tinyxmlerror.cpp */; };
@@ -1622,6 +1631,7 @@
 				0C0370931FF849C9005744F2 /* ofxXmlSettings.cpp in Sources */,
 				0C0370941FF849C9005744F2 /* GUI.cpp in Sources */,
 				0C0370971FF849C9005744F2 /* UdpSocket.cpp in Sources */,
+				651B4EDA20743A5E006B12A6 /* ToggleButtonGroup.cpp in Sources */,
 				0C0370C31FF849FF005744F2 /* main.cpp in Sources */,
 				0C58072A207119E800B43487 /* Decorator.cpp in Sources */,
 				0C03709B1FF849C9005744F2 /* ofxOscReceiver.cpp in Sources */,
@@ -1651,6 +1661,7 @@
 			files = (
 				0C0CA2931FF92EA700C4C463 /* ElementStyle.cpp in Sources */,
 				0C0370D31FF853E1005744F2 /* Button.cpp in Sources */,
+				651B4EDE20743A60006B12A6 /* ToggleButtonGroup.cpp in Sources */,
 				0C9AA0A9203F7E4B00318675 /* Window.cpp in Sources */,
 				0C94473220533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C0370D61FF853E1005744F2 /* Element.cpp in Sources */,
@@ -1692,6 +1703,7 @@
 				0C1C0BC6200F76D800BC3369 /* ofxOscReceiver.cpp in Sources */,
 				0C94473120533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C1C0BC7200F76D800BC3369 /* Preview.cpp in Sources */,
+				651B4EDD20743A5F006B12A6 /* ToggleButtonGroup.cpp in Sources */,
 				0C1C0BC9200F76D800BC3369 /* tinyxmlparser.cpp in Sources */,
 				0C1C0BCA200F76D800BC3369 /* Viewport.cpp in Sources */,
 				0C1C0BCB200F76D800BC3369 /* Element.cpp in Sources */,
@@ -1742,6 +1754,7 @@
 				0C9AA0AB203F7E4B00318675 /* Window.cpp in Sources */,
 				651B4ED02074109B006B12A6 /* ButtonGroup.cpp in Sources */,
 				0C5807302071459800B43487 /* SliderDecorator.cpp in Sources */,
+				651B4EE020743A60006B12A6 /* ToggleButtonGroup.cpp in Sources */,
 				0C1C0C0B200F7A3200BC3369 /* ElementStyle.cpp in Sources */,
 				0C1C0C0C200F7A3200BC3369 /* Splitter.cpp in Sources */,
 				0C1C0C0D200F7A3200BC3369 /* ofxOscMessage.cpp in Sources */,
@@ -1777,6 +1790,7 @@
 				0C767D2C200E1A4F0002318B /* ofxOscReceiver.cpp in Sources */,
 				0C94473020533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C767D2D200E1A4F0002318B /* Preview.cpp in Sources */,
+				651B4EDC20743A5F006B12A6 /* ToggleButtonGroup.cpp in Sources */,
 				0C767D2F200E1A4F0002318B /* tinyxmlparser.cpp in Sources */,
 				0C767D30200E1A4F0002318B /* Viewport.cpp in Sources */,
 				0C767D31200E1A4F0002318B /* Element.cpp in Sources */,
@@ -1818,6 +1832,7 @@
 				0C9AA080203F78ED00318675 /* ofxOscReceiver.cpp in Sources */,
 				0C94473520533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C9AA081203F78ED00318675 /* Preview.cpp in Sources */,
+				651B4EE120743A61006B12A6 /* ToggleButtonGroup.cpp in Sources */,
 				0C9AA083203F78ED00318675 /* tinyxmlparser.cpp in Sources */,
 				0C9AA084203F78ED00318675 /* Viewport.cpp in Sources */,
 				0C9AA085203F78ED00318675 /* Element.cpp in Sources */,
@@ -1859,6 +1874,7 @@
 				0C9C32F120057BD500750DC3 /* tinyxmlparser.cpp in Sources */,
 				0C94472F20533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C9C331420057C1D00750DC3 /* ofApp.cpp in Sources */,
+				651B4EDB20743A5E006B12A6 /* ToggleButtonGroup.cpp in Sources */,
 				0C9C32F220057BD500750DC3 /* Viewport.cpp in Sources */,
 				0C9C331320057C1D00750DC3 /* main.cpp in Sources */,
 				0C9C32F320057BD500750DC3 /* Element.cpp in Sources */,
@@ -1900,6 +1916,7 @@
 				0C3930061FBCFA3200D9016F /* Preview.cpp in Sources */,
 				0C39301F1FBCFAE500D9016F /* ofApp.cpp in Sources */,
 				65276BAE1F486E0000949383 /* tinyxmlparser.cpp in Sources */,
+				651B4ED820743A5E006B12A6 /* ToggleButtonGroup.cpp in Sources */,
 				0C94472D20533CEE00C46845 /* ContainerBase.cpp in Sources */,
 				0C392FFC1FBCFA3200D9016F /* Viewport.cpp in Sources */,
 				0C392FFA1FBCFA3200D9016F /* Element.cpp in Sources */,
@@ -1950,6 +1967,7 @@
 				0C3930031FBCFA3200D9016F /* VerticalSlider.cpp in Sources */,
 				0C580728206EE0EE00B43487 /* ButtonGroup.cpp in Sources */,
 				0C3930071FBCFA3200D9016F /* Preview.cpp in Sources */,
+				651B4EDF20743A60006B12A6 /* ToggleButtonGroup.cpp in Sources */,
 				0C392FFD1FBCFA3200D9016F /* Viewport.cpp in Sources */,
 				0C392FFB1FBCFA3200D9016F /* Element.cpp in Sources */,
 				0CB45C66206EACC900BAF981 /* GUI.cpp in Sources */,

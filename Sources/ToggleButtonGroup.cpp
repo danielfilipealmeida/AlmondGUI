@@ -37,7 +37,7 @@ void ToggleButtonGroup::draw( )
         theRect = getRectForButton(button);
         visibleRect = getVisibleRectForButton(button);
         isHovered =  visibleRect.inside(ofGetMouseX(), ofGetMouseY());
-        backgroundColor = style.addAlphaToColor(ToggleButton::getBackgroundColor(isHovered, button.pressed, button.pushed();
+        backgroundColor = style.addAlphaToColor(ToggleButton::getBackgroundColor(isHovered, button.pressed, button.pushed));
         
         ofFill();
         ofSetColor(backgroundColor);
