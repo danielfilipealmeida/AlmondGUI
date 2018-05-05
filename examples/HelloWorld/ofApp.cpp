@@ -20,7 +20,7 @@ void ofApp::setup(){
     Label *label1 = gui->add<Label>({
         {"caption", "just a simple label"}
     });
-    label1->getStyle()->setAlpha(127);
+    //label1->getStyle()->setAlpha(127);
     viewport->add(label1);
     
     button->setOnClick([label1](Button *button) {
@@ -40,7 +40,7 @@ void ofApp::setup(){
         {"minValue", 0},
         {"maxValue", 1}
     });
-    slider->getStyle()->setAlpha(127);
+    //slider->getStyle()->setAlpha(127);
     viewport->add(slider);
     slider->setOnChange([](Slider *slider) {
         slider->set({
@@ -75,7 +75,7 @@ void ofApp::setup(){
         {"height", 32},
         {"width", 100}
     });
-    bGroup->getStyle()->setAlpha(127);
+    //bGroup->getStyle()->setAlpha(127);
     viewport->add(bGroup);
     
     Label *label2 = gui->add<Label>({
@@ -99,10 +99,20 @@ void ofApp::setup(){
         {"caption", "a preview!!!. see some videos playing"}
     });
     preview->setBuffer(&fbo);
-    preview->getStyle()->setAlpha(127);
+    //preview->getStyle()->setAlpha(127);
     viewport->add(preview);
     
-  
+    
+    Viewport *viewport2 = gui->add<Viewport>({
+        {"x", 200},
+        {"y", 200},
+        {"width", 200},
+        {"height", 100}
+
+    });
+    Button *newButton = gui->add<Button>({{"caption", "another button"}});
+    viewport2->add(newButton);
+    viewport->getStyle()->setAlpha(127);
     
     gui->updateVisibleRects();
      
