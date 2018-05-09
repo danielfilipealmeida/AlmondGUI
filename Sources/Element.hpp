@@ -60,6 +60,7 @@ protected:
     Boolean entered;
     Boolean exited;
     Boolean dragging;
+    Boolean visible;
     ElementStyle style;
     
     string identifier;
@@ -115,6 +116,8 @@ public:
     virtual void setParent(void *_parent);
     virtual void* getParent();
     virtual string getIdentifier();
+    virtual void setVisible(Boolean _visible);
+    virtual Boolean getVisible();
     
     /*!
      \brief Returns the zone to draw

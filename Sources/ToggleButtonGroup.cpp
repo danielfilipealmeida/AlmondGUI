@@ -27,6 +27,8 @@ void ToggleButtonGroup::addButton(json::iterator it) {
 
 void ToggleButtonGroup::draw( )
 {
+    if (visible == FALSE) return;
+    
     Element::draw( );
     
     for (auto button:buttons) {
@@ -56,6 +58,8 @@ void ToggleButtonGroup::draw( )
 
 void ToggleButtonGroup::update()
 {
+    if (visible == FALSE) return;
+
     Element::update();
     
     for (auto &button:buttons) {

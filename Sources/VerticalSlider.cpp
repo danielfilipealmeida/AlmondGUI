@@ -22,6 +22,8 @@ VerticalSlider::~VerticalSlider() {
 
 
 void VerticalSlider::update() {
+    if (visible == FALSE) return;
+
     float previousValue = value;
     
     Button::update();
@@ -50,6 +52,9 @@ void VerticalSlider::update() {
 
 void VerticalSlider::draw( ) {
     ofColor backgroundColor = getBackgroundColor();
+    
+    if (visible == FALSE) return;
+    
     Element::draw( );
     /*
     drawSlider( , value, caption, rect, ofColor2N Color(backgroundColor, 255), ofColor2N Color(GUIStyle::getInstance().getTextColor(), 255), true);

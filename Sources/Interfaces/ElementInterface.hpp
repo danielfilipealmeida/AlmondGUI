@@ -74,6 +74,17 @@ public:
      */
     virtual float getHeightForWidth(float _width) = 0;
     
+    /*!
+     \brief show/hide an element
+     */
+
+    virtual void setVisible(Boolean _visible) = 0;
+    
+    /*!
+     \brief gets visibility of the element
+     */
+    virtual Boolean getVisible() = 0;
+    
 }; 
 
 #endif /* ElementInterface_h */

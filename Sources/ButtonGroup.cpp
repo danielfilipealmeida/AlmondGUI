@@ -25,6 +25,8 @@ ButtonGroup::~ButtonGroup()
 
 void ButtonGroup::update()
 {
+    if (visible == FALSE) return;
+
     Element::update();
     
     for (auto &button:buttons) {
@@ -73,6 +75,8 @@ ofRectangle ButtonGroup::getVisibleRectForButton(ButtonData button) {
 
 void ButtonGroup::draw()
 {
+    if (visible == FALSE) return;
+    
     Element::draw();
     
     for (auto button:buttons) {

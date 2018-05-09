@@ -148,6 +148,7 @@ void* Viewport::add(void *newElement) {
     ofRectangle newElementRect;
     std::vector<void*> childElements;
 
+    
     elementY = getNextElementY();
     width = getRect().width - (2 * GUI_BORDER);
     height = ((Element *)newElement)->getHeightForWidth(width);
@@ -169,6 +170,8 @@ void* Viewport::add(void *newElement) {
     
     updateFbo();
     update();
+    
+    lastChild = newElement;
     
     return newElement;
 }
@@ -284,10 +287,11 @@ std::vector<void*> Viewport::getChildElements()
     
     childs = ((GUI *)gui)->getChildsOfElement((void *) this);
     
-    /* Converts std::vector<Element*> to std::vector<void*> */
+    /* Converts std::vector<Element*> to std::vector<void*> - This looks really a bad idea! */
     for(auto element:childs) {
         childsResult.push_back((void*) element);
     }
     
     return childsResult;
 }
+

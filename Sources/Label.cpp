@@ -24,6 +24,8 @@ void Label::update(){
 }
 
 void Label::draw( ){
+    if (visible == FALSE) return;
+    
     Element::draw( );
     
     ofSetColor(style.getCaptionColor());

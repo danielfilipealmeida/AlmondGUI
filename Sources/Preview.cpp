@@ -36,12 +36,16 @@ void Preview::set(json config) {
 
 
 void Preview::update() {
+    if (visible == FALSE) return;
+
     Element::update();
 }
 
 
 
 void Preview::draw( ) {
+    if (visible == FALSE) return;
+    
     //Element::draw( );
     if (fbo == NULL) return;
     

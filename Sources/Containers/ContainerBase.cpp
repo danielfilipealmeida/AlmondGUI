@@ -9,6 +9,11 @@
 #include "ElementInterface.hpp"
 #include "GUI.hpp"
 
+ContainerBase::ContainerBase() {
+    lastChild = NULL;
+    gui = NULL;
+}
+
 void ContainerBase::setGUI(void *_gui)
 {
     gui = _gui;
@@ -34,4 +39,9 @@ void ContainerBase::drawChilds() {
     for(auto child:childs) {
         ((Element*)child)->draw();
     }
+}
+
+void* ContainerBase::getLastChild()
+{
+    return lastChild;
 }

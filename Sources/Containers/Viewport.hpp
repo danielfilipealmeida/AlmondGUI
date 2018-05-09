@@ -17,6 +17,9 @@
  
  rect: the definition of the rectangle of the viewport
  visibleRect: rect translated into screen coordinates
+ 
+ TODO: implement a viewport without FBO's. the idea is to use OpenGL  masking capabilities
+ Before drawing, should calculate all childs that are visible on the current viewport config.
  */
 class Viewport : public ContainerBase
 {
@@ -83,6 +86,7 @@ public:
     
     virtual std::vector<void*> getChildElements();
     
+
     
     
 

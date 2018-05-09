@@ -26,6 +26,9 @@ void Button::update() {
     Boolean previousPressed = pressed;
    
     Element::update();
+    if (visible == FALSE) return;
+
+    
     if (pressed) cout << "pressed" <<endl;
     if (pressed == FALSE && previousPressed != pressed) {
         onClick(this);
@@ -39,6 +42,7 @@ ofColor Button::getBackgroundColor(Boolean isHover, Boolean isPressed) {
         backgroundColor = GUIStyle::getInstance().getBackgroundColor();
     }
     else {
+        // tirar a ternaria. é muito grande
         backgroundColor = isPressed ? GUIStyle::getInstance().getDarkColor() : GUIStyle::getInstance().getLightColor();
     }
     
@@ -47,6 +51,8 @@ ofColor Button::getBackgroundColor(Boolean isHover, Boolean isPressed) {
 
 void Button::draw( )
 {
+    if (visible == FALSE) return;
+    
     style.backgroundColor = style.addAlphaToColor(getBackgroundColor(hover, pressed));
     Element::draw( );
 

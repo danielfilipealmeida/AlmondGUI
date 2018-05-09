@@ -20,6 +20,7 @@ Element::Element()
     pressed = FALSE;
     entered = FALSE;
     exited = FALSE;
+    visible = TRUE;
     
     rect.x = rect.y = rect.width = rect.height = -1;
     
@@ -70,6 +71,18 @@ void* Element::getParent() {
     return parent;
 };
 
+void Element::setVisible(Boolean _visible)
+{
+    visible = _visible;
+}
+
+
+Boolean Element::getVisible()
+{
+    return visible;
+}
+
+
 
 Boolean Element::checkIsDragging()
 {
@@ -89,6 +102,8 @@ Boolean Element::checkIsDragging()
  */
 void Element::update()
 {
+    if (visible == FALSE) return;
+    
     dragging = checkIsDragging();
     
     Boolean previousHover = hover;
@@ -133,6 +148,7 @@ void Element::update()
 }
 
 void Element::draw() {
+    if (visible == FALSE) return;
     
     if (style.alpha < 255) ofEnableAlphaBlending();
     
@@ -145,6 +161,7 @@ void Element::draw() {
 
 void Element::finishDraw()
 {
+    if (visible == FALSE) return;
     
 #ifdef GUIDEBUG
     drawDebugRect();
@@ -199,6 +216,8 @@ void Element::set(json config) {
              config["y"].get<unsigned int>(),
              config["width"].get<unsigned int>(),
              config["height"].get<unsigned int>());
+    
+    if (config["visible"].is_boolean()) visible = config["visible"].get<Boolean>();
 }
 
 

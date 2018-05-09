@@ -15,6 +15,7 @@
 #include "Slider.hpp"
 #include "VerticalSlider.hpp"
 #include "Viewport.hpp"
+#include "PaginatedViewport.hpp"
 #include "Splitter.hpp"
 #include "Preview.hpp"
 #include "Label.hpp"

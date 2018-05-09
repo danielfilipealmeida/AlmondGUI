@@ -10,6 +10,8 @@
 #include "GUI.hpp"
 
 void ToggleButton::update() {
+    if (visible == FALSE) return;
+
     Boolean previousPressed = pressed;
     
     Element::update();
@@ -41,6 +43,8 @@ ofColor ToggleButton::getBackgroundColor(Boolean isHover, Boolean isPressed, Boo
 
 void ToggleButton::draw( )
 {
+    if (visible == FALSE) return;
+    
     style.backgroundColor = style.addAlphaToColor(getBackgroundColor(hover, pressed, isPushed()));
     ofColor backgroundColor;
     

@@ -27,6 +27,8 @@ void Slider::update() {
     float previousValue = value;
     static bool previousMouseState;
     
+    if (visible == FALSE) return;
+    
     // calculate dragging = mouse is clicked and has the same value as previously
     dragging = (ofGetMousePressed() == previousMouseState && ofGetMousePressed() > 0);
     previousMouseState = ofGetMousePressed();
@@ -82,6 +84,8 @@ float Slider::getRealValue(float normalizedValue)
 
 void Slider::draw()
 {
+    if (visible == FALSE) return;
+
     string displayedCaption = caption;
     ofColor backgroundColor = style.addAlphaToColor(getBackgroundColor());
     
