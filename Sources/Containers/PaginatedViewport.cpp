@@ -53,59 +53,60 @@ PaginatedViewport::~PaginatedViewport()
 }
 
 
-/*
- TODO make this work.
- Create a method to get the new element where the rect and the page are set.
- */
-void* PaginatedViewport::add(void *newElement)
-{
-  
+
+ofRectangle PaginatedViewport::getNewElementRect(Element *element) {
     float elementY, width, height;
-    ofRectangle newElementRect;
-    std::vector<void*> childElements;
-
+    Element *lastAddedElement;
     
-    Element *lastAddedElement = (Element*) getLastChild();
-    
-    // todo, make a method that returns the rect and the page.
-    if (lastAddedElement != NULL) {
-        elementY = lastAddedElement->getRect().y + lastAddedElement->getRect().height + GUI_BORDER;
+    lastAddedElement = (Element*) getLastChild();
+    elementY = GUI_BORDER;
+    if (lastAddedElement != NULL)
+    {
+        elementY += lastAddedElement->getRect().y +
+            lastAddedElement->getRect().height;
     }
-    else {
-        elementY = GUI_BORDER;
-    }
-
     
-    if (elementY + ((Element *)newElement)->getRect().height > this->getRect().height) {
+    // checks if adding the new element overflows
+    if (elementY + ((Element *)element)->getRect().height > this->getRect().height)
+    {
         lastPage++;
         elementY = GUI_BORDER;
     }
     
     width = getRect().width - (2 * GUI_BORDER);
-    height = ((Element *)newElement)->getHeightForWidth(width);
+    height = ((Element *)element)->getHeightForWidth(width);
+    
+    return ofRectangle(GUI_BORDER,
+                       elementY,
+                       width,
+                       height);
+}
 
+
+void* PaginatedViewport::add(void *newElement)
+{
+    ofRectangle newElementRect;
+    std::vector<void*> childElements;
+    PaginatedViewportElement *newPaginatedElement;
+
+    newElementRect = getNewElementRect(((Element *)newElement));
     ((Element *)newElement)->setParent(this);
-
     ((Element*) newElement)->set({
-        {"x", GUI_BORDER},
-        {"y", elementY},
-        {"width", width},
-        {"height", height},
+        {"x", newElementRect.x},
+        {"y", newElementRect.y},
+        {"width", newElementRect.width},
+        {"height", newElementRect.height},
         {"visible", currentPage == lastPage}
     });
     
-    PaginatedViewportElement *newPaginatedElement = new PaginatedViewportElement((Element *)newElement);
+    newPaginatedElement = new PaginatedViewportElement((Element *)newElement);
     newPaginatedElement->setPage(lastPage);
     paginatedElements.push_back(newPaginatedElement);
-    
-    
-  
     lastChild = (Element*) newElement;
     
     return newElement;
-
-
 }
+
 
 void PaginatedViewport::setPage(unsigned int _page) {
     currentPage = _page;
@@ -114,12 +115,4 @@ void PaginatedViewport::setPage(unsigned int _page) {
         Boolean isVisible = element->getPage() == currentPage ? TRUE:FALSE;
         element->getElement()->setVisible(isVisible);
     }
-    
-}
-
-
-// todo. is this needed?
-void PaginatedViewport::calculateChildsLocations()
-{
-    
 }
