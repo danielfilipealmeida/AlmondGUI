@@ -217,7 +217,9 @@ void Element::set(json config) {
              config["width"].get<unsigned int>(),
              config["height"].get<unsigned int>());
     
-    if (config["visible"].is_boolean()) visible = config["visible"].get<Boolean>();
+    if (config["visible"].is_boolean()) {
+        visible = config["visible"].get<Boolean>();
+    }
 }
 
 

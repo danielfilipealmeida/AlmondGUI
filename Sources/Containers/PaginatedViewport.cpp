@@ -88,6 +88,8 @@ void* PaginatedViewport::add(void *newElement)
     ofRectangle newElementRect;
     std::vector<void*> childElements;
     PaginatedViewportElement *newPaginatedElement;
+    
+    Boolean isVisible = currentPage == lastPage ? TRUE:FALSE;
 
     newElementRect = getNewElementRect(((Element *)newElement));
     ((Element *)newElement)->setParent(this);
@@ -96,7 +98,7 @@ void* PaginatedViewport::add(void *newElement)
         {"y", newElementRect.y},
         {"width", newElementRect.width},
         {"height", newElementRect.height},
-        {"visible", currentPage == lastPage}
+        {"visible", isVisible}
     });
     
     newPaginatedElement = new PaginatedViewportElement((Element *)newElement);
