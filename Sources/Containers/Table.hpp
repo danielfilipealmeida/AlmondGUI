@@ -97,6 +97,9 @@ public:
      */
     string dump();
     
+    /*!
+     \brief todo
+     */
     void* add(void *newElement);
 };
 

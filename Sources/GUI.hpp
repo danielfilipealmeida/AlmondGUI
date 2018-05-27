@@ -64,7 +64,14 @@ protected:
     
 public:
     
+    /*!
+     \brief todo
+     */
     GUI();
+    
+    /*!
+     \brief todo
+     */
     ~GUI();
     
     // implement Interface methods
@@ -147,7 +154,6 @@ public:
     
     /*!
      \brief Save a texture to a file
-     
      \param file filename
      \param texture texture
      */
@@ -162,13 +168,13 @@ public:
 
     /*!
      \brief gets the currently focused element
-     \return the currently focused element
+     \return The currently focused element
      */
     Element *getFocusedElement();
     
     /*!
      \brief checks if a given element is currently focused
-     \param the element to check
+     \param element The element to check
      \return true or false for the focused condition of the queried element
      */
     Boolean isElementFocused(Element *element);
@@ -177,14 +183,14 @@ public:
     
     /*!
      Returns the dump of a ofRectangle
-     \param ofRectangle rect to get the dump from
+     \param rect The rectangle to get the dump from
      \return a json variable with the dump
      */
     static json jsonDump(ofRectangle rect);
     
     /*!
      Returns the dump of a ofColor
-     \param ofColor color to get the dump from
+     \param color The color to get the dump from
      \return a json variable with the dump
      */
     static json jsonDump(ofColor color);

@@ -3,7 +3,39 @@
 2017 Daniel Almeida
 
 
-AlmondGUI is a Graphic User Interface library built to be used with  `openFrameworks` and uses the `nanovg` library.
+AlmondGUI is a Graphic User Interface library for `openFrameworks`.
+
+
+## Quick Intro
+
+A `GUI` is a group of interface elements inside a window. 
+The `GUI` object must be initialized on the `setup` method as well as (ideally) all gui elements.
+The `GUI`object besides storing all elements, also serves as a factory object of gui elements.
+
+    void ofApp::setup(){
+        gui = new GUI();
+
+        label = gui->add<Label>({
+            {"x", 10},
+            {"y", 70},
+            {"width", 100},
+            {"height", GUI_LINE_HEIGHT * 1.5},
+            {"caption", "Label"},
+        });
+    }
+
+
+The `GUI` also needs to be updated and drawn, like this
+
+
+    void ofApp::update() {
+        gui->update();
+
+    }
+
+    void ofApp::draw() {
+        gui->draw();
+    }
 
 
 ## Graphic User Elements
@@ -16,15 +48,103 @@ AlmondGUI is a Graphic User Interface library built to be used with  `openFramew
 
 Use a `Label` to present textual information. Currently, labels only present one line of text. It cannot be pressed, so it cannot produce events.
 
+![Label element](images/label.png)
+
+#### Options
+
+- x
+- y
+- width
+- height
+- visible
+
+
+#### Examples
+
+    label = gui->add<Label>({
+        {"x", 10},
+        {"y", 70},
+        {"width", 100},
+        {"height", GUI_LINE_HEIGHT * 1.5},
+        {"caption", "Label"},
+    });
+
+
+
+
 
 ### Button
 
 `Button` can be pressed and is the basis of a few other elements like `ToggleButton` and `Slider`. It produces the `click` event.
 
+![Button element](images/button.png)
+
+
+#### Options
+
+- x
+- y
+- width
+- height
+- visible
+
+
+#### Examples
+
+    button = gui->add<Button>({
+        {"x", 10},
+        {"y", 10},
+        {"width", 100},
+        {"height", GUI_LINE_HEIGHT * 1.5},
+        {"caption", "Button"}
+    });
+
+
+
 
 ### Toggle Button
 
 This element is also clickable but it changes between two possible states: `pushed` and `not pushed`.
+
+
+![Toggle element](images/toggle.png)
+![Pressed toggle element](images/togglePressed.png)
+
+#### Options
+
+- x
+- y
+- width
+- height
+- visible
+
+
+#### Methods
+
+
+* `Boolean isPushed();`
+
+> Get the state of the `Toggle Button`.
+
+
+
+*`void setPushed(Boolean _pushed);`
+
+> Sets the state of the `Toggle Button`
+
+
+
+#### Examples
+
+    toggle = gui->add<ToggleButton>({
+        {"x", 10},
+        {"y", 100},
+        {"width", 100},
+        {"height", GUI_LINE_HEIGHT * 1.5},
+        {"caption", "Toggle"},
+    });
+
+
 
 
 ### Button Group and Toggle Group
@@ -35,6 +155,35 @@ These elements show a group of buttons or toggles but actually are each one elem
 ### Slider
 
 A rectangular area that allows the selection of a float value by clicking/dragging inside of it. The minimum and maximum values are user-defined.
+
+
+![Slider element](images/slider.png)
+
+#### Options
+
+- x
+- y
+- width
+- height
+- visible
+- value
+- minValue
+- maxValue
+
+
+#### Examples
+
+    slider = gui->add<Slider>({
+        {"x", 10},
+        {"y", 70},
+        {"width", 100},
+        {"height", GUI_LINE_HEIGHT * 1.5},
+        {"caption", "Slider"},
+        {"maxValue", 1.0},
+        {"minValue", 0.0},
+        {"value", 0.5}
+    });
+
 
 
 ### Preview

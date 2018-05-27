@@ -62,9 +62,7 @@ protected:
     Boolean dragging;
     Boolean visible;
     ElementStyle style;
-    
     string identifier;
-    
     string className;
 
     /*!
@@ -101,9 +99,19 @@ protected:
     
 public:
     
+    /*!
+     \brief todo
+     */
     Element();
+
+    /*!
+     \brief todo
+     */
     ~Element();
     
+    /*!
+     \brief todo
+     */
     virtual string getClass();
     
     /* ElementInteface mandatory methods */
@@ -151,6 +159,9 @@ public:
     virtual float getHeightForWidth(float _width);
     
     
+    /*!
+     \brief todo
+     */
     virtual ofRectangle getVisibleRect();
 
         
@@ -219,6 +230,11 @@ public:
      */
     ElementStyle* getStyle();
     
+    /*!
+     \brief Saves a screenshot of the element to a png file in a given path
+     \param [string] path
+     */
+    void saveScreenshot(string path);
 };
 
 #endif /* Element_hpp */

@@ -52,7 +52,7 @@ public:
     void setBuffer(ofFbo *_fbo);
     
     /*!
-     ...
+     \brief todo
      */
     float getHeightForWidth(float _width);
 };

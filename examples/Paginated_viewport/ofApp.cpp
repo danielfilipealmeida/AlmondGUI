@@ -23,12 +23,6 @@ void ofApp::setup(){
 void ofApp::update(){
     gui->update();
     
-    video.update();
-    fbo.begin();
-    ofSetColor(255,255,255);
-    video.draw(0,0,fbo.getWidth(), fbo.getHeight());
-    fbo.end();
-    
 }
 
 //--------------------------------------------------------------

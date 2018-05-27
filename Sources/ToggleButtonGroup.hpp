@@ -19,23 +19,24 @@ class ToggleButtonGroup : public ButtonGroup
 {
     std::function<void(ToggleButtonGroup *toggleButtonGroup)> onClick = NULL;
  public:
+    
     /*!
-     ...
+     \brief todo
      */
     virtual void addButton(json::iterator it);
 
     /*!
-     ...
+     \brief todo
      */
     virtual void update();
     
     /*!
-     ...
+     \brief todo
      */
     void draw( );
     
     /*!
-     ...
+     \brief todo
      */
     void setOnClick(std::function<void(ToggleButtonGroup *toggleButtonGroup )> _onClick);
 };

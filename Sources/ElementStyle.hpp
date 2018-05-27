@@ -36,8 +36,14 @@ public:
     ofColor captionColor;
     unsigned char alpha;
     
+    /*!
+     \brief todo
+     */
     ElementStyle();
     
+    /*!
+     \brief todo
+     */
     void setAlpha(float _alpha);
     
     /*!
@@ -60,6 +66,9 @@ public:
      */
     ofColor getCaptionColor();
     
+    /*!
+     \brief todo
+     */
     json jsonDump();
 };
 

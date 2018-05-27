@@ -22,6 +22,11 @@ Button::Button()
 Button::~Button()
 {}
 
+string Button::getClass() {
+    return "Button";
+}
+
+
 void Button::update() {
     Boolean previousPressed = pressed;
    
@@ -64,8 +69,11 @@ void Button::draw( )
 
 void Button::set(json config) {
     Element::set(config);
-    if (config["caption"].is_string()) caption = config["caption"].get<string>();
-}
+    
+    if (config["caption"].is_string()) {
+        caption = config["caption"].get<string>();
+
+    }}
 
 void Button::setOnClick(std::function<void(Button *button)> _onClick) {
     onClick = _onClick;

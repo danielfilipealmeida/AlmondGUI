@@ -50,32 +50,45 @@ public:
     ~Button();
     
     /*!
-     ...
+     \brief Handles update event on the Button
      */
     virtual void update();
     
     /*!
-     ...
+     \brief draws the button
      */
-    virtual void draw( );
+    virtual void draw();
     
     /*!
-     ...
+     \brief Sets up the Slider information
+     
+     Available options:
+        - x
+        - y
+        - width
+        - height
+        - visible
+     
+     \param config input configuration in a json objects
+     
      */
     virtual void set(json config);
 
     /*!
-     ...
+     \brief Sets the lambda to be executed on click event
      */
     void setOnClick(std::function<void(Button *button)> _onClick);
 
     /*!
-     ...
+     \brief Returns a string with the name of the element
      */
-    string getClass() { return "Button";}
+    string getClass();
     
     /*!
-     ...
+     \brief returns the color for the given conditions of hover and press
+     \param isHover if the element is hovered
+     \param isPressed if the element is pressed
+     \returns the color for the given conditions
      */
     static ofColor getBackgroundColor(Boolean isHover, Boolean isPressed);
     

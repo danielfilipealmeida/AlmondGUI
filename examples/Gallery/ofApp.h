@@ -12,8 +12,14 @@
  */
 class ofApp : public ofBaseApp {
     ofFbo fbo;
+    ofVideoPlayer video;
     GUI *gui;
-    PaginatedViewport *paginatedViewport;
+    Button *button;
+    Slider *slider;
+    Label *label;
+    ToggleButton *toggle, *togglePressed;
+    
+    Boolean firstDraw;
     
 	public:
 		void setup();

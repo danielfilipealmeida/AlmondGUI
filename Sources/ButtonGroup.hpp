@@ -33,37 +33,37 @@ protected:
 public:
     
     /*!
-     ...
+     \brief todo
      */
     ButtonGroup() ;
     
     /*!
-     ...
+     \brief todo
      */
     ~ButtonGroup();
     
     /*!
-     ...
+     \brief todo
      */
     virtual void update();
     
     /*!
-     ...
+     \brief todo
      */
     virtual void draw( );
     
     /*!
-     ...
+     \brief todo
      */
     virtual void set(json config);
     
     /*!
-     ...
+     \brief todo
      */
     virtual void createButtons();
     
     /*!
-     ...
+     \brief todo
      */
     virtual void addButton(json::iterator it);
 
@@ -73,7 +73,7 @@ public:
     ButtonData getLastClickedButtonData();
     
     /*!
-     ...
+     \brief todo
      */
     void setOnClick(std::function<void(ButtonGroup *buttonGroup)> _onClick);
     

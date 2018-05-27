@@ -55,35 +55,38 @@ protected:
 public:
     
     /*!
-     ...
+     \brief todo
      */
     Viewport();
     
     /*!
-     ...
+     \brief todo
      */
     ~Viewport();
     
     /*!
-     ...
+     \brief todo
      */
     void set(json config);
     
     /*!
-     ...
+     \brief todo
      */
     virtual void update();
     
     /*!
-     ...
+     \brief todo
      */
     virtual void draw( );
     
     /*!
-     ...
+     \brief todo
      */
     virtual string getClass() { return "Viewport";}
     
+    /*!
+     \brief todo
+     */
     virtual std::vector<void*> getChildElements();
     
 

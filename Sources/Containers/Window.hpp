@@ -26,9 +26,20 @@ class Window : public ofBaseApp, public ContainerBase
     
     
 public:
+    /*!
+     \brief todo
+     */
     Window();
+    
+    /*!
+     \brief todo
+     */
+    
     ~Window() {};
     
+    /*!
+     \brief todo
+     */
     void createWindow();
 
     /*!
@@ -36,8 +47,14 @@ public:
      */
     string getClass() { return "Window"; }
     
+    /*!
+     \brief todo
+     */
     Element *addToGUI(json elementData);
     
+    /*!
+     \brief todo
+     */
     void* add(void *newElement);
     
     /*!
@@ -45,7 +62,11 @@ public:
      */
     void update();
     
-        void updateWithEvents(ofEventArgs & args);
+    
+    /*!
+     \brief todo
+     */
+    void updateWithEvents(ofEventArgs & args);
     
     /*!
      \brief Draws
@@ -57,8 +78,14 @@ public:
      */
     void drawWithEvents(ofEventArgs & args);
     
+    /*!
+     \brief todo
+     */
     void mousePressed(ofMouseEventArgs & mouse);
     
+    /*!
+     \brief todo
+     */
     void mouseMovedWithEvents(ofMouseEventArgs & mouse);
 
     
@@ -67,6 +94,9 @@ public:
      */
     void set(json config);
     
+    /*!
+     \brief todo
+     */
     void setCurrentWindow();
 };
 

@@ -18,32 +18,32 @@
 class VerticalSlider : public Slider {
 public:
     /*!
-     ...
+     \brief todo
      */
     VerticalSlider();
     
     /*!
-     ...
+     \brief todo
      */
     ~VerticalSlider();
     
     /*!
-     ...
+     \brief todo
      */
     void update();
     
     /*!
-     ...
+     \brief todo
      */
     void draw( );
     
     /*!
-     ...
+     \brief todo
      */
     void set(json config);
 
     /*!
-     ...
+     \brief todo
      */
     virtual string getClass() { return "VerticalSlider";}
 };

@@ -346,3 +346,11 @@ Boolean Element::canScroll() {
 ElementStyle* Element::getStyle() {
     return &style;
 }
+
+void Element::saveScreenshot(string path) {
+    ofImage img;
+    
+    img.grabScreen(rect.x, rect.y, rect.width, rect.height);
+    img.save(path);
+    
+}

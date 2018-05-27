@@ -39,22 +39,22 @@ protected:
 public:
     
     /*!
-     ...
+     \brief todo
      */
     Slider();
     
     /*!
-     ...
+     \brief todo
      */
     ~Slider();
     
     /*!
-     ...
+     \brief todo
      */
     void update();
     
     /*!
-     ...
+     \brief todo
      */
     void draw( );
     
@@ -66,22 +66,25 @@ public:
     ofColor getBackgroundColor();
         
     /*!
-     ...
+     \brief Sets up the Slider
+     
+     Available options:
+    
      */
     void set(json config);
     
     /*!
-     ...
+     \brief todo
      */
     void setValue(float _value);
     
     /*!
-     ...
+     \brief todo
      */
     float getValue();
     
     /*!
-     ...
+     \brief todo
      */
     void setOnChange(std::function<void(Slider *slider)> _onChange);
     
