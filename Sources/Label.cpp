@@ -17,10 +17,12 @@ Label::Label()
 }
 
 
-Label::~Label(){
+Label::~Label()
+{
 }
 
-void Label::update(){
+void Label::update()
+{
 }
 
 void Label::draw( ){
@@ -34,7 +36,13 @@ void Label::draw( ){
     Element::finishDraw();
 }
 
-void Label::set(json config){
+void Label::set(json config)
+{
     Element::set(config);
     if (config["caption"].is_string()) caption = config["caption"].get<string>();
+}
+
+void Label::setCaption(string _caption)
+{
+    caption = _caption;
 }

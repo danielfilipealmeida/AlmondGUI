@@ -33,27 +33,27 @@ protected:
 public:
     
     /*!
-     \brief todo
+     \brief Constructor
      */
     ButtonGroup() ;
     
     /*!
-     \brief todo
+     \brief Destructor
      */
     ~ButtonGroup();
     
     /*!
-     \brief todo
+     \brief Updates all buttons on the buttons group.
      */
     virtual void update();
     
     /*!
-     \brief todo
+     \brief Draws the buttons group
      */
     virtual void draw( );
     
     /*!
-     \brief todo
+     \brief Sets the data of the buttons group
      */
     virtual void set(json config);
     
