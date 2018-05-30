@@ -169,9 +169,7 @@ void Element::finishDraw()
     
     if (style.hasBorder) {
         ofNoFill();
-        /*
-        ofSetColor(gui->getFocusedElement() == this ? style.focusedColor : style.borderColor);
-        */
+        ofSetLineWidth(1);
         ofSetColor(style.getBorderColor());
         ofDrawRectangle(rect);
     }
