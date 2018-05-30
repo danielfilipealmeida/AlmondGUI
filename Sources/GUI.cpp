@@ -210,3 +210,21 @@ Boolean GUI::isElementFocused(Element *element)
     return element == focusedElement;
 }
 
+void GUI::deleteChildsOfElement(void *parentElement)
+{
+    std::vector<unsigned int> indexesOfElementsToDelete;
+    
+    unsigned int count = 0;
+    for(auto element:elements) {
+        if ((void *) element->getParent() == parentElement) {
+            indexesOfElementsToDelete.push_back(count);
+        }
+        count++;
+    }
+    
+    for (std::vector<unsigned int>::reverse_iterator i = indexesOfElementsToDelete.rbegin();
+         i != indexesOfElementsToDelete.rend();
+         i++) {
+        elements.erase(elements.begin() + (*i));
+    }
+}

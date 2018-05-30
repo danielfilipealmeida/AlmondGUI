@@ -39,6 +39,11 @@ public:
      \brief Draws all elements that are children of this container
      */
     virtual void drawChilds() = 0;
+    
+    /*!
+     \brief Removes all child elements
+     */
+    virtual void empty() = 0;
 };
 
 

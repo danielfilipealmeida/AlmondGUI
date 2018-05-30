@@ -45,3 +45,8 @@ void* ContainerBase::getLastChild()
 {
     return lastChild;
 }
+
+void ContainerBase::empty()
+{
+    ((GUI *)gui)->deleteChildsOfElement((void *) this);
+}

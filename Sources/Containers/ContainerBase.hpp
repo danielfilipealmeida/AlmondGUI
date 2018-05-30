@@ -41,6 +41,11 @@ public:
      \brief Draws all child elements
      */
     virtual void drawChilds();
+    
+    /*!
+     \brief Removes all child elements
+     */
+    virtual void empty();
 };
 
 #endif /* ContainerBase_hpp */

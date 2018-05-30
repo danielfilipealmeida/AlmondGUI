@@ -96,8 +96,11 @@ public:
    
     /*!
      \brief Adds an element to the elements list
+     \param element the element added to the gui list
      */
     void add(Element *element);
+    
+    
 
     /*!
      \brief Template for creating, setting and storing new elements
@@ -141,6 +144,14 @@ public:
      \result returns if the element has childs or not
      */
     Boolean elementHasChilds(Element *element);
+    
+    
+    /*!
+     \brief Delete all elements from the gui that belong to a given element
+     \param *parentElement the element that will have it's children deleted
+     */
+    void deleteChildsOfElement(void *parentElement);
+    
     
     /*!
      \brief Traverse all elements and updates their visible rect
