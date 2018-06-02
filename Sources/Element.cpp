@@ -103,7 +103,7 @@ Boolean Element::checkIsDragging()
 void Element::update()
 {
     if (visible == FALSE) return;
-    
+
     dragging = checkIsDragging();
     
     Boolean previousHover = hover;
@@ -222,13 +222,7 @@ void Element::set(json config) {
 
 
 
-/*
-std::vector<Element*> Element::getChildElements() {
-    return gui->filter([this](Element *element) {
-        return element->parent == this;
-    });
-}
-*/
+
 
 void *Element::add(void *newElement) {
     ((Element *)newElement)->setParent(this);

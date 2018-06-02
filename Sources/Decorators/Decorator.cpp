@@ -11,7 +11,6 @@
 Decorator::Decorator(Element *_el)
 {
     element = _el;
-    element->setParent(this);
 }
 
 
