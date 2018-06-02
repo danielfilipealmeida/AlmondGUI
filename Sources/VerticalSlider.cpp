@@ -64,7 +64,6 @@ void VerticalSlider::draw( ) {
 }
 
 void VerticalSlider::set(json config) {
-    //cout << config.dump(4) << endl;
     Slider::set(config);
 }
 
