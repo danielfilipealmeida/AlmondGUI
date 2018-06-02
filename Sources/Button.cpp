@@ -33,8 +33,6 @@ void Button::update() {
     Element::update();
     if (visible == FALSE) return;
 
-    
-    if (pressed) cout << "pressed" <<endl;
     if (pressed == FALSE && previousPressed != pressed) {
         onClick(this);
     }

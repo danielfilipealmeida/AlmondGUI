@@ -14,22 +14,29 @@
 #include "catch.hpp"
 #include "VerticalSlider.hpp"
 
+/**
+ THIS IS NOT WORKING! WHY?
+ fails on releasing element
+ */
 
 TEST_CASE("Should set GUI vertical slider properties", "[VerticalSlider::VerticalSlider]") {
-    VerticalSlider verticalSlider;
+    VerticalSlider *verticalSlider;
     
-    verticalSlider.set({
+    verticalSlider = new VerticalSlider();
+    verticalSlider->set({
         {"x", 10},
         {"y", 20},
         {"width", 100},
         {"height", 120},
         {"caption", "vslider"}
     });
-    ofRectangle rect = verticalSlider.rect;
+    ofRectangle rect = verticalSlider->rect;
     
     REQUIRE(rect.x == 10);
     REQUIRE(rect.y == 20);
     REQUIRE(rect.width == 100);
     REQUIRE(rect.height == 120);
-    REQUIRE(verticalSlider.caption.compare("vslider") == 0);
+    REQUIRE(verticalSlider->caption.compare("vslider") == 0);
+    
+    delete verticalSlider;
 }

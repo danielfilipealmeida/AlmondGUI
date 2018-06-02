@@ -13,6 +13,7 @@
 #include "ofMain.h"
 #include "ofApp.h"
 
+#define CATCH_CONFIG_COLOUR_ANSI
 
 /*
 

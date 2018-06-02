@@ -184,7 +184,6 @@
 		0C5807312071467700B43487 /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
 		0C71E9F61FF828880045EA4D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F01FF828880045EA4D /* main.cpp */; };
 		0C71E9F81FF828880045EA4D /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F21FF828880045EA4D /* Viewport.cpp */; };
-		0C71E9FA1FF828880045EA4D /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F41FF828880045EA4D /* VerticalSlider.cpp */; };
 		0C71E9FB1FF828880045EA4D /* Button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C71E9F51FF828880045EA4D /* Button.cpp */; };
 		0C72CFCA204AE1ED00F9D777 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C72CFC9204AE1ED00F9D777 /* README.md */; };
 		0C767D0D200D1EB10002318B /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C767D0B200D1EB10002318B /* Table.cpp */; };
@@ -339,6 +338,11 @@
 		0CD86AAB204BFC2800DFB79D /* ContainerInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0CD86AAA204BFC2800DFB79D /* ContainerInterface.hpp */; };
 		0CD86AAF204BFCAA00DFB79D /* ChildInterface.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0CD86AAE204BFCAA00DFB79D /* ChildInterface.hpp */; };
 		0CEC7E1F20019DAF001AF9A3 /* Loop001.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC7E1D20019DAF001AF9A3 /* Loop001.mp4 */; };
+		6502612220C1E7FA0031301B /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
+		6502612420C1E7FE0031301B /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
+		6502612620C1EC3A0031301B /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6502612520C1EC3A0031301B /* ResetButtonDecorator.cpp */; };
+		6502612720C1FA0F0031301B /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
+		6502612820C1FA160031301B /* Decorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF51FBCFA3200D9016F /* Decorator.cpp */; };
 		6504556E1F470EA300CB3BE5 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655BFAF81E7355BD00B74446 /* CoreMIDI.framework */; };
 		6504556F1F470EAC00CB3BE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8967B1E73311F000D470B /* Foundation.framework */; };
 		650455711F470ED000CB3BE5 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BC812F1DF8D94600331165 /* Syphon.framework */; };
@@ -649,6 +653,7 @@
 		0CD86AAE204BFCAA00DFB79D /* ChildInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ChildInterface.hpp; path = Sources/Interfaces/ChildInterface.hpp; sourceTree = SOURCE_ROOT; };
 		0CEC7E1D20019DAF001AF9A3 /* Loop001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Loop001.mp4; path = ../../../../../ArbutusEngine/TestData/Loop001.mp4; sourceTree = "<group>"; };
 		0CF9976620024B4B00D15EAA /* ButtonGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ButtonGroup.cpp; sourceTree = "<group>"; };
+		6502612520C1EC3A0031301B /* ResetButtonDecorator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResetButtonDecorator.cpp; sourceTree = "<group>"; };
 		650455591F47085D00CB3BE5 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		650D42D620A831240032640D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Gallery/main.cpp; sourceTree = "<group>"; };
 		650D42D720A831240032640D /* ofApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ofApp.cpp; path = Gallery/ofApp.cpp; sourceTree = "<group>"; };
@@ -1028,6 +1033,7 @@
 				0C71E9F11FF828880045EA4D /* Splitter.cpp */,
 				0C767D11200D1EC90002318B /* Table.cpp */,
 				0CB45C65206EACC900BAF981 /* GUI.cpp */,
+				6502612520C1EC3A0031301B /* ResetButtonDecorator.cpp */,
 			);
 			name = Tests;
 			path = tests;
@@ -2166,7 +2172,9 @@
 				650D42DB20A831420032640D /* SyphonNameboundClient.m in Sources */,
 				650D42DC20A831420032640D /* tinyxml.cpp in Sources */,
 				650D42DD20A831420032640D /* OscReceivedElements.cpp in Sources */,
+				6502612420C1E7FE0031301B /* ResetButtonDecorator.cpp in Sources */,
 				650D42DE20A831420032640D /* Button.cpp in Sources */,
+				6502612220C1E7FA0031301B /* Decorator.cpp in Sources */,
 				650D42DF20A831420032640D /* Table.cpp in Sources */,
 				650D42E020A831420032640D /* OscPrintReceivedElements.cpp in Sources */,
 				650D42E120A831420032640D /* Slider.cpp in Sources */,
@@ -2268,13 +2276,14 @@
 				65E8969D1E734EEF000D470B /* OscTypes.cpp in Sources */,
 				655BFAFA1E7358C000B74446 /* UdpSocket.cpp in Sources */,
 				655BFAFD1E735BC100B74446 /* SyphonNameboundClient.m in Sources */,
+				6502612620C1EC3A0031301B /* ResetButtonDecorator.cpp in Sources */,
 				0C392FFF1FBCFA3200D9016F /* Slider.cpp in Sources */,
 				0C3930131FBCFA3200D9016F /* Button.cpp in Sources */,
 				0C39300F1FBCFA3200D9016F /* GUI.cpp in Sources */,
 				0C71E9FB1FF828880045EA4D /* Button.cpp in Sources */,
 				0C71E9F81FF828880045EA4D /* Viewport.cpp in Sources */,
 				0C71E9F61FF828880045EA4D /* main.cpp in Sources */,
-				0C71E9FA1FF828880045EA4D /* VerticalSlider.cpp in Sources */,
+				6502612720C1FA0F0031301B /* ResetButtonDecorator.cpp in Sources */,
 				0C3930031FBCFA3200D9016F /* VerticalSlider.cpp in Sources */,
 				0C580728206EE0EE00B43487 /* ButtonGroup.cpp in Sources */,
 				0C3930071FBCFA3200D9016F /* Preview.cpp in Sources */,
@@ -2282,6 +2291,7 @@
 				0C392FFD1FBCFA3200D9016F /* Viewport.cpp in Sources */,
 				0C392FFB1FBCFA3200D9016F /* Element.cpp in Sources */,
 				0CB45C66206EACC900BAF981 /* GUI.cpp in Sources */,
+				6502612820C1FA160031301B /* Decorator.cpp in Sources */,
 				65E22543209DE50B002E107A /* PaginatedViewport.cpp in Sources */,
 				0C767D0E200D1EB10002318B /* Table.cpp in Sources */,
 				0C3930051FBCFA3200D9016F /* Label.cpp in Sources */,

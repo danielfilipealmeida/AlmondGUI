@@ -10,12 +10,18 @@
 #include "Slider.hpp"
 #include "GUI.hpp"
 
-void ResetButtonDecorator::draw( ) {
+void ResetButtonDecorator::draw()
+{
+    Decorator::draw();
+    drawButton();
+}
+
+
+void ResetButtonDecorator::drawButton()
+{
     ofRectangle theRect;
     ofColor backgroundColor;
-    
-    Decorator::draw( );
-    
+
     theRect = resetButton.rect;
     backgroundColor = Button::getBackgroundColor(resetButton.hover, resetButton.pushed);
     
@@ -29,6 +35,7 @@ void ResetButtonDecorator::draw( ) {
     ofSetColor(style.borderColor);
     ofNoFill();
     ofDrawRectangle(theRect);
+
 }
 
 void ResetButtonDecorator::set(json config) {

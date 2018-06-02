@@ -21,14 +21,19 @@ class ResetButtonDecorator : public Decorator
     
 public:
     /*!
-     ...
+     \brief constructor
      */
     ResetButtonDecorator(Element *el): Decorator(el) {}
     
     /*!
-     ...
+     \brief Draws the decorator and the decorated element
      */
-    void draw( );
+    void draw();
+    
+    /*!
+     \brief Draws the button
+     */
+    void drawButton();
     
     /*!
      ...

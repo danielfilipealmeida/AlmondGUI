@@ -19,6 +19,9 @@ class ofApp : public ofBaseApp {
     Label *label;
     ToggleButton *toggle, *togglePressed;
     
+    Slider *slider2;
+    ResetButtonDecorator *sliderWithDecorator;
+    
     Boolean firstDraw;
     
 	public:
@@ -35,6 +38,8 @@ class ofApp : public ofBaseApp {
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+    
+
 
 };
 

@@ -11,7 +11,7 @@ void ofApp::setup(){
     label = gui->add<Label>({
         {"x", 10},
         {"y", 10},
-        {"width", 100},
+        {"width", 150},
         {"height", GUI_LINE_HEIGHT * 1.5},
         {"caption", "Label"},
     });
@@ -19,7 +19,7 @@ void ofApp::setup(){
     button = gui->add<Button>({
         {"x", 10},
         {"y", 40},
-        {"width", 100},
+        {"width", 150},
         {"height", GUI_LINE_HEIGHT * 1.5},
         {"caption", "Button"}
     });
@@ -27,7 +27,7 @@ void ofApp::setup(){
     slider = gui->add<Slider>({
         {"x", 10},
         {"y", 70},
-        {"width", 100},
+        {"width", 150},
         {"height", GUI_LINE_HEIGHT * 1.5},
         {"caption", "Slider"},
         {"maxValue", 1.0},
@@ -35,11 +35,10 @@ void ofApp::setup(){
         {"value", 0.5}
     });
     
-
     toggle = gui->add<ToggleButton>({
         {"x", 10},
         {"y", 100},
-        {"width", 100},
+        {"width", 150},
         {"height", GUI_LINE_HEIGHT * 1.5},
         {"caption", "Toggle"},
 
@@ -48,12 +47,11 @@ void ofApp::setup(){
     togglePressed = gui->add<ToggleButton>({
         {"x", 10},
         {"y", 130},
-        {"width", 100},
+        {"width", 150},
         {"height", GUI_LINE_HEIGHT * 1.5},
         {"caption", "Pressed Toggle"}
     });
     togglePressed->setPushed(true);
-    
 
     
     firstDraw = TRUE;
@@ -128,3 +126,4 @@ void ofApp::gotMessage(ofMessage msg){
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
 }
+

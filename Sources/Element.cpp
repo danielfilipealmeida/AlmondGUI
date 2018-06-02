@@ -250,16 +250,6 @@ ofRectangle Element::calculateVisibleRect() {
     visibleRect.width = rect.width;
     visibleRect.height = rect.height;
     
-    // todo: this needs to be completely redone because scollable will be a new interface and it's needed to use this
-    /*
-    if (((ElementInterface *)parent)->getClass().compare("Viewport") == 0) {
-        //Viewport *viewport = (Viewport *) parent;
-        // todo: fix the problem of the casting being incomplete due to multi-inheritance
-        Viewport *viewport = static_cast<Viewport *>(parent);
-        visibleRect.x = visibleRect.x - viewport->getOffsetX();
-        visibleRect.y = visibleRect.y - viewport->getOffsetY();
-    }
-     */
     return visibleRect;
 }
 

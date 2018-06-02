@@ -200,11 +200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/Element.cpp"
-            timestampString = "547918032.600005"
+            timestampString = "549590357.044493"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "353"
-            endingLineNumber = "353"
+            startingLineNumber = "343"
+            endingLineNumber = "343"
             landmarkName = "Element::saveScreenshot(string path)"
             landmarkType = "7">
          </BreakpointContent>
@@ -221,6 +221,150 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tests/VerticalSlider.cpp"
+            timestampString = "549585237.213852"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "TEST_CASE(&quot;Should set GUI vertical slider properties&quot;, &quot;[VerticalSlider::VerticalSlider]&quot;)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____C_A_T_C_H____T_E_S_T____0()"
+                  moduleName = "Catch Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniel/XCode/of_v0.9.8_osx_release/addons/ofxAlmondGUI/tests/VerticalSlider.cpp"
+                  timestampString = "549584357.886571"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "5552">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "____C_A_T_C_H____T_E_S_T____0()"
+                  moduleName = "Catch Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniel/XCode/of_v0.9.8_osx_release/addons/ofxAlmondGUI/tests/VerticalSlider.cpp"
+                  timestampString = "549584357.998477"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "5557">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "External/Catch2/single_include/catch.hpp"
+            timestampString = "549583874.651858"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8589"
+            endingLineNumber = "8589"
+            landmarkName = "class UnaryExpr"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Catch::StringRef::StringRef(char const*)"
+                  moduleName = "Catch Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniel/XCode/of_v0.9.8_osx_release/addons/ofxAlmondGUI/External/Catch2/single_include/catch.hpp"
+                  timestampString = "549583874.6843311"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8589"
+                  endingLineNumber = "8589"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Catch::StringRef::StringRef(char const*)"
+                  moduleName = "Catch Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniel/XCode/of_v0.9.8_osx_release/addons/ofxAlmondGUI/External/Catch2/single_include/catch.hpp"
+                  timestampString = "549583874.688383"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8587"
+                  endingLineNumber = "8587"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/Decorators/Decorator.cpp"
+            timestampString = "549591162.94081"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "Decorator::update()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/Element.cpp"
+            timestampString = "549590203.368358"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "Element::update()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/Element.cpp"
+            timestampString = "549590314.166628"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "Element::calculateVisibleRect()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
