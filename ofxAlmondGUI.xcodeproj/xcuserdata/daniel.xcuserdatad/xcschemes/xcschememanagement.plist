@@ -29,6 +29,11 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>Reset Button Decorator.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>Splitter in Splitter.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -108,6 +113,11 @@
 			<true/>
 		</dict>
 		<key>6550F637209DF7CB006A240B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65E7991D20C2AE9700ECE397</key>
 		<dict>
 			<key>primary</key>
 			<true/>

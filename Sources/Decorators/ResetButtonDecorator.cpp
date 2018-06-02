@@ -50,6 +50,8 @@ void ResetButtonDecorator::set(json config) {
                                    config["y"].get<float>(),
                                    config["width"].get<float>(),
                                    config["height"].get<float>()));
+        
+        // overides the width to take out the space occupied by the button
         config["width"] = config["width"].get<float>() - resetButton.rect.width - (GUI_BORDER / 2.0);
     }
     getElement()->set(config);
