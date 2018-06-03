@@ -98,7 +98,8 @@ public:
     string dump();
     
     /*!
-     \brief todo
+     \brief Adds a new element to the table. TODO
+     \param newElement
      */
     void* add(void *newElement);
 };

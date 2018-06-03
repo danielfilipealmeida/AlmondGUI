@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Image Matrix.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
 		<key>Paginated Viewport.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -113,6 +118,11 @@
 			<true/>
 		</dict>
 		<key>6550F637209DF7CB006A240B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65DF214D20C3EDD400D17DCF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -204,9 +204,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "343"
-            endingLineNumber = "343"
-            landmarkName = "Element::saveScreenshot(string path)"
-            landmarkType = "7">
+            endingLineNumber = "343">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -364,6 +362,22 @@
             startingLineNumber = "241"
             endingLineNumber = "241"
             landmarkName = "Element::calculateVisibleRect()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sources/ImageMatrix.cpp"
+            timestampString = "549756143.685691"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "ImageMatrix::draw()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

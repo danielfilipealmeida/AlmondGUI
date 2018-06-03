@@ -232,7 +232,7 @@ public:
     
     /*!
      \brief Saves a screenshot of the element to a png file in a given path
-     \param [string] path
+     \param path the path where the screenshop will be saved
      */
     void saveScreenshot(string path);
 };

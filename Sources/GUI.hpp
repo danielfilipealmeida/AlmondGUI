@@ -23,6 +23,7 @@
 #include "ToggleButtonGroup.hpp"
 #include "Table.hpp"
 #include "Window.hpp"
+#include "ImageMatrix.hpp"
 
 // Decorators
 #include "Decorator.hpp"
