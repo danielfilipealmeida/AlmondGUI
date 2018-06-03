@@ -129,7 +129,7 @@ float ButtonGroup::getButtonsWidth()
         totalWidth = ((ElementInterface *)parent)->getRect().width;
     }
     
-    return (totalWidth - (GUI_BORDER * (nButtons)))/ (float) nButtons;
+   return (totalWidth - (GUI_BORDER * (nButtons - 1))) / (float) nButtons;
 }
 
 void ButtonGroup::createButtons() {
