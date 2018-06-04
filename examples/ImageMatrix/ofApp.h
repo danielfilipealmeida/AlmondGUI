@@ -12,7 +12,9 @@
  */
 class ofApp : public ofBaseApp {
     GUI *gui;
-    ImageMatrix *imageMatrix;
+    ImageMatrix *imageMatrix, *imageMatrixInViewport;
+    Viewport *viewport;
+
 
     string resourcesPath;
     Label *label;

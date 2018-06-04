@@ -147,12 +147,16 @@ void* Viewport::add(void *newElement) {
     float elementY, width, height;
     ofRectangle newElementRect;
     std::vector<void*> childElements;
+    float newElementHeight;
 
     
     elementY = getNextElementY();
     width = getRect().width - (2 * GUI_BORDER);
-    height = ((Element *)newElement)->getHeightForWidth(width);
+    newElementHeight = ((Element *)newElement)->getRect().height;
+    
+    height = (newElementHeight > 0) ? newElementHeight : ((Element *)newElement)->getHeightForWidth(width);
 
+   
     ((Element *)newElement)->setParent(this);
     childElements = getChildElements();
 

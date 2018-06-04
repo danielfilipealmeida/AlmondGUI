@@ -81,14 +81,17 @@ void ImageMatrix::draw()
         ofRectangle drawRect;
         float imageAspectRatio = image->rect.w / image->rect.h;
         float cellAspectRatio = cellWidth / cellHeight;
+        float factor = image->rect.h / cellHeight;
+    
         if (imageAspectRatio > cellAspectRatio) {
             
         } else {
             
         }
+        
         image->drawSubsection(imageRect.x, imageRect.y, imageRect.width, imageRect.height,
                               drawRect.x, drawRect.y, drawRect.width, drawRect.height);
-         */
+        */
         
    }
     

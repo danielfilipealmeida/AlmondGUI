@@ -48,6 +48,23 @@ void ofApp::setup(){
         {"caption", "[nothing selected yet]"}
     });
     gui->add(label);
+    
+    
+    viewport = gui->add<Viewport>({
+        {"x", 500},
+        {"y", 100},
+        {"width", 200},
+        {"height", 200}
+    });
+    
+    imageMatrixInViewport = (ImageMatrix *)viewport->add(gui->add<ImageMatrix>({
+         {"columns", 2},
+         {"rows", 2},
+         {"height", 200},
+         {"width", 200}
+    }));
+    imageMatrixInViewport->addImage(new ofImage(resourcesPath + "/002.png"), 1, 1);
+    
 }
 
 //--------------------------------------------------------------

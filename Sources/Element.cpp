@@ -205,11 +205,14 @@ void Element::drawDebugRect( ) {
 void Element::set(json config) {
     if (!config.is_object()) return;
     
-    if (!config["x"].is_number()) return;
-    if (!config["y"].is_number()) return;
     if (!config["width"].is_number()) return;
     if (!config["height"].is_number()) return;
-    
+    if (!config["x"].is_number()) {
+        config["x"] = 0;
+    }
+    if (!config["y"].is_number()) {
+        config["y"] = 0;
+    }
     rect.set(config["x"].get<unsigned int>(),
              config["y"].get<unsigned int>(),
              config["width"].get<unsigned int>(),
