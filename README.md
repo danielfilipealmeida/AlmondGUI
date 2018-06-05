@@ -5,6 +5,12 @@
 
 AlmondGUI is a Graphic User Interface library for `openFrameworks`.
 
+## Installing
+
+This Repo uses submodules, please clone it using the following command:
+
+	git clone --recurse-submodules https://github.com/danielfilipealmeida/AlmondGUI.git
+
 
 ## Quick Intro
 

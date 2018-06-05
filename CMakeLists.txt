@@ -35,6 +35,9 @@ SET(JSON_PATH "${EXTERNAL_PATH}/json/")
 
 ## SET UP ALL THE INCLUDES
 include_directories("Sources/")
+include_directories("Sources/Interfaces/")
+include_directories("Sources/Decorators/")
+include_directories("Sources/Containers/")
 include_directories("${OPENFRAMEWORKS_PATH}/libs/openFrameworks/")
 include_directories("${OPENFRAMEWORKS_PATH}/libs/openFrameworks/3d/")
 include_directories("${OPENFRAMEWORKS_PATH}/libs/openFrameworks/app/")
@@ -57,7 +60,7 @@ include_directories("${OPENFRAMEWORKS_PATH}/libs/kiss/include")
 include_directories("${GSTREAM_PATH}")
 include_directories("${GLIB_PATH}")
 include_directories("${GLIB_PATH}/glib")
-include_directories("${EXTERNAL_PATH}/src/")
+include_directories("${JSON_PATH}/src/")
 
 
 ## GET ALL FILES TO COMPILE FOR THE LIB
