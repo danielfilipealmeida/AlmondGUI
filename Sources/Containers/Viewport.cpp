@@ -8,6 +8,7 @@
 
 #include "Viewport.hpp"
 #include "GUI.hpp"
+#include <typeinfo>
 
 Viewport::Viewport() {
     className = "Viewport";
@@ -148,15 +149,17 @@ void* Viewport::add(void *newElement) {
     ofRectangle newElementRect;
     std::vector<void*> childElements;
     float newElementHeight;
-
+    
     
     elementY = getNextElementY();
     width = getRect().width - (2 * GUI_BORDER);
     newElementHeight = ((Element *)newElement)->getRect().height;
     
-    height = (newElementHeight > 0) ? newElementHeight : ((Element *)newElement)->getHeightForWidth(width);
+    // this is hackish and bad. 2 is because a decorator around sliders is created with 2 pixels
+    height = (newElementHeight > 2) ? newElementHeight : ((Element *)newElement)->getHeightForWidth(width);
 
-   
+    //height = ((Element *)newElement)->getHeightForWidth(width);
+
     ((Element *)newElement)->setParent(this);
     childElements = getChildElements();
 

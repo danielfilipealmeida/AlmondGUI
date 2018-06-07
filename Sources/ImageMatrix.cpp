@@ -15,6 +15,7 @@ ImageMatrix::ImageMatrix()
     style.hasBorder = true;
     style.hasBackground = true;
     lastPressedCell = std::make_pair(-1, -1);
+    lastAddedIndex = 0;
 }
 
 ImageMatrix::~ImageMatrix()
@@ -130,13 +131,25 @@ std::pair<int, int> ImageMatrix::getLastPressedCell()
     return lastPressedCell;
 }
 
-void ImageMatrix::addImage(ofImage* pixels, unsigned int column, unsigned int row)
+void ImageMatrix::addImage(ofImage* newImage, unsigned int column, unsigned int row)
 {
     if (column >= columns) return;
     if (row >= rows) return;
     
-    images[std::make_pair(column, row)] = pixels;
+    images[std::make_pair(column, row)] = newImage;
     
+}
+
+void ImageMatrix::addImage(ofImage* newImage)
+{
+    
+    unsigned int column, row;
+    
+    row = (unsigned int) floor((float)  lastAddedIndex / (float) columns);
+    column = (unsigned int) lastAddedIndex % columns;
+    addImage(newImage, column, row);
+    
+    lastAddedIndex++;
 }
 
 ofRectangle ImageMatrix::getImageRect(unsigned int column, unsigned int row)

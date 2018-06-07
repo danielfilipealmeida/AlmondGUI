@@ -23,7 +23,7 @@ class ImageMatrix : public Element
     std::function<void(ImageMatrix *imageMatrix)> onClick = NULL;
     std::map<std::pair<unsigned int, unsigned int>, ofImage*> images;
     std::pair<int, int> lastPressedCell;
-    
+    unsigned int lastAddedIndex;
 
 public:
     
@@ -71,6 +71,13 @@ public:
      \param row the row of the matrix (x coordinate)
      */
     void addImage(ofImage* newImage, unsigned int column, unsigned int row);
+    
+    
+    /*!
+     \brief adds a new image to the Image Matrix
+     \param newImage the image to add to the Image Matrix
+     */
+    void addImage(ofImage* newImage);
     
     /*!
      \brief Returns the coordinates of the last clicked cell
