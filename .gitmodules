@@ -1,15 +1,1 @@
-[submodule "External/nanovg"]
-	path = External/nanovg
-	url = https://github.com/memononen/nanovg.git
-[submodule "External/ArbutusEngine"]
-	path = External/ArbutusEngine
-	url = https://github.com/danielfilipealmeida/ArbutusEngine.git
-[submodule "External/Catch2"]
-	path = External/Catch2
-	url = https://github.com/catchorg/Catch2.git
-[submodule "External/json"]
-	path = External/json
-	url = https://github.com/nlohmann/json.git
-[submodule "External/ofxSyphon"]
-	path = External/ofxSyphon
-	url = https://github.com/astellato/ofxSyphon.git
+
