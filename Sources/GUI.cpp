@@ -145,9 +145,31 @@ void GUI::updateVisibleRects()
     });
 }
 
+
+string GUI::getFontPath(string filename, string path)
+{
+    
+    string fullPath = path + "/" + filename;
+    if (ofFile::doesFileExist(fullPath)) {
+        return fullPath;
+    }
+        
+    fullPath = ofFilePath::getCurrentExeDir() + " /../Resources/" + "/" + filename;
+    if (ofFile::doesFileExist(fullPath)) {
+        return fullPath;
+    }
+    
+    throw new std::runtime_error(SPRINTF(MSG_ERROR_LOADING_FONT, filename.c_str()));
+}
+
+
 void GUI::loadFonts(string fontsPath)
 {
-    textFont.load(fontsPath + "OpenSans-Light.ttf", 13, true, true);
+    if (fontsPath.empty()) {
+        //fontsPath = ofFilePath::getCurrentExePath() + "/../Resources/";
+        fontsPath = ofFilePath::getCurrentExeDir() + "../Resources/";
+    }
+    textFont.load(fontsPath + DEFAULT_FONT, 13, true, true);
     textFont.setLineHeight(10);
 }
 

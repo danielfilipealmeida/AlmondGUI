@@ -12,18 +12,21 @@
 #include "ofAppGLFWWindow.h"
 
 
-Window::Window() {
+Window::Window()
+{
     className = "Window";
 
 }
 
-void* Window::add(void *newElement) {
+void* Window::add(void *newElement)
+{
     // todo: finish
     
     return newElement;
 }
 
-ofGLFWWindowSettings Window::getSettings() {
+ofGLFWWindowSettings Window::getSettings()
+{
     ofGLFWWindowSettings settings;
     
     settings.width = 200;
@@ -34,7 +37,8 @@ ofGLFWWindowSettings Window::getSettings() {
 }
 
 
-void Window::createWindow() {
+void Window::createWindow()
+{
     window = ofCreateWindow(getSettings());
     window->setVerticalSync(false);
     ofAddListener(window->events().draw, this, &Window::drawWithEvents);
@@ -45,19 +49,23 @@ void Window::createWindow() {
 }
 
 
-void Window::update() {
+void Window::update()
+{
    if (window == NULL) return;
     Element::update();
 }
 
-void Window::updateWithEvents(ofEventArgs & args) {
+
+void Window::updateWithEvents(ofEventArgs & args)
+{
     setCurrentWindow();
     update();
 }
 
 
 
-void Window::draw() {
+void Window::draw()
+{
     if (window == NULL) return;
     Element::draw( );
     drawChilds();
@@ -65,33 +73,38 @@ void Window::draw() {
 
 }
 
-void Window::drawWithEvents(ofEventArgs & args) {
+
+void Window::drawWithEvents(ofEventArgs & args)
+{
     draw();
 }
 
 
-
-
-void Window::mousePressed(ofMouseEventArgs & mouse) {
+void Window::mousePressed(ofMouseEventArgs & mouse)
+{
 
 }
 
-void Window::mouseMovedWithEvents(ofMouseEventArgs & mouse) {
+void Window::mouseMovedWithEvents(ofMouseEventArgs & mouse)
+{
     window.get()->setWindowTitle(ofToString(mouse.x) + " x " + ofToString(mouse.y));
 }
 
-void Window::set(json config) {
+void Window::set(json config)
+{
     if (window == NULL) createWindow();
 }
 
 
-void Window::setCurrentWindow() {
+void Window::setCurrentWindow()
+{
     if (!window) return;
     
     ofGetMainLoop()->setCurrentWindow(window);
 }
 
-Element *Window::addToGUI(json elementData) {
-    
+Element *Window::addToGUI(json elementData)
+{
+    return NULL;
 }
 

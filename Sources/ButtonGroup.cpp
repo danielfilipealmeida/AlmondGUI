@@ -199,6 +199,9 @@ void ButtonGroup::forEach(std::function<void (ButtonData)> lambda) {
 }
 
 ButtonData ButtonGroup::getButtonDataAtIndex(unsigned int index) {
-    if (buttons.size() <= index) return;
+    if (buttons.size() <= index) {
+        throw std::invalid_argument("Invalid index");
+    }
+    
     return buttons[index];
 }

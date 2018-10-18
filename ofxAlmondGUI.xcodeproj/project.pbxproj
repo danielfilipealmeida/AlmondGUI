@@ -50,7 +50,6 @@
 		0C0370E01FF853E1005744F2 /* ToggleButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FF31FBCFA3200D9016F /* ToggleButton.cpp */; };
 		0C0370E21FF853E1005744F2 /* VerticalSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FE11FBCFA3000D9016F /* VerticalSlider.cpp */; };
 		0C0370E31FF853E1005744F2 /* Viewport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FDD1FBCFA3000D9016F /* Viewport.cpp */; };
-		0C0370E51FF85656005744F2 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E896851E733920000D470B /* Syphon.framework */; };
 		0C0370E71FF85676005744F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8967B1E73311F000D470B /* Foundation.framework */; };
 		0C0370E81FF85681005744F2 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 655BFAF81E7355BD00B74446 /* CoreMIDI.framework */; };
 		0C0370EA1FF85CC0005744F2 /* libfmodex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1150EF1F9F67C70004CBD5 /* libfmodex.dylib */; };
@@ -424,6 +423,22 @@
 		65276BB81F486ED300949383 /* IpEndpointName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81401DF8D96500331165 /* IpEndpointName.cpp */; };
 		65276BB91F486EDA00949383 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81451DF8D96500331165 /* NetworkingUtils.cpp */; };
 		65276BBA1F486FC100949383 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81461DF8D96500331165 /* UdpSocket.cpp */; };
+		652AFC6E21791ADE00A39760 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC6F21791ADE00A39760 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7021791ADE00A39760 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7121791ADE00A39760 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7221791ADE00A39760 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7321791ADE00A39760 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7421791ADE00A39760 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7521791ADE00A39760 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7621791ADE00A39760 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7721791ADE00A39760 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7821791ADE00A39760 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7921791ADE00A39760 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7A21791ADE00A39760 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7B2179234C00A39760 /* Syphon.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7D217923B600A39760 /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 652AFC6D21791ADE00A39760 /* Syphon.framework */; };
+		652AFC7E217923C000A39760 /* libfmodex.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0C1150EF1F9F67C70004CBD5 /* libfmodex.dylib */; };
 		6550F639209DF7CB006A240B /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81321DF8D94600331165 /* SyphonNameboundClient.m */; };
 		6550F63A209DF7CB006A240B /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD361F44691E008E4F9E /* tinyxml.cpp */; };
 		6550F63B209DF7CB006A240B /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81551DF8D96500331165 /* OscReceivedElements.cpp */; };
@@ -528,11 +543,8 @@
 		65DF217E20C3EDD400D17DCF /* Loop001.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC7E1D20019DAF001AF9A3 /* Loop001.mp4 */; };
 		65DF217F20C3EDD400D17DCF /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0CA29B1FF9781A00C4C463 /* OpenSans-Bold.ttf */; };
 		65DF218B20C3EE2100D17DCF /* ImageMatrix-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65DF218620C3EE2100D17DCF /* ImageMatrix-Info.plist */; };
-		65DF218C20C3EE2100D17DCF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65DF218720C3EE2100D17DCF /* main.cpp */; };
 		65DF218D20C3EE2100D17DCF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65DF218720C3EE2100D17DCF /* main.cpp */; };
-		65DF218E20C3EE2100D17DCF /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65DF218820C3EE2100D17DCF /* ofApp.cpp */; };
 		65DF218F20C3EE2100D17DCF /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65DF218820C3EE2100D17DCF /* ofApp.cpp */; };
-		65DF219020C3EE2100D17DCF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 65DF218A20C3EE2100D17DCF /* README.md */; };
 		65DF219120C3EE2100D17DCF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 65DF218A20C3EE2100D17DCF /* README.md */; };
 		65DF219920C4085F00D17DCF /* 001.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DF219320C4085F00D17DCF /* 001.png */; };
 		65DF219A20C4085F00D17DCF /* 002.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DF219420C4085F00D17DCF /* 002.png */; };
@@ -547,7 +559,6 @@
 		65E6BD3C1F44691E008E4F9E /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD391F44691E008E4F9E /* tinyxmlparser.cpp */; };
 		65E6BD3E1F4469DB008E4F9E /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC819A1DF8D9D600331165 /* ofxXmlSettings.cpp */; };
 		65E6BD3F1F446BB5008E4F9E /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81451DF8D96500331165 /* NetworkingUtils.cpp */; };
-		65E6BD481F464F4E008E4F9E /* Syphon.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 65E6BD471F464F4E008E4F9E /* Syphon.framework */; };
 		65E7991F20C2AE9700ECE397 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81321DF8D94600331165 /* SyphonNameboundClient.m */; };
 		65E7992020C2AE9700ECE397 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65E6BD361F44691E008E4F9E /* tinyxml.cpp */; };
 		65E7992120C2AE9700ECE397 /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81551DF8D96500331165 /* OscReceivedElements.cpp */; };
@@ -597,7 +608,6 @@
 		65E7995620C2B85100ECE397 /* ResetButtonDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FEB1FBCFA3100D9016F /* ResetButtonDecorator.cpp */; };
 		65E7995720C2B85400ECE397 /* SliderDecorator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */; };
 		65E896811E733454000D470B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E8967B1E73311F000D470B /* Foundation.framework */; };
-		65E896821E73347B000D470B /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BC812F1DF8D94600331165 /* Syphon.framework */; };
 		65E896911E733DD2000D470B /* ofxOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC815E1DF8D96500331165 /* ofxOscMessage.cpp */; };
 		65E896921E734275000D470B /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81621DF8D96500331165 /* ofxOscReceiver.cpp */; };
 		65E896931E7342BC000D470B /* ofxSyphonServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65BC81381DF8D94600331165 /* ofxSyphonServer.mm */; };
@@ -609,9 +619,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0C10A8B520000E7E0066270B /* PBXContainerItemProxy */ = {
+		652AFC6A2178B31F00A39760 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0C1E77E51F8E5320005507CF /* openFrameworksLib.xcodeproj */;
+			containerPortal = 652AFC662178B31E00A39760 /* openFrameworksLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
 			remoteInfo = openFrameworks;
@@ -628,6 +638,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		652AFC7C217923AC00A39760 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				652AFC7D217923B600A39760 /* Syphon.framework in CopyFiles */,
+				652AFC7E217923C000A39760 /* libfmodex.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		65E8965A1E72F3FF000D470B /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
@@ -635,7 +656,7 @@
 			dstSubfolderSpec = 16;
 			files = (
 				0C1150F21F9F680E0004CBD5 /* libfmodex.dylib in Copy Files */,
-				65E6BD481F464F4E008E4F9E /* Syphon.framework in Copy Files */,
+				652AFC7B2179234C00A39760 /* Syphon.framework in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,7 +703,7 @@
 		0C10A8AF20000CB20066270B /* ofxMidiOut.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxMidiOut.cpp; sourceTree = "<group>"; };
 		0C10A8B020000CB20066270B /* ofxMidiOut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxMidiOut.h; sourceTree = "<group>"; };
 		0C10A8B120000CB20066270B /* ofxMidiTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxMidiTypes.h; sourceTree = "<group>"; };
-		0C1150EF1F9F67C70004CBD5 /* libfmodex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmodex.dylib; path = ../../libs/fmodex/lib/osx/libfmodex.dylib; sourceTree = "<group>"; };
+		0C1150EF1F9F67C70004CBD5 /* libfmodex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmodex.dylib; path = ../of_v0.9.8_osx_release/libs/fmodex/lib/osx/libfmodex.dylib; sourceTree = SOURCE_ROOT; };
 		0C1C0BAC200F76BE00BC3369 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0C1C0BAD200F76BE00BC3369 /* ofApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofApp.cpp; sourceTree = "<group>"; };
 		0C1C0BAE200F76BE00BC3369 /* ofApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
@@ -692,7 +713,6 @@
 		0C1C0BEB200F7A2700BC3369 /* ofApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
 		0C1C0BEC200F7A2700BC3369 /* Viewport_in_splitter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Viewport_in_splitter-Info.plist"; sourceTree = "<group>"; };
 		0C1C0C21200F7A3200BC3369 /* Viewport in Splitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Viewport in Splitter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C1E77E51F8E5320005507CF /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		0C392FD41FBCFA2F00D9016F /* GUI.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GUI.hpp; sourceTree = "<group>"; };
 		0C392FD51FBCFA2F00D9016F /* SliderDecorator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SliderDecorator.cpp; sourceTree = "<group>"; };
 		0C392FD61FBCFA2F00D9016F /* GUIStyle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GUIStyle.hpp; sourceTree = "<group>"; };
@@ -760,7 +780,7 @@
 		0CD86A9F204B179600DFB79D /* ElementInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ElementInterface.hpp; path = Sources/Interfaces/ElementInterface.hpp; sourceTree = SOURCE_ROOT; };
 		0CD86AAA204BFC2800DFB79D /* ContainerInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ContainerInterface.hpp; path = Sources/Interfaces/ContainerInterface.hpp; sourceTree = SOURCE_ROOT; };
 		0CD86AAE204BFCAA00DFB79D /* ChildInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ChildInterface.hpp; path = Sources/Interfaces/ChildInterface.hpp; sourceTree = SOURCE_ROOT; };
-		0CEC7E1D20019DAF001AF9A3 /* Loop001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Loop001.mp4; path = ../../../../../ArbutusEngine/TestData/Loop001.mp4; sourceTree = "<group>"; };
+		0CEC7E1D20019DAF001AF9A3 /* Loop001.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Loop001.mp4; path = ../../Resources/Videos/Loop001.mp4; sourceTree = "<group>"; };
 		0CF9976620024B4B00D15EAA /* ButtonGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ButtonGroup.cpp; sourceTree = "<group>"; };
 		6502612520C1EC3A0031301B /* ResetButtonDecorator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResetButtonDecorator.cpp; sourceTree = "<group>"; };
 		6503DC7E20C2EFFD003CB988 /* ResetButtonDecorator-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ResetButtonDecorator-Info.plist"; path = "ResetButtonDecorator/ResetButtonDecorator-Info.plist"; sourceTree = "<group>"; };
@@ -770,6 +790,9 @@
 		650D42D820A831240032640D /* ofApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = Gallery/ofApp.h; sourceTree = "<group>"; };
 		650D430D20A831420032640D /* Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		650D430F20A831880032640D /* Gallery-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Gallery-Info.plist"; path = "Gallery/Gallery-Info.plist"; sourceTree = "<group>"; };
+		652AFC662178B31E00A39760 /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../of_v0.9.8_osx_release/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = "<group>"; };
+		652AFC6D21791ADE00A39760 /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Syphon.framework; path = ../libs/ofxSyphon/libs/Syphon/lib/osx/Syphon.framework; sourceTree = "<group>"; };
+		652AFC7F217949F300A39760 /* Macros.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Macros.hpp; sourceTree = "<group>"; };
 		6550F66B209DF7CB006A240B /* Paginated Viewport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paginated Viewport.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6550F66D209DF8B9006A240B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Paginated_viewport/README.md; sourceTree = "<group>"; };
 		6550F66E209DF8B9006A240B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Paginated_viewport/main.cpp; sourceTree = "<group>"; };
@@ -783,7 +806,7 @@
 		65852E3520A3C23B002BEDAA /* Viewport-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Viewport-Info.plist"; sourceTree = "<group>"; };
 		65852E3720A3C412002BEDAA /* Windows-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Windows-Info.plist"; path = "examples/Windows/Windows-Info.plist"; sourceTree = SOURCE_ROOT; };
 		659E25D51E70BCAE00217A12 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
-		65BC812F1DF8D94600331165 /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Syphon.framework; path = ../../../../../../External/ofxSyphon/libs/Syphon/lib/osx/Syphon.framework; sourceTree = "<group>"; };
+		65BC812F1DF8D94600331165 /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Syphon.framework; sourceTree = "<group>"; };
 		65BC81311DF8D94600331165 /* SyphonNameboundClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SyphonNameboundClient.h; sourceTree = "<group>"; };
 		65BC81321DF8D94600331165 /* SyphonNameboundClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SyphonNameboundClient.m; sourceTree = "<group>"; };
 		65BC81341DF8D94600331165 /* ofxSyphon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxSyphon.h; sourceTree = "<group>"; };
@@ -847,8 +870,6 @@
 		65E6BD371F44691E008E4F9E /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
 		65E6BD381F44691E008E4F9E /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
 		65E6BD391F44691E008E4F9E /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
-		65E6BD431F463A15008E4F9E /* osx */ = {isa = PBXFileReference; lastKnownFileType = folder; name = osx; path = External/ArbutusEngine/External/openFrameworks/libs/openFrameworksCompiled/lib/osx; sourceTree = "<group>"; };
-		65E6BD471F464F4E008E4F9E /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Syphon.framework; path = External/ofxSyphon/libs/Syphon/lib/osx/Syphon.framework; sourceTree = SOURCE_ROOT; };
 		65E7991920C2AE8900ECE397 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ResetButtonDecorator/main.cpp; sourceTree = "<group>"; };
 		65E7991A20C2AE8900ECE397 /* ofApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ofApp.cpp; path = ResetButtonDecorator/ofApp.cpp; sourceTree = "<group>"; };
 		65E7991B20C2AE8900ECE397 /* ofApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = ResetButtonDecorator/ofApp.h; sourceTree = "<group>"; };
@@ -857,8 +878,6 @@
 		65E896531E72E85B000D470B /* makedocs.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = makedocs.sh; sourceTree = "<group>"; };
 		65E896631E72F420000D470B /* Catch Tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Catch Tests"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E8967B1E73311F000D470B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		65E896851E733920000D470B /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Syphon.framework; path = ../../../addons/ofxSyphon/libs/Syphon/lib/osx/Syphon.framework; sourceTree = "<group>"; };
-		65E896871E733975000D470B /* libfmodex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmodex.dylib; path = ../../../libs/fmodex/lib/osx/libfmodex.dylib; sourceTree = "<group>"; };
 		65F6C5401F42F08A00270C51 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -871,6 +890,7 @@
 				0C0370EA1FF85CC0005744F2 /* libfmodex.dylib in Frameworks */,
 				0C0370AD1FF849C9005744F2 /* Syphon.framework in Frameworks */,
 				0C0370AF1FF849C9005744F2 /* Foundation.framework in Frameworks */,
+				652AFC7121791ADE00A39760 /* Syphon.framework in Frameworks */,
 				0C0370B01FF849C9005744F2 /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -880,9 +900,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C0370E81FF85681005744F2 /* CoreMIDI.framework in Frameworks */,
+				652AFC6E21791ADE00A39760 /* Syphon.framework in Frameworks */,
 				0C0370E71FF85676005744F2 /* Foundation.framework in Frameworks */,
 				0C0370EC1FF85FD3005744F2 /* libfmodex.dylib in Frameworks */,
-				0C0370E51FF85656005744F2 /* Syphon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -893,6 +913,7 @@
 				0C1C0BD7200F76D800BC3369 /* Syphon.framework in Frameworks */,
 				0C1C0BD8200F76D800BC3369 /* libfmodex.dylib in Frameworks */,
 				0C1C0BD9200F76D800BC3369 /* Foundation.framework in Frameworks */,
+				652AFC7421791ADE00A39760 /* Syphon.framework in Frameworks */,
 				0C1C0BDA200F76D800BC3369 /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -904,6 +925,7 @@
 				0C1C0C14200F7A3200BC3369 /* Syphon.framework in Frameworks */,
 				0C1C0C15200F7A3200BC3369 /* libfmodex.dylib in Frameworks */,
 				0C1C0C16200F7A3200BC3369 /* Foundation.framework in Frameworks */,
+				652AFC7521791ADE00A39760 /* Syphon.framework in Frameworks */,
 				0C1C0C17200F7A3200BC3369 /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -915,6 +937,7 @@
 				0C767D3D200E1A4F0002318B /* Syphon.framework in Frameworks */,
 				0C767D3E200E1A4F0002318B /* libfmodex.dylib in Frameworks */,
 				0C767D3F200E1A4F0002318B /* Foundation.framework in Frameworks */,
+				652AFC7321791ADE00A39760 /* Syphon.framework in Frameworks */,
 				0C767D40200E1A4F0002318B /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -926,6 +949,7 @@
 				0C9AA091203F78ED00318675 /* Syphon.framework in Frameworks */,
 				0C9AA092203F78ED00318675 /* libfmodex.dylib in Frameworks */,
 				0C9AA093203F78ED00318675 /* Foundation.framework in Frameworks */,
+				652AFC7621791ADE00A39760 /* Syphon.framework in Frameworks */,
 				0C9AA094203F78ED00318675 /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -937,6 +961,7 @@
 				0C9C32FF20057BD500750DC3 /* Syphon.framework in Frameworks */,
 				0C9C330020057BD500750DC3 /* libfmodex.dylib in Frameworks */,
 				0C9C330120057BD500750DC3 /* Foundation.framework in Frameworks */,
+				652AFC7221791ADE00A39760 /* Syphon.framework in Frameworks */,
 				0C9C330220057BD500750DC3 /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -948,6 +973,7 @@
 				650455711F470ED000CB3BE5 /* Syphon.framework in Frameworks */,
 				0C1150F01F9F67C70004CBD5 /* libfmodex.dylib in Frameworks */,
 				6504556F1F470EAC00CB3BE5 /* Foundation.framework in Frameworks */,
+				652AFC7021791ADE00A39760 /* Syphon.framework in Frameworks */,
 				6504556E1F470EA300CB3BE5 /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -959,6 +985,7 @@
 				650D430020A831420032640D /* Syphon.framework in Frameworks */,
 				650D430120A831420032640D /* libfmodex.dylib in Frameworks */,
 				650D430220A831420032640D /* Foundation.framework in Frameworks */,
+				652AFC7821791ADE00A39760 /* Syphon.framework in Frameworks */,
 				650D430320A831420032640D /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -970,6 +997,7 @@
 				6550F65E209DF7CB006A240B /* Syphon.framework in Frameworks */,
 				6550F65F209DF7CB006A240B /* libfmodex.dylib in Frameworks */,
 				6550F660209DF7CB006A240B /* Foundation.framework in Frameworks */,
+				652AFC7721791ADE00A39760 /* Syphon.framework in Frameworks */,
 				6550F661209DF7CB006A240B /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -981,6 +1009,7 @@
 				65DF217520C3EDD400D17DCF /* Syphon.framework in Frameworks */,
 				65DF217620C3EDD400D17DCF /* libfmodex.dylib in Frameworks */,
 				65DF217720C3EDD400D17DCF /* Foundation.framework in Frameworks */,
+				652AFC7A21791ADE00A39760 /* Syphon.framework in Frameworks */,
 				65DF217820C3EDD400D17DCF /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -992,6 +1021,7 @@
 				65E7994420C2AE9700ECE397 /* Syphon.framework in Frameworks */,
 				65E7994520C2AE9700ECE397 /* libfmodex.dylib in Frameworks */,
 				65E7994620C2AE9700ECE397 /* Foundation.framework in Frameworks */,
+				652AFC7921791ADE00A39760 /* Syphon.framework in Frameworks */,
 				65E7994720C2AE9700ECE397 /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1001,8 +1031,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				655BFAF91E7355BD00B74446 /* CoreMIDI.framework in Frameworks */,
+				652AFC6F21791ADE00A39760 /* Syphon.framework in Frameworks */,
 				65E896811E733454000D470B /* Foundation.framework in Frameworks */,
-				65E896821E73347B000D470B /* Syphon.framework in Frameworks */,
 				0C1150F11F9F67C70004CBD5 /* libfmodex.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1090,14 +1120,6 @@
 				0C10A8A520000CB20066270B /* ofxPGMidiSourceDelegate.mm */,
 			);
 			path = ios;
-			sourceTree = "<group>";
-		};
-		0C10A8B220000E7E0066270B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0C10A8B620000E7E0066270B /* openFrameworksDebug.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		0C1C0BAB200F76BE00BC3369 /* Splitter_in_splitter */ = {
@@ -1267,6 +1289,14 @@
 			name = Gallery;
 			sourceTree = "<group>";
 		};
+		652AFC672178B31E00A39760 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				652AFC6B2178B31F00A39760 /* openFrameworksDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6550F635209DF767006A240B /* Paginated Viewport */ = {
 			isa = PBXGroup;
 			children = (
@@ -1282,9 +1312,8 @@
 		659E25D41E70BCAE00217A12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				65E6BD431F463A15008E4F9E /* osx */,
-				65E896871E733975000D470B /* libfmodex.dylib */,
-				65E896851E733920000D470B /* Syphon.framework */,
+				0C1150EF1F9F67C70004CBD5 /* libfmodex.dylib */,
+				652AFC6D21791ADE00A39760 /* Syphon.framework */,
 				655BFAF81E7355BD00B74446 /* CoreMIDI.framework */,
 				65E8967B1E73311F000D470B /* Foundation.framework */,
 				659E25D51E70BCAE00217A12 /* CoreVideo.framework */,
@@ -1298,8 +1327,9 @@
 				65BC812B1DF8D94600331165 /* libs */,
 				65BC81331DF8D94600331165 /* src */,
 			);
-			path = ofxSyphon;
-			sourceTree = "<group>";
+			name = ofxSyphon;
+			path = ../libs/ofxSyphon;
+			sourceTree = SOURCE_ROOT;
 		};
 		65BC812B1DF8D94600331165 /* libs */ = {
 			isa = PBXGroup;
@@ -1340,8 +1370,7 @@
 				65BC81311DF8D94600331165 /* SyphonNameboundClient.h */,
 				65BC81321DF8D94600331165 /* SyphonNameboundClient.m */,
 			);
-			name = src;
-			path = ../../../../External/ofxSyphon/libs/Syphon/src;
+			path = src;
 			sourceTree = "<group>";
 		};
 		65BC81331DF8D94600331165 /* src */ = {
@@ -1355,8 +1384,7 @@
 				65BC81391DF8D94600331165 /* ofxSyphonServerDirectory.h */,
 				65BC813A1DF8D94600331165 /* ofxSyphonServerDirectory.mm */,
 			);
-			name = src;
-			path = ../../External/ofxSyphon/src;
+			path = src;
 			sourceTree = "<group>";
 		};
 		65BC813B1DF8D95600331165 /* ofxOsc */ = {
@@ -1366,8 +1394,8 @@
 				65BC813C1DF8D96500331165 /* libs */,
 			);
 			name = ofxOsc;
-			path = ../../ofxOsc;
-			sourceTree = "<group>";
+			path = ../of_v0.9.8_osx_release/addons/ofxOsc;
+			sourceTree = SOURCE_ROOT;
 		};
 		65BC813C1DF8D96500331165 /* libs */ = {
 			isa = PBXGroup;
@@ -1462,8 +1490,8 @@
 				65BC81991DF8D9D600331165 /* src */,
 			);
 			name = ofxXmlSettings;
-			path = ../../ofxXmlSettings;
-			sourceTree = "<group>";
+			path = ../of_v0.9.8_osx_release/addons/ofxXmlSettings;
+			sourceTree = SOURCE_ROOT;
 		};
 		65BC81941DF8D9D600331165 /* libs */ = {
 			isa = PBXGroup;
@@ -1556,11 +1584,9 @@
 				E4B69E1C0A3A1BDC003C02F2 /* Sources */,
 				0C39301A1FBCFAC600D9016F /* Examples */,
 				0C71E9EF1FF828650045EA4D /* Tests */,
-				0C1150EF1F9F67C70004CBD5 /* libfmodex.dylib */,
 				0C0CB3871F957763004BD8FE /* doxygenconf */,
 				0C03769B1F968FCC0079E842 /* makedocs.sh */,
 				650415601F65DE4D001D7832 /* Resources */,
-				65E6BD471F464F4E008E4F9E /* Syphon.framework */,
 				65F6C5401F42F08A00270C51 /* README.md */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				BB4B014C10F69532006C3DED /* addons */,
@@ -1569,7 +1595,6 @@
 				65E896521E72E839000D470B /* scripts */,
 				65E896631E72F420000D470B /* Catch Tests */,
 				650455591F47085D00CB3BE5 /* HelloWorld.app */,
-				0C1E77E51F8E5320005507CF /* openFrameworksLib.xcodeproj */,
 				0C0370BB1FF849C9005744F2 /* Viewport.app */,
 				0C0370C81FF85376005744F2 /* libAlmond.a */,
 				0C9C330C20057BD500750DC3 /* Splitters.app */,
@@ -1581,6 +1606,7 @@
 				650D430D20A831420032640D /* Gallery.app */,
 				65E7995120C2AE9700ECE397 /* ResetButtonDecocator.app */,
 				65DF218320C3EDD400D17DCF /* ImageMatrix.app */,
+				652AFC662178B31E00A39760 /* openFrameworksLib.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1590,6 +1616,7 @@
 				0C9F6610202E10D50026F6E1 /* Interfaces */,
 				0C0370ED1FF8602E005744F2 /* Decorators */,
 				0C58072E20711CD500B43487 /* Containers */,
+				652AFC7F217949F300A39760 /* Macros.hpp */,
 				0C392FEC1FBCFA3100D9016F /* GUI.cpp */,
 				0C392FD41FBCFA2F00D9016F /* GUI.hpp */,
 				0C392FEA1FBCFA3100D9016F /* GUIStyle.cpp */,
@@ -1767,6 +1794,7 @@
 				650455551F47085D00CB3BE5 /* Sources */,
 				650455561F47085D00CB3BE5 /* Frameworks */,
 				650455571F47085D00CB3BE5 /* Resources */,
+				652AFC7C217923AC00A39760 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -1902,8 +1930,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 0C10A8B220000E7E0066270B /* Products */;
-					ProjectRef = 0C1E77E51F8E5320005507CF /* openFrameworksLib.xcodeproj */;
+					ProductGroup = 652AFC672178B31E00A39760 /* Products */;
+					ProjectRef = 652AFC662178B31E00A39760 /* openFrameworksLib.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1926,11 +1954,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		0C10A8B620000E7E0066270B /* openFrameworksDebug.a */ = {
+		652AFC6B2178B31F00A39760 /* openFrameworksDebug.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = openFrameworksDebug.a;
-			remoteRef = 0C10A8B520000E7E0066270B /* PBXContainerItemProxy */;
+			remoteRef = 652AFC6A2178B31F00A39760 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -2632,12 +2660,10 @@
 				65E8969D1E734EEF000D470B /* OscTypes.cpp in Sources */,
 				655BFAFA1E7358C000B74446 /* UdpSocket.cpp in Sources */,
 				655BFAFD1E735BC100B74446 /* SyphonNameboundClient.m in Sources */,
-				65DF218E20C3EE2100D17DCF /* ofApp.cpp in Sources */,
 				6502612620C1EC3A0031301B /* ResetButtonDecorator.cpp in Sources */,
 				0C392FFF1FBCFA3200D9016F /* Slider.cpp in Sources */,
 				0C3930131FBCFA3200D9016F /* Button.cpp in Sources */,
 				0C39300F1FBCFA3200D9016F /* GUI.cpp in Sources */,
-				65DF218C20C3EE2100D17DCF /* main.cpp in Sources */,
 				0C71E9FB1FF828880045EA4D /* Button.cpp in Sources */,
 				0C71E9F81FF828880045EA4D /* Viewport.cpp in Sources */,
 				0C71E9F61FF828880045EA4D /* main.cpp in Sources */,
@@ -2654,7 +2680,6 @@
 				0C767D0E200D1EB10002318B /* Table.cpp in Sources */,
 				0C3930051FBCFA3200D9016F /* Label.cpp in Sources */,
 				0C3930111FBCFA3200D9016F /* Splitter.cpp in Sources */,
-				65DF219020C3EE2100D17DCF /* README.md in Sources */,
 				0C39300B1FBCFA3200D9016F /* GUIStyle.cpp in Sources */,
 				0C3930151FBCFA3200D9016F /* ToggleButton.cpp in Sources */,
 			);
@@ -3026,7 +3051,7 @@
 					"\"$(OFX_SYPHON_PATH)/libs/Syphon/src\"/**",
 					"$(ENGINE_PATH)/src/Library/Engine/**",
 					"$(NANOVG_PATH)/src/**",
-					"$(LIB_JSON_PATH)",
+					"$(LIB_JSON_PATH)/src",
 				);
 				LIB_BOOST_FS = "\"$(OF_PATH)/libs/boost/lib/osx/boost_filesystem.a\"";
 				LIB_BOOST_SYSTEM = "\"$(OF_PATH)/libs/boost/lib/osx/boost_system.a\"";
@@ -3040,7 +3065,6 @@
 				LIB_GLEW = "\"$(OF_PATH)/libs/glew/lib/osx/glew.a\"";
 				LIB_GLFW = "\"$(OF_PATH)/libs/glfw/lib/osx/glfw3.a\"";
 				LIB_GLUT = "\"$(OF_PATH)/libs/glut/lib/osx/GLUT.framework/Versions/A/GLUT\"";
-				LIB_JSON_PATH = External/json/src/;
 				LIB_OPENSSL1 = "\"$(OF_PATH)/libs/openssl/lib/osx/crypto.a\"";
 				LIB_OPENSSL2 = "\"$(OF_PATH)/libs/openssl/lib/osx/ssl.a\"";
 				LIB_POCO = "$(LIB_POCO_0) $(LIB_POCO_1) $(LIB_POCO_2) $(LIB_POCO_3) $(LIB_POCO_4) $(LIB_POCO_5) $(LIB_POCO_6) $(LIB_POCO_7) $(LIB_POCO_8) $(LIB_POCO_9)";
@@ -3060,7 +3084,6 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				NANOVG_PATH = "$(SRCROOT)/External/nanovg/";
 				NEW_SETTING = "";
-				OFX_SYPHON_PATH = "$(ARBUTUSENGINE_EXTERNAL_PATH)/ofxSyphon";
 				OF_CORE_FRAMEWORKS = "$(OF_PATH)/libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a -framework Accelerate -framework AGL -framework AppKit -framework ApplicationServices -framework AudioToolbox -framework AVFoundation -framework Cocoa -framework CoreAudio -framework CoreFoundation -framework CoreMedia -framework CoreServices -framework CoreVideo -framework IOKit -framework OpenGL -framework QuartzCore -framework QuickTime -framework QTKit -framework GLUT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RESOURCES_PATH = Resources;
@@ -3157,7 +3180,7 @@
 					"\"$(OFX_SYPHON_PATH)/libs/Syphon/src\"/**",
 					"$(ENGINE_PATH)/src/Library/Engine/**",
 					"$(NANOVG_PATH)/src/**",
-					"$(LIB_JSON_PATH)",
+					"$(LIB_JSON_PATH)/src",
 				);
 				LIB_BOOST_FS = "\"$(OF_PATH)/libs/boost/lib/osx/boost_filesystem.a\"";
 				LIB_BOOST_SYSTEM = "\"$(OF_PATH)/libs/boost/lib/osx/boost_system.a\"";
@@ -3171,7 +3194,6 @@
 				LIB_GLEW = "\"$(OF_PATH)/libs/glew/lib/osx/glew.a\"";
 				LIB_GLFW = "\"$(OF_PATH)/libs/glfw/lib/osx/glfw3.a\"";
 				LIB_GLUT = "\"$(OF_PATH)/libs/glut/lib/osx/GLUT.framework/Versions/A/GLUT\"";
-				LIB_JSON_PATH = External/json/src/;
 				LIB_OPENSSL1 = "\"$(OF_PATH)/libs/openssl/lib/osx/crypto.a\"";
 				LIB_OPENSSL2 = "\"$(OF_PATH)/libs/openssl/lib/osx/ssl.a\"";
 				LIB_POCO = "$(LIB_POCO_0) $(LIB_POCO_1) $(LIB_POCO_2) $(LIB_POCO_3) $(LIB_POCO_4) $(LIB_POCO_5) $(LIB_POCO_6) $(LIB_POCO_7) $(LIB_POCO_8) $(LIB_POCO_9)";
@@ -3191,7 +3213,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				NANOVG_PATH = "$(SRCROOT)/External/nanovg/";
 				NEW_SETTING = "";
-				OFX_SYPHON_PATH = "$(ARBUTUSENGINE_EXTERNAL_PATH)/ofxSyphon";
 				OF_CORE_FRAMEWORKS = "$(OF_PATH)/libs/openFrameworksCompiled/lib/osx/openFrameworks.a -framework Accelerate -framework AGL -framework AppKit -framework ApplicationServices -framework AudioToolbox -framework AVFoundation -framework Cocoa -framework CoreAudio -framework CoreFoundation -framework CoreMedia -framework CoreServices -framework CoreVideo -framework IOKit -framework OpenGL -framework QuartzCore -framework QuickTime -framework QTKit -framework GLUT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RESOURCES_PATH = Resources;
@@ -4608,7 +4629,7 @@
 					"\"$(OFX_SYPHON_PATH)/libs/Syphon/src\"/**",
 					"$(ENGINE_PATH)/src/Library/Engine/**",
 					"$(NANOVG_PATH)/src/**",
-					"$(LIB_JSON_PATH)",
+					"$(LIB_JSON_PATH)/src",
 					"$(LIB_CATCH_PATH)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/examples/HelloWorld/HelloWorld-Info.plist";
@@ -4616,7 +4637,7 @@
 					"$(inherited)",
 					"\"$(OF_PATH)/libs/openFrameworksCompiled/lib/osx/\"",
 					"$(ENGINE_PATH)/bin",
-					"$(PROJECT_DIR)Engine/External/openFrameworks/libs/fmodex/lib/osx",
+					"$(OF_PATH)/libs/fmodex/lib/osx",
 				);
 				LIB_ARBUTUSENGINE_PATH = ../ArbutusEngine;
 				LIB_BOOST_FS = "\"$(OF_PATH)/libs/boost/lib/osx/boost_filesystem.a\"";
@@ -4631,7 +4652,6 @@
 				LIB_GLEW = "\"$(OF_PATH)/libs/glew/lib/osx/glew.a\"";
 				LIB_GLFW = "\"$(OF_PATH)/libs/glfw/lib/osx/glfw3.a\"";
 				LIB_GLUT = "\"$(OF_PATH)/libs/glut/lib/osx/GLUT.framework/Versions/A/GLUT\"";
-				LIB_JSON_PATH = External/json/src/;
 				LIB_OPENSSL1 = "\"$(OF_PATH)/libs/openssl/lib/osx/crypto.a\"";
 				LIB_OPENSSL2 = "\"$(OF_PATH)/libs/openssl/lib/osx/ssl.a\"";
 				LIB_POCO = "$(LIB_POCO_0) $(LIB_POCO_1) $(LIB_POCO_2) $(LIB_POCO_3) $(LIB_POCO_4) $(LIB_POCO_5) $(LIB_POCO_6) $(LIB_POCO_7) $(LIB_POCO_8) $(LIB_POCO_9)";
@@ -4651,7 +4671,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				NANOVG_PATH = "$(SRCROOT)/External/nanovg/";
 				NEW_SETTING = "";
-				OFX_SYPHON_PATH = "$(ARBUTUSENGINE_EXTERNAL_PATH)/ofxSyphon";
+				OFX_SYPHON_PATH = ../libs/ofxSyphon;
 				OF_CORE_FRAMEWORKS = "$(OF_PATH)/libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a -framework Accelerate -framework AGL -framework AppKit -framework ApplicationServices -framework AudioToolbox -framework AVFoundation -framework Cocoa -framework CoreAudio -framework CoreFoundation -framework CoreMedia -framework CoreServices -framework CoreVideo -framework IOKit -framework OpenGL -framework QuartzCore -framework QuickTime -framework QTKit -framework GLUT";
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
@@ -4740,7 +4760,7 @@
 					"\"$(OFX_SYPHON_PATH)/libs/Syphon/src\"/**",
 					"$(ENGINE_PATH)/src/Library/Engine/**",
 					"$(NANOVG_PATH)/src/**",
-					"$(LIB_JSON_PATH)",
+					"$(LIB_JSON_PATH)/src",
 					"$(LIB_CATCH_PATH)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/examples/HelloWorld/HelloWorld-Info.plist";
@@ -4748,7 +4768,7 @@
 					"$(inherited)",
 					"\"$(OF_PATH)/libs/openFrameworksCompiled/lib/osx/\"",
 					"$(ENGINE_PATH)/bin",
-					"$(PROJECT_DIR)Engine/External/openFrameworks/libs/fmodex/lib/osx",
+					"$(OF_PATH)/libs/fmodex/lib/osx",
 				);
 				LIB_ARBUTUSENGINE_PATH = ../ArbutusEngine;
 				LIB_BOOST_FS = "\"$(OF_PATH)/libs/boost/lib/osx/boost_filesystem.a\"";
@@ -4763,7 +4783,6 @@
 				LIB_GLEW = "\"$(OF_PATH)/libs/glew/lib/osx/glew.a\"";
 				LIB_GLFW = "\"$(OF_PATH)/libs/glfw/lib/osx/glfw3.a\"";
 				LIB_GLUT = "\"$(OF_PATH)/libs/glut/lib/osx/GLUT.framework/Versions/A/GLUT\"";
-				LIB_JSON_PATH = External/json/src/;
 				LIB_OPENSSL1 = "\"$(OF_PATH)/libs/openssl/lib/osx/crypto.a\"";
 				LIB_OPENSSL2 = "\"$(OF_PATH)/libs/openssl/lib/osx/ssl.a\"";
 				LIB_POCO = "$(LIB_POCO_0) $(LIB_POCO_1) $(LIB_POCO_2) $(LIB_POCO_3) $(LIB_POCO_4) $(LIB_POCO_5) $(LIB_POCO_6) $(LIB_POCO_7) $(LIB_POCO_8) $(LIB_POCO_9)";
@@ -4783,7 +4802,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				NANOVG_PATH = "$(SRCROOT)/External/nanovg/";
 				NEW_SETTING = "";
-				OFX_SYPHON_PATH = "$(ARBUTUSENGINE_EXTERNAL_PATH)/ofxSyphon";
+				OFX_SYPHON_PATH = ../libs/ofxSyphon;
 				OF_CORE_FRAMEWORKS = "$(OF_PATH)/libs/openFrameworksCompiled/lib/osx/openFrameworks.a -framework Accelerate -framework AGL -framework AppKit -framework ApplicationServices -framework AudioToolbox -framework AVFoundation -framework Cocoa -framework CoreAudio -framework CoreFoundation -framework CoreMedia -framework CoreServices -framework CoreVideo -framework IOKit -framework OpenGL -framework QuartzCore -framework QuickTime -framework QTKit -framework GLUT";
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
@@ -5868,6 +5887,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -5893,7 +5913,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"\"$(OFX_SYPHON_PATH)/libs/Syphon/lib/osx/\"",
 					"\"$(OF_PATH)/libs/openFrameworksCompiled/lib/osx/\"",
 					"$(OFX_SYPHON_PATH)/libs/Syphon/lib/osx",
 				);
@@ -5943,21 +5962,21 @@
 					"\"$(OFX_SYPHON_PATH)/libs/Syphon/src\"/**",
 					"$(ENGINE_PATH)/src/Library/Engine/**",
 					"$(NANOVG_PATH)/src/**",
-					"$(LIB_JSON_PATH)",
+					"$(LIB_JSON_PATH)/src",
 					"$(LIB_CATCH_PATH)",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(OF_PATH)/libs/openFrameworksCompiled/lib/osx/\"",
 					"$(ENGINE_PATH)/bin",
-					"$(PROJECT_DIR)Engine/External/openFrameworks/libs/fmodex/lib/osx",
+					"$(FMODEX_PATH)/lib/osx",
 				);
 				LIB_BOOST_FS = "\"$(OF_PATH)/libs/boost/lib/osx/boost_filesystem.a\"";
 				LIB_BOOST_SYSTEM = "\"$(OF_PATH)/libs/boost/lib/osx/boost_system.a\"";
 				LIB_CAIRO1 = "\"$(OF_PATH)/libs/cairo/lib/osx/cairo-script-interpreter.a\"";
 				LIB_CAIRO2 = "\"$(OF_PATH)/libs/cairo/lib/osx/cairo.a\"";
 				LIB_CAIRO3 = "\"$(OF_PATH)/libs/cairo/lib/osx/pixman-1.a\"";
-				LIB_FMODEX = "\"$(OF_PATH)/libs/fmodex/lib/osx/libfmodex.dylib\"";
+				LIB_CATCH_PATH = ../libs/Catch2/single_include/catch2;
 				LIB_FREEIMAGE = "\"$(OF_PATH)/libs/FreeImage/lib/osx/freeimage.a\"";
 				LIB_FREETYPE = "\"$(OF_PATH)/libs/freetype/lib/osx/freetype.a\"";
 				LIB_GLEW = "\"$(OF_PATH)/libs/glew/lib/osx/glew.a\"";
@@ -5981,9 +6000,7 @@
 				MACH_O_TYPE = mh_execute;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				NANOVG_PATH = "$(SRCROOT)/External/nanovg/";
 				NEW_SETTING = "";
-				OFX_SYPHON_PATH = "$(ARBUTUSENGINE_EXTERNAL_PATH)/ofxSyphon";
 				OF_CORE_FRAMEWORKS = "$(OF_PATH)/libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a -framework Accelerate -framework AGL -framework AppKit -framework ApplicationServices -framework AudioToolbox -framework AVFoundation -framework Cocoa -framework CoreAudio -framework CoreFoundation -framework CoreMedia -framework CoreServices -framework CoreVideo -framework IOKit -framework OpenGL -framework QuartzCore -framework QuickTime -framework QTKit -framework GLUT";
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
@@ -5998,6 +6015,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -6025,7 +6043,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-					"\"$(OFX_SYPHON_PATH)/libs/Syphon/lib/osx/\"",
 					"\"$(OF_PATH)/libs/openFrameworksCompiled/lib/osx/\"",
 					"$(OFX_SYPHON_PATH)/libs/Syphon/lib/osx",
 				);
@@ -6071,21 +6088,21 @@
 					"\"$(OFX_SYPHON_PATH)/libs/Syphon/src\"/**",
 					"$(ENGINE_PATH)/src/Library/Engine/**",
 					"$(NANOVG_PATH)/src/**",
-					"$(LIB_JSON_PATH)",
+					"$(LIB_JSON_PATH)/src",
 					"$(LIB_CATCH_PATH)",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(OF_PATH)/libs/openFrameworksCompiled/lib/osx/\"",
 					"$(ENGINE_PATH)/bin",
-					"$(PROJECT_DIR)Engine/External/openFrameworks/libs/fmodex/lib/osx",
+					"$(FMODEX_PATH)/lib/osx",
 				);
 				LIB_BOOST_FS = "\"$(OF_PATH)/libs/boost/lib/osx/boost_filesystem.a\"";
 				LIB_BOOST_SYSTEM = "\"$(OF_PATH)/libs/boost/lib/osx/boost_system.a\"";
 				LIB_CAIRO1 = "\"$(OF_PATH)/libs/cairo/lib/osx/cairo-script-interpreter.a\"";
 				LIB_CAIRO2 = "\"$(OF_PATH)/libs/cairo/lib/osx/cairo.a\"";
 				LIB_CAIRO3 = "\"$(OF_PATH)/libs/cairo/lib/osx/pixman-1.a\"";
-				LIB_FMODEX = "\"$(OF_PATH)/libs/fmodex/lib/osx/libfmodex.dylib\"";
+				LIB_CATCH_PATH = ../libs/Catch2/single_include/catch2;
 				LIB_FREEIMAGE = "\"$(OF_PATH)/libs/FreeImage/lib/osx/freeimage.a\"";
 				LIB_FREETYPE = "\"$(OF_PATH)/libs/freetype/lib/osx/freetype.a\"";
 				LIB_GLEW = "\"$(OF_PATH)/libs/glew/lib/osx/glew.a\"";
@@ -6109,9 +6126,7 @@
 				MACH_O_TYPE = mh_execute;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				NANOVG_PATH = "$(SRCROOT)/External/nanovg/";
 				NEW_SETTING = "";
-				OFX_SYPHON_PATH = "$(ARBUTUSENGINE_EXTERNAL_PATH)/ofxSyphon";
 				OF_CORE_FRAMEWORKS = "$(OF_PATH)/libs/openFrameworksCompiled/lib/osx/openFrameworks.a -framework Accelerate -framework AGL -framework AppKit -framework ApplicationServices -framework AudioToolbox -framework AVFoundation -framework Cocoa -framework CoreAudio -framework CoreFoundation -framework CoreMedia -framework CoreServices -framework CoreVideo -framework IOKit -framework OpenGL -framework QuartzCore -framework QuickTime -framework QTKit -framework GLUT";
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
@@ -6147,6 +6162,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FMODEX_PATH = "$(OF_PATH)/libs/fmodex";
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
@@ -6168,14 +6184,17 @@
 					"$(OF_PATH)/libs/openframeworks/**",
 					"$(OF_PATH)/libs/glew/include/**",
 					src,
+					"$(LIB_JSON_PATH)/src/**",
 				);
-				LIB_CATCH_PATH = External/Catch2/single_include/;
-				LIB_JSON_PATH = External/json/src/;
+				LIB_CATCH_PATH = ../libs/Catch2/single_include/;
+				LIB_FMODEX = "\"$(FMODEX_PATH)/lib/osx/libfmodex.dylib\"";
+				LIB_JSON_PATH = ../libs/json/;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OFX_SYPHON_PATH = ../libs/ofxSyphon;
 				OF_ADDONS_PATH = "$(OF_PATH)/addons";
 				OF_CORE_LIBS = "$(LIB_POCO) $(LIB_TESS) $(LIB_GLEW) $(LIB_CAIRO1) $(LIB_CAIRO2) $(LIB_CAIRO3) $(LIB_FMODEX) $(LIB_RTAUDIO) $(LIB_OPENSSL1) $(LIB_OPENSSL2) $(LIB_GLFW) $(LIB_FREEIMAGE) $(LIB_FREETYPE) $(LIB_BOOST_FS) $(LIB_BOOST_SYSTEM)";
 				OF_LIBS_PATH = "$(OF_PATH)/libs";
-				OF_PATH = ../..;
+				OF_PATH = ../of_v0.9.8_osx_release;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
@@ -6209,6 +6228,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEAD_CODE_STRIPPING = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FMODEX_PATH = "$(OF_PATH)/libs/fmodex";
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
@@ -6231,14 +6251,17 @@
 					"$(OF_PATH)/libs/openframeworks/**",
 					"$(OF_PATH)/libs/glew/include/**",
 					src,
+					"$(LIB_JSON_PATH)/src/**",
 				);
-				LIB_CATCH_PATH = External/Catch2/single_include/;
-				LIB_JSON_PATH = External/json/src/;
+				LIB_CATCH_PATH = ../libs/Catch2/single_include/;
+				LIB_FMODEX = "\"$(FMODEX_PATH)/lib/osx/libfmodex.dylib\"";
+				LIB_JSON_PATH = ../libs/json/;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OFX_SYPHON_PATH = ../libs/ofxSyphon;
 				OF_ADDONS_PATH = "$(OF_PATH)/addons";
 				OF_CORE_LIBS = "$(LIB_POCO) $(LIB_TESS) $(LIB_GLEW) $(LIB_CAIRO1) $(LIB_CAIRO2) $(LIB_CAIRO3) $(LIB_FMODEX) $(LIB_RTAUDIO) $(LIB_OPENSSL1) $(LIB_OPENSSL2) $(LIB_GLFW) $(LIB_FREEIMAGE) $(LIB_FREETYPE) $(LIB_BOOST_FS) $(LIB_BOOST_SYSTEM)";
 				OF_LIBS_PATH = "$(OF_PATH)/libs";
-				OF_PATH = ../..;
+				OF_PATH = ../of_v0.9.8_osx_release;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-mtune=native",

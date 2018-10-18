@@ -9,6 +9,7 @@
 #ifndef GUI_hpp
 #define GUI_hpp
 
+#include "Macros.hpp"
 #include <stdio.h>
 #include "Button.hpp"
 #include "ToggleButton.hpp"
@@ -31,11 +32,7 @@
 #include "SliderDecorator.hpp"
 
 
-
-
-
 // todo: move fonts somewhere else.
-// maybe have them on a singleton that gathers all fonts
 typedef enum  {
     Text = 0,
     Title
@@ -65,19 +62,25 @@ protected:
     
 public:
     
+    const string DEFAULT_FONT = "OpenSans-Light.ttf";
+    
+    const string MSG_ERROR_LOADING_FONT = "Error loading font '%s'.";
+    
+    
     /*!
-     \brief todo
+     \brief Constructor
      */
     GUI();
     
     /*!
-     \brief todo
+     \brief Destructor
      */
     ~GUI();
     
-    // implement Interface methods
+    /*!
+     \brief Returns all childs of an element
+     */
     std::vector<Element*> getChildsOfElement(void* parentElement);
-    
     
     /*!
      Updates all elements of the GUI
@@ -91,18 +94,23 @@ public:
     
     /*!
      \brief Load all needed fonts
+     \param fontsPath The absolute path to the fonts. If no path is set, reverts to the Resources folder inside the app bundle
      */
     void loadFonts(string fontsPath = "");
     
-   
+    /*!
+     \brief returns a working absolute path to a font file or throws an error
+     \param filename the filename of the font
+     \param path the path of the folder where the file is at
+     */
+    string getFontPath(string filename, string path = "");
+    
     /*!
      \brief Adds an element to the elements list
      \param element the element added to the gui list
      */
     void add(Element *element);
     
-    
-
     /*!
      \brief Template for creating, setting and storing new elements
      */

@@ -38,6 +38,20 @@ The `GUI` also needs to be updated and drawn, like this
     }
 
 
+
+## Dependencies
+
+- [Catch 2](https://github.com/catchorg/Catch2)
+
+Developed with: https://github.com/catchorg/Catch2/tree/19ab2117c5bac2f376f8da4a4b25e183137bcec0
+
+
+- [JSON for Modern C++](https://github.com/nlohmann/json)
+
+Developed with: https://github.com/nlohmann/json/tree/ce1dccf347faf6beb2cdf06b788c01cc24e4c6ce
+
+
+
 ## Graphic User Elements
 
 ### Element
@@ -271,6 +285,10 @@ Example not working.
 ### Windows
 
 Shows two windows with their own GUI. Currently not working.
+
+
+
+
 
 ## Todo
 

@@ -10,8 +10,8 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3D7DC358-A01E-4E25-B23C-E07E08A789EF",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "F4CCB893AFADB97238A965FD2F28717F1CAAE613" : "ofxAlmondGUI\/External\/ofxSyphon\/",
-    "D9DFD42923335AE734B8FD39A96E7EE083832D5A" : "ofxAlmondGUI\/",
+    "F4CCB893AFADB97238A965FD2F28717F1CAAE613" : "libs\/ofxSyphon\/",
+    "D9DFD42923335AE734B8FD39A96E7EE083832D5A" : "AlmondGUI\/",
     "8D1851B4994CED709E75F1DE491BEC25BE8B0B36" : "..\/..\/ArbutusEngine"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ofxAlmondGUI",

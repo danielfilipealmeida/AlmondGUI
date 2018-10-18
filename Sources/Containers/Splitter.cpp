@@ -59,6 +59,8 @@ void Splitter::resize(ofRectangle newRect)
 void* Splitter::add(void *newElement)
 {
     add((Element *) newElement, 0.5, SPLITTER_MODE_PERCENTAGE);
+    
+    return newElement;
 }
 
 
