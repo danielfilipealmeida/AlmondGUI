@@ -22,23 +22,28 @@ Button::Button()
 Button::~Button()
 {}
 
-string Button::getClass() {
+string Button::getClass()
+{
     return "Button";
 }
 
 
-void Button::update() {
+void Button::update()
+{
     Boolean previousPressed = pressed;
    
     Element::update();
     if (visible == FALSE) return;
 
-    if (pressed == FALSE && previousPressed != pressed) {
+    if (pressed == FALSE &&
+        previousPressed != pressed
+    ) {
         onClick(this);
     }
 }
 
-ofColor Button::getBackgroundColor(Boolean isHover, Boolean isPressed) {
+ofColor Button::getBackgroundColor(Boolean isHover, Boolean isPressed)
+{
     ofColor backgroundColor;
     
     if (isHover == FALSE) {
@@ -52,7 +57,8 @@ ofColor Button::getBackgroundColor(Boolean isHover, Boolean isPressed) {
     return backgroundColor;
 }
 
-void Button::draw( )
+
+void Button::draw()
 {
     if (visible == FALSE) return;
     
@@ -65,7 +71,9 @@ void Button::draw( )
     Element::finishDraw( );
 }
 
-void Button::set(json config) {
+
+void Button::set(json config)
+{
     Element::set(config);
     
     if (config["caption"].is_string()) {
@@ -73,11 +81,13 @@ void Button::set(json config) {
 
     }}
 
-void Button::setOnClick(std::function<void(Button *button)> _onClick) {
+void Button::setOnClick(std::function<void(Button *button)> _onClick)
+{
     onClick = _onClick;
 }
 
 
-string Button::getCaption() {
+string Button::getCaption()
+ {
     return caption;
 }
